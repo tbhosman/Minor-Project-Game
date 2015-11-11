@@ -10,7 +10,7 @@ public class EnemySight : MonoBehaviour {
 	public float deathDistance;
 
 	void Update(){
-		SeeingPlayer = CanSeePlayer(); //Debug value
+		SeeingPlayer = CanSeePlayer();
 		float Distance = Vector3.Distance(transform.position, Player.transform.position);
 
 		if ((SeeingPlayer == true)) {
