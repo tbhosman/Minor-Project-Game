@@ -42,6 +42,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+		public bool MakingWalkingSound;
+		public bool MakingRunningSound;
+
         // Use this for initialization
         private void Start()
         {
@@ -65,7 +68,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
             {
-                m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
+               // m_Jump = CrossPlatformInputManager.GetButtonDown("Jump"); //enable to jump
             }
 
             if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
@@ -205,12 +208,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
             float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
             float vertical = CrossPlatformInputManager.GetAxis("Vertical");
 
+			MakingWalkingSound = !(horizontal == 0 && vertical == 0); //Information for enemy
+
             bool waswalking = m_IsWalking;
 
 #if !MOBILE_INPUT
             // On standalone builds, walk/run speed is modified by a key press.
             // keep track of whether or not the character is walking or running
             m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
+			MakingRunningSound = !m_IsWalking; //Information for enemy
 #endif
             // set the desired speed to be walking or running
             speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
