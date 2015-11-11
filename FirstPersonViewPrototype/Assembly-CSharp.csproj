@@ -85,6 +85,7 @@
      <Compile Include="Assets\imports\Standard Assets\Utility\WaypointProgressTracker.cs" />
      <Compile Include="Assets\scripts\EnemySight.cs" />
      <Compile Include="Assets\scripts\FlashlightScript.cs" />
+     <Compile Include="Assets\scripts\GeigerController.cs" />
      <None Include="Assets\imports\sky5X\README.txt" />
      <None Include="Assets\imports\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\imports\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
