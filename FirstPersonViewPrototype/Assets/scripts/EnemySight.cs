@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class EnemySight : MonoBehaviour {
 
@@ -8,6 +9,10 @@ public class EnemySight : MonoBehaviour {
 	public float visibilityDistance = 50;
 	public bool SeeingPlayer;
 	public float deathDistance;
+	public float hearDistance;
+	public float hearDistanceStanding = 10;
+	public float hearDistanceWalking = 50;
+	public float hearDistanceRunning = 100;
 
 	void Update(){
 		SeeingPlayer = CanSeePlayer();
@@ -20,6 +25,10 @@ public class EnemySight : MonoBehaviour {
 				Debug.Log("You died");
 				//Game over sequence starts here
 			}
+		}
+
+		if (CanHearPlayer () == true) {
+			Debug.Log ("I can hear you.");
 		}
 	}
 
@@ -37,6 +46,28 @@ public class EnemySight : MonoBehaviour {
 			}
 		}
 		
+		return false;
+	}
+
+	protected bool CanHearPlayer(){
+
+		RaycastHit hit;
+		Vector3 rayDirection = Player.transform.position - transform.position;
+
+		if (Player.GetComponent<FirstPersonController>().MakingWalkingSound == true) {
+			hearDistance = hearDistanceWalking;
+		} else {
+			hearDistance = hearDistanceStanding;
+		}
+
+		if (Player.GetComponent<FirstPersonController>().MakingRunningSound == true) {
+			hearDistance = hearDistanceRunning;
+		}
+
+		if (Physics.Raycast(transform.position, rayDirection, out hit, hearDistance))
+		{
+			return (hit.transform.CompareTag("Player"));
+		}
 		return false;
 	}
 
