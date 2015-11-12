@@ -18,43 +18,42 @@ public class OpeningDoor : MonoBehaviour
         animator = GetComponent<Animator>();
         doorText.text = "";
     }
-
-    void onTriggerEnter(Collider other)
+    
+    void OnTriggerStay(Collider colli)
     {
-        if (other.gameObject.tag == "Player")
+        if (colli.gameObject.tag == "Player")
         {
             if (firstpersoncontroller.getKey1())
             {
                 doorText.text = "Press E to open the door";
             }
-            else  {
+            else
+            {
                 doorText.text = "Locked";
             }
         }
-    }
 
-    void OnTriggerStay(Collider colli)
-    {
-       
-     if (colli.gameObject.tag == "Player" && firstpersoncontroller.getKey1() && !doorOpen && Input.GetKeyDown("e"))
+        if (colli.gameObject.tag == "Player" && firstpersoncontroller.getKey1() && !doorOpen && Input.GetKeyDown("e")) {
             {
                 doorOpen = true;
+                doorText.text = "";
                 Doors("Open");
+            }
         }
     }
-
-    void OnTriggerExit(Collider coll)
-    {
-        if (doorOpen && firstpersoncontroller.getKey1())
+        void OnTriggerExit(Collider coll)
         {
-            doorOpen = false;
-            Doors("Close");
+            if (doorOpen && firstpersoncontroller.getKey1())
+            {
+                doorOpen = false;
+                Doors("Close");
+            }
+            doorText.text = "";
         }
+
+        void Doors(string state)
+    {
+            animator.SetTrigger(state);
     }
 
-    void Doors(string state)
-    {
-        animator.SetTrigger(state);
-    }
-    
 }
