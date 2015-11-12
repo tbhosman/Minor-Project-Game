@@ -71,6 +71,7 @@
     <Compile Include="Assets\imports\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\imports\Standard Assets\Characters\FirstPersonCharacter\Scripts\HeadBob.cs" />
     <Compile Include="Assets\imports\Standard Assets\Characters\FirstPersonCharacter\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\imports\Standard Assets\Characters\FirstPersonCharacter\Scripts\OpeningDoor.cs" />
     <Compile Include="Assets\imports\Standard Assets\Characters\FirstPersonCharacter\Scripts\RigidbodyFirstPersonController.cs" />
     <Compile Include="Assets\imports\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
     <Compile Include="Assets\imports\Standard Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
@@ -109,7 +110,6 @@
     <Compile Include="Assets\scripts\EnemySight.cs" />
     <Compile Include="Assets\scripts\FlashlightScript.cs" />
     <Compile Include="Assets\scripts\GeigerController.cs" />
-    <Compile Include="Assets\scripts\OpeningDoor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\imports\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
