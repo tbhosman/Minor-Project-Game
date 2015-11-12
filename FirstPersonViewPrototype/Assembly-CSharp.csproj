@@ -84,6 +84,7 @@
      <Compile Include="Assets\imports\Standard Assets\Utility\TimedObjectDestructor.cs" />
      <Compile Include="Assets\imports\Standard Assets\Utility\WaypointCircuit.cs" />
      <Compile Include="Assets\imports\Standard Assets\Utility\WaypointProgressTracker.cs" />
+     <Compile Include="Assets\scripts\EnemyRouting.cs" />
      <Compile Include="Assets\scripts\EnemySight.cs" />
      <Compile Include="Assets\scripts\FlashlightScript.cs" />
      <Compile Include="Assets\scripts\GeigerController.cs" />

@@ -1,0 +1,160 @@
+fileFormatVersion: 2
+guid: 1a0f7ad54c3c95a4a813ecce46a125bd
+timeCreated: 1447335668
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Basic_Wall_Generic_-_200mm__193866_
+    100002: Basic_Wall_Generic_-_200mm__193886_
+    100004: Basic_Wall_Generic_-_200mm__193908_
+    100006: Basic_Wall_Generic_-_200mm__193939_
+    100008: Basic_Wall_Generic_-_200mm__193984_
+    100010: Basic_Wall_Generic_-_200mm__194038_
+    100012: Basic_Wall_Generic_-_200mm__194170_
+    100014: Basic_Wall_Generic_-_200mm__194218_
+    100016: Basic_Wall_Generic_-_200mm__194260_
+    100018: Basic_Wall_Generic_-_200mm__194293_
+    100020: Basic_Wall_Generic_-_200mm__194324_
+    100022: Basic_Wall_Generic_-_200mm__194358_
+    100024: Basic_Wall_Generic_-_200mm__194402_
+    100026: M_Desk_1525_x_762mm_Student__195426_
+    100028: M_Desk_1525_x_762mm_Student__195477_
+    100030: M_Desk_1830_x_915mm__195615_
+    100032: M_Desk_1830_x_915mm__195672_
+    100034: //RootNode
+    400000: Basic_Wall_Generic_-_200mm__193866_
+    400002: Basic_Wall_Generic_-_200mm__193886_
+    400004: Basic_Wall_Generic_-_200mm__193908_
+    400006: Basic_Wall_Generic_-_200mm__193939_
+    400008: Basic_Wall_Generic_-_200mm__193984_
+    400010: Basic_Wall_Generic_-_200mm__194038_
+    400012: Basic_Wall_Generic_-_200mm__194170_
+    400014: Basic_Wall_Generic_-_200mm__194218_
+    400016: Basic_Wall_Generic_-_200mm__194260_
+    400018: Basic_Wall_Generic_-_200mm__194293_
+    400020: Basic_Wall_Generic_-_200mm__194324_
+    400022: Basic_Wall_Generic_-_200mm__194358_
+    400024: Basic_Wall_Generic_-_200mm__194402_
+    400026: M_Desk_1525_x_762mm_Student__195426_
+    400028: M_Desk_1525_x_762mm_Student__195477_
+    400030: M_Desk_1830_x_915mm__195615_
+    400032: M_Desk_1830_x_915mm__195672_
+    400034: //RootNode
+    2300000: Basic_Wall_Generic_-_200mm__193866_
+    2300002: Basic_Wall_Generic_-_200mm__193886_
+    2300004: Basic_Wall_Generic_-_200mm__193908_
+    2300006: Basic_Wall_Generic_-_200mm__193939_
+    2300008: Basic_Wall_Generic_-_200mm__193984_
+    2300010: Basic_Wall_Generic_-_200mm__194038_
+    2300012: Basic_Wall_Generic_-_200mm__194170_
+    2300014: Basic_Wall_Generic_-_200mm__194218_
+    2300016: Basic_Wall_Generic_-_200mm__194260_
+    2300018: Basic_Wall_Generic_-_200mm__194293_
+    2300020: Basic_Wall_Generic_-_200mm__194324_
+    2300022: Basic_Wall_Generic_-_200mm__194358_
+    2300024: Basic_Wall_Generic_-_200mm__194402_
+    2300026: M_Desk_1525_x_762mm_Student__195426_
+    2300028: M_Desk_1525_x_762mm_Student__195477_
+    2300030: M_Desk_1830_x_915mm__195615_
+    2300032: M_Desk_1830_x_915mm__195672_
+    3300000: Basic_Wall_Generic_-_200mm__193866_
+    3300002: Basic_Wall_Generic_-_200mm__193886_
+    3300004: Basic_Wall_Generic_-_200mm__193908_
+    3300006: Basic_Wall_Generic_-_200mm__193939_
+    3300008: Basic_Wall_Generic_-_200mm__193984_
+    3300010: Basic_Wall_Generic_-_200mm__194038_
+    3300012: Basic_Wall_Generic_-_200mm__194170_
+    3300014: Basic_Wall_Generic_-_200mm__194218_
+    3300016: Basic_Wall_Generic_-_200mm__194260_
+    3300018: Basic_Wall_Generic_-_200mm__194293_
+    3300020: Basic_Wall_Generic_-_200mm__194324_
+    3300022: Basic_Wall_Generic_-_200mm__194358_
+    3300024: Basic_Wall_Generic_-_200mm__194402_
+    3300026: M_Desk_1525_x_762mm_Student__195426_
+    3300028: M_Desk_1525_x_762mm_Student__195477_
+    3300030: M_Desk_1830_x_915mm__195615_
+    3300032: M_Desk_1830_x_915mm__195672_
+    4300000: M_Desk_1830_x_915mm__195672_
+    4300002: M_Desk_1830_x_915mm__195615_
+    4300004: M_Desk_1525_x_762mm_Student__195477_
+    4300006: M_Desk_1525_x_762mm_Student__195426_
+    4300008: Basic_Wall_Generic_-_200mm__194402_
+    4300010: Basic_Wall_Generic_-_200mm__194358_
+    4300012: Basic_Wall_Generic_-_200mm__194324_
+    4300014: Basic_Wall_Generic_-_200mm__194293_
+    4300016: Basic_Wall_Generic_-_200mm__194260_
+    4300018: Basic_Wall_Generic_-_200mm__194218_
+    4300020: Basic_Wall_Generic_-_200mm__194170_
+    4300022: Basic_Wall_Generic_-_200mm__194038_
+    4300024: Basic_Wall_Generic_-_200mm__193984_
+    4300026: Basic_Wall_Generic_-_200mm__193939_
+    4300028: Basic_Wall_Generic_-_200mm__193908_
+    4300030: Basic_Wall_Generic_-_200mm__193886_
+    4300032: Basic_Wall_Generic_-_200mm__193866_
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
