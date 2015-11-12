@@ -1,29 +1,32 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class GeigerController : MonoBehaviour {
 	
 	private float playerDistance;
 
+	private AudioSource GeigerAudioSource;
 	public AudioClip GeigerLevel1;
 	public AudioClip GeigerLevel2;
 	public AudioClip GeigerLevel3;
 	public AudioClip GeigerLevel4;
 
+	private int audiolevel = 0;
 	private bool canPlayAudio = true;
-	public float GeigerParameter; // Use this for initialization
+	public float GeigerParameter;
+
 	void Start () {
-	
-		GeigerLevel1 = null;
-		GeigerLevel2 = null;
-		GeigerLevel3 = null;
-		GeigerLevel4 = null;
+
+		GeigerAudioSource = GetComponent<AudioSource> ();
+		GeigerAudioSource.clip = GeigerLevel1;
+		GeigerAudioSource.loop = true;
+		GeigerAudioSource.Play();
 	}
 
 	void Update () {
-	
+
 		float radiodistance = DistanceToClosestRadioactive ();
-		print(PlayAudio (radiodistance));
+		audiolevel = ChooseAudioClip (radiodistance, audiolevel);
 	}
 
 	float DistanceToClosestRadioactive(){
@@ -40,23 +43,38 @@ public class GeigerController : MonoBehaviour {
 		}
 		return distance;
 	}
-
-	int PlayAudio(float radiodistance){
-		int audiolevel = 0;
-
-		if (radiodistance > 20) {
-			audiolevel = 1;
-		}
+	
+ 	int ChooseAudioClip(float radiodistance, int previousaudiolevel){
 		if (radiodistance < 20 && radiodistance > 12) {
 			audiolevel = 2;
+			if (audiolevel != previousaudiolevel){
+			GeigerAudioSource.clip = GeigerLevel2;
+			GeigerAudioSource.Play();
+			}
+				return audiolevel;
 		}
 		if (radiodistance < 12 && radiodistance > 8) {
 			audiolevel = 3;
+			if (audiolevel != previousaudiolevel){
+				GeigerAudioSource.clip = GeigerLevel3;
+				GeigerAudioSource.Play();
+			}
+				return audiolevel;
 		}
 		if (radiodistance < 8) {
 			audiolevel = 4;
+			if (audiolevel != previousaudiolevel){
+				GeigerAudioSource.clip = GeigerLevel4;
+				GeigerAudioSource.Play();
+			}
+				return audiolevel;
 		}
-
+		audiolevel = 1;
+		if (audiolevel != previousaudiolevel){
+			GeigerAudioSource.clip = GeigerLevel1;
+			GeigerAudioSource.Play();
+		}
 		return audiolevel;
+
 	}
 }

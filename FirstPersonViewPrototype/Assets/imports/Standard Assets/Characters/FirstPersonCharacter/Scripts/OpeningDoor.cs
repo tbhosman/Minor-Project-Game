@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using UnityStandardAssets.Characters.FirstPerson;
 
@@ -9,39 +10,50 @@ public class OpeningDoor : MonoBehaviour
     bool doorOpen;
     public GameObject player;
     private FirstPersonController firstpersoncontroller;
+    public Text doorText;
     void Start()
     {
         firstpersoncontroller = player.GetComponent<FirstPersonController>();
         doorOpen = false;
         animator = GetComponent<Animator>();
-        Debug.Log("key1 opgepakt: " + firstpersoncontroller.getKey1());
-    }
-
-
-    void OnTriggerEnter(Collider colli)
-    {
-       
-            if (colli.gameObject.tag == "Player" && firstpersoncontroller.getKey1())
-            {
-                doorOpen = true;
-                Doors("Open");
-                
-        }
-        
-        }
-
-    void OnTriggerExit(Collider coll)
-    {
-        if (doorOpen && firstpersoncontroller.getKey1())
-        {
-            doorOpen = false;
-            Doors("Close");
-        }
-    }
-
-    void Doors(string state)
-    {
-        animator.SetTrigger(state);
+        doorText.text = "";
     }
     
+    void OnTriggerStay(Collider colli)
+    {
+        if (colli.gameObject.tag == "Player")
+        {
+            if (firstpersoncontroller.getKey1())
+            {
+                doorText.text = "Press E to open the door";
+            }
+            else
+            {
+                doorText.text = "Locked";
+            }
+        }
+
+        if (colli.gameObject.tag == "Player" && firstpersoncontroller.getKey1() && !doorOpen && Input.GetKeyDown("e")) {
+            {
+                doorOpen = true;
+                doorText.text = "";
+                Doors("Open");
+            }
+        }
+    }
+        void OnTriggerExit(Collider coll)
+        {
+            if (doorOpen && firstpersoncontroller.getKey1())
+            {
+                doorOpen = false;
+                Doors("Close");
+            }
+            doorText.text = "";
+        }
+
+        void Doors(string state)
+    {
+            animator.SetTrigger(state);
+    }
+
 }
