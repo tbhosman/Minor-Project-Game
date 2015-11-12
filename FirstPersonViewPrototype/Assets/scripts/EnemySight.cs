@@ -51,9 +51,6 @@ public class EnemySight : MonoBehaviour {
 
 	protected bool CanHearPlayer(){
 
-		RaycastHit hit;
-		Vector3 rayDirection = Player.transform.position - transform.position;
-
 		if (Player.GetComponent<FirstPersonController>().MakingWalkingSound == true) {
 			hearDistance = hearDistanceWalking;
 		} else {
@@ -64,9 +61,9 @@ public class EnemySight : MonoBehaviour {
 			hearDistance = hearDistanceRunning;
 		}
 
-		if (Physics.Raycast(transform.position, rayDirection, out hit, hearDistance))
+		if (Vector3.Distance(Player.transform.position, transform.position) < hearDistance)
 		{
-			return (hit.transform.CompareTag("Player"));
+			return true;
 		}
 		return false;
 	}

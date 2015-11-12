@@ -62,6 +62,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			m_MouseLook.Init(transform , m_Camera.transform);
 			MakingWalkingSound = false;
 			MakingRunningSound = false;
+			//Cursor.visible = false; //uncomment to remove mouse
         }
 
 
@@ -220,7 +221,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // On standalone builds, walk/run speed is modified by a key press.
             // keep track of whether or not the character is walking or running
             m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
-			MakingRunningSound = !m_IsWalking; //Information for enemy
+			MakingRunningSound = !m_IsWalking && MakingWalkingSound; //Information for enemy
 #endif
             // set the desired speed to be walking or running
             speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
