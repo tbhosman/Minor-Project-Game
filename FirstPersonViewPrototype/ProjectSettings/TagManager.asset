@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - radioactive
-  - Key
-  - Waypoint
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -45,51 +41,3 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-=======
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!78 &1
-TagManager:
-  serializedVersion: 2
-  tags:
-  - radioactive
-  - Key
-  - Waypoint
-  layers:
-  - Default
-  - TransparentFX
-  - Ignore Raycast
-  - 
-  - Water
-  - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
->>>>>>> 06fc7cfc5111454a02d9ddd8a81c588a586102df

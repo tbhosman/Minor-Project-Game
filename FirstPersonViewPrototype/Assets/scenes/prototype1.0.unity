@@ -239,8 +239,10 @@ MonoBehaviour:
   waypoints: []
   canReach: 
   waypoint: {fileID: 0}
-  reachDist: 1
+  reachDist: .200000003
   speed: 2
+  cacheSize: 5
+  waypointcache: 
 --- !u!54 &287552375
 Rigidbody:
   m_ObjectHideFlags: 0
