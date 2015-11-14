@@ -37,7 +37,7 @@ public class MapGenerator : MonoBehaviour {
 
 	protected bool ReachableFromTo(Vector3 location1, Vector3 location2){
 		RaycastHit hit;
-		Vector3 rayDirection = location1 - location2;
+		Vector3 rayDirection = location2 - location1;
 		Vector3 p1 = location1 + Vector3.up * -enemyObject.transform.localScale.y * 0.5F;
 		Vector3 p2 = p1 + Vector3.up * enemyObject.transform.localScale.y;
 		
