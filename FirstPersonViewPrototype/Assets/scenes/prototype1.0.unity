@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 802715136}
-  fieldOfViewDegrees: 30
+  fieldOfViewDegrees: 70
   visibilityDistance: 120
   SeeingPlayer: 0
   deathDistance: 10
@@ -1366,6 +1366,10 @@ Prefab:
       propertyPath: m_Intensity
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 10820962, guid: e1b73d28571c314418e68b9d616fd825, type: 2}
+      propertyPath: m_SpotAngle
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1b73d28571c314418e68b9d616fd825, type: 2}
   m_IsPrefabParent: 0
@@ -1898,7 +1902,7 @@ Light:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
   m_Range: 40
-  m_SpotAngle: 30
+  m_SpotAngle: 70
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
