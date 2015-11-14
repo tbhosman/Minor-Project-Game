@@ -16,6 +16,8 @@ public class EnemyRouting : MonoBehaviour {
 	public int[] waypointcache;
 	private int reachindex;
 	private int waypoint_index;
+	public GameObject enemyObject;
+	public float CapsuleCastErrorDistance;
 
 	// Use this for initialization
 	void Start () {
@@ -74,10 +76,12 @@ public class EnemyRouting : MonoBehaviour {
 	protected bool Reachable(Vector3 location){
 		RaycastHit hit;
 		Vector3 rayDirection = location - transform.position;
+		Vector3 p1 = transform.position + Vector3.up * -enemyObject.transform.localScale.y * 0.5F;
+		Vector3 p2 = p1 + Vector3.up * enemyObject.transform.localScale.y;
 
-		if (Physics.Raycast(transform.position, rayDirection, out hit))
+		if (Physics.CapsuleCast(p1, p2, enemyObject.transform.localScale.x/2, rayDirection, out hit))
 		{
-			return (hit.transform.CompareTag("Waypoint"));
+			return (hit.transform.CompareTag("Waypoint") && (Vector3.Distance(hit.transform.position,location) < CapsuleCastErrorDistance));
 		}
 		return false;
 	}

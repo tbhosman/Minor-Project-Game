@@ -243,6 +243,8 @@ MonoBehaviour:
   speed: 2
   cacheSize: 5
   waypointcache: 
+  enemyObject: {fileID: 840483980}
+  CapsuleCastErrorDistance: 1
 --- !u!54 &287552375
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1183,7 +1185,7 @@ GameObject:
   - 65: {fileID: 840483984}
   - 23: {fileID: 840483983}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: EnemyObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
