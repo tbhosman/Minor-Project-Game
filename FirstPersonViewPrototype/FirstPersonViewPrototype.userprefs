@@ -1,7 +1,16 @@
 ﻿<Properties>
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\imports\Standard Assets\Characters\FirstPersonCharacter\Scripts\OpeningDoor.cs">
     <Files>
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\MapGenerator.cs">
+    <Files>
+      <File FileName="Assets\scripts\EnemyRouting.cs" Line="25" Column="32" />
+      <File FileName="Assets\scripts\Edge.cs" Line="11" Column="47" />
+      <File FileName="Assets\scripts\MapGenerator.cs" Line="33" Column="25" />
+>>>>>>> 8e243afb9bd73548607890648e313c9a4c8b2623
       <File FileName="Assets\imports\Standard Assets\Characters\FirstPersonCharacter\Scripts\OpeningDoor.cs" Line="19" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>

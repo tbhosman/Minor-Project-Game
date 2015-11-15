@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
   tags: []
+=======
+  tags:
+  - Waypoint
+  - radioactive
+  - Key
+>>>>>>> 8e243afb9bd73548607890648e313c9a4c8b2623
   layers:
   - Default
   - TransparentFX
@@ -13,7 +20,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Waypoint
   - 
   - 
   - 
