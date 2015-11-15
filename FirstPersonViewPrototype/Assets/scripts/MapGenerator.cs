@@ -31,7 +31,7 @@ public class MapGenerator : MonoBehaviour {
 			}
 		}
 
-		List<int> ans = map.shortest_path (0, 5);
+		List<int> ans = map.shortest_path (0, 5); //test calculation
 	}
 	
 	// Update is called once per frame
