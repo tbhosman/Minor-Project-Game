@@ -1,32 +1,25 @@
 ﻿<Properties>
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\imports\Standard Assets\Characters\FirstPersonCharacter\Scripts\OpeningDoor.cs">
-    <Files>
-=======
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\MapGenerator.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\EnemyRouting.cs">
     <Files>
-<<<<<<< HEAD
-      <File FileName="Assets\scripts\MapGenerator.cs" Line="35" Column="3" />
-      <File FileName="Assets\scripts\EnemyRouting.cs" Line="1" Column="1" />
-=======
-      <File FileName="Assets\scripts\EnemyRouting.cs" Line="25" Column="32" />
-      <File FileName="Assets\scripts\Edge.cs" Line="11" Column="47" />
-      <File FileName="Assets\scripts\MapGenerator.cs" Line="33" Column="25" />
->>>>>>> 8e243afb9bd73548607890648e313c9a4c8b2623
->>>>>>> bed8e1323ae539ebe44b9a3bf41c9df3ef2f4181
+      <File FileName="Assets\scripts\EnemyRouting.cs" Line="83" Column="79" />
+      <File FileName="Assets\scripts\MapGenerator.cs" Line="1" Column="1" />
       <File FileName="Assets\imports\Standard Assets\Characters\FirstPersonCharacter\Scripts\OpeningDoor.cs" Line="19" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="D:\Documents\Minor-Project-Game\FirstPersonViewPrototype\Assets\scripts\MapGenerator.cs" line="114" />
-      <Breakpoint file="D:\Documents\Minor-Project-Game\FirstPersonViewPrototype\Assets\scripts\MapGenerator.cs" line="125" />
-      <Breakpoint file="D:\Documents\Minor-Project-Game\FirstPersonViewPrototype\Assets\scripts\MapGenerator.cs" line="117" />
-      <Breakpoint file="D:\Documents\Minor-Project-Game\FirstPersonViewPrototype\Assets\scripts\MapGenerator.cs" line="106" />
-      <Breakpoint file="D:\Documents\Minor-Project-Game\FirstPersonViewPrototype\Assets\scripts\MapGenerator.cs" line="111" />
-      <Breakpoint file="D:\Documents\Minor-Project-Game\FirstPersonViewPrototype\Assets\scripts\MapGenerator.cs" line="109" />
+      <Breakpoint file="D:\Documents\Minor-Project-Game\FirstPersonViewPrototype\Assets\scripts\EnemyRouting.cs" line="75" />
+      <Breakpoint file="D:\Documents\Minor-Project-Game\FirstPersonViewPrototype\Assets\scripts\EnemyRouting.cs" line="76" />
+      <Breakpoint file="D:\Documents\Minor-Project-Game\FirstPersonViewPrototype\Assets\scripts\EnemyRouting.cs" line="77" />
+      <Breakpoint file="D:\Documents\Minor-Project-Game\FirstPersonViewPrototype\Assets\scripts\EnemyRouting.cs" line="78" />
+      <Breakpoint file="D:\Documents\Minor-Project-Game\FirstPersonViewPrototype\Assets\scripts\EnemyRouting.cs" line="79" />
+      <Breakpoint file="D:\Documents\Minor-Project-Game\FirstPersonViewPrototype\Assets\scripts\EnemyRouting.cs" line="83" />
+      <Breakpoint file="D:\Documents\Minor-Project-Game\FirstPersonViewPrototype\Assets\scripts\EnemyRouting.cs" line="84" />
+      <Breakpoint file="D:\Documents\Minor-Project-Game\FirstPersonViewPrototype\Assets\scripts\EnemyRouting.cs" line="85" />
+      <Breakpoint file="D:\Documents\Minor-Project-Game\FirstPersonViewPrototype\Assets\scripts\EnemyRouting.cs" line="86" />
+      <Breakpoint file="D:\Documents\Minor-Project-Game\FirstPersonViewPrototype\Assets\scripts\EnemyRouting.cs" line="87" />
+      <Breakpoint file="D:\Documents\Minor-Project-Game\FirstPersonViewPrototype\Assets\scripts\EnemyRouting.cs" line="88" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

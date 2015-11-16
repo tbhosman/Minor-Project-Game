@@ -18,6 +18,8 @@ public class EnemyRouting : MonoBehaviour {
 	private int waypoint_index;
 	public GameObject enemyObject;
 	public float CapsuleCastErrorDistance;
+	public float angleError;
+	public float turnSpeed;
 
 	// Use this for initialization
 	void Start () {
@@ -35,8 +37,8 @@ public class EnemyRouting : MonoBehaviour {
 		}
 		waypoint = waypoints[newWaypoint ()];
 		rb = GetComponent<Rigidbody>();
-		rb.velocity = transform.TransformDirection(new Vector3(0,0,speed));
-		rb.transform.LookAt (waypoint.transform.position + new Vector3(0,0.1f,0));
+		rb.velocity = transform.TransformDirection(new Vector3(0,0,0));
+		//rb.transform.LookAt (waypoint.transform.position + new Vector3(0,0.1f,0));
 
 		waypointcache = new int[cacheSize];
 		for (int i=0; i<cacheSize; i++) {
@@ -66,10 +68,25 @@ public class EnemyRouting : MonoBehaviour {
 
 			//set as new waypoint
 			waypoint = waypoints[newWaypoint()];
+			rb.velocity = transform.TransformDirection(new Vector3(0,0,0)); //set speed to 0 for turning to next waypoint
+
 		}
 
-		rb.velocity = transform.TransformDirection(new Vector3(0,0,speed));
-		rb.transform.LookAt (waypoint.transform.position + new Vector3(0,0.1f,0));
+		if (rb.velocity == new Vector3 (0, 0, 0)) { //turning to new waypoint
+			Vector3 newRotation = Quaternion.LookRotation(waypoint.transform.position - transform.position).eulerAngles;
+			newRotation.x = 0.0f;
+			newRotation.z = 0.0f;
+			if (Mathf.Abs((float) transform.rotation.eulerAngles.y - newRotation.y) < angleError ){ //pointing towards new waypoint
+				rb.velocity = transform.TransformDirection(new Vector3(0,0,speed));
+			}
+			else{
+				rb.transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(newRotation), Time.deltaTime * turnSpeed);
+			}
+		}
+		else{ //moving to a waypoint
+			rb.velocity = transform.TransformDirection(new Vector3(0,0,speed));
+			rb.transform.LookAt (waypoint.transform.position + new Vector3(0,0.1f,0));
+		}
 
 	}
 
