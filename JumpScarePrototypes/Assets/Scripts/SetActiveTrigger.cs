@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TriggerVanishers : MonoBehaviour {
+public class SetActiveTrigger : MonoBehaviour {
 
 	public GameObject ObjectToTrigger;
 	// Use this for initialization

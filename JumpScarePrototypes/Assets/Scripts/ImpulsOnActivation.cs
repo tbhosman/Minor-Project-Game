@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RollForce : MonoBehaviour {
+public class ImpulsOnActivation : MonoBehaviour {
 	public float thrust;
 	public bool applyforce = false;
 	// Use this for initialization
