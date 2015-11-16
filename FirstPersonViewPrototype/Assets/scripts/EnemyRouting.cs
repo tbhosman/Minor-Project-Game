@@ -11,7 +11,7 @@ public class EnemyRouting : MonoBehaviour {
 	public GameObject waypoint;
 	public float reachDist;
 	public float speed;
-	private Rigidbody rb;
+	public Rigidbody rb;
 	public int cacheSize;
 	public int[] waypointcache;
 	private int reachindex;
