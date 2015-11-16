@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class OnActivation : MonoBehaviour {
+public class JumpScareScript : MonoBehaviour {
 	
 	private AudioSource audiosource;
 	public bool Scare;
