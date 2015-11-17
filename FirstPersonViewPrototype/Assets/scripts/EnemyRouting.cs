@@ -25,6 +25,7 @@ public class EnemyRouting : MonoBehaviour {
 	public bool wantWalk;
 	public bool isAnimIdle;
 	public bool isAnimWalk;
+	public float CapsuleCastRangeCorrection;
 
 	// Use this for initialization
 	void Start () {
@@ -110,10 +111,10 @@ public class EnemyRouting : MonoBehaviour {
 	protected bool Reachable(Vector3 location){
 		RaycastHit hit;
 		Vector3 rayDirection = location - transform.position;
-		Vector3 p1 = transform.position + Vector3.up * -enemyObject.transform.localScale.y * 0.5F;
-		Vector3 p2 = p1 + Vector3.up * enemyObject.transform.localScale.y;
+		Vector3 p1 = transform.position + Vector3.up * -enemyObject.transform.lossyScale.y * 0.5F;
+		Vector3 p2 = p1 + Vector3.up * enemyObject.transform.lossyScale.y;
 
-		if (Physics.CapsuleCast(p1, p2, enemyObject.transform.localScale.x/2, rayDirection, out hit))
+		if (Physics.CapsuleCast(p1, p2, CapsuleCastRangeCorrection*enemyObject.transform.lossyScale.x/2, rayDirection, out hit))
 		{
 			return (hit.transform.CompareTag("Waypoint") && (Vector3.Distance(hit.transform.position,location) < CapsuleCastErrorDistance));
 		}
