@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
@@ -10,6 +11,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
     
     public class FirstPersonController : MonoBehaviour
     {
+
         [SerializeField] private bool m_IsWalking;
         [SerializeField] private float m_WalkSpeed;
         [SerializeField] private float m_RunSpeed;
@@ -28,6 +30,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
 
+        private bool wait;
         private Camera m_Camera;
         private bool m_Jump;
         private float m_YRotation;
@@ -49,6 +52,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Use this for initialization
         private void Start()
         {
+            wait = false;
             key1 = false;
             m_CharacterController = GetComponent<CharacterController>();
             m_Camera = Camera.main;
@@ -62,9 +66,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			m_MouseLook.Init(transform , m_Camera.transform);
 			MakingWalkingSound = false;
 			MakingRunningSound = false;
-			//Cursor.visible = false; //uncomment to remove mouse
+            //Cursor.visible = false; //uncomment to remove mouse
+            StartCoroutine(Wait(15));
         }
 
+        
 
         // Update is called once per frame
         private void Update()
@@ -181,71 +187,91 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_FootstepSounds[n] = m_FootstepSounds[0];
             m_FootstepSounds[0] = m_AudioSource.clip;
         }
+        IEnumerator Wait(int getal)
+        {
+            yield return new WaitForSeconds(getal);
+            setWait(true);
+        }
 
-
+        private void setWait(bool a) {
+            wait = a;
+        }
         private void UpdateCameraPosition(float speed)
         {
-            Vector3 newCameraPosition;
-            if (!m_UseHeadBob)
-            {
-                return;
-            }
-            if (m_CharacterController.velocity.magnitude > 0 && m_CharacterController.isGrounded)
-            {
-                m_Camera.transform.localPosition =
-                    m_HeadBob.DoHeadBob(m_CharacterController.velocity.magnitude +
-                                      (speed*(m_IsWalking ? 1f : m_RunstepLenghten)));
-                newCameraPosition = m_Camera.transform.localPosition;
-                newCameraPosition.y = m_Camera.transform.localPosition.y - m_JumpBob.Offset();
-            }
-            else
-            {
-                newCameraPosition = m_Camera.transform.localPosition;
-                newCameraPosition.y = m_OriginalCameraPosition.y - m_JumpBob.Offset();
-            }
-            m_Camera.transform.localPosition = newCameraPosition;
+            
+            
+                Vector3 newCameraPosition;
+                if (!m_UseHeadBob)
+                {
+                    return;
+                }
+                if (m_CharacterController.velocity.magnitude > 0 && m_CharacterController.isGrounded)
+                {
+                    m_Camera.transform.localPosition =
+                        m_HeadBob.DoHeadBob(m_CharacterController.velocity.magnitude +
+                                          (speed * (m_IsWalking ? 1f : m_RunstepLenghten)));
+                    newCameraPosition = m_Camera.transform.localPosition;
+                    newCameraPosition.y = m_Camera.transform.localPosition.y - m_JumpBob.Offset();
+                }
+                else
+                {
+                    newCameraPosition = m_Camera.transform.localPosition;
+                    newCameraPosition.y = m_OriginalCameraPosition.y - m_JumpBob.Offset();
+                }
+                m_Camera.transform.localPosition = newCameraPosition;
+            
         }
 
 
         private void GetInput(out float speed)
         {
-            // Read input
-            float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
-            float vertical = CrossPlatformInputManager.GetAxis("Vertical");
+            if (wait)
+            { // Read input
+                float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
+                float vertical = CrossPlatformInputManager.GetAxis("Vertical");
 
-			MakingWalkingSound = !(horizontal == 0 && vertical == 0); //Information for enemy
+                MakingWalkingSound = !(horizontal == 0 && vertical == 0); //Information for enemy
 
-            bool waswalking = m_IsWalking;
+                bool waswalking = m_IsWalking;
 
 #if !MOBILE_INPUT
-            // On standalone builds, walk/run speed is modified by a key press.
-            // keep track of whether or not the character is walking or running
-            m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
-			MakingRunningSound = !m_IsWalking && MakingWalkingSound; //Information for enemy
+                // On standalone builds, walk/run speed is modified by a key press.
+                // keep track of whether or not the character is walking or running
+                m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
+                MakingRunningSound = !m_IsWalking && MakingWalkingSound; //Information for enemy
 #endif
-            // set the desired speed to be walking or running
-            speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
-            m_Input = new Vector2(horizontal, vertical);
 
-            // normalize input if it exceeds 1 in combined length:
-            if (m_Input.sqrMagnitude > 1)
-            {
-                m_Input.Normalize();
+                // set the desired speed to be walking or running
+                speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
+                m_Input = new Vector2(horizontal, vertical);
+
+                // normalize input if it exceeds 1 in combined length:
+                if (m_Input.sqrMagnitude > 1)
+                {
+                    m_Input.Normalize();
+                }
+
+                // handle speed change to give an fov kick
+                // only if the player is going to a run, is running and the fovkick is to be used
+                if (m_IsWalking != waswalking && m_UseFovKick && m_CharacterController.velocity.sqrMagnitude > 0)
+                {
+                    StopAllCoroutines();
+                    StartCoroutine(!m_IsWalking ? m_FovKick.FOVKickUp() : m_FovKick.FOVKickDown());
+                }
             }
-
-            // handle speed change to give an fov kick
-            // only if the player is going to a run, is running and the fovkick is to be used
-            if (m_IsWalking != waswalking && m_UseFovKick && m_CharacterController.velocity.sqrMagnitude > 0)
+            else
             {
-                StopAllCoroutines();
-                StartCoroutine(!m_IsWalking ? m_FovKick.FOVKickUp() : m_FovKick.FOVKickDown());
+                speed = 0.0F;
             }
         }
 
 
         private void RotateView()
         {
-            m_MouseLook.LookRotation (transform, m_Camera.transform);
+            if (wait)
+            {
+                m_MouseLook.LookRotation(transform, m_Camera.transform);
+            }
         }
 
 

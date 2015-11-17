@@ -2,18 +2,19 @@
 using System.Collections;
 
 public class FlashlightScript : MonoBehaviour {
-
+    public toggleFlashLight toggleflashlight;
 	private Light flashlight;
-
-	void Start () {
-	
-		flashlight = this.GetComponent<Light> ();
-
-	}
-	
+   
+    
+    void Start()
+    {
+        flashlight = this.GetComponent<Light>();
+        flashlight.enabled = false;
+    }
 	void Update () {
-		
-		if (Input.GetKeyDown("f")){
+
+  
+        if (Input.GetKeyDown("f")&&toggleflashlight.getLight()){
 			
 			if (flashlight.enabled == true)
 			{
