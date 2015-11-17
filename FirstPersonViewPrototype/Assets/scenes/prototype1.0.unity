@@ -542,7 +542,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1439289686}
-  - {fileID: 1552522329}
   m_Father: {fileID: 0}
   m_RootOrder: 4
 --- !u!114 &287552374
@@ -568,6 +567,7 @@ MonoBehaviour:
   CapsuleCastErrorDistance: 1
   angleError: 5
   turnSpeed: 1
+  rampUpDuration: 2
 --- !u!54 &287552375
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -826,6 +826,10 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300230, guid: a8a3ef1a8a526ad47ba43d0d3f0e4c4b, type: 3}
+--- !u!4 &413765677 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400066, guid: 854320024729430469fe46a72ac29742, type: 3}
+  m_PrefabInternal: {fileID: 1439289685}
 --- !u!1 &427538328 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 166644, guid: 3ac649f0650f2034f8af72a9bf1b794c, type: 2}
@@ -3577,12 +3581,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1552522328}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .409999996, z: .400000006}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 5.96046412e-08, w: 1}
+  m_LocalPosition: {x: 1.02100003, y: 1.56599998, z: .103}
+  m_LocalScale: {x: .68061775, y: .68061775, z: .68061769}
   m_Children: []
-  m_Father: {fileID: 287552373}
-  m_RootOrder: 1
+  m_Father: {fileID: 413765677}
+  m_RootOrder: 0
 --- !u!108 &1552522330
 Light:
   m_ObjectHideFlags: 0
