@@ -21,6 +21,10 @@ public class EnemyRouting : MonoBehaviour {
 	public float angleError;
 	public float turnSpeed;
 	public float rampUpDuration;
+	public bool wantIdle;
+	public bool wantWalk;
+	public bool isAnimIdle;
+	public bool isAnimWalk;
 
 	// Use this for initialization
 	void Start () {
@@ -59,6 +63,8 @@ public class EnemyRouting : MonoBehaviour {
 		//if a new waypoint is needed (enemy is close to current waypoint)
 		if (Vector3.Distance (transform.position, waypoint.transform.position) < reachDist) {
 
+			wantWalk = false;
+
 			for (int i = 0; i < cacheSize-1; i++)
 			{
 				waypointcache[i] = waypointcache[i + 1]; //Shift all positions by one
@@ -69,16 +75,18 @@ public class EnemyRouting : MonoBehaviour {
 
 			//set as new waypoint
 			waypoint = waypoints[newWaypoint()];
-			rb.velocity = transform.TransformDirection(new Vector3(0,0,0));//StartCoroutine(RampSpeed(speed,0)); //set speed to 0 for turning to next waypoint
-
+			wantIdle = true;
+			//rb.velocity = transform.TransformDirection(new Vector3(0,0,0));//StartCoroutine(RampSpeed(speed,0)); //set speed to 0 for turning to next waypoint
 		}
 
 		if (rb.velocity == new Vector3 (0, 0, 0)) { //turning to new waypoint
+			wantIdle = false;
 			Vector3 newRotation = Quaternion.LookRotation(waypoint.transform.position - transform.position).eulerAngles;
 			newRotation.x = 0.0f;
 			newRotation.z = 0.0f;
 			if (Mathf.Abs((float) transform.rotation.eulerAngles.y - newRotation.y) < angleError ){ //pointing towards new waypoint
-				StartCoroutine(RampSpeed(0,speed));//rb.velocity = transform.TransformDirection(new Vector3(0,0, StartCoroutine(RampSpeed(0,speed))));
+				wantWalk = true;
+				//StartCoroutine(RampSpeed(0,speed));//rb.velocity = transform.TransformDirection(new Vector3(0,0, StartCoroutine(RampSpeed(0,speed))));
 			}
 			else{
 				rb.transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(newRotation), Time.deltaTime * turnSpeed);
@@ -87,6 +95,14 @@ public class EnemyRouting : MonoBehaviour {
 		else{ //moving to a waypoint
 			rb.velocity = transform.TransformDirection(new Vector3(0,0,speed));
 			rb.transform.LookAt (waypoint.transform.position + new Vector3(0,0.1f,0));
+		}
+
+		if (isAnimIdle == true){
+			rb.velocity = transform.TransformDirection(new Vector3(0,0,0));
+		}
+		else if (isAnimWalk == true){
+			rb.velocity = transform.TransformDirection(new Vector3(0,0,speed));
+			//StartCoroutine(RampSpeed(0,speed));
 		}
 
 	}

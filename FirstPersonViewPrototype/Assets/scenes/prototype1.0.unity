@@ -558,7 +558,7 @@ MonoBehaviour:
   waypoints: []
   canReach: 
   waypoint: {fileID: 0}
-  reachDist: .200000003
+  reachDist: .5
   speed: 2
   rb: {fileID: 0}
   cacheSize: 5
@@ -568,6 +568,10 @@ MonoBehaviour:
   angleError: 5
   turnSpeed: 1
   rampUpDuration: 2
+  wantIdle: 0
+  wantWalk: 0
+  isAnimIdle: 0
+  isAnimWalk: 0
 --- !u!54 &287552375
 Rigidbody:
   m_ObjectHideFlags: 0

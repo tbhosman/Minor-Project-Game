@@ -11,8 +11,23 @@ public class EnemyAnimationScript : MonoBehaviour {
 	}
 
 	public void Update() {
-		Debug.Log(animator.GetFloat ("Speed"));
-		animator.SetFloat("Speed", Mathf.Abs (GameObject.Find ("Enemy").GetComponent<EnemyRouting> ().rb.velocity.z));
+		if (GameObject.Find ("Enemy").GetComponent<EnemyRouting> ().wantIdle) {
+			animator.SetFloat("Speed", 0); //sets animation to idle
+		}
+		else if (GameObject.Find ("Enemy").GetComponent<EnemyRouting> ().wantWalk) {
+			animator.SetFloat("Speed", GameObject.Find ("Enemy").GetComponent<EnemyRouting> ().speed); //sets animation to walking
+		}
+
+		if (animator.GetCurrentAnimatorStateInfo (0).IsName("Idle")) {
+			GameObject.Find ("Enemy").GetComponent<EnemyRouting> ().isAnimIdle = true;
+			GameObject.Find ("Enemy").GetComponent<EnemyRouting> ().isAnimWalk = false;
+
+		} else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Walking")) {
+			GameObject.Find ("Enemy").GetComponent<EnemyRouting> ().isAnimIdle = false;
+			GameObject.Find ("Enemy").GetComponent<EnemyRouting> ().isAnimWalk = true;
+		}
+		//Debug.Log(animator.GetFloat ("Speed"));
+		//animator.SetFloat("Speed", Mathf.Abs (GameObject.Find ("Enemy").GetComponent<EnemyRouting> ().rb.velocity.z));
 		}
 }
 
