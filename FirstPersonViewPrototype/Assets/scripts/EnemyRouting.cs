@@ -126,7 +126,7 @@ public class EnemyRouting : MonoBehaviour {
 		newReachables = new ArrayList();
 		for (int i = 0; i < waypoints_parent.transform.childCount; i++)
 		{
-			if (canReach[i] == true){
+			if (canReach[i] == true && waypoint_index != i){
 				Reachables.Add(i);
 				if (PositionNotCached(i)){
 					newReachables.Add(i);
@@ -136,9 +136,9 @@ public class EnemyRouting : MonoBehaviour {
 
 		//if possible, choose waypoint not in cache
 		if (newReachables.Count == 0) {
-			reachindex = (int)Reachables [Random.Range (0, Reachables.Count - 1)];
+			reachindex = (int) Reachables[Reachables.Count-1]; //take oldest location
 		} else {
-			reachindex = (int)newReachables [Random.Range (0, newReachables.Count - 1)];
+			reachindex = (int) newReachables [Random.Range (0, newReachables.Count)];
 		}
 
 		return reachindex;
