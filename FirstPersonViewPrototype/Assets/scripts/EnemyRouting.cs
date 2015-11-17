@@ -92,7 +92,7 @@ public class EnemyRouting : MonoBehaviour {
 				rb.transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(newRotation), Time.deltaTime * turnSpeed);
 			}
 		}
-		else{ //moving to a waypoint
+		else if (wantWalk == true){ //moving to a waypoint
 			rb.velocity = transform.TransformDirection(new Vector3(0,0,speed));
 			rb.transform.LookAt (waypoint.transform.position + new Vector3(0,0.1f,0));
 		}
