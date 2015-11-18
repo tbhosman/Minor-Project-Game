@@ -26,6 +26,7 @@ public class EnemyRouting : MonoBehaviour {
 	public bool isAnimIdle;
 	public bool isAnimWalk;
 	public float CapsuleCastRangeCorrection;
+	public float animStopDist;
 
 	// Use this for initialization
 	void Start () {
@@ -61,25 +62,6 @@ public class EnemyRouting : MonoBehaviour {
 			canReach[i] = Reachable(waypoints[i].transform.position);
 		}
 
-		//if a new waypoint is needed (enemy is close to current waypoint)
-		if (Vector3.Distance (transform.position, waypoint.transform.position) < reachDist) {
-
-			wantWalk = false;
-
-			for (int i = 0; i < cacheSize-1; i++)
-			{
-				waypointcache[i] = waypointcache[i + 1]; //Shift all positions by one
-			}
-			waypointcache[cacheSize-1] = waypoint_index; //Add previous waypoint to cache
-
-			waypoint_index = newWaypoint ();
-
-			//set as new waypoint
-			waypoint = waypoints[newWaypoint()];
-			wantIdle = true;
-			//rb.velocity = transform.TransformDirection(new Vector3(0,0,0));//StartCoroutine(RampSpeed(speed,0)); //set speed to 0 for turning to next waypoint
-		}
-
 		if (rb.velocity == new Vector3 (0, 0, 0)) { //turning to new waypoint
 			wantIdle = false;
 			Vector3 newRotation = Quaternion.LookRotation(waypoint.transform.position - transform.position).eulerAngles;
@@ -106,6 +88,30 @@ public class EnemyRouting : MonoBehaviour {
 			//StartCoroutine(RampSpeed(0,speed));
 		}
 
+	}
+
+	void LateUpdate(){
+		//if a new waypoint is needed (enemy is close to current waypoint)
+		if (Vector3.Distance (transform.position, waypoint.transform.position) < animStopDist) {
+			
+			wantWalk = false;
+
+		}
+
+		if (Vector3.Distance (transform.position, waypoint.transform.position) < reachDist) {
+
+			for (int i = 0; i < cacheSize-1; i++) {
+				waypointcache [i] = waypointcache [i + 1]; //Shift all positions by one
+			}
+			waypointcache [cacheSize - 1] = waypoint_index; //Add previous waypoint to cache
+			
+			waypoint_index = newWaypoint ();
+			
+			//set as new waypoint
+			waypoint = waypoints [waypoint_index];
+			wantIdle = true;
+			//rb.velocity = transform.TransformDirection(new Vector3(0,0,0));//StartCoroutine(RampSpeed(speed,0)); //set speed to 0 for turning to next waypoint
+		}
 	}
 
 	protected bool Reachable(Vector3 location){
@@ -136,7 +142,7 @@ public class EnemyRouting : MonoBehaviour {
 
 		//if possible, choose waypoint not in cache
 		if (newReachables.Count == 0) {
-			reachindex = (int) Reachables[Reachables.Count-1]; //take oldest location
+			reachindex = (int) Reachables[0]; //take oldest location
 		} else {
 			reachindex = (int) newReachables [Random.Range (0, newReachables.Count)];
 		}
