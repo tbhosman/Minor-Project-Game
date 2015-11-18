@@ -27,6 +27,9 @@ public class EnemyRouting : MonoBehaviour {
 	public bool isAnimWalk;
 	public float CapsuleCastRangeCorrection;
 	public float animStopDist;
+	private Vector3 playerLocation;
+	public bool followingPlayer;
+	public int waypointToPlayer;
 
 	// Use this for initialization
 	void Start () {
@@ -55,6 +58,13 @@ public class EnemyRouting : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (GetComponent<EnemySight> ().hearingPlayer || GetComponent<EnemySight> ().seeingPlayer) {
+			playerLocation = GameObject.Find("FPSController").gameObject.transform.position;
+			followingPlayer = true;
+			waypointToPlayer = findWaypointToPlayer();
+			//route enemy to waypoint using Dijkstra
+		}
 
 		//check which waypoints can be reached
 		for (int i = 0; i < waypoints.Length; i++)
@@ -169,4 +179,30 @@ public class EnemyRouting : MonoBehaviour {
 		}
 	}
 
+	int findWaypointToPlayer(){
+		int ans = -1;
+		float dist = float.MaxValue;
+		for (int i = 0; i < waypoints_parent.transform.childCount; i++){
+			float wp = Vector3.Distance(waypoints[i].gameObject.transform.position,playerLocation);
+			if (ReachableWaypointToPlayer(i)){
+				if (Mathf.Abs(wp) < dist){
+					dist = Mathf.Abs(wp);
+					ans = i;
+				}
+			}
+		}
+		return ans;
+	}
+
+	protected bool ReachableWaypointToPlayer(int waypointToReach){
+		RaycastHit hit;
+		Vector3 pos = waypoints [waypointToReach].gameObject.transform.position;
+		Vector3 rayDirection = playerLocation - pos;
+		
+		if (Physics.Raycast(pos, rayDirection, out hit))
+		{
+			return hit.transform.CompareTag("Player");
+		}
+		return false;
+	}
 }

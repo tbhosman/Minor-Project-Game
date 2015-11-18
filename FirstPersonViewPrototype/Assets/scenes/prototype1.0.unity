@@ -17,9 +17,9 @@ RenderSettings:
   m_Fog: 0
   m_FogColor: {r: .5, g: .5, b: .5, a: 1}
   m_FogMode: 3
-  m_FogDensity: .00999999978
-  m_LinearFogStart: 0
-  m_LinearFogEnd: 300
+  m_FogDensity: .0500000007
+  m_LinearFogStart: 10
+  m_LinearFogEnd: 20
   m_AmbientSkyColor: {r: .211999997, g: .226999998, b: .259000003, a: 1}
   m_AmbientEquatorColor: {r: .114, g: .125, b: .133000001, a: 1}
   m_AmbientGroundColor: {r: .0469999984, g: .0430000015, b: .0350000001, a: 1}
@@ -641,6 +641,8 @@ MonoBehaviour:
   hearDistanceStanding: 5
   hearDistanceWalking: 25
   hearDistanceRunning: 50
+  hearingPlayer: 0
+  seeingPlayer: 0
 --- !u!4 &287552373
 Transform:
   m_ObjectHideFlags: 0
