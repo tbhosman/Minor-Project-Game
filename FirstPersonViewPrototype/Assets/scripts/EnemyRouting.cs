@@ -74,6 +74,8 @@ public class EnemyRouting : MonoBehaviour {
 	void Update () {
 
 		if (followingPlayer && RouteToPlayer.Count == 0) {
+			wantWalk = true;
+			wantIdle = false;
 			rb.velocity = transform.TransformDirection(new Vector3(0,0,speed));
 			//if enemy can walk to player directly, go there
 			if (enemyCanReachPlayer()){
@@ -253,7 +255,7 @@ public class EnemyRouting : MonoBehaviour {
 		Vector3 pos = waypoints [waypointToReach].gameObject.transform.position;
 		Vector3 rayDirection = lastPlayerLocation - pos;
 
-		hit = Physics.RaycastAll(pos, rayDirection);
+		hit = Physics.RaycastAll(new Ray(pos, rayDirection));
 		if (hit[hit.Length-1].transform.CompareTag("Player")){
 			return true;
 		}
