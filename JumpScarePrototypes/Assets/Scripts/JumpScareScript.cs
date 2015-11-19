@@ -8,8 +8,10 @@ public class JumpScareScript : MonoBehaviour {
 	public float scaredistance;
 	private GameObject Player;
 	public float Scarelength;
+	public static bool triggered;
 	
 	void Start () {
+		triggered = false;
 		Player = GameObject.FindGameObjectWithTag ("Player");
 		GetComponent<MeshRenderer>().enabled = false;
 		bool Scare = false;
@@ -18,6 +20,9 @@ public class JumpScareScript : MonoBehaviour {
 	}
 	
 	void Update(){
+		if (triggered){
+			gameObject.SetActive(false);
+		}
 			if (Scare == true) {
 				if (Vector3.Distance (transform.position, Player.transform.position)<scaredistance){
 					audiosource.UnPause();
