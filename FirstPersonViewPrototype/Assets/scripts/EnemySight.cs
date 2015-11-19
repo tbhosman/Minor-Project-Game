@@ -7,19 +7,21 @@ public class EnemySight : MonoBehaviour {
 	public GameObject Player;
 	public float fieldOfViewDegrees = 30;
 	public float visibilityDistance = 50;
-	public bool SeeingPlayer;
 	public float deathDistance;
 	public float hearDistance;
 	public float hearDistanceStanding = 10;
 	public float hearDistanceWalking = 50;
 	public float hearDistanceRunning = 100;
+	public bool hearingPlayer;
+	public bool seeingPlayer;
 
 	void Update(){
-		SeeingPlayer = CanSeePlayer();
+		seeingPlayer = CanSeePlayer();
 		float Distance = Vector3.Distance(transform.position, Player.transform.position);
 
-		if ((SeeingPlayer == true)) {
-			transform.LookAt(Player.transform.position);
+		if ((seeingPlayer == true)) {
+			//transform.LookAt(Player.transform.position);
+			Debug.Log("I can see you.");
 
 			if (Distance < deathDistance){
 				Debug.Log("You died");
@@ -27,7 +29,8 @@ public class EnemySight : MonoBehaviour {
 			}
 		}
 
-		if (CanHearPlayer () == true) {
+		hearingPlayer = CanHearPlayer ();
+		if (hearingPlayer) {
 			Debug.Log ("I can hear you.");
 		}
 	}

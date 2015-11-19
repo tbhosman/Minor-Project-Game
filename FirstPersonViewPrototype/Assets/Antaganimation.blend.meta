@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 854320024729430469fe46a72ac29742
-timeCreated: 1447689688
+guid: d29be4ae8d466f9488c17dbc2491d376
+timeCreated: 1447762547
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -27,27 +27,28 @@ ModelImporter:
     100038: hipsCtrl
     100040: kneeCtrl_L
     100042: kneeCtrl_R
-    100044: Lower_back
-    100046: lowerArm_L
-    100048: lowerArm_R
-    100050: lowerLeg_L
-    100052: lowerLeg_R
-    100054: Neck
-    100056: toeRoll_L
-    100058: toeRoll_R
-    100060: Torso_001
-    100062: Torso_001_MeshPart0
-    100064: Torso_001_MeshPart1
-    100066: Torso_001_MeshPart2
-    100068: Torso_001_MeshPart3
-    100070: Torso_001_MeshPart4
-    100072: Torso_001_MeshPart5
-    100074: upperArm_L
-    100076: upperArm_R
-    100078: upperLeg_L
-    100080: upperLeg_R
-    100082: wrist_L
-    100084: wrist_R
+    100044: Lamp
+    100046: Lamp_MeshPart0
+    100048: Lamp_MeshPart1
+    100050: Lamp_MeshPart2
+    100052: Lamp_MeshPart3
+    100054: Lamp_MeshPart4
+    100056: Lamp_MeshPart5
+    100058: Lichaam
+    100060: Lower_back
+    100062: lowerArm_L
+    100064: lowerArm_R
+    100066: lowerLeg_L
+    100068: lowerLeg_R
+    100070: Neck
+    100072: toeRoll_L
+    100074: toeRoll_R
+    100076: upperArm_L
+    100078: upperArm_R
+    100080: upperLeg_L
+    100082: upperLeg_R
+    100084: wrist_L
+    100086: wrist_R
     400000: //RootNode
     400002: Armature
     400004: Back
@@ -70,42 +71,45 @@ ModelImporter:
     400038: hipsCtrl
     400040: kneeCtrl_L
     400042: kneeCtrl_R
-    400044: Lower_back
-    400046: lowerArm_L
-    400048: lowerArm_R
-    400050: lowerLeg_L
-    400052: lowerLeg_R
-    400054: Neck
-    400056: toeRoll_L
-    400058: toeRoll_R
-    400060: Torso_001
-    400062: Torso_001_MeshPart0
-    400064: Torso_001_MeshPart1
-    400066: Torso_001_MeshPart2
-    400068: Torso_001_MeshPart3
-    400070: Torso_001_MeshPart4
-    400072: Torso_001_MeshPart5
-    400074: upperArm_L
-    400076: upperArm_R
-    400078: upperLeg_L
-    400080: upperLeg_R
-    400082: wrist_L
-    400084: wrist_R
-    4300000: Torso_001_MeshPart0
-    4300002: Torso_001_MeshPart1
-    4300004: Torso_001_MeshPart2
-    4300006: Torso_001_MeshPart3
-    4300008: Torso_001_MeshPart4
-    4300010: Torso_001_MeshPart5
-    7400000: Idle
-    7400002: Walk
+    400044: Lamp
+    400046: Lamp_MeshPart0
+    400048: Lamp_MeshPart1
+    400050: Lamp_MeshPart2
+    400052: Lamp_MeshPart3
+    400054: Lamp_MeshPart4
+    400056: Lamp_MeshPart5
+    400058: Lichaam
+    400060: Lower_back
+    400062: lowerArm_L
+    400064: lowerArm_R
+    400066: lowerLeg_L
+    400068: lowerLeg_R
+    400070: Neck
+    400072: toeRoll_L
+    400074: toeRoll_R
+    400076: upperArm_L
+    400078: upperArm_R
+    400080: upperLeg_L
+    400082: upperLeg_R
+    400084: wrist_L
+    400086: wrist_R
+    4300000: Lichaam
+    4300002: Lamp_MeshPart0
+    4300004: Lamp_MeshPart1
+    4300006: Lamp_MeshPart2
+    4300008: Lamp_MeshPart3
+    4300010: Lamp_MeshPart4
+    4300012: Lamp_MeshPart5
+    7400000: Default Take
+    7400002: ArmatureAction_001
     9500000: //RootNode
-    13700000: Torso_001_MeshPart0
-    13700002: Torso_001_MeshPart1
-    13700004: Torso_001_MeshPart2
-    13700006: Torso_001_MeshPart3
-    13700008: Torso_001_MeshPart4
-    13700010: Torso_001_MeshPart5
+    13700000: Lamp_MeshPart0
+    13700002: Lamp_MeshPart1
+    13700004: Lamp_MeshPart2
+    13700006: Lamp_MeshPart3
+    13700008: Lamp_MeshPart4
+    13700010: Lamp_MeshPart5
+    13700012: Lichaam
   materials:
     importMaterials: 1
     materialName: 0
@@ -127,7 +131,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Idle
+      name: Default Take
       takeName: Default Take
       firstFrame: 21
       lastFrame: 51
@@ -222,24 +226,26 @@ ModelImporter:
         weight: 1
       - path: Armature/hipsCtrl/Bone/upperLeg_R/lowerLeg_R/heel_R/foot_R
         weight: 1
-      - path: Torso_001
+      - path: Lamp
         weight: 0
-      - path: Torso_001/Torso_001_MeshPart0
+      - path: Lamp/Lamp_MeshPart0
         weight: 0
-      - path: Torso_001/Torso_001_MeshPart1
+      - path: Lamp/Lamp_MeshPart1
         weight: 0
-      - path: Torso_001/Torso_001_MeshPart2
+      - path: Lamp/Lamp_MeshPart2
         weight: 0
-      - path: Torso_001/Torso_001_MeshPart3
+      - path: Lamp/Lamp_MeshPart3
         weight: 0
-      - path: Torso_001/Torso_001_MeshPart4
+      - path: Lamp/Lamp_MeshPart4
         weight: 0
-      - path: Torso_001/Torso_001_MeshPart5
+      - path: Lamp/Lamp_MeshPart5
+        weight: 0
+      - path: Lichaam
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
     - serializedVersion: 16
-      name: Walk
+      name: ArmatureAction_001
       takeName: ArmatureAction_001
       firstFrame: 56
       lastFrame: 85
@@ -334,19 +340,21 @@ ModelImporter:
         weight: 1
       - path: Armature/hipsCtrl/Bone/upperLeg_R/lowerLeg_R/heel_R/foot_R
         weight: 1
-      - path: Torso_001
+      - path: Lamp
         weight: 0
-      - path: Torso_001/Torso_001_MeshPart0
+      - path: Lamp/Lamp_MeshPart0
         weight: 0
-      - path: Torso_001/Torso_001_MeshPart1
+      - path: Lamp/Lamp_MeshPart1
         weight: 0
-      - path: Torso_001/Torso_001_MeshPart2
+      - path: Lamp/Lamp_MeshPart2
         weight: 0
-      - path: Torso_001/Torso_001_MeshPart3
+      - path: Lamp/Lamp_MeshPart3
         weight: 0
-      - path: Torso_001/Torso_001_MeshPart4
+      - path: Lamp/Lamp_MeshPart4
         weight: 0
-      - path: Torso_001/Torso_001_MeshPart5
+      - path: Lamp/Lamp_MeshPart5
+        weight: 0
+      - path: Lichaam
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
@@ -726,40 +734,45 @@ ModelImporter:
       rotation: {x: .952934027, y: -3.99936795e-08, z: .303177685, w: 1.26770942e-07}
       scale: {x: 1.00000036, y: 1, z: 1}
       transformModified: 1
-    - name: Torso_001
+    - name: Lamp
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: -5.96046412e-08, w: 1}
       scale: {x: 9.79502296, y: 9.79502296, z: 9.79502392}
       transformModified: 1
-    - name: Torso_001_MeshPart0
+    - name: Lamp_MeshPart0
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: Torso_001_MeshPart1
+    - name: Lamp_MeshPart1
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: Torso_001_MeshPart2
+    - name: Lamp_MeshPart2
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: Torso_001_MeshPart3
+    - name: Lamp_MeshPart3
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: Torso_001_MeshPart4
+    - name: Lamp_MeshPart4
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: Torso_001_MeshPart5
+    - name: Lamp_MeshPart5
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Lichaam
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: -5.96046412e-08, w: 1}
+      scale: {x: 9.79502296, y: 9.79502296, z: 9.79502392}
       transformModified: 1
     armTwist: .5
     foreArmTwist: .5

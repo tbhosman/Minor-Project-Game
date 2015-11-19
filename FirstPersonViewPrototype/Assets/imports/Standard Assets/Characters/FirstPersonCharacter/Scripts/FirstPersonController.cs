@@ -67,7 +67,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			MakingWalkingSound = false;
 			MakingRunningSound = false;
             //Cursor.visible = false; //uncomment to remove mouse
-            StartCoroutine(Wait(15));
+            StartCoroutine(Wait(8));
         }
 
         

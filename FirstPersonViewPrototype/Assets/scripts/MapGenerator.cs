@@ -7,11 +7,12 @@ public class MapGenerator : MonoBehaviour {
 
 	public GameObject enemyObject;
 	public float CapsuleCastErrorDistance;
+	public Graph map;
 
 	// Use this for initialization
 	void Start () {
 	
-		Graph map = new Graph ();
+		map = new Graph ();
 
 		for (int a = 0; a < transform.childCount; a++) {
 			map.add_vertex(a, new Dictionary<int, float>());
@@ -41,17 +42,17 @@ public class MapGenerator : MonoBehaviour {
 	protected bool ReachableFromTo(Vector3 location1, Vector3 location2){
 		RaycastHit hit;
 		Vector3 rayDirection = location2 - location1;
-		Vector3 p1 = location1 + Vector3.up * -enemyObject.transform.localScale.y * 0.5F;
-		Vector3 p2 = p1 + Vector3.up * enemyObject.transform.localScale.y;
+		Vector3 p1 = location1 + Vector3.up * -enemyObject.transform.lossyScale.y * 0.5F;
+		Vector3 p2 = p1 + Vector3.up * enemyObject.transform.lossyScale.y;
 		
-		if (Physics.CapsuleCast(p1, p2, enemyObject.transform.localScale.x/2, rayDirection, out hit)) //cast a rough enemy size to other waypoint
+		if (Physics.CapsuleCast(p1, p2, GameObject.Find("Enemy").GetComponent<EnemyRouting>().CapsuleCastRangeCorrection * enemyObject.transform.lossyScale.x/2, rayDirection, out hit)) //cast a rough enemy size to other waypoint
 		{
 			return ((hit.transform.CompareTag("Waypoint")) && (Vector3.Distance(hit.transform.position,location2) < CapsuleCastErrorDistance));
 		}
 		return false;
 	}
 
-	class Graph
+	public class Graph
 	{
 		Dictionary<int, Dictionary<int, float>> vertices = new Dictionary<int, Dictionary<int, float>>();
 		
