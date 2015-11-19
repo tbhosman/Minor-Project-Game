@@ -249,21 +249,19 @@ public class EnemyRouting : MonoBehaviour {
 	}
 
 	protected bool ReachableWaypointToPlayer(int waypointToReach){ //check if player is reachable from a waypoint
-		RaycastHit hit;
+		RaycastHit[] hit;
 		Vector3 pos = waypoints [waypointToReach].gameObject.transform.position;
-		pos.y = transform.position.y;
 		Vector3 rayDirection = lastPlayerLocation - pos;
-		
-		if (Physics.Raycast(pos, rayDirection, out hit))
-		{
-			return hit.transform.CompareTag("Player");
+
+		hit = Physics.RaycastAll(pos, rayDirection);
+		if (hit[hit.Length-1].transform.CompareTag("Player")){
+			return true;
 		}
 		return false;
 	}
 
 	protected bool enemyCanReachPlayer(){
 		Vector3 location = GameObject.Find ("FPSController").transform.position;
-		location.y = transform.position.y;
 		RaycastHit hit;
 		Vector3 rayDirection = location - transform.position;
 		Vector3 p1 = transform.position + Vector3.up * -enemyObject.transform.lossyScale.y * 0.5F;
