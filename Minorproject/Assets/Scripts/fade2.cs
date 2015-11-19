@@ -10,13 +10,15 @@ public class fade2 : MonoBehaviour {
 	public float duration = 0.5f;
 	public Light dimLight;
 	public float zoomSpeed1 = 0.05f;
-	public float zoomSpeed2 = 0.5f;
 
+
+	void Start () {
+		timer = 0.0f;
+	}
 
 	// Update is called once per frame
 	void Update () {
 		timer += Time.deltaTime;
-		//float ratio1 = Time.time / duration;
 
 		Text text1 = texts [1];
 		text1.color = Color.black;
@@ -37,11 +39,10 @@ public class fade2 : MonoBehaviour {
 
 			}
 			//Debug.Log (timer);
-			//Debug.Log (timer);
-
+			//Debug.Log (ratio);
 		} else if (timer > 5.0f && timer < 10.0f) {
 		
-			float ratio = (Time.time - 5.0f) / duration; //- ratio1;
+			float ratio = (timer - 5.0f) / duration; //- ratio1;
 			Text text = texts [1];
 			text.color = Color.white;
 			Color myColor = text.color;
@@ -51,12 +52,12 @@ public class fade2 : MonoBehaviour {
 				myColor.a = Mathf.Lerp (1, 0, ratio);
 				text.color = myColor;
 			}
-			Debug.Log (ratio);
+			//Debug.Log (ratio);
 			//Debug.Log (timer);
 
 		} else if (timer > 10.0f && timer < 15.0f) {
 			
-			float ratio = (Time.time - 10.0f) / duration; //- ratio1;
+			float ratio = (timer - 10.0f) / duration; //- ratio1;
 			Text text = texts [2];
 			text.color = Color.white;
 			Color myColor = text.color;
@@ -66,11 +67,11 @@ public class fade2 : MonoBehaviour {
 				myColor.a = Mathf.Lerp (1, 0, ratio);
 				text.color = myColor;
 			}
-			Debug.Log (ratio);
+			//Debug.Log (ratio);
 			//Debug.Log (timer);
 		} else if (timer > 15.0f && timer < 20.0f) {
 			
-			float ratio = (Time.time - 15.0f) / duration; //- ratio1;
+			float ratio = (timer - 15.0f) / duration; //- ratio1;
 			Text text = texts [3];
 			text.color = Color.white;
 			Color myColor = text.color;
@@ -82,12 +83,14 @@ public class fade2 : MonoBehaviour {
 			}
 			//Debug.Log (ratio);
 			//Debug.Log (timer);
-		} else if (timer > 20.0f) {
+		} else if (timer > 20.0f && timer < 25.0f) {
 			dimLight.intensity += zoomSpeed1;
 			} if (timer > 25.0f) {
 				dimLight.intensity -= zoomSpeed1;
 			}
-		}
-}
+		} 
+	}
+
+
 
 
