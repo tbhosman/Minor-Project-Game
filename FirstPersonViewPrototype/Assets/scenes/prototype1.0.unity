@@ -421,7 +421,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 117293985}
-  - 65: {fileID: 117293986}
+  - 135: {fileID: 117293986}
   m_Layer: 8
   m_Name: Waypoint 9
   m_TagString: Waypoint
@@ -441,8 +441,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1924482527}
   m_RootOrder: 8
---- !u!65 &117293986
-BoxCollider:
+--- !u!135 &117293986
+SphereCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -451,7 +451,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: .5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &118028549
 GameObject:
@@ -1804,7 +1804,7 @@ GameObject:
   - 95: {fileID: 519220854}
   - 65: {fileID: 519220853}
   - 114: {fileID: 519220852}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Hinge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2100,7 +2100,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 584166210}
-  - 65: {fileID: 584166211}
+  - 135: {fileID: 584166211}
   m_Layer: 8
   m_Name: Waypoint 5
   m_TagString: Waypoint
@@ -2120,8 +2120,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1924482527}
   m_RootOrder: 4
---- !u!65 &584166211
-BoxCollider:
+--- !u!135 &584166211
+SphereCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -2130,7 +2130,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: .5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &613955040 stripped
 GameObject:
@@ -2476,7 +2476,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 741239870}
-  - 65: {fileID: 741239871}
+  - 135: {fileID: 741239871}
   m_Layer: 8
   m_Name: Waypoint 6
   m_TagString: Waypoint
@@ -2496,8 +2496,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1924482527}
   m_RootOrder: 5
---- !u!65 &741239871
-BoxCollider:
+--- !u!135 &741239871
+SphereCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -2506,7 +2506,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: .5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &746799285
 Prefab:
@@ -4055,7 +4055,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1151748828}
-  - 65: {fileID: 1151748829}
+  - 135: {fileID: 1151748829}
   m_Layer: 8
   m_Name: Waypoint 10
   m_TagString: Waypoint
@@ -4075,8 +4075,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1924482527}
   m_RootOrder: 9
---- !u!65 &1151748829
-BoxCollider:
+--- !u!135 &1151748829
+SphereCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -4085,7 +4085,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: .5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1157360775 stripped
 GameObject:
@@ -4293,7 +4293,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6544742, guid: 00660139676625c4994dc058c2826b67, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 00660139676625c4994dc058c2826b67, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1277964260
@@ -4484,10 +4485,26 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300246, guid: a8a3ef1a8a526ad47ba43d0d3f0e4c4b, type: 3}
+--- !u!1 &1417709211 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 144724, guid: 00660139676625c4994dc058c2826b67, type: 2}
+  m_PrefabInternal: {fileID: 1274344351}
 --- !u!4 &1417709212 stripped
 Transform:
   m_PrefabParentObject: {fileID: 457160, guid: 00660139676625c4994dc058c2826b67, type: 2}
   m_PrefabInternal: {fileID: 1274344351}
+--- !u!135 &1417709213
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1417709211}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1423062540 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 161482, guid: 3ac649f0650f2034f8af72a9bf1b794c, type: 2}
@@ -4607,7 +4624,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1461948413}
-  - 65: {fileID: 1461948414}
+  - 135: {fileID: 1461948414}
   m_Layer: 8
   m_Name: Waypoint 4
   m_TagString: Waypoint
@@ -4627,8 +4644,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1924482527}
   m_RootOrder: 3
---- !u!65 &1461948414
-BoxCollider:
+--- !u!135 &1461948414
+SphereCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -4637,7 +4654,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: .5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1465377644 stripped
 GameObject:
@@ -4895,7 +4912,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1539931985}
-  - 65: {fileID: 1539931986}
+  - 135: {fileID: 1539931986}
   m_Layer: 8
   m_Name: Waypoint 7
   m_TagString: Waypoint
@@ -4915,8 +4932,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1924482527}
   m_RootOrder: 6
---- !u!65 &1539931986
-BoxCollider:
+--- !u!135 &1539931986
+SphereCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -4925,7 +4942,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: .5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1543345433 stripped
 GameObject:
@@ -5732,7 +5749,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1758886504}
-  - 65: {fileID: 1758886505}
+  - 135: {fileID: 1758886505}
   m_Layer: 8
   m_Name: Waypoint 3
   m_TagString: Waypoint
@@ -5752,8 +5769,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1924482527}
   m_RootOrder: 2
---- !u!65 &1758886505
-BoxCollider:
+--- !u!135 &1758886505
+SphereCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -5762,7 +5779,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: .5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1763518491
 GameObject:
@@ -5860,7 +5877,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1774622187}
-  - 65: {fileID: 1774622188}
+  - 135: {fileID: 1774622188}
   m_Layer: 8
   m_Name: Waypoint 2
   m_TagString: Waypoint
@@ -5880,8 +5897,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1924482527}
   m_RootOrder: 1
---- !u!65 &1774622188
-BoxCollider:
+--- !u!135 &1774622188
+SphereCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -5890,7 +5907,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: .5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1780265092 stripped
 GameObject:
@@ -6382,7 +6399,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1961708748}
-  - 65: {fileID: 1961708749}
+  - 135: {fileID: 1961708749}
   m_Layer: 8
   m_Name: Waypoint 8
   m_TagString: Waypoint
@@ -6402,8 +6419,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1924482527}
   m_RootOrder: 7
---- !u!65 &1961708749
-BoxCollider:
+--- !u!135 &1961708749
+SphereCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -6412,7 +6429,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: .5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1963364647
 GameObject:
