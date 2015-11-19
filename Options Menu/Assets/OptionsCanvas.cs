@@ -6,7 +6,8 @@ public class OptionsCanvas : MonoBehaviour {
     public Slider aaSlider;
     public Text aaText;
     public Dropdown resolutionDropdown;
-	
+    public Toggle fullscreenToggle;
+    private bool togglefullscreen;
 
 	void Start () {
         PlayerPrefs.SetInt("AA", 4);
@@ -19,7 +20,8 @@ public class OptionsCanvas : MonoBehaviour {
                 aaText.text = "disabled";
             }
        }
-	}
+        Screen.fullScreen = true;
+    }
 	
     public void AAchange()
     {   
@@ -46,6 +48,11 @@ public class OptionsCanvas : MonoBehaviour {
                 Screen.SetResolution(800, 600, true);
                 break;
         }
+    }
+
+    public void setFullscreen()
+    {
+        Screen.fullScreen = !Screen.fullScreen;
     }
 
     void Update () {
