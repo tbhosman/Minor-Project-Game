@@ -1,10 +1,11 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
-public class SetActiveTrigger : MonoBehaviour {
-	
+public class BooleanTrigger : MonoBehaviour {
+
+
 	public GameObject ObjectToTrigger;
-	// Use this for initialization
+	public string Scriptname;
 	void Start () {
 	}
 	
@@ -14,11 +15,8 @@ public class SetActiveTrigger : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col){
 		if (col.gameObject.tag == "Player") {
-			ObjectToTrigger.SetActive (true);
+			ObjectToTrigger.GetComponent<TriggerObjectScript>().Trigger = true;
 			gameObject.SetActive(false);
 		}
 	}
-
-
 }
-
