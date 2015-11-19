@@ -5,10 +5,10 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class EnemySight : MonoBehaviour {
 
 	public GameObject Player;
-	public float fieldOfViewDegrees = 30;
+	public float fieldOfViewDegrees = 70;
 	public float visibilityDistance = 50;
 	public float deathDistance;
-	public float hearDistance;
+	private float hearDistance;
 	public float hearDistanceStanding = 10;
 	public float hearDistanceWalking = 50;
 	public float hearDistanceRunning = 100;

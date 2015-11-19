@@ -29,13 +29,21 @@ public class EnemyRouting : MonoBehaviour {
 	public bool isAnimWalk;
 	public float CapsuleCastRangeCorrection;
 	public float animStopDist;
-	private Vector3 playerLocation;
+	public Vector3 lastPlayerLocation;
 	public bool followingPlayer;
 	public int waypointToPlayer;
 	public List<int> RouteToPlayer;
+	public GameObject waypointObject;
+	public float reachedLastPlayerLocationDistance = 1;
 
 	// Use this for initialization
 	void Start () {
+		followingPlayer = false;
+		RouteToPlayer = new List<int>();
+		//wantIdle = false;
+		//wantWalk = false;
+		//isAnimIdle = false;
+		//isAnimWalk = false;
 		Reachables = new ArrayList();
 		waypoints_parent = GameObject.Find ("Waypoints");
 		waypoints = new GameObject[waypoints_parent.transform.childCount];
@@ -58,14 +66,37 @@ public class EnemyRouting : MonoBehaviour {
 		for (int i=0; i<cacheSize; i++) {
 			waypointcache[i] = -1;
 		}
+		waypointToPlayer = findWaypointToPlayer();
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
+		if (followingPlayer && RouteToPlayer.Count == 0) {
+			rb.velocity = transform.TransformDirection(new Vector3(0,0,speed));
+			//if enemy can walk to player directly, go there
+			if (enemyCanReachPlayer()){
+				TurnTowards(GameObject.Find("FPSController").gameObject.transform.position);
+				return;
+			}
+			//if enemy cannot reach player, try last found location
+			else if(enemyCanReachLocation(lastPlayerLocation)){
+				TurnTowards (lastPlayerLocation);
+				//if last found location is reached, end search
+				if (Vector3.Distance(transform.position,lastPlayerLocation) < reachedLastPlayerLocationDistance){
+					followingPlayer = false;
+				}
+				return;
+			} else { //if player or last location cannot be reached, end search
+				followingPlayer = false;
+			}
+		}
+
 		//Check if enemy can hear or see player
 		if (GetComponent<EnemySight> ().hearingPlayer || GetComponent<EnemySight> ().seeingPlayer) {
-			playerLocation = GameObject.Find("FPSController").gameObject.transform.position;
+			lastPlayerLocation = GameObject.Find("FPSController").gameObject.transform.position;
+			lastPlayerLocation.y = transform.position.y;
 			followingPlayer = true;
 			waypointToPlayer = findWaypointToPlayer();
 			RouteToPlayer = GameObject.Find("Waypoints").GetComponent<MapGenerator>().map.shortest_path(waypoint_index,waypointToPlayer);
@@ -73,16 +104,17 @@ public class EnemyRouting : MonoBehaviour {
 
 		if (rb.velocity == new Vector3 (0, 0, 0)) { //turning to new waypoint
 			wantIdle = false;
-			Vector3 newRotation = Quaternion.LookRotation(waypoint.transform.position - transform.position).eulerAngles;
-			newRotation.x = 0.0f;
-			newRotation.z = 0.0f;
-			if (Mathf.Abs((float) transform.rotation.eulerAngles.y - newRotation.y) < angleError ){ //pointing towards new waypoint
-				wantWalk = true;
-				//StartCoroutine(RampSpeed(0,speed));//rb.velocity = transform.TransformDirection(new Vector3(0,0, StartCoroutine(RampSpeed(0,speed))));
-			}
-			else{
-				rb.transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(newRotation), Time.deltaTime * turnSpeed);
-			}
+			TurnTowards(waypoint.transform.position);
+//			Vector3 newRotation = Quaternion.LookRotation(waypoint.transform.position - transform.position).eulerAngles;
+//			newRotation.x = 0.0f;
+//			newRotation.z = 0.0f;
+//			if (Mathf.Abs((float) transform.rotation.eulerAngles.y - newRotation.y) < angleError ){ //pointing towards new waypoint
+//				wantWalk = true;
+//				//StartCoroutine(RampSpeed(0,speed));//rb.velocity = transform.TransformDirection(new Vector3(0,0, StartCoroutine(RampSpeed(0,speed))));
+//			}
+//			else{
+//				rb.transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(newRotation), Time.deltaTime * turnSpeed);
+//			}
 		}
 		else if (wantWalk == true){ //moving to a waypoint
 			rb.velocity = transform.TransformDirection(new Vector3(0,0,speed));
@@ -126,6 +158,19 @@ public class EnemyRouting : MonoBehaviour {
 			waypoint = waypoints [waypoint_index];
 			wantIdle = true;
 			//rb.velocity = transform.TransformDirection(new Vector3(0,0,0));//StartCoroutine(RampSpeed(speed,0)); //set speed to 0 for turning to next waypoint
+		}
+	}
+
+	void TurnTowards(Vector3 location){
+		Vector3 newRotation = Quaternion.LookRotation(location - transform.position).eulerAngles;
+		newRotation.x = 0.0f;
+		newRotation.z = 0.0f;
+		if (Mathf.Abs((float) transform.rotation.eulerAngles.y - newRotation.y) < angleError ){ //pointing towards new waypoint
+			wantWalk = true;
+			//StartCoroutine(RampSpeed(0,speed));//rb.velocity = transform.TransformDirection(new Vector3(0,0, StartCoroutine(RampSpeed(0,speed))));
+		}
+		else{
+			rb.transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(newRotation), Time.deltaTime * turnSpeed);
 		}
 	}
 
@@ -192,7 +237,7 @@ public class EnemyRouting : MonoBehaviour {
 		int ans = -1;
 		float dist = float.MaxValue;
 		for (int i = 0; i < waypoints_parent.transform.childCount; i++){
-			float wp = Vector3.Distance(waypoints[i].gameObject.transform.position,playerLocation);
+			float wp = Vector3.Distance(waypoints[i].gameObject.transform.position,lastPlayerLocation);
 			if (ReachableWaypointToPlayer(i)){
 				if (Mathf.Abs(wp) < dist){
 					dist = Mathf.Abs(wp);
@@ -203,15 +248,49 @@ public class EnemyRouting : MonoBehaviour {
 		return ans;
 	}
 
-	protected bool ReachableWaypointToPlayer(int waypointToReach){
+	protected bool ReachableWaypointToPlayer(int waypointToReach){ //check if player is reachable from a waypoint
 		RaycastHit hit;
 		Vector3 pos = waypoints [waypointToReach].gameObject.transform.position;
-		Vector3 rayDirection = playerLocation - pos;
+		pos.y = transform.position.y;
+		Vector3 rayDirection = lastPlayerLocation - pos;
 		
 		if (Physics.Raycast(pos, rayDirection, out hit))
 		{
 			return hit.transform.CompareTag("Player");
 		}
+		return false;
+	}
+
+	protected bool enemyCanReachPlayer(){
+		Vector3 location = GameObject.Find ("FPSController").transform.position;
+		location.y = transform.position.y;
+		RaycastHit hit;
+		Vector3 rayDirection = location - transform.position;
+		Vector3 p1 = transform.position + Vector3.up * -enemyObject.transform.lossyScale.y * 0.5F;
+		Vector3 p2 = p1 + Vector3.up * enemyObject.transform.lossyScale.y;
+		
+		if (Physics.CapsuleCast(p1, p2, CapsuleCastRangeCorrection*enemyObject.transform.lossyScale.x/2, rayDirection, out hit))
+		{
+			return (hit.transform.CompareTag("Player") && (Vector3.Distance(hit.transform.position,location) < CapsuleCastErrorDistance));
+		}
+		return false;
+	}
+
+	protected bool enemyCanReachLocation(Vector3 location){
+		GameObject temp = GameObject.Instantiate (waypointObject);
+		temp.transform.position = location; //set temp waypoint at location to go to
+		RaycastHit hit;
+		Vector3 rayDirection = location - transform.position;
+		Vector3 p1 = transform.position + Vector3.up * -enemyObject.transform.lossyScale.y * 0.5F;
+		Vector3 p2 = p1 + Vector3.up * enemyObject.transform.lossyScale.y;
+		
+		if (Physics.CapsuleCast(p1, p2, CapsuleCastRangeCorrection*enemyObject.transform.lossyScale.x/2, rayDirection, out hit))
+		{
+			bool ans = (hit.transform.CompareTag("Waypoint") && Vector3.Distance(hit.transform.position,location) < CapsuleCastErrorDistance);
+			Destroy (temp);
+			return ans;
+		}
+		Destroy (temp);
 		return false;
 	}
 }

@@ -65,6 +65,11 @@ public class MapGenerator : MonoBehaviour {
 		{
 			this.vertices [name].Add(neighbor,distance);
 		}
+
+		public void remove_edge(int name, int neighbor) //add a connection between waypoints
+		{
+			this.vertices [name].Remove(neighbor);
+		}
 		
 		public List<int> shortest_path(int start, int finish)
 		{
@@ -72,7 +77,7 @@ public class MapGenerator : MonoBehaviour {
 			var distances = new Dictionary<int, float>();
 			var nodes = new List<int>();
 			
-			List<int> path = null;
+			List<int> path = new List<int>();
 			
 			foreach (var vertex in vertices) //initialize distances
 			{
