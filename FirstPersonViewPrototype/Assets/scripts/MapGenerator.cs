@@ -7,11 +7,12 @@ public class MapGenerator : MonoBehaviour {
 
 	public GameObject enemyObject;
 	public float CapsuleCastErrorDistance;
+	public Graph map;
 
 	// Use this for initialization
 	void Start () {
 	
-		Graph map = new Graph ();
+		map = new Graph ();
 
 		for (int a = 0; a < transform.childCount; a++) {
 			map.add_vertex(a, new Dictionary<int, float>());
@@ -51,7 +52,7 @@ public class MapGenerator : MonoBehaviour {
 		return false;
 	}
 
-	class Graph
+	public class Graph
 	{
 		Dictionary<int, Dictionary<int, float>> vertices = new Dictionary<int, Dictionary<int, float>>();
 		
@@ -64,6 +65,11 @@ public class MapGenerator : MonoBehaviour {
 		{
 			this.vertices [name].Add(neighbor,distance);
 		}
+
+		public void remove_edge(int name, int neighbor) //add a connection between waypoints
+		{
+			this.vertices [name].Remove(neighbor);
+		}
 		
 		public List<int> shortest_path(int start, int finish)
 		{
@@ -71,7 +77,7 @@ public class MapGenerator : MonoBehaviour {
 			var distances = new Dictionary<int, float>();
 			var nodes = new List<int>();
 			
-			List<int> path = null;
+			List<int> path = new List<int>();
 			
 			foreach (var vertex in vertices) //initialize distances
 			{
