@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+
 
 public class EnemyRouting : MonoBehaviour {
 
@@ -30,6 +32,7 @@ public class EnemyRouting : MonoBehaviour {
 	private Vector3 playerLocation;
 	public bool followingPlayer;
 	public int waypointToPlayer;
+	public List<int> RouteToPlayer;
 
 	// Use this for initialization
 	void Start () {
@@ -45,7 +48,8 @@ public class EnemyRouting : MonoBehaviour {
 				Reachables.Add(waypoints[i]);
 			}
 		}
-		waypoint = waypoints[newWaypoint ()];
+		waypoint_index = newWaypoint ();
+		waypoint = waypoints[waypoint_index];
 		rb = GetComponent<Rigidbody>();
 		rb.velocity = transform.TransformDirection(new Vector3(0,0,0));
 		//rb.transform.LookAt (waypoint.transform.position + new Vector3(0,0.1f,0));
@@ -63,13 +67,7 @@ public class EnemyRouting : MonoBehaviour {
 			playerLocation = GameObject.Find("FPSController").gameObject.transform.position;
 			followingPlayer = true;
 			waypointToPlayer = findWaypointToPlayer();
-			//route enemy to waypoint using Dijkstra
-		}
-
-		//check which waypoints can be reached
-		for (int i = 0; i < waypoints.Length; i++)
-		{
-			canReach[i] = Reachable(waypoints[i].transform.position);
+			GameObject.Find("Waypoints").GetComponent<MapGenerator>().map.shortest_path(waypoint_index,waypointToPlayer);
 		}
 
 		if (rb.velocity == new Vector3 (0, 0, 0)) { //turning to new waypoint
@@ -109,6 +107,11 @@ public class EnemyRouting : MonoBehaviour {
 		}
 
 		if (Vector3.Distance (transform.position, waypoint.transform.position) < reachDist) {
+			//check which waypoints can be reached
+			for (int i = 0; i < waypoints.Length; i++)
+			{
+				canReach[i] = Reachable(waypoints[i].transform.position);
+			}
 
 			for (int i = 0; i < cacheSize-1; i++) {
 				waypointcache [i] = waypointcache [i + 1]; //Shift all positions by one

@@ -7,11 +7,12 @@ public class MapGenerator : MonoBehaviour {
 
 	public GameObject enemyObject;
 	public float CapsuleCastErrorDistance;
+	public Graph map;
 
 	// Use this for initialization
 	void Start () {
 	
-		Graph map = new Graph ();
+		map = new Graph ();
 
 		for (int a = 0; a < transform.childCount; a++) {
 			map.add_vertex(a, new Dictionary<int, float>());
@@ -51,7 +52,7 @@ public class MapGenerator : MonoBehaviour {
 		return false;
 	}
 
-	class Graph
+	public class Graph
 	{
 		Dictionary<int, Dictionary<int, float>> vertices = new Dictionary<int, Dictionary<int, float>>();
 		
