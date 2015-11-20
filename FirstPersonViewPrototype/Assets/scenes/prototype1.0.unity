@@ -3188,7 +3188,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 10877746, guid: b2f8af2d9e8578a4e8e2d276a9ffa4ca, type: 2}
       propertyPath: m_Shadows.m_Type
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2f8af2d9e8578a4e8e2d276a9ffa4ca, type: 2}
@@ -4428,7 +4428,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_Strength: 1
     m_Bias: .0500000007
@@ -5295,7 +5295,7 @@ Light:
   m_SpotAngle: 70
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 2
     m_Resolution: -1
     m_Strength: 1
     m_Bias: .0500000007
