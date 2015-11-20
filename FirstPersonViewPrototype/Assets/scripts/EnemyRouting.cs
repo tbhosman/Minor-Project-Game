@@ -200,7 +200,7 @@ public class EnemyRouting : MonoBehaviour {
 
 			//if possible, choose waypoint not in cache
 			if (newReachables.Count == 0) {
-				reachindex = (int)Reachables [0]; //take oldest location
+				reachindex = (int)Reachables [Reachables.Count-1]; //take oldest location
 			} else {
 				reachindex = (int)newReachables [Random.Range (0, newReachables.Count)];
 			}
