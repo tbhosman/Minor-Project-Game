@@ -1373,7 +1373,7 @@ GameObject:
   - 114: {fileID: 380339498}
   m_Layer: 0
   m_Name: Geiger Counter
-  m_TagString: radioactive
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5219,7 +5219,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02384acb10480ad43bea0d4fc1d1360c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  visibilityDistance: 100
   hitMiddlePosition: {x: 0, y: 0, z: 0}
   hitUpPosition: {x: 0, y: 0, z: 0}
   hitDownPosition: {x: 0, y: 0, z: 0}
