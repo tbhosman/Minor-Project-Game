@@ -248,13 +248,12 @@ public class EnemyRouting : MonoBehaviour {
 	}
 
 	protected bool ReachableWaypointToPlayer(int waypointToReach){ //check if player is reachable from a waypoint
-		RaycastHit[] hit;
+		RaycastHit hit;
 		Vector3 pos = waypoints [waypointToReach].gameObject.transform.position;
 		Vector3 rayDirection = lastPlayerLocation - pos;
 
-		hit = Physics.RaycastAll(new Ray(pos, rayDirection));
-		if (hit[hit.Length-1].transform.CompareTag("Player")){
-			return true;
+		if (Physics.Raycast(pos,rayDirection, out hit)){
+			return hit.transform.CompareTag("Player");
 		}
 		return false;
 	}
