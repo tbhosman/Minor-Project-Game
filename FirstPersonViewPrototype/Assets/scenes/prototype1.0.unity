@@ -1848,7 +1848,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 3, y: 6, z: 10}
-  m_Center: {x: 0, y: 3, z: 0}
+  m_Center: {x: 0, y: -1, z: 0}
 --- !u!95 &519220854
 Animator:
   serializedVersion: 3
@@ -4164,7 +4164,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 492758, guid: 8eb2c6e490efb8e4292b6377c2c6441f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -.00706794765
+      value: -.100706793
       objectReference: {fileID: 0}
     - target: {fileID: 492758, guid: 8eb2c6e490efb8e4292b6377c2c6441f, type: 2}
       propertyPath: m_LocalPosition.z
