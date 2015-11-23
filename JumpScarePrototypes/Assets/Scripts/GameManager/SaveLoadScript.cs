@@ -55,6 +55,7 @@ public class SaveLoadScript : MonoBehaviour {
 
 		binary.Serialize (fStream, saver);
 		fStream.Close ();
+		print ("game saved");
 	}
 
 	public void Load()	{
@@ -68,10 +69,9 @@ public class SaveLoadScript : MonoBehaviour {
 			for (int i = 0; i < AOGameObjects; i++) {
 				GameObject ObjectToLoad = allObjects[i];
 				ObjectToLoad.transform.position = new Vector3 (saver.xcoordinates [i], saver.ycoordinates [i], saver.zcoordinates [i]);
-				Quaternion ObjectRotation = Quaternion.LookRotation(new Vector3(saver.rotationx[i],saver.rotationy[i],saver.rotationz[i]));
 				ObjectToLoad.SetActive(saver.active[i]);
 			}
-
+			print ("game loaded");
 		} else {
 			print ("No SaveFile Exists yet");
 		}
@@ -85,8 +85,6 @@ public class SaveLoadScript : MonoBehaviour {
 	}
 
 
-
-
 	[Serializable]
 	class SaveManager
 	{
@@ -98,6 +96,5 @@ public class SaveLoadScript : MonoBehaviour {
 		public float[] rotationz;
 		public float[] rotationw;
 		public bool[] active;
-		public bool[] triggered;
 	}
 }
