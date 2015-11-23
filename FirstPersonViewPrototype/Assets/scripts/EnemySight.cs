@@ -16,6 +16,7 @@ public class EnemySight : MonoBehaviour {
 	public bool seeingPlayer;
 	public float canSeeLocationError = 0.05f;
 	public bool seeingPlayerLight;
+	public float fieldOfViewDegreesPlayerLight = 120;
 
 	void Update(){
 		seeingPlayer = CanSeePlayer();
@@ -81,19 +82,19 @@ public class EnemySight : MonoBehaviour {
 	protected bool CanSeePlayerLight(){
 		if (GameObject.Find("FirstPersonCharacter").transform.GetChild(0).GetComponent<Light>().enabled){
 
-			if (CanSeeLocation (GameObject.Find("FirstPersonCharacter").transform.GetChild(0).GetComponent<FlashlightHitArea>().hitDownPosition)){
+			if (CanSeeLocation (GameObject.Find("PlayerLight").GetComponent<FlashlightHitArea>().hitDownPosition)){
 				return true;
 			}
-			if (CanSeeLocation (GameObject.Find("FirstPersonCharacter").transform.GetChild(0).GetComponent<FlashlightHitArea>().hitUpPosition)){
+			if (CanSeeLocation (GameObject.Find("PlayerLight").GetComponent<FlashlightHitArea>().hitUpPosition)){
 				return true;
 			}
-			if (CanSeeLocation (GameObject.Find("FirstPersonCharacter").transform.GetChild(0).GetComponent<FlashlightHitArea>().hitLeftPosition)){
+			if (CanSeeLocation (GameObject.Find("PlayerLight").GetComponent<FlashlightHitArea>().hitLeftPosition)){
 				return true;
 			}
-			if (CanSeeLocation (GameObject.Find("FirstPersonCharacter").transform.GetChild(0).GetComponent<FlashlightHitArea>().hitRightPosition)){
+			if (CanSeeLocation (GameObject.Find("PlayerLight").GetComponent<FlashlightHitArea>().hitRightPosition)){
 				return true;
 			}
-			if (CanSeeLocation (GameObject.Find("FirstPersonCharacter").transform.GetChild(0).GetComponent<FlashlightHitArea>().hitMiddlePosition)){
+			if (CanSeeLocation (GameObject.Find("PlayerLight").GetComponent<FlashlightHitArea>().hitMiddlePosition)){
 				return true;
 			}
 
@@ -105,12 +106,12 @@ public class EnemySight : MonoBehaviour {
 		RaycastHit hit;
 		Vector3 rayDirection = hitLocation - transform.position;
 		
-		if ((Vector3.Angle(rayDirection, transform.forward)) <= fieldOfViewDegrees * 0.5f)
+		if ((Vector3.Angle(rayDirection, transform.forward)) <= fieldOfViewDegreesPlayerLight * 0.5f)
 		{
 			// Detect if player is within the field of view
 			if (Physics.Raycast(transform.position, rayDirection, out hit))
 			{
-				return (Vector3.Distance (hit.transform.position,hitLocation) < canSeeLocationError);
+				return (Vector3.Distance (hit.point,hitLocation) < canSeeLocationError);
 			}
 		}
 		

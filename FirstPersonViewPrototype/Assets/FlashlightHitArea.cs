@@ -21,21 +21,26 @@ public class FlashlightHitArea : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		float angle = GetComponent<Light>().spotAngle;
+		float angle = transform.GetComponent<Light>().spotAngle/2;
 		if (Physics.Raycast (transform.position, transform.forward, out hitMiddle)){
-			hitMiddlePosition = hitMiddle.transform.position;
+			hitMiddlePosition = hitMiddle.point;
+			//Debug.DrawRay(transform.position, transform.forward);
 		}
-		if (Physics.Raycast (transform.position, transform.forward + Quaternion.AngleAxis(-angle, transform.up) * transform.forward, out hitDown)){
-			hitDownPosition = hitDown.transform.position;
+		if (Physics.Raycast (transform.position, Quaternion.AngleAxis(-angle, transform.up) * transform.forward, out hitDown)){
+			hitDownPosition = hitDown.point;
+			//Debug.DrawRay(transform.position, Quaternion.AngleAxis(-angle, transform.up) * transform.forward);
 		}
 		if (Physics.Raycast (transform.position, transform.forward + Quaternion.AngleAxis(angle,transform.up) * transform.forward, out hitUp)){
-			hitUpPosition = hitUp.transform.position;
+			hitUpPosition = hitUp.point;
+			//Debug.DrawRay(transform.position, Quaternion.AngleAxis(angle, transform.up) * transform.forward);
 		}
 		if (Physics.Raycast (transform.position, transform.forward + Quaternion.AngleAxis (angle,transform.right) * transform.forward, out hitRight)){
-			hitRightPosition = hitRight.transform.position;
+			hitRightPosition = hitRight.point;
+			//Debug.DrawRay(transform.position, Quaternion.AngleAxis(angle, transform.right) * transform.forward);
 		}
 		if (Physics.Raycast (transform.position, transform.forward + Quaternion.AngleAxis (-angle, transform.right) * transform.forward, out hitLeft)){
-			hitLeftPosition = hitLeft.transform.position;
+			hitLeftPosition = hitLeft.point;
+			//Debug.DrawRay(transform.position, Quaternion.AngleAxis(-angle, transform.right) * transform.forward);
 		}
 	}
 }
