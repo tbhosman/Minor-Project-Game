@@ -426,20 +426,6 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
---- !u!114 &126214493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 126214491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14ae05785c2f73347bef4485bf01f51a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioclip: {fileID: 8300000, guid: 8a84a02d451d451429ca582589b95183, type: 3}
-  playtime: 2
-  audiosource: {fileID: 126214492}
 --- !u!1 &133084320 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 2034a36924fe20a43b5428c8ff5ebdb0, type: 3}
@@ -485,6 +471,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 5
   applyforce: 1
+--- !u!114 &133084327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 133084320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14ae05785c2f73347bef4485bf01f51a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioclip: {fileID: 8300000, guid: 8a84a02d451d451429ca582589b95183, type: 3}
+  playtime: 2
+  audiosource: {fileID: 126214492}
 --- !u!1001 &163798051
 Prefab:
   m_ObjectHideFlags: 0
@@ -966,7 +966,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1935351955}
+      - m_Target: {fileID: 1935351957}
         m_MethodName: RemoveSaveFile
         m_Mode: 1
         m_Arguments:
@@ -1073,11 +1073,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: a0bad0dea3eafd74695a19ae8218245a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: a0bad0dea3eafd74695a19ae8218245a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: a0bad0dea3eafd74695a19ae8218245a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1237,7 +1237,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1935351955}
+      - m_Target: {fileID: 1935351957}
         m_MethodName: Save
         m_Mode: 1
         m_Arguments:
@@ -1335,7 +1335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c91fcb972a1e834081297f76459980f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectToTrigger: {fileID: 1592297699}
+  ObjectToTrigger: {fileID: 250373843}
 --- !u!23 &714149388
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1657,11 +1657,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: cfcb128190ba22342996f0a603e3e9a3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: cfcb128190ba22342996f0a603e3e9a3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: cfcb128190ba22342996f0a603e3e9a3, type: 3}
       propertyPath: m_Enabled
@@ -2193,7 +2193,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1935351955}
+      - m_Target: {fileID: 1935351957}
         m_MethodName: Load
         m_Mode: 1
         m_Arguments:
@@ -2266,7 +2266,7 @@ TerrainCollider:
   m_Material: {fileID: 0}
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: 6c5d0af018318af41a8118a71de357db, type: 2}
-  m_EnableTreeColliders: 1
+  m_EnableTreeColliders: 0
 --- !u!218 &1397942452
 Terrain:
   m_ObjectHideFlags: 0
@@ -2357,7 +2357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c91fcb972a1e834081297f76459980f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectToTrigger: {fileID: 126214491}
+  ObjectToTrigger: {fileID: 133084320}
 --- !u!23 &1407229123
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2858,7 +2858,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96ffd09237bc3a4299a95fa780b18af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 918f24e4b7dc8e44cafee8909cbea69d, type: 3}
 --- !u!82 &1592297704
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3019,7 +3018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c91fcb972a1e834081297f76459980f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectToTrigger: {fileID: 214820353}
+  ObjectToTrigger: {fileID: 1994187580}
 --- !u!23 &1768611477
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3084,6 +3083,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1935351956}
   - 114: {fileID: 1935351955}
+  - 114: {fileID: 1935351957}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3102,6 +3102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473312731946527458aeecae9ad54f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentstosave: 
   allObjects: []
   AOGameObjects: 0
 --- !u!4 &1935351956
@@ -3116,6 +3117,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!114 &1935351957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1935351954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffd483bbf2ad7304b9b5042072cd794c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Parent: {fileID: 1055440931}
+  allObjects: []
+  AOGameObjects: 0
 --- !u!1001 &1958344913
 Prefab:
   m_ObjectHideFlags: 0
@@ -3197,11 +3212,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 2034a36924fe20a43b5428c8ff5ebdb0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 2034a36924fe20a43b5428c8ff5ebdb0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2034a36924fe20a43b5428c8ff5ebdb0, type: 3}
       propertyPath: m_LocalRotation.y
