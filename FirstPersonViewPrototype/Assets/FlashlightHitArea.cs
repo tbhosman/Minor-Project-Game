@@ -3,7 +3,6 @@ using System.Collections;
 
 public class FlashlightHitArea : MonoBehaviour {
 
-	public float visibilityDistance = 100;
 	public RaycastHit hitMiddle;
 	public Vector3 hitMiddlePosition;
 	public RaycastHit hitUp;
@@ -23,25 +22,20 @@ public class FlashlightHitArea : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		float angle = GetComponent<Light>().spotAngle;
-		if (Physics.Raycast (transform.position, transform.rotation.eulerAngles, out hitMiddle, visibilityDistance)){
+		if (Physics.Raycast (transform.position, transform.forward, out hitMiddle)){
 			hitMiddlePosition = hitMiddle.transform.position;
-			Debug.DrawLine(transform.position,hitMiddlePosition);
 		}
-		if (Physics.Raycast (transform.position, transform.rotation.eulerAngles + new Vector3 (angle, 0, 0), out hitDown, visibilityDistance)){
+		if (Physics.Raycast (transform.position, transform.forward + Quaternion.AngleAxis(-angle, transform.up) * transform.forward, out hitDown)){
 			hitDownPosition = hitDown.transform.position;
-			Debug.DrawLine(transform.position,hitDownPosition);
 		}
-		if (Physics.Raycast (transform.position, transform.rotation.eulerAngles + new Vector3 (-angle, 0, 0), out hitUp, visibilityDistance)) {
+		if (Physics.Raycast (transform.position, transform.forward + Quaternion.AngleAxis(angle,transform.up) * transform.forward, out hitUp)){
 			hitUpPosition = hitUp.transform.position;
-			Debug.DrawLine(transform.position,hitUpPosition);
 		}
-		if (Physics.Raycast (transform.position, transform.rotation.eulerAngles + new Vector3 (0, angle, 0), out hitRight, visibilityDistance)) {
+		if (Physics.Raycast (transform.position, transform.forward + Quaternion.AngleAxis (angle,transform.right) * transform.forward, out hitRight)){
 			hitRightPosition = hitRight.transform.position;
-			Debug.DrawLine(transform.position,hitRightPosition);
 		}
-		if (Physics.Raycast (transform.position, transform.rotation.eulerAngles + new Vector3 (0, -angle, 0), out hitLeft, visibilityDistance)) {
+		if (Physics.Raycast (transform.position, transform.forward + Quaternion.AngleAxis (-angle, transform.right) * transform.forward, out hitLeft)){
 			hitLeftPosition = hitLeft.transform.position;
-			Debug.DrawLine(transform.position,hitLeftPosition);
 		}
 	}
 }
