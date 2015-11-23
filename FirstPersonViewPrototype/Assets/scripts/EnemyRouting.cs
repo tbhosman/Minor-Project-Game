@@ -30,15 +30,14 @@ public class EnemyRouting : MonoBehaviour {
 	public float CapsuleCastRangeCorrection;
 	public float animStopDist;
 	public Vector3 lastPlayerLocation;
-	public bool followingPlayer;
 	public int waypointToPlayer;
 	public List<int> RouteToPlayer;
 	public GameObject waypointObject;
 	public float reachedLastPlayerLocationDistance = 1;
+	public bool goingToPlayer;
 
 	// Use this for initialization
 	void Start () {
-		followingPlayer = false;
 		RouteToPlayer = new List<int>();
 		//wantIdle = false;
 		//wantWalk = false;
@@ -67,13 +66,16 @@ public class EnemyRouting : MonoBehaviour {
 			waypointcache[i] = -1;
 		}
 		waypointToPlayer = findWaypointToPlayer();
+		waypoint_index = -1;
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		if (followingPlayer && RouteToPlayer.Count == 0) {
+		if (goingToPlayer && RouteToPlayer.Count == 0) {
+			wantWalk = true;
+			wantIdle = false;
 			rb.velocity = transform.TransformDirection(new Vector3(0,0,speed));
 			//if enemy can walk to player directly, go there
 			if (enemyCanReachPlayer()){
@@ -85,11 +87,11 @@ public class EnemyRouting : MonoBehaviour {
 				TurnTowards (lastPlayerLocation);
 				//if last found location is reached, end search
 				if (Vector3.Distance(transform.position,lastPlayerLocation) < reachedLastPlayerLocationDistance){
-					followingPlayer = false;
+					goingToPlayer = false;
 				}
 				return;
 			} else { //if player or last location cannot be reached, end search
-				followingPlayer = false;
+				goingToPlayer = false;
 			}
 		}
 
@@ -97,7 +99,6 @@ public class EnemyRouting : MonoBehaviour {
 		if (GetComponent<EnemySight> ().hearingPlayer || GetComponent<EnemySight> ().seeingPlayer) {
 			lastPlayerLocation = GameObject.Find("FPSController").gameObject.transform.position;
 			lastPlayerLocation.y = transform.position.y;
-			followingPlayer = true;
 			waypointToPlayer = findWaypointToPlayer();
 			RouteToPlayer = GameObject.Find("Waypoints").GetComponent<MapGenerator>().map.shortest_path(waypoint_index,waypointToPlayer);
 		}
@@ -105,16 +106,6 @@ public class EnemyRouting : MonoBehaviour {
 		if (rb.velocity == new Vector3 (0, 0, 0)) { //turning to new waypoint
 			wantIdle = false;
 			TurnTowards(waypoint.transform.position);
-//			Vector3 newRotation = Quaternion.LookRotation(waypoint.transform.position - transform.position).eulerAngles;
-//			newRotation.x = 0.0f;
-//			newRotation.z = 0.0f;
-//			if (Mathf.Abs((float) transform.rotation.eulerAngles.y - newRotation.y) < angleError ){ //pointing towards new waypoint
-//				wantWalk = true;
-//				//StartCoroutine(RampSpeed(0,speed));//rb.velocity = transform.TransformDirection(new Vector3(0,0, StartCoroutine(RampSpeed(0,speed))));
-//			}
-//			else{
-//				rb.transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(newRotation), Time.deltaTime * turnSpeed);
-//			}
 		}
 		else if (wantWalk == true){ //moving to a waypoint
 			rb.velocity = transform.TransformDirection(new Vector3(0,0,speed));
@@ -141,6 +132,12 @@ public class EnemyRouting : MonoBehaviour {
 
 		//if a new waypoint is needed (enemy is close to current waypoint)
 		if (Vector3.Distance (transform.position, waypoint.transform.position) < reachDist) {
+
+			if (waypoint_index == waypointToPlayer){ //if final waypoint to player is reached, do not get a new waypoint
+				goingToPlayer = true;
+				return;
+			}
+
 			//check which waypoints can be reached
 			for (int i = 0; i < waypoints.Length; i++)
 			{
@@ -189,6 +186,7 @@ public class EnemyRouting : MonoBehaviour {
 
 	int newWaypoint(){
 		if (RouteToPlayer.Count == 0) { //enemy is not following a route to the player
+
 			Reachables = new ArrayList ();
 			newReachables = new ArrayList ();
 			for (int i = 0; i < waypoints_parent.transform.childCount; i++) {
@@ -202,10 +200,11 @@ public class EnemyRouting : MonoBehaviour {
 
 			//if possible, choose waypoint not in cache
 			if (newReachables.Count == 0) {
-				reachindex = (int)Reachables [0]; //take oldest location
+				reachindex = (int)Reachables [Reachables.Count-1]; //take oldest location
 			} else {
 				reachindex = (int)newReachables [Random.Range (0, newReachables.Count)];
 			}
+
 		} else { //enemy is following route to player
 			reachindex = RouteToPlayer[RouteToPlayer.Count-1];
 			RouteToPlayer.RemoveAt(RouteToPlayer.Count-1);
@@ -249,13 +248,12 @@ public class EnemyRouting : MonoBehaviour {
 	}
 
 	protected bool ReachableWaypointToPlayer(int waypointToReach){ //check if player is reachable from a waypoint
-		RaycastHit[] hit;
+		RaycastHit hit;
 		Vector3 pos = waypoints [waypointToReach].gameObject.transform.position;
 		Vector3 rayDirection = lastPlayerLocation - pos;
 
-		hit = Physics.RaycastAll(pos, rayDirection);
-		if (hit[hit.Length-1].transform.CompareTag("Player")){
-			return true;
+		if (Physics.Raycast(pos,rayDirection, out hit)){
+			return hit.transform.CompareTag("Player");
 		}
 		return false;
 	}

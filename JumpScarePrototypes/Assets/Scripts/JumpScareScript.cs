@@ -4,32 +4,32 @@ using System.Collections;
 public class JumpScareScript : MonoBehaviour {
 	
 	private AudioSource audiosource;
-	public bool Scare;
 	public float scaredistance;
 	private GameObject Player;
 	public float Scarelength;
+	public bool Scare;
 	
 	void Start () {
 		Player = GameObject.FindGameObjectWithTag ("Player");
 		GetComponent<MeshRenderer>().enabled = false;
-		bool Scare = false;
+		Scare = false;
 		audiosource = this.GetComponent<AudioSource>();
 		audiosource.Pause ();
 	}
 	
 	void Update(){
-			if (Scare == true) {
-				if (Vector3.Distance (transform.position, Player.transform.position)<scaredistance){
-					audiosource.UnPause();
-					StartCoroutine(ShutdownAfter3());
+
+	if (Scare) {
+			if (Vector3.Distance (transform.position, Player.transform.position) < scaredistance) {
+				StartCoroutine (ShutdownAfterScareLength ());
+				Scare = false;
 			}
 		}
 	}
 
-	IEnumerator ShutdownAfter3(){
-		yield return new WaitForSeconds (1.0f);
+	IEnumerator ShutdownAfterScareLength(){
+		audiosource.UnPause();
 		GetComponent<MeshRenderer>().enabled = true;
-		Scare = false;
 		yield return new WaitForSeconds(Scarelength);
 		gameObject.SetActive (false);
 	}

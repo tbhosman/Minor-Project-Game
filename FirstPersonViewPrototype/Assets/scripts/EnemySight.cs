@@ -14,6 +14,8 @@ public class EnemySight : MonoBehaviour {
 	public float hearDistanceRunning = 100;
 	public bool hearingPlayer;
 	public bool seeingPlayer;
+	public float canSeeLocationError = 0.05f;
+	public bool seeingPlayerLight;
 
 	void Update(){
 		seeingPlayer = CanSeePlayer();
@@ -32,6 +34,11 @@ public class EnemySight : MonoBehaviour {
 		hearingPlayer = CanHearPlayer ();
 		if (hearingPlayer) {
 			Debug.Log ("I can hear you.");
+		}
+
+		seeingPlayerLight = CanSeePlayerLight ();
+		if (seeingPlayerLight) {
+			Debug.Log ("I can see your light.");
 		}
 	}
 
@@ -68,6 +75,45 @@ public class EnemySight : MonoBehaviour {
 		{
 			return true;
 		}
+		return false;
+	}
+
+	protected bool CanSeePlayerLight(){
+		if (GameObject.Find("FirstPersonCharacter").transform.GetChild(0).GetComponent<Light>().enabled){
+
+			if (CanSeeLocation (GameObject.Find("FirstPersonCharacter").transform.GetChild(0).GetComponent<FlashlightHitArea>().hitDownPosition)){
+				return true;
+			}
+			if (CanSeeLocation (GameObject.Find("FirstPersonCharacter").transform.GetChild(0).GetComponent<FlashlightHitArea>().hitUpPosition)){
+				return true;
+			}
+			if (CanSeeLocation (GameObject.Find("FirstPersonCharacter").transform.GetChild(0).GetComponent<FlashlightHitArea>().hitLeftPosition)){
+				return true;
+			}
+			if (CanSeeLocation (GameObject.Find("FirstPersonCharacter").transform.GetChild(0).GetComponent<FlashlightHitArea>().hitRightPosition)){
+				return true;
+			}
+			if (CanSeeLocation (GameObject.Find("FirstPersonCharacter").transform.GetChild(0).GetComponent<FlashlightHitArea>().hitMiddlePosition)){
+				return true;
+			}
+
+		}
+		return false;
+	}
+
+	protected bool CanSeeLocation(Vector3 hitLocation){
+		RaycastHit hit;
+		Vector3 rayDirection = hitLocation - transform.position;
+		
+		if ((Vector3.Angle(rayDirection, transform.forward)) <= fieldOfViewDegrees * 0.5f)
+		{
+			// Detect if player is within the field of view
+			if (Physics.Raycast(transform.position, rayDirection, out hit))
+			{
+				return (Vector3.Distance (hit.transform.position,hitLocation) < canSeeLocationError);
+			}
+		}
+		
 		return false;
 	}
 
