@@ -18,7 +18,7 @@ public class VanishScript : MonoBehaviour {
 		ObjectToPlayerRay = new Ray (transform.position, RayDirection);
 		if (Physics.Raycast (ObjectToPlayerRay, out RayHit)) {
 			if (Vector3.Angle(transform.position-player.transform.position, player.transform.forward) <= FieldOfVanishDegree* 0.5f){
-				gameObject.SetActive(false);
+				gameObject.GetComponent<vanishafterseconds>().enabled = true;
 			}
 		}
 	}

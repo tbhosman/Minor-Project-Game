@@ -8,16 +8,16 @@ using System.Collections.Generic;
 
 public class SaveLoadScript : MonoBehaviour {
 
-
+	public string parentstosave;
 	public GameObject[] allObjects;
 	public int AOGameObjects;
 
 
 	void Start () {
+	
 		//initialize allobjectsarray
 		allObjects = (GameObject[])Resources.FindObjectsOfTypeAll(typeof(GameObject)) ;
 		AOGameObjects = allObjects.Length;
-		Load ();
 	}
 	
 	public void Save() {
