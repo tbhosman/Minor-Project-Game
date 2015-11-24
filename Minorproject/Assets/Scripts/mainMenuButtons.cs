@@ -12,7 +12,7 @@ public class mainMenuButtons : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		optionsCanvas.enabled = false;
+		//optionsCanvas.enabled = false;
 	}
 	
 
@@ -35,7 +35,8 @@ public class mainMenuButtons : MonoBehaviour {
 	}
 
 	public void optionsPanel () {
-		optionsCanvas.enabled = !optionsCanvas.enabled;
+		//Application.LoadLevel ("");
+		//optionsCanvas.enabled = !optionsCanvas.enabled;
 
 	}
 }
