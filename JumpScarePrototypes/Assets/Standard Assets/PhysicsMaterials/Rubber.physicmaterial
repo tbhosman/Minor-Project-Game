@@ -11,9 +11,6 @@ PhysicMaterial:
   bounciness: .5
   frictionCombine: 3
   bounceCombine: 0
-  frictionDirection2: {x: 0, y: 0, z: 0}
-  dynamicFriction2: 0
-  staticFriction2: 0
 --- !u!1002 &13400001
 EditorExtensionImpl:
   serializedVersion: 6
