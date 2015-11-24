@@ -45,7 +45,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\FlashlightHitArea.cs" />
+     <Compile Include="Assets\imports\Industrial\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\imports\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" />
      <Compile Include="Assets\imports\Standard Assets\Characters\FirstPersonCharacter\Scripts\HeadBob.cs" />
      <Compile Include="Assets\imports\Standard Assets\Characters\FirstPersonCharacter\Scripts\MouseLook.cs" />
@@ -85,9 +85,22 @@
      <Compile Include="Assets\imports\Standard Assets\Utility\TimedObjectDestructor.cs" />
      <Compile Include="Assets\imports\Standard Assets\Utility\WaypointCircuit.cs" />
      <Compile Include="Assets\imports\Standard Assets\Utility\WaypointProgressTracker.cs" />
+     <Compile Include="Assets\jumpscares\prefabs\Scripts\BooleanTrigger.cs" />
+     <Compile Include="Assets\jumpscares\prefabs\Scripts\GameManager\SaveLoadScript.cs" />
+     <Compile Include="Assets\jumpscares\prefabs\Scripts\GameManager\SaveLoadscript2.cs" />
+     <Compile Include="Assets\jumpscares\prefabs\Scripts\ImpulsOnActivation.cs" />
+     <Compile Include="Assets\jumpscares\prefabs\Scripts\JumScareSystem.cs" />
+     <Compile Include="Assets\jumpscares\prefabs\Scripts\JumpScareScript.cs" />
+     <Compile Include="Assets\jumpscares\prefabs\Scripts\PlayAudioClip.cs" />
+     <Compile Include="Assets\jumpscares\prefabs\Scripts\Player\JumpScareActivation.cs" />
+     <Compile Include="Assets\jumpscares\prefabs\Scripts\SetActiveTrigger.cs" />
+     <Compile Include="Assets\jumpscares\prefabs\Scripts\TriggerObjectScript.cs" />
+     <Compile Include="Assets\jumpscares\prefabs\Scripts\VanishScript.cs" />
+     <Compile Include="Assets\jumpscares\prefabs\Scripts\vanishafterseconds.cs" />
      <Compile Include="Assets\scripts\EnemyAnimationScript.cs" />
      <Compile Include="Assets\scripts\EnemyRouting.cs" />
      <Compile Include="Assets\scripts\EnemySight.cs" />
+     <Compile Include="Assets\scripts\FlashlightHitArea.cs" />
      <Compile Include="Assets\scripts\FlashlightScript.cs" />
      <Compile Include="Assets\scripts\GeigerController.cs" />
      <Compile Include="Assets\scripts\MapGenerator.cs" />
@@ -98,17 +111,11 @@
      <None Include="Assets\imports\sky5X\README.txt" />
      <None Include="Assets\imports\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\imports\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>D:/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
