@@ -2,16 +2,23 @@
 using System.Collections;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(AudioSource))]
 public class OptionsCanvas : MonoBehaviour {
     public Slider aaSlider;
     public Slider VolumeSlider;
+    public Slider sensSlider;
     public Text aaText;
     public Dropdown resolutionDropdown;
     public Toggle fullscreenToggle;
     public Toggle vsyncToggle;
     private bool togglefullscreen;
+    public RawImage Face;
+    AudioSource scream;
+    public AudioClip Screamsound;
+
 
 	void Start () {
+        scream = GetComponent<AudioSource>();
         PlayerPrefs.SetInt("AA", 4);
         if (PlayerPrefs.HasKey("AA"))
         {
@@ -116,6 +123,29 @@ public class OptionsCanvas : MonoBehaviour {
         
     }
 
+    IEnumerator popupFace()
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            yield return new WaitForSeconds(0.03f);
+            Face.transform.SetAsLastSibling();
+            yield return new WaitForSeconds(0.09f);
+            Face.transform.SetAsFirstSibling();
+        }
+    }
+
+
+    public void sensetivity()
+    {
+        PlayerPrefs.SetFloat("Volume", sensSlider.value);
+        if (sensSlider.value == 1)
+        {
+            scream.PlayOneShot(Screamsound, 1f);
+            StartCoroutine(popupFace());
+            
+            
+        }
+    }
     void Update () {
 	
 	}
