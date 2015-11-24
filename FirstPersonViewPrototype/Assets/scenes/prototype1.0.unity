@@ -1599,7 +1599,7 @@ MonoBehaviour:
   seeingPlayer: 0
   canSeeLocationError: .0500000007
   seeingPlayerLight: 0
-  fieldOfViewDegreesPlayerLight: 120
+  fieldOfViewDegreesPlayerLight: 140
 --- !u!4 &287552373
 Transform:
   m_ObjectHideFlags: 0
