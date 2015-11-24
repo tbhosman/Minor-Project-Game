@@ -548,25 +548,6 @@ Prefab:
     - {fileID: 9500000, guid: bf709294da0de3c4fbb497b73ea59710, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: bf709294da0de3c4fbb497b73ea59710, type: 3}
   m_IsPrefabParent: 0
---- !u!1 &214820353 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100002, guid: cfcb128190ba22342996f0a603e3e9a3, type: 3}
-  m_PrefabInternal: {fileID: 962321516}
---- !u!54 &214820355
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 214820353}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!4 &214820356 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: cfcb128190ba22342996f0a603e3e9a3, type: 3}
@@ -3245,6 +3226,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.08730197, y: .594124019, z: 5.55449963}
   m_Center: {x: -1.32279599, y: -.261512011, z: .00172102451}
+--- !u!54 &1994187585
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1994187580}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2034224154
 GameObject:
   m_ObjectHideFlags: 0
@@ -3337,6 +3333,7 @@ GameObject:
   - 64: {fileID: 2103892831}
   - 23: {fileID: 2103892830}
   - 114: {fileID: 2103892834}
+  - 114: {fileID: 2103892835}
   m_Layer: 0
   m_Name: Vanishplane
   m_TagString: VanishObject
@@ -3412,3 +3409,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1677277625}
   FieldOfVanishDegree: 60
+--- !u!114 &2103892835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2103892829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 534ec6233e0c64d42a1d2906c92e37f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seconds: 1
