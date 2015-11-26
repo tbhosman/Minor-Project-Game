@@ -6,9 +6,11 @@ public class PlayAudioClip : MonoBehaviour {
 	public AudioClip audioclip;
 	public float playtime;
 	public AudioSource audiosource;
+	public float playfromseconds;
 	// Use this for initialization
 	void Start () {
 		audiosource.clip = audioclip;
+		audiosource.time = playfromseconds;
 		audiosource.Pause ();
 		if (playtime == 0) {
 			audiosource.Play ();
