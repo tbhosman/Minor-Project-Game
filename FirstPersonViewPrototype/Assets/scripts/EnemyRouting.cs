@@ -233,7 +233,7 @@ public class EnemyRouting : MonoBehaviour {
 	}
 
 	int findWaypointToPlayer(){
-		int ans = -1;
+		int ans = -2;
 		float dist = float.MaxValue;
 		for (int i = 0; i < waypoints_parent.transform.childCount; i++){
 			float wp = Vector3.Distance(waypoints[i].gameObject.transform.position,lastPlayerLocation);
