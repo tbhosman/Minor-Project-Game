@@ -22,6 +22,7 @@ public class VanishScript : MonoBehaviour {
 		if (Physics.Raycast (ObjectToPlayerRay, out RayHit)) {
 			if (RayHit.collider.gameObject.tag == "Player"){
 				if (Vector3.Angle(transform.position-player.transform.position, player.transform.forward) <= FieldOfVanishDegree* 0.5f){
+					Debug.Log("VanishActivated");
 					gameObject.GetComponent<PlayAudioClip>().enabled = true;
 					gameObject.GetComponent<Animation>().Play();
 				}
