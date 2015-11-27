@@ -1,6 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
+Project("{3F1143A0-A375-1366-548B-06C39FC1E7B3}") = "FirstPersonViewPrototype", "Assembly-CSharp-firstpass.csproj", "{9AA1279F-74E6-8B95-0017-9D18677523E1}"
+EndProject
 Project("{3F1143A0-A375-1366-548B-06C39FC1E7B3}") = "FirstPersonViewPrototype", "Assembly-CSharp.csproj", "{365C3C4A-6FCA-2044-7CA1-A0950FDBE9D4}"
 EndProject
 Project("{3F1143A0-A375-1366-548B-06C39FC1E7B3}") = "FirstPersonViewPrototype", "Assembly-CSharp-Editor.csproj", "{40F3EB58-8E5F-B92C-D924-DB0883A4683D}"
@@ -11,6 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9AA1279F-74E6-8B95-0017-9D18677523E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AA1279F-74E6-8B95-0017-9D18677523E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AA1279F-74E6-8B95-0017-9D18677523E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AA1279F-74E6-8B95-0017-9D18677523E1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{365C3C4A-6FCA-2044-7CA1-A0950FDBE9D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{365C3C4A-6FCA-2044-7CA1-A0950FDBE9D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{365C3C4A-6FCA-2044-7CA1-A0950FDBE9D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -23,7 +29,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																									GlobalSection(MonoDevelopProperties) = preSolution
+																																																																											GlobalSection(MonoDevelopProperties) = preSolution
 =======
 																																											GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> e4b22e9464ddce11096515eee01ff1e8097ba1c1

@@ -25,11 +25,6 @@ public class EnemySight : MonoBehaviour {
 		if ((seeingPlayer == true)) {
 			//transform.LookAt(Player.transform.position);
 			Debug.Log("I can see you.");
-
-			if (Distance < deathDistance){
-				Debug.Log("You died");
-				//Game over sequence starts here
-			}
 		}
 
 		hearingPlayer = CanHearPlayer ();
