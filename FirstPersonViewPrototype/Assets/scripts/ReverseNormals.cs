@@ -5,7 +5,7 @@ using System.Collections;
 public class ReverseNormals : MonoBehaviour
 {
 
-    void Start()
+    void Awake()
     {
         MeshFilter filter = GetComponent(typeof(MeshFilter)) as MeshFilter;
         if (filter != null)
