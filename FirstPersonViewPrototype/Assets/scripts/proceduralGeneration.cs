@@ -8,11 +8,13 @@ public class proceduralGeneration : MonoBehaviour {
     private int rotation;
     private int rotationStoel;
     private int prullenbak;
+    private int whiteboard;
     private float stoeloffsetx = 0;
     private float stoeloffsetz = 0;
     public GameObject stoel;
     public GameObject desk;
     public GameObject Prullenbak;
+    public GameObject Whiteboard;
    
     // Use this for initialization
 	void Start () {
@@ -39,6 +41,27 @@ public class proceduralGeneration : MonoBehaviour {
                     break;
                 case 3:
                     if (array[6, 1] == 0) { Instantiate(Prullenbak, new Vector3(transform.position.x + 3.5f, transform.position.y+0.3f, transform.position.z - 2), Quaternion.Euler(270, 0, 0)); array[6, 1] = 1; }
+                    break;
+            };
+        }
+
+        for (int i = 0; i < 2; i++)
+        {
+            whiteboard = Random.Range(0, 4);
+            switch (whiteboard)
+            {
+                case 0:
+
+                   Instantiate(Whiteboard, new Vector3(transform.position.x + 3.75f, transform.position.y -0.5f, transform.position.z), Quaternion.Euler(0, 0, 0));
+                    break;
+                case 1:
+                   Instantiate(Whiteboard, new Vector3(transform.position.x - 3.75f, transform.position.y -0.5f, transform.position.z), Quaternion.Euler(0, 180, 0));
+                    break;
+                case 2:
+                   Instantiate(Whiteboard, new Vector3(transform.position.x, transform.position.y -0.5f, transform.position.z + 3.38f), Quaternion.Euler(0, 270, 0));
+                    break;
+                case 3:
+                    Instantiate(Whiteboard, new Vector3(transform.position.x, transform.position.y -0.5f, transform.position.z - 2.74f), Quaternion.Euler(0, 90, 0));
                     break;
             };
         }
