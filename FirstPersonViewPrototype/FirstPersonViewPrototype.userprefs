@@ -1,24 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\MirrorProbeControl.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\jumpscares\prefabs\Scripts\VanishScript.cs">
     <Files>
-      <File FileName="Assets\scripts\MirrorProbeControl.cs" Line="23" Column="13" />
-      <File FileName="Assets\scripts\EnemyRouting.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\FlashlightHitArea.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\MapGenerator.cs" Line="1" Column="1" />
-      <File FileName="Assets\imports\Standard Assets\Characters\FirstPersonCharacter\Scripts\OpeningDoor.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\toggleFlashLight.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\EnemySight.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\FlashlightScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\GeigerController.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Movie.cs" Line="1" Column="1" />
+      <File FileName="Assets\jumpscares\prefabs\Scripts\VanishScript.cs" Line="24" Column="26" />
+      <File FileName="Assets\jumpscares\prefabs\Scripts\SetActiveTrigger.cs" Line="1" Column="1" />
+      <File FileName="Assets\jumpscares\prefabs\Scripts\PlayAudioClip.cs" Line="21" Column="5" />
+      <File FileName="Assets\jumpscares\prefabs\Scripts\JumScareSystem.cs" Line="30" Column="51" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="D:\Documents\Minor-Project-Game\FirstPersonViewPrototype\Assets\scripts\EnemyRouting.cs" line="77" />
-      <Breakpoint file="D:\Documents\Minor-Project-Game\FirstPersonViewPrototype\Assets\scripts\EnemyRouting.cs" line="127" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

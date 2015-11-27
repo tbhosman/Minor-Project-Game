@@ -6,6 +6,7 @@ public class JumScareSystem : MonoBehaviour {
 	public GameObject ScareObject;
 	public AudioClip ScareSound;
 	private AudioSource audiosource;
+	public float jumpscareseconds;
 	
 	void Start(){
 		audiosource = this.GetComponent<AudioSource> (); 
@@ -26,7 +27,7 @@ public class JumScareSystem : MonoBehaviour {
 	}
 	
 	IEnumerator ScaredWait(){
-		yield return new WaitForSeconds(1.0f);
+		yield return new WaitForSeconds(jumpscareseconds);
 		audiosource.Stop ();
 		gameObject.GetComponent<Animation> ().Stop();
 		ScareObject.GetComponent<Animation> ().Stop();
