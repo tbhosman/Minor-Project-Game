@@ -4480,8 +4480,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66ab427a6d8ddd348968c3a703b8e053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameOverDistance: 3
-  DyingDistance: 15
+  GameOverDistance: 4
+  DyingDistance: 8
   PEDistance: 0
   alpha_value: 0
   maxVolume: .0500000007
