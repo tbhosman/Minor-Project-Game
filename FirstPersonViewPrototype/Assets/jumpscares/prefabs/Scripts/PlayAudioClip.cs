@@ -7,15 +7,18 @@ public class PlayAudioClip : MonoBehaviour {
 	public float playtime;
 	public AudioSource audiosource;
 	public float playfromseconds;
+	public bool hasaudio;
 	// Use this for initialization
 	void Start () {
-		audiosource.clip = audioclip;
-		audiosource.time = playfromseconds;
-		audiosource.Pause ();
-		if (playtime == 0) {
-			audiosource.Play ();
-		} else {
-			StartCoroutine (PlayAudioSource ());
+		if (hasaudio) {
+			audiosource.clip = audioclip;
+			audiosource.time = playfromseconds;
+			audiosource.Pause ();
+			if (playtime == 0) {
+				audiosource.Play ();
+			} else {
+				StartCoroutine (PlayAudioSource ());
+			}
 		}
 	}
 	

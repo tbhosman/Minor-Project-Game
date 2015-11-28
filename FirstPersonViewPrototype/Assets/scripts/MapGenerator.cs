@@ -27,6 +27,7 @@ public class MapGenerator : MonoBehaviour {
 					if (ReachableFromTo(p1, p2)){ //if there is a connection possible between the two waypoints
 						map.add_edge(i, j, Vector3.Distance(p1,p2)); //
 						map.add_edge(j, i, Vector3.Distance(p1,p2));
+						Debug.DrawLine(p1,p2, Color.green, 10, false);
 					}
 				}
 			}
