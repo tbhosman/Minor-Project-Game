@@ -4779,7 +4779,7 @@ MonoBehaviour:
   canReach: 
   waypoint: {fileID: 0}
   reachDist: .5
-  speed: 1.70000005
+  speed: 2
   rb: {fileID: 0}
   cacheSize: 10
   waypointcache: 
@@ -12794,7 +12794,7 @@ MonoBehaviour:
   m_IsWalking: 0
   m_WalkSpeed: 1.5
   m_RunSpeed: 3
-  m_RunstepLenghten: .699999988
+  m_RunstepLenghten: 1
   m_JumpSpeed: 10
   m_StickToGroundForce: 10
   m_GravityMultiplier: 2
@@ -12866,7 +12866,7 @@ MonoBehaviour:
   m_JumpBob:
     BobDuration: .200000003
     BobAmount: .100000001
-  m_StepInterval: 5
+  m_StepInterval: 3
   m_FootstepSounds:
   - {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
   - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
