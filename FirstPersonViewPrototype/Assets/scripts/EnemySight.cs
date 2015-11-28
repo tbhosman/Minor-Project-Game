@@ -23,18 +23,17 @@ public class EnemySight : MonoBehaviour {
 		float Distance = Vector3.Distance(transform.position, Player.transform.position);
 
 		if ((seeingPlayer == true)) {
-			//transform.LookAt(Player.transform.position);
-			Debug.Log("I can see you.");
+			//Debug.Log("I can see you.");
 		}
 
 		hearingPlayer = CanHearPlayer ();
 		if (hearingPlayer) {
-			Debug.Log ("I can hear you.");
+			//Debug.Log ("I can hear you.");
 		}
 
 		seeingPlayerLight = CanSeePlayerLight ();
 		if (seeingPlayerLight) {
-			Debug.Log ("I can see your light.");
+			//Debug.Log ("I can see your light.");
 		}
 	}
 
