@@ -1109,7 +1109,7 @@ AnimationClip:
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: 3.5
+    m_StopTime: 11.1999998
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -5538,6 +5538,20 @@ AnimationClip:
     messageOptions: 0
   - time: 3.0333333
     functionName: FadeToBlack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 10.0333338
+    functionName: ActivateGasMaskOverlay
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 11.1999998
+    functionName: FadeIn
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

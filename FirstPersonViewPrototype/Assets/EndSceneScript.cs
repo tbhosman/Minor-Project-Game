@@ -7,8 +7,23 @@ public class EndSceneScript : MonoBehaviour {
 	public Image fadeImage;
 	public float shakeduration;
 	public float fadeduration;
+	public float fadeinduration;
 	private float a;
+	public RawImage GasMaskOverlay;
 
+	void ActivateGasMaskOverlay(){
+		GasMaskOverlay.enabled = true;
+	}
+
+	IEnumerator FadeIn(){
+		float elapsed = 0;
+		while (elapsed <fadeinduration) {
+			elapsed += Time.deltaTime;
+			a = 1-elapsed/fadeinduration;
+			fadeImage.color = new Color (0, 0, 0, a);
+			yield return null;
+		}
+	}
 	IEnumerator FadeToBlack(){
 		float elapsed = 0;
 		while (elapsed <fadeduration) {
