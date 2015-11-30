@@ -10,11 +10,7 @@ public class toggleFlashLight : MonoBehaviour {
         toggleLight = false;
         FlashLightText.text = "";
     }
-	
-	// Update is called once per frame
-	void Update () {
-        Debug.Log("light:  " + toggleLight);	
-	}
+
 
     public bool getLight()
     {
