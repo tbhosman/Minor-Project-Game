@@ -17,6 +17,7 @@ public class EnemySight : MonoBehaviour {
 	public float canSeeLocationError = 0.05f;
 	public bool seeingPlayerLight;
 	public float fieldOfViewDegreesPlayerLight = 120;
+	public bool canHearClearly;
 
 	void Update(){
 		seeingPlayer = CanSeePlayer();
@@ -66,11 +67,17 @@ public class EnemySight : MonoBehaviour {
 			hearDistance = hearDistanceRunning;
 		}
 
-		if (Vector3.Distance(Player.transform.position, transform.position) < hearDistance)
-		{
+		float PEdist = Vector3.Distance (Player.transform.position, transform.position);
+		if (PEdist < hearDistance / 2) {
+			canHearClearly = true;
 			return true;
+		} else if (PEdist < hearDistance) {
+			canHearClearly = false;
+			return true;
+		} else {
+			canHearClearly = false;
+			return false;
 		}
-		return false;
 	}
 
 	protected bool CanSeePlayerLight(){
