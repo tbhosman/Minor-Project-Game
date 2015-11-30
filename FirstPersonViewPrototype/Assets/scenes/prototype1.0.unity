@@ -4651,7 +4651,7 @@ MonoBehaviour:
   fieldOfViewDegrees: 70
   visibilityDistance: 120
   deathDistance: 10
-  hearDistanceStanding: 5
+  hearDistanceStanding: 1
   hearDistanceWalking: 25
   hearDistanceRunning: 50
   hearingPlayer: 0
@@ -4659,6 +4659,7 @@ MonoBehaviour:
   canSeeLocationError: .0500000007
   seeingPlayerLight: 0
   fieldOfViewDegreesPlayerLight: 140
+  canHearClearly: 0
 --- !u!4 &287552373
 Transform:
   m_ObjectHideFlags: 0
@@ -4706,7 +4707,7 @@ MonoBehaviour:
   waypointToPlayer: 0
   RouteToPlayer: 
   waypointObject: {fileID: 191906, guid: 00660139676625c4994dc058c2826b67, type: 2}
-  reachedLastPlayerLocationDistance: 1
+  reachedLastPlayerLocationDistance: .5
   goingToPlayer: 0
   wantTurn: 0
 --- !u!54 &287552375
@@ -15695,7 +15696,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 480706, guid: b2f8af2d9e8578a4e8e2d276a9ffa4ca, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 93.5999985
+      value: 92.0199966
       objectReference: {fileID: 0}
     - target: {fileID: 480706, guid: b2f8af2d9e8578a4e8e2d276a9ffa4ca, type: 2}
       propertyPath: m_LocalRotation.x
@@ -15715,7 +15716,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 480706, guid: b2f8af2d9e8578a4e8e2d276a9ffa4ca, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 11460532, guid: b2f8af2d9e8578a4e8e2d276a9ffa4ca, type: 2}
       propertyPath: FlashLightText
@@ -30770,7 +30771,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1825868969}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -97.6999969, y: .579999983, z: 92}
+  m_LocalPosition: {x: -96.4400024, y: .579999983, z: 93.3099976}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 802715137}
