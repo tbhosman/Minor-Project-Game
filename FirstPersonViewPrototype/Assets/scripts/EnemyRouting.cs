@@ -35,6 +35,7 @@ public class EnemyRouting : MonoBehaviour {
 	public GameObject waypointObject;
 	public float reachedLastPlayerLocationDistance = 1;
 	public bool goingToPlayer;
+	public bool wantTurn;
 
 	// Use this for initialization
 	void Start () {
@@ -57,6 +58,7 @@ public class EnemyRouting : MonoBehaviour {
 		}
 		waypoint_index = newWaypoint ();
 		waypoint = waypoints[waypoint_index];
+		wantTurn = true;
 		rb = GetComponent<Rigidbody>();
 		rb.velocity = transform.TransformDirection(new Vector3(0,0,0));
 		//rb.transform.LookAt (waypoint.transform.position + new Vector3(0,0.1f,0));
@@ -103,8 +105,7 @@ public class EnemyRouting : MonoBehaviour {
 			RouteToPlayer = GameObject.Find("Waypoints").GetComponent<MapGenerator>().map.shortest_path(waypoint_index,waypointToPlayer);
 		}
 
-		if (rb.velocity == new Vector3 (0, 0, 0)) { //turning to new waypoint
-			wantIdle = false;
+		if (wantTurn) { //turning to new waypoint
 			TurnTowards(waypoint.transform.position);
 		}
 		else if (wantWalk == true){ //moving to a waypoint
@@ -153,7 +154,7 @@ public class EnemyRouting : MonoBehaviour {
 			
 			//set as new waypoint
 			waypoint = waypoints [waypoint_index];
-			wantIdle = true;
+			wantTurn = true;
 			//rb.velocity = transform.TransformDirection(new Vector3(0,0,0));//StartCoroutine(RampSpeed(speed,0)); //set speed to 0 for turning to next waypoint
 		}
 	}
@@ -162,12 +163,17 @@ public class EnemyRouting : MonoBehaviour {
 		Vector3 newRotation = Quaternion.LookRotation(location - transform.position).eulerAngles;
 		newRotation.x = 0.0f;
 		newRotation.z = 0.0f;
-		if (Mathf.Abs((float) transform.rotation.eulerAngles.y - newRotation.y) < angleError ){ //pointing towards new waypoint
+		if (Mathf.Abs ((float)transform.rotation.eulerAngles.y - newRotation.y) < angleError) { //pointing towards new waypoint
 			wantWalk = true;
+			wantTurn = false;
+			wantIdle = false;
 			//StartCoroutine(RampSpeed(0,speed));//rb.velocity = transform.TransformDirection(new Vector3(0,0, StartCoroutine(RampSpeed(0,speed))));
-		}
-		else{
-			rb.transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(newRotation), Time.deltaTime * turnSpeed);
+		} else if (rb.velocity == new Vector3 (0, 0, 0)) {
+			wantIdle = true;
+			wantWalk = false;
+			rb.transform.rotation = Quaternion.Lerp (transform.rotation, Quaternion.Euler (newRotation), Time.deltaTime * turnSpeed);
+		} else {
+			wantIdle = true;
 		}
 	}
 

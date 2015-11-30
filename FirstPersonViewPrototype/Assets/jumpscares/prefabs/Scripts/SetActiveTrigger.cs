@@ -4,6 +4,7 @@ using System.Collections;
 public class SetActiveTrigger : MonoBehaviour {
 	
 	public GameObject ObjectToTrigger;
+	public bool activebool;
 	// Use this for initialization
 	void Start () {
 	}
@@ -14,7 +15,7 @@ public class SetActiveTrigger : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col){
 		if (col.gameObject.tag == "Player") {
-			ObjectToTrigger.SetActive (true);
+			ObjectToTrigger.SetActive (activebool);
 			gameObject.SetActive(false);
 		}
 	}
