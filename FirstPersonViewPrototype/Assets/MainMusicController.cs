@@ -34,18 +34,17 @@ public class MainMusicController : MonoBehaviour {
 		for (int i = 1; i < transform.childCount; i++) {
 			if (audioTracks[i].name == track){
 				audioTracks[i].gameObject.SetActive(true);
-				FadeMusic (audioTracks[i].GetComponent<AudioSource>(), maxVolume, fadeTime);
+				StartCoroutine(FadeMusic (audioTracks[i].GetComponent<AudioSource>(), maxVolume, fadeTime));
 			} else {
-				FadeMusic (audioTracks[i].GetComponent<AudioSource>(), 0, fadeTime);
 				if (audioTracks[i].gameObject.activeSelf == true){
 					toFadeOut = i;
 				}
+				StartCoroutine(FadeMusic (audioTracks[i].GetComponent<AudioSource>(), 0, fadeTime));
 			}
 		}
-		audioTracks [toFadeOut].SetActive (false);
 	}
 
-	IEnumerator FadeMusic(AudioSource audio, float targetVolume, float duration)
+	private IEnumerator FadeMusic(AudioSource audio, float targetVolume, float duration)
 	{
 		float startVolume = audio.volume;
 		float inverseDuration = 1.0f / duration;
@@ -53,9 +52,10 @@ public class MainMusicController : MonoBehaviour {
 		while (lerpFactor <= 1.0f) {
 			audio.volume = Mathf.Lerp(startVolume, targetVolume, lerpFactor);
 			lerpFactor = lerpFactor + Time.deltaTime * inverseDuration;
+			yield return null;
 		}
 		audio.volume = targetVolume;
-		yield return true;
+		audioTracks [toFadeOut].SetActive (false);
 	}
 
 }
