@@ -18,6 +18,7 @@ public class SecurityPanelController : MonoBehaviour {
 			}
 		}
 		codeDisplayText.text = "";
+		gameObject.SetActive(false);
 	}
 
 	void Update () {
