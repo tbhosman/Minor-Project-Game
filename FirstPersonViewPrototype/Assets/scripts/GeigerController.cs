@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GeigerController : MonoBehaviour {
 	
@@ -14,6 +15,9 @@ public class GeigerController : MonoBehaviour {
 	private int audiolevel = 0;
 	private bool canPlayAudio = true;
 	public float GeigerParameter;
+	public float radioactivityConstant = 2000;
+	public float overloadValue = 2000;
+	private float radiodistance;
 
 	void Start () {
 
@@ -25,8 +29,31 @@ public class GeigerController : MonoBehaviour {
 
 	void Update () {
 
-		float radiodistance = DistanceToClosestRadioactive ();
+		radiodistance = DistanceToClosestRadioactive ();
+		setGeigerText ();
 		audiolevel = ChooseAudioClip (radiodistance, audiolevel);
+	}
+
+	void setGeigerText(){
+		float radioactivityValue = radioactivityConstant / radiodistance;
+		string radioactivityPadded = "";
+		string radioactivityUnpadded = "";
+		if (radioactivityValue > overloadValue) {
+			radioactivityPadded = " OVERLD";
+		} else { //counter is not overloaded
+			radioactivityUnpadded = radioactivityValue.ToString ("0.00");
+			if (radioactivityUnpadded.Length < 7){ //low value, needs to be padded for digital display
+				radioactivityPadded = radioactivityUnpadded.PadLeft(7);
+			}
+			else if (radioactivityUnpadded.Length == 7){ //value is good, no padding needed
+				radioactivityPadded = radioactivityUnpadded;
+			}
+			else{ //debug for values with more than 7 digits
+				radioactivityPadded = " OVERLD";
+			}
+		}
+
+		transform.parent.GetChild (1).GetChild (0).GetComponent<TextMesh> ().text = radioactivityPadded;
 	}
 
 	float DistanceToClosestRadioactive(){
