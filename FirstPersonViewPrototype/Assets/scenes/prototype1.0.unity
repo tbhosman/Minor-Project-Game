@@ -6574,7 +6574,7 @@ Transform:
   - {fileID: 1234821730}
   - {fileID: 960434144}
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 25
 --- !u!1 &395534530
 GameObject:
   m_ObjectHideFlags: 0
@@ -14343,7 +14343,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!111 &833293017
 Animation:
   m_ObjectHideFlags: 0
@@ -26443,7 +26443,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1506986782
 Transform:
   m_ObjectHideFlags: 0
