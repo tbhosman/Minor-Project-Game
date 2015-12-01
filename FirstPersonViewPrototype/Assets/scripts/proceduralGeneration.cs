@@ -13,6 +13,10 @@ public class proceduralGeneration : MonoBehaviour {
     private float stoeloffsetz = 0;
     private int deskoffsetRij = 0;
     private int deskoffsetKolom = 0;
+    public int x_coordinaatdeur;
+    public int z_coordinaatdeur;
+    private float scalingX;
+    private float scalingY;
 
     public GameObject archiefkast;
     public GameObject stoel;
@@ -24,46 +28,59 @@ public class proceduralGeneration : MonoBehaviour {
     public GameObject computer3;
     public GameObject computer4;
     public GameObject computer5;
+    public GameObject file;
     private GameObject computerkeuze;
+
     // Use this for initialization
     void Start() {
+        RaycastHit hit;
+        Physics.Raycast(new Vector3(transform.position.x,transform.position.y+0.1f,transform.position.z), Vector3.right, out hit);
+        Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z), Vector3.right, out hit);
+        Debug.Log("distance: " + hit.distance);
+        scalingX = hit.distance / 3.58382364f;
+        scalingY = hit.distance/2.5f;
+        array[x_coordinaatdeur, z_coordinaatdeur] = 1;
+        if (x_coordinaatdeur != 0) { array[x_coordinaatdeur - 1, z_coordinaatdeur] = 1; }
+        if (x_coordinaatdeur != 6) { array[x_coordinaatdeur + 1, z_coordinaatdeur] = 1; }
+        if (z_coordinaatdeur !=0) { array[x_coordinaatdeur, z_coordinaatdeur - 1] = 1; }
+        if (z_coordinaatdeur != 5) { array[x_coordinaatdeur, z_coordinaatdeur + 1] = 1; }
 
         for (int i = 0; i < 2; i++) {
             prullenbak = Random.Range(0, 4);
             switch (prullenbak) {
                 case 0:
 
-                    if (array[6, 5] == 0) { Instantiate(Prullenbak, new Vector3(transform.position.x + 3.55f, transform.position.y + 0.3f, transform.position.z + 2.75f), Quaternion.Euler(270, 0, 0)); array[6, 5] = 1; }
+                    if (array[6, 5] == 0) { Instantiate(Prullenbak, new Vector3(transform.position.x + 3.23f*scalingX, transform.position.y + 0.3f, transform.position.z + 2.75f), Quaternion.Euler(270, 0, 0)); array[6, 5] = 1; }
                     break;
                 case 1:
-                    if (array[0, 0] == 0) { Instantiate(Prullenbak, new Vector3(transform.position.x - 3.55f, transform.position.y + 0.3f, transform.position.z - 2.75f), Quaternion.Euler(270, 0, 0)); array[0, 0] = 1; }
+                    if (array[0, 0] == 0) { Instantiate(Prullenbak, new Vector3(transform.position.x - 3.23f * scalingX, transform.position.y + 0.3f, transform.position.z - 2.75f), Quaternion.Euler(270, 0, 0)); array[0, 0] = 1; }
                     break;
                 case 2:
-                    if (array[0, 5] == 0) { Instantiate(Prullenbak, new Vector3(transform.position.x - 3.55f, transform.position.y + 0.3f, transform.position.z + 2.65f), Quaternion.Euler(270, 0, 0)); array[0, 5] = 1; }
+                    if (array[0, 5] == 0) { Instantiate(Prullenbak, new Vector3(transform.position.x - 3.23f * scalingX, transform.position.y + 0.3f, transform.position.z + 2.65f), Quaternion.Euler(270, 0, 0)); array[0, 5] = 1; }
                     break;
                 case 3:
-                    if (array[6, 0] == 0) { Instantiate(Prullenbak, new Vector3(transform.position.x + 3.55f, transform.position.y + 0.3f, transform.position.z - 2.65f), Quaternion.Euler(270, 0, 0)); array[6, 0] = 1; }
+                    if (array[6, 0] == 0) { Instantiate(Prullenbak, new Vector3(transform.position.x + 3.23f * scalingX, transform.position.y + 0.3f, transform.position.z - 2.65f), Quaternion.Euler(270, 0, 0)); array[6, 0] = 1; }
                     break;
             };
         }
 
         for (int i = 0; i < 2; i++)
         {
-            whiteboard = Random.Range(0, 4);
+            whiteboard = Random.Range(0, 3);
             switch (whiteboard)
             {
                 case 0:
 
-                    Instantiate(Whiteboard, new Vector3(transform.position.x + 3.85f, transform.position.y-0.2f, transform.position.z), Quaternion.Euler(0, 0, 0));
+                    if (x_coordinaatdeur != 6) { Instantiate(Whiteboard, new Vector3(transform.position.x + 3.5f * scalingX, transform.position.y + 0.4f, transform.position.z), Quaternion.Euler(0, 0, 0)); }
                     break;
                 case 1:
-                    Instantiate(Whiteboard, new Vector3(transform.position.x - 3.85f, transform.position.y - 0.2f, transform.position.z), Quaternion.Euler(0, 180, 0));
+                    if (x_coordinaatdeur != 0) { Instantiate(Whiteboard, new Vector3(transform.position.x - 3.5f * scalingX, transform.position.y + 0.4f, transform.position.z), Quaternion.Euler(0, 180, 0)); }
                     break;
                 case 2:
-                    Instantiate(Whiteboard, new Vector3(transform.position.x, transform.position.y - 0.2f, transform.position.z + 3.14f), Quaternion.Euler(0, 270, 0));
+                    if (z_coordinaatdeur != 5) { Instantiate(Whiteboard, new Vector3(transform.position.x, transform.position.y + 0.4f, transform.position.z + 3.04f), Quaternion.Euler(0, 270, 0)); }
                     break;
                 case 3:
-                    Instantiate(Whiteboard, new Vector3(transform.position.x, transform.position.y - 0.2f, transform.position.z - 3.08f), Quaternion.Euler(0, 90, 0));
+                    if (z_coordinaatdeur != 0) { Instantiate(Whiteboard, new Vector3(transform.position.x, transform.position.y + 0.4f, transform.position.z - 3.00f), Quaternion.Euler(0, 90, 0)); }
                     break;
             };
         }
@@ -72,27 +89,31 @@ public class proceduralGeneration : MonoBehaviour {
             rij = Random.Range(3, 5);
             kolom = Random.Range(2, 3);
             if (array[rij,kolom]==0) {
-                Instantiate(desk, new Vector3(transform.position.x + (rij * 1.1f - 3.3f), transform.position.y, transform.position.z + (kolom - 2.5f)), Quaternion.Euler(0, rotation, 0));
-                Instantiate(desk, new Vector3(transform.position.x + (rij) * 1.1f - 3.3f, transform.position.y, transform.position.z + (kolom-1) - 2.5f), Quaternion.Euler(0, 180, 0));
+                Instantiate(desk, new Vector3(transform.position.x + (rij * scalingX - 3.0f*scalingX), transform.position.y, transform.position.z + (kolom - 2.5f)), Quaternion.Euler(0, rotation, 0));
+                Instantiate(desk, new Vector3(transform.position.x + (rij * scalingX - 3.0f*scalingX), transform.position.y, transform.position.z + (kolom-1) - 2.5f), Quaternion.Euler(0, 180, 0));
                 array[rij, kolom] = 1;
-                array[rij-1, kolom] = 1;
+                array[rij, kolom-1] = 1;
+
                 array[rij+1, kolom] = 1;
-                array[rij - 2, kolom] = 1;
-                array[rij, kolom+1] = 1;
+                array[rij+1, kolom-1] = 1;
+
+                array[rij-1, kolom] = 1;
                 array[rij - 1, kolom + 1] = 1;
-                array[rij, kolom - 1] = 1;
-                array[rij - 1, kolom - 1] = 1;
-                array[rij - 2, kolom + 1] = 1;
-                array[rij, kolom + 2] = 1;
-                array[rij - 1, kolom + 2] = 1;
-                array[rij - 3, kolom] = 1;
-                array[rij - 3, kolom + 1] = 1;
-                array[rij + 2, kolom] = 1;
-                array[rij + 2, kolom + 1] = 1;
+
                 array[rij, kolom - 2] = 1;
+                array[rij, kolom + 1] = 1;
+
+                array[rij - 2, kolom + 1] = 1;
+                array[rij - 2, kolom] = 1;
+
+                array[rij + 2, kolom] = 1;
+                array[rij + 2, kolom - 1] = 1;
+
+                array[rij + 1, kolom + 1] = 1;
+                array[rij + 1, kolom - 2] = 1;
+
+                array[rij - 1, kolom + 1] = 1;
                 array[rij - 1, kolom - 2] = 1;
-                array[rij, kolom + 3] = 1;
-                array[rij - 1, kolom + 3] = 1;
             }
 
         }
@@ -177,17 +198,46 @@ public class proceduralGeneration : MonoBehaviour {
                     if (kolom - deskoffsetKolom != -1 && kolom - deskoffsetKolom != 6) { array[rij, kolom - deskoffsetKolom] = 1; }
                 }
 
-                Instantiate(desk, new Vector3(transform.position.x + ((rij + deskoffsetRij*0.5f) *1.1f - 3.3f), transform.position.y, transform.position.z + ((kolom + deskoffsetKolom*0.5f) - 2.5f)), Quaternion.Euler(0, rotation, 0));
-                Instantiate(computerkeuze, new Vector3(transform.position.x + (rij  * 1.1f - 3.3f + stoeloffsetx * -0.2f), transform.position.y+0.86f, transform.position.z + kolom - 2.5f+stoeloffsetz * -0.2f), Quaternion.Euler(0, rotation, 0));
-                Instantiate(stoel, new Vector3(transform.position.x + ((rij + deskoffsetRij*0.5f) * 1.1f - 3.3f + stoeloffsetx * 0.75f), transform.position.y, transform.position.z + ((kolom + deskoffsetKolom*0.5f) - 2.5f + stoeloffsetz * 0.75f)), Quaternion.Euler(0, rotation-90, 0));
+                Instantiate(desk, new Vector3(transform.position.x + ((rij + deskoffsetRij*0.5f) *scalingX - 3.0f*scalingX), transform.position.y, transform.position.z + ((kolom + deskoffsetKolom*0.5f) - 2.5f)), Quaternion.Euler(0, rotation, 0));
+                Instantiate(computerkeuze, new Vector3(transform.position.x + (rij  * scalingX - 3.0f*scalingX + stoeloffsetx * -0.2f), transform.position.y+0.86f, transform.position.z + kolom - 2.5f+stoeloffsetz * -0.2f), Quaternion.Euler(0, rotation, 0));
+                Instantiate(file, new Vector3(transform.position.x + (rij * scalingX - 3.0f*scalingX+deskoffsetRij + Random.Range(-0.3f,0.3f)), transform.position.y + 0.866f, transform.position.z + kolom - 2.5f + deskoffsetKolom + Random.Range(-0.3f, 0.3f)), Quaternion.Euler(180, Random.Range(0,360), 0));
+                if (array[rij, kolom] != 0) { Instantiate(stoel, new Vector3(transform.position.x + ((rij) * scalingX - 3.0f * scalingX + stoeloffsetx * 0.75f), transform.position.y, transform.position.z + ((kolom) - 2.5f + stoeloffsetz * 0.75f)), Quaternion.Euler(0, rotation - 90 + Random.Range(-20, 20), 0)); }
                 Debug.Log(deskoffsetRij + " "  + deskoffsetKolom);
             }
             stoeloffsetx = 0;
             stoeloffsetz = 0;
         }
+        for (int i = 0;i<6;i++) {
+            
+            if (array[i, 0] == 0)
+            {
+                Instantiate(archiefkast, new Vector3(transform.position.x+i*scalingX-3.0f*scalingX, transform.position.y, transform.position.z-2.5f+0), Quaternion.Euler(0, 0, 0));
+                array[i, 0] = 1;
+            }
+            if (array[i, 5] == 0)
+            {
+                Instantiate(archiefkast, new Vector3(transform.position.x + i * scalingX - 3.0f*scalingX, transform.position.y, transform.position.z - 2.5f + 5), Quaternion.Euler(0, 180, 0));
+                array[i, 5] = 1;
+            }
+        }
+        for (int i = 0; i < 5; i++)
+        {
+
+            if (array[0, i] == 0)
+            {
+                Instantiate(archiefkast, new Vector3(transform.position.x + 0 * scalingX - 3.0f*scalingX, transform.position.y, transform.position.z - 2.5f+i), Quaternion.Euler(0, 90, 0));
+                array[0, i] = 1;
+            }
+            if (array[6, i] == 0)
+            {
+                Instantiate(archiefkast, new Vector3(transform.position.x + 6 * scalingX - 3.0f*scalingX, transform.position.y, transform.position.z - 2.5f+ i), Quaternion.Euler(0, 270, 0));
+                array[6, i] = 1;
+            }
+        }
     }
-    
-void OnDrawGizmos()
+
+
+    void OnDrawGizmos()
 {
         for (int i = 0; i < 7; i++)
         {
@@ -197,13 +247,9 @@ void OnDrawGizmos()
                 {
                     Gizmos.color = Color.cyan;
                 }else { Gizmos.color = Color.red; }
-                Gizmos.DrawSphere(new Vector3(transform.position.x+1.1f*i-3.3f,transform.position.y,transform.position.z+j-2.5f), 0.1f);
+                Gizmos.DrawSphere(new Vector3(transform.position.x+scalingX*i-3.0f*scalingX,transform.position.y,transform.position.z+j-2.5f), 0.1f);
             }
         }
 }
 
-// Update is called once per frame
-void Update () {
-	
-	}
 }
