@@ -3,10 +3,15 @@ using System.Collections;
 
 public class DontLookScareScript : MonoBehaviour {
 
-	public FirstPersonConrtoller;
+	public GameObject FirstPersonController;
+
 	// Use this for initialization
 	void Start () {
-	
+
+	}
+
+	void TogglePlayerControl(){
+
 	}
 	
 	// Update is called once per frame
