@@ -46,9 +46,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 24.0895748
-  m_TransitionOffset: 0
-  m_ExitTime: .52804023
+  m_TransitionDuration: .157599688
+  m_TransitionOffset: .840503573
+  m_ExitTime: .911143124
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -129,7 +129,7 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Wake
-  m_Speed: .200000003
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 110186190}
