@@ -10,7 +10,7 @@ public class rotatelight : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.eulerAngles = new Vector3(rotateValue*4, 0, 0);
+		transform.eulerAngles = new Vector3(90,rotateValue*4,0);
         rotateValue++;
     }
 }
