@@ -10,9 +10,15 @@ public class EndSceneScript : MonoBehaviour {
 	public float fadeinduration;
 	private float a;
 	public RawImage GasMaskOverlay;
+	public Animator AntagAnimator;
 
-	void ActivateGasMaskOverlay(){
-		GasMaskOverlay.enabled = true;
+	void AntagWalk(){
+		AntagAnimator.SetFloat ("Speed", 0.2f);
+		AntagAnimator.speed = 0.65f;
+	}
+
+	void ToggleGasMaskOverlay(){
+		GasMaskOverlay.enabled = !GasMaskOverlay.enabled;
 	}
 
 	IEnumerator FadeIn(){
