@@ -6,6 +6,7 @@ public class InspectScript : MonoBehaviour {
 
 	private bool Inspected;
 	private GameObject Player;
+	private Animator PlayerAnimator;
 	public Text InspectInstructions;
 	public Animation DontLookAnim;
 	// Use this for initialization
@@ -13,6 +14,7 @@ public class InspectScript : MonoBehaviour {
 		Inspected = false;
 		InspectInstructions.enabled = false;
 		Player = GameObject.FindGameObjectWithTag ("Player");
+		PlayerAnimator = Player.GetComponentInParent<Animator>();
 	}
 
 	void Update () {
@@ -22,6 +24,7 @@ public class InspectScript : MonoBehaviour {
 				if (Input.GetKeyDown ("e")) {
 					InspectInstructions.enabled = false;
 					DontLookAnim.Play ();
+					PlayerAnimator.SetTrigger("Trigger");
 					Inspected = true;
 				}
 			}
