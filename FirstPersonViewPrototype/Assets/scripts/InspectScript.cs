@@ -43,7 +43,6 @@ public class InspectScript : MonoBehaviour {
 	}
 
 	IEnumerator disablePlayer(){
-		Player.GetComponent<
 	}
 
 	void OnTriggerExit(){
