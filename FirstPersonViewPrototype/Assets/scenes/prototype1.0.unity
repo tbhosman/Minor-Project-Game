@@ -13209,8 +13209,8 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 802715136}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -36.0999985, y: 13.6999998, z: 21.7000008}
+  m_LocalRotation: {x: 0, y: -.707106829, z: 0, w: .707106709}
+  m_LocalPosition: {x: 4.98000002, y: 1.14999998, z: 99.8899994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1825868970}
@@ -14533,6 +14533,7 @@ GameObject:
   - 4: {fileID: 833293018}
   - 111: {fileID: 833293017}
   - 114: {fileID: 833293019}
+  - 114: {fileID: 833293020}
   m_Layer: 0
   m_Name: EndAnimation
   m_TagString: Untagged
@@ -14581,11 +14582,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 665134487}
-  shakeduration: .5
   fadeduration: 7
   fadeinduration: 3
   GasMaskOverlay: {fileID: 1516467366}
   AntagAnimator: {fileID: 1358557066}
+--- !u!114 &833293020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 833293016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a3514666645bd498a6f81186fb9707, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeduration: .5
+  shakeIntensity: 1
 --- !u!1 &836473165
 GameObject:
   m_ObjectHideFlags: 0
@@ -32211,6 +32224,56 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300380, guid: 1a7272ea20ead8f42bc6dc0614f395fc, type: 3}
+--- !u!1001 &1824028252
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 451680, guid: 16e9fc15d072f784a8e8cc87e0288ccc, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451680, guid: 16e9fc15d072f784a8e8cc87e0288ccc, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451680, guid: 16e9fc15d072f784a8e8cc87e0288ccc, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451680, guid: 16e9fc15d072f784a8e8cc87e0288ccc, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451680, guid: 16e9fc15d072f784a8e8cc87e0288ccc, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451680, guid: 16e9fc15d072f784a8e8cc87e0288ccc, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451680, guid: 16e9fc15d072f784a8e8cc87e0288ccc, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 451680, guid: 16e9fc15d072f784a8e8cc87e0288ccc, type: 2}
+      propertyPath: m_RootOrder
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 11418068, guid: 16e9fc15d072f784a8e8cc87e0288ccc, type: 2}
+      propertyPath: flashlight
+      value: 
+      objectReference: {fileID: 1386179270}
+    - target: {fileID: 179202, guid: 16e9fc15d072f784a8e8cc87e0288ccc, type: 2}
+      propertyPath: m_Name
+      value: HallWayScare
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 16e9fc15d072f784a8e8cc87e0288ccc, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1825868969
 GameObject:
   m_ObjectHideFlags: 0
