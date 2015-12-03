@@ -23,8 +23,13 @@ public class VanishScript : MonoBehaviour {
 			if (RayHit.collider.gameObject.tag == "Player"){
 				if (Vector3.Angle(transform.position-player.transform.position, player.transform.forward) <= FieldOfVanishDegree* 0.5f){
 					Debug.Log("VanishActivated");
+					if (deactivate) {
+						gameObject.SetActive(false);
+					}
+					else{
 					gameObject.GetComponent<PlayAudioClip>().enabled = true;
 					gameObject.GetComponent<Animation>().Play();
+					}
 				}
 			}
 		}
