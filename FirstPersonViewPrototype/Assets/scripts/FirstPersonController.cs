@@ -187,8 +187,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_FootstepSounds[n] = m_FootstepSounds[0];
             m_FootstepSounds[0] = m_AudioSource.clip;
         }
-        IEnumerator Wait(int getal)
+        public IEnumerator Wait(int getal)
         {
+			setWait (false);
             yield return new WaitForSeconds(getal);
             setWait(true);
         }
