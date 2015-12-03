@@ -18,6 +18,7 @@ public class GeigerController : MonoBehaviour {
 	public float radioactivityConstant = 2000;
 	public float overloadValue = 2000;
 	private float radiodistance;
+    private float offsetgeiger = 0;
 
 	void Start () {
 
@@ -25,18 +26,20 @@ public class GeigerController : MonoBehaviour {
 		GeigerAudioSource.clip = GeigerLevel1;
 		GeigerAudioSource.loop = true;
 		GeigerAudioSource.Play();
+        Invoke("setGeigerText", Random.Range(0f, 0.2f));
 	}
 
 	void Update () {
 
 		radiodistance = DistanceToClosestRadioactive ();
-		setGeigerText ();
+		
 		audiolevel = ChooseAudioClip (radiodistance, audiolevel);
 	}
 
 	void setGeigerText(){
-		float radioactivityValue = radioactivityConstant / radiodistance;
-		string radioactivityPadded = "";
+
+        float radioactivityValue = radioactivityConstant / radiodistance + Random.Range(-1f,1f);
+        string radioactivityPadded = "";
 		string radioactivityUnpadded = "";
 		if (radioactivityValue > overloadValue) {
 			radioactivityPadded = " OVERLD";
@@ -54,7 +57,8 @@ public class GeigerController : MonoBehaviour {
 		}
 
 		transform.parent.GetChild (1).GetChild (0).GetComponent<TextMesh> ().text = radioactivityPadded;
-	}
+        Invoke("setGeigerText", Random.Range(0f,0.2f));
+    }
 
 	float DistanceToClosestRadioactive(){
 		GameObject[] radioactives;
