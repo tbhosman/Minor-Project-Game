@@ -39,6 +39,7 @@ public class SecurityPanelController : MonoBehaviour {
 	public void GetDigitInput(Text input){
 		if (codeDisplayText.text.Length < 4) {
 			codeDisplayText.text += input.text;
+			GetComponent<AudioSource>().Play();
 			StartCoroutine (UpdateTextField ());
 		}
 	}
@@ -46,6 +47,7 @@ public class SecurityPanelController : MonoBehaviour {
 	public void UndoInput(){
 		if (codeDisplayText.text.Length > 0 && codeDisplayText.text.Length != 4){
 			codeDisplayText.text = codeDisplayText.text.Remove(codeDisplayText.text.Length - 1);
+			GetComponent<AudioSource>().Play();
 			StartCoroutine(UpdateTextField ());
 		}
 	}
@@ -58,6 +60,7 @@ public class SecurityPanelController : MonoBehaviour {
 				codeDisplayText.text = "";
 				gameObject.SetActive(false);
 				MachineRoomDoor.GetComponent<Animation>().Play();
+				MachineRoomDoor.GetComponent<AudioSource>().Play();
 				codeDisplayPanel.GetComponent<Image> ().color = new Color (255, 255, 255, 100);
 			}
 			else {
