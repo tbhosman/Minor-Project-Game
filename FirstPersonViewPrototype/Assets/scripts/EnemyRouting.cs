@@ -36,6 +36,7 @@ public class EnemyRouting : MonoBehaviour {
 	public float reachedLastPlayerLocationDistance = 1;
 	public bool goingToPlayer;
 	public bool wantTurn;
+	private float prevDist;
 
 	// Use this for initialization
 	void Start () {
@@ -70,6 +71,7 @@ public class EnemyRouting : MonoBehaviour {
 		waypointToPlayer = findWaypointToPlayer();
 		waypoint_index = -1;
 
+		prevDist = Vector3.Distance (transform.position, waypoint.transform.position);
 	}
 	
 	// Update is called once per frame
@@ -162,6 +164,13 @@ public class EnemyRouting : MonoBehaviour {
 			getNewWaypoint();
 			//rb.velocity = transform.TransformDirection(new Vector3(0,0,0));//StartCoroutine(RampSpeed(speed,0)); //set speed to 0 for turning to next waypoint
 		}
+
+		//debug for enemy passing a waypoint
+		if (prevDist < Vector3.Distance (transform.position, waypoint.transform.position)) { //enemy going further away
+			getNewWaypoint();
+		}
+		prevDist = Vector3.Distance (transform.position, waypoint.transform.position);
+
 	}
 
 	void getNewWaypoint(){
