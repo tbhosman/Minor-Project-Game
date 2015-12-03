@@ -80,8 +80,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\EndSceneScript.cs" />
-    <Compile Include="Assets\MainMusicController.cs" />
+    <Compile Include="Assets\CanvasManager.cs" />
+    <Compile Include="Assets\DontLookScareScript.cs" />
+    <Compile Include="Assets\InspectScript.cs" />
     <Compile Include="Assets\imports\Industrial\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
     <Compile Include="Assets\imports\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\imports\Standard Assets\Characters\FirstPersonCharacter\Scripts\HeadBob.cs" />
@@ -134,6 +135,7 @@
     <Compile Include="Assets\jumpscares\prefabs\Scripts\TriggerObjectScript.cs" />
     <Compile Include="Assets\jumpscares\prefabs\Scripts\VanishScript.cs" />
     <Compile Include="Assets\jumpscares\prefabs\Scripts\vanishafterseconds.cs" />
+    <Compile Include="Assets\scripts\EndSceneScript.cs" />
     <Compile Include="Assets\scripts\EnemyAnimationScript.cs" />
     <Compile Include="Assets\scripts\EnemyRouting.cs" />
     <Compile Include="Assets\scripts\EnemySight.cs" />
@@ -141,9 +143,11 @@
     <Compile Include="Assets\scripts\FlashlightScript.cs" />
     <Compile Include="Assets\scripts\GameOverScript.cs" />
     <Compile Include="Assets\scripts\GeigerController.cs" />
+    <Compile Include="Assets\scripts\MainMusicController.cs" />
     <Compile Include="Assets\scripts\MapGenerator.cs" />
     <Compile Include="Assets\scripts\Movie.cs" />
     <Compile Include="Assets\scripts\ReverseNormals.cs" />
+    <Compile Include="Assets\scripts\SecurityPanelController.cs" />
     <Compile Include="Assets\scripts\proceduralGeneration.cs" />
     <Compile Include="Assets\scripts\rotatelight.cs" />
     <Compile Include="Assets\scripts\toggleFlashLight.cs" />
