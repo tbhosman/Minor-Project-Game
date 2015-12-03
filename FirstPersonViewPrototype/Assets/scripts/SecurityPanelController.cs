@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class SecurityPanelController : MonoBehaviour {
 
@@ -17,6 +18,20 @@ public class SecurityPanelController : MonoBehaviour {
 			}
 		}
 		codeDisplayText.text = "";
+		gameObject.SetActive(false);
+	}
+
+	void Update () {
+
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			gameObject.SetActive(false);
+		}
+
+		if (isActiveAndEnabled) {
+			GameObject.Find ("FPSController").GetComponent<FirstPersonController>().enabled = false;
+		} else {
+			GameObject.Find ("FPSController").GetComponent<FirstPersonController>().enabled = true;
+		}
 	}
 
 	public void GetDigitInput(Text input){

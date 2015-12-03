@@ -24,10 +24,6 @@ public class MainMusicController : MonoBehaviour {
 		if (!(audioTracks[0].GetComponent<AudioSource>().isPlaying) && audioTracks[0].gameObject.activeSelf) {
 			FadeIn("Office");
 		}
-
-		if (Time.time > 60) {
-			FadeIn ("MachineRoom");
-		}
 	}
 
 	void FadeIn(string track){
