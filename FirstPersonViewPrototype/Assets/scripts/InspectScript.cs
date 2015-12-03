@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class InspectScript : MonoBehaviour {
 
@@ -12,7 +13,8 @@ public class InspectScript : MonoBehaviour {
 	private Ray PlayerRay;
 	private RaycastHit RayHit;
 	public GameObject DontLookMonster;
-	public float animationlength;
+	public int animationlength;
+	private FirstPersonController fps;
 	// Use this for initialization
 	void Start () {
 		Inspected = false;
@@ -30,6 +32,7 @@ public class InspectScript : MonoBehaviour {
 				InspectInstructions.text = "Press E to inspect";
 				InspectInstructions.enabled = true;
 				if (Input.GetKeyDown ("e")) {
+					StartCoroutine(Player.GetComponent<FirstPersonController>().Wait(animationlength));
 					DontLookMonster.SetActive(true);
 					InspectInstructions.enabled = false;
 					DontLookAnim.Play ();
@@ -42,8 +45,6 @@ public class InspectScript : MonoBehaviour {
 		}
 	}
 
-	IEnumerator disablePlayer(){
-	}
 
 	void OnTriggerExit(){
 		InspectInstructions.enabled = false;
