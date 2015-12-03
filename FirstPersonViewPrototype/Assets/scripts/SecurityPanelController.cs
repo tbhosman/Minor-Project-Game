@@ -8,6 +8,7 @@ public class SecurityPanelController : MonoBehaviour {
 	public GameObject codeDisplayPanel;
 	public Text codeDisplayText;
 	public string correctCode;
+	public GameObject MachineRoomDoor;
 
 	// Use this for initialization
 	void Start () {
@@ -19,6 +20,7 @@ public class SecurityPanelController : MonoBehaviour {
 		}
 		codeDisplayText.text = "";
 		gameObject.SetActive(false);
+		MachineRoomDoor = GameObject.Find ("MachineRoomDoor");
 	}
 
 	void Update () {
@@ -54,6 +56,8 @@ public class SecurityPanelController : MonoBehaviour {
 				codeDisplayPanel.GetComponent<Image> ().color = Color.green;
 				yield return StartCoroutine (WaitForRealSeconds (2.0f));
 				codeDisplayText.text = "";
+				gameObject.SetActive(false);
+				MachineRoomDoor.GetComponent<Animation>().Play();
 				codeDisplayPanel.GetComponent<Image> ().color = new Color (255, 255, 255, 100);
 			}
 			else {
