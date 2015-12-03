@@ -189,6 +189,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
         public IEnumerator Wait(int getal)
         {
+			setWait (false);
             yield return new WaitForSeconds(getal);
             setWait(true);
         }

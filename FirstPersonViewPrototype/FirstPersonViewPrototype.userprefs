@@ -1,9 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\InspectScript.cs">
     <Files>
-      <File FileName="Assets\scripts\InspectScript.cs" Line="16" Column="12" />
-      <File FileName="Assets\scripts\FirstPersonController.cs" Line="190" Column="43" />
+      <File FileName="Assets\scripts\InspectScript.cs" Line="11" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
