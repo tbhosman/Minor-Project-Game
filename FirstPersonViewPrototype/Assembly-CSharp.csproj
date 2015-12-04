@@ -45,8 +45,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AdjustMotionBlur.cs" />
      <Compile Include="Assets\DisableFlashlight.cs" />
-     <Compile Include="Assets\OnDeactivateActivate.cs" />
      <Compile Include="Assets\ShakeCameraScript.cs" />
      <Compile Include="Assets\imports\Industrial\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\imports\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
