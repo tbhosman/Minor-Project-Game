@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//Object verdwijnt als de player bijnen fieldofvanishdegree kijkt naar het object. Zet noAnimation true als hij geen animatie bevat.
 public class VanishScript : MonoBehaviour {
 
 	public GameObject player;
@@ -8,12 +9,14 @@ public class VanishScript : MonoBehaviour {
 	private RaycastHit RayHit;
 	public float FieldOfVanishDegree;
 	private Vector3 RayDirection;
-	public bool deactivate;
+	public bool noAnimation;
+	public bool ActivateObjectOnLookAt;
+	public GameObject ObjectToActivateOnLookAt;
 
 	void Start () {
-		deactivate = false;
-		gameObject.GetComponent<Animation> ().Stop ();
-
+		if (!noAnimation) {
+			gameObject.GetComponent<Animation> ().Stop ();
+		}
 	}
 	
 	void Update(){
@@ -23,18 +26,18 @@ public class VanishScript : MonoBehaviour {
 			if (RayHit.collider.gameObject.tag == "Player"){
 				if (Vector3.Angle(transform.position-player.transform.position, player.transform.forward) <= FieldOfVanishDegree* 0.5f){
 					Debug.Log("VanishActivated");
-					if (deactivate) {
+					if (noAnimation) {
 						gameObject.SetActive(false);
 					}
 					else{
 					gameObject.GetComponent<PlayAudioClip>().enabled = true;
 					gameObject.GetComponent<Animation>().Play();
 					}
+					if (ActivateObjectOnLookAt){
+						ObjectToActivateOnLookAt.SetActive (true);
+					}
 				}
 			}
-		}
-		if (deactivate) {
-			gameObject.SetActive(false);
 		}
 	}
 }	
