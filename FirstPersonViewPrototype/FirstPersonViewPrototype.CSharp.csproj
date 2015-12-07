@@ -51,11 +51,17 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
@@ -76,6 +82,7 @@
   <ItemGroup>
     <Compile Include="Assets\DisableFlashlight.cs" />
     <Compile Include="Assets\ShakeCameraScript.cs" />
+    <Compile Include="Assets\changeShader.cs" />
     <Compile Include="Assets\imports\Industrial\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
     <Compile Include="Assets\imports\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
     <Compile Include="Assets\imports\Standard Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
@@ -220,6 +227,7 @@
     <None Include="Assets\imports\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\imports\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
     <None Include="Assets\imports\sky5X\README.txt" />
+    <None Include="Assets\outline.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
