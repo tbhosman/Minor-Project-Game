@@ -1,42 +1,34 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-using UnityStandardAssets.Characters.FirstPerson;
+public class InspectNoteScript : MonoBehaviour {
 
-public class InspectScript : MonoBehaviour {
-
-	private bool Inspected;
-	private GameObject Player;
-	private Animator PlayerAnimator;
 	public Text InspectInstructions;
-	public Animation DontLookAnim;
+	public string displayText;
 	private Ray PlayerRay;
+	private GameObject Player;
 	private RaycastHit RayHit;
-	public GameObject DontLookMonster;
-	public int animationlength;
-	// Use this for initialization
-	void Start () {
-		Inspected = false;
-		InspectInstructions.enabled = false;
-		Player = GameObject.FindGameObjectWithTag ("Player");
-		PlayerAnimator = Player.GetComponentInChildren<Animator>();
-	}
-	
+	public bool inspected;
+	private GameObject Inventory;
 
+	void Start(){
+		Inventory = GameObject.FindGameObjectWithTag ("Inventory");
+		inspected = false;
+		Player = GameObject.FindGameObjectWithTag ("Player");
+
+	}
 	void OnTriggerStay() {
 		PlayerRay = new Ray (Player.transform.position, Player.transform.forward);
 		Physics.Raycast (PlayerRay, out RayHit);
 		if (RayHit.collider.gameObject == gameObject) {
-			if (!Inspected) {
+			if (!inspected) {
 				InspectInstructions.text = "Press E to inspect";
 				InspectInstructions.enabled = true;
 				if (Input.GetKeyDown ("e")) {
-					StartCoroutine(Player.GetComponent<FirstPersonController>().Wait(animationlength));
-					DontLookMonster.SetActive(true);
 					InspectInstructions.enabled = false;
-					DontLookAnim.Play ();
-					PlayerAnimator.SetTrigger ("Inspect");
-					Inspected = true;
+					inspected = true;
+					Inventory.GetComponent<InventoryManager>().SecurityCodeNoteFound = true;
+					gameObject.SetActive(false);
 				}
 			}
 		}else {
@@ -44,8 +36,9 @@ public class InspectScript : MonoBehaviour {
 		}
 	}
 
-
 	void OnTriggerExit(){
 		InspectInstructions.enabled = false;
 	}
+
+
 }
