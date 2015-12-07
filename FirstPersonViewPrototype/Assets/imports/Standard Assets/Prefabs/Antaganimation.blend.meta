@@ -1,0 +1,792 @@
+fileFormatVersion: 2
+guid: d29be4ae8d466f9488c17dbc2491d376
+timeCreated: 1447762547
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Armature
+    100004: Back
+    100006: Bone
+    100008: collar_L
+    100010: collar_R
+    100012: foot_L
+    100014: foot_R
+    100016: footCtrl_L
+    100018: footCtrl_R
+    100020: footIK_L
+    100022: footIK_R
+    100024: footRollCtrl_L
+    100026: footRollCtrl_R
+    100028: Head
+    100030: heel_L
+    100032: heel_R
+    100034: heelRoll_L
+    100036: heelRoll_R
+    100038: hipsCtrl
+    100040: kneeCtrl_L
+    100042: kneeCtrl_R
+    100044: Lamp
+    100046: Lamp_MeshPart0
+    100048: Lamp_MeshPart1
+    100050: Lamp_MeshPart2
+    100052: Lamp_MeshPart3
+    100054: Lamp_MeshPart4
+    100056: Lamp_MeshPart5
+    100058: Lichaam
+    100060: Lower_back
+    100062: lowerArm_L
+    100064: lowerArm_R
+    100066: lowerLeg_L
+    100068: lowerLeg_R
+    100070: Neck
+    100072: toeRoll_L
+    100074: toeRoll_R
+    100076: upperArm_L
+    100078: upperArm_R
+    100080: upperLeg_L
+    100082: upperLeg_R
+    100084: wrist_L
+    100086: wrist_R
+    400000: //RootNode
+    400002: Armature
+    400004: Back
+    400006: Bone
+    400008: collar_L
+    400010: collar_R
+    400012: foot_L
+    400014: foot_R
+    400016: footCtrl_L
+    400018: footCtrl_R
+    400020: footIK_L
+    400022: footIK_R
+    400024: footRollCtrl_L
+    400026: footRollCtrl_R
+    400028: Head
+    400030: heel_L
+    400032: heel_R
+    400034: heelRoll_L
+    400036: heelRoll_R
+    400038: hipsCtrl
+    400040: kneeCtrl_L
+    400042: kneeCtrl_R
+    400044: Lamp
+    400046: Lamp_MeshPart0
+    400048: Lamp_MeshPart1
+    400050: Lamp_MeshPart2
+    400052: Lamp_MeshPart3
+    400054: Lamp_MeshPart4
+    400056: Lamp_MeshPart5
+    400058: Lichaam
+    400060: Lower_back
+    400062: lowerArm_L
+    400064: lowerArm_R
+    400066: lowerLeg_L
+    400068: lowerLeg_R
+    400070: Neck
+    400072: toeRoll_L
+    400074: toeRoll_R
+    400076: upperArm_L
+    400078: upperArm_R
+    400080: upperLeg_L
+    400082: upperLeg_R
+    400084: wrist_L
+    400086: wrist_R
+    4300000: Lichaam
+    4300002: Lamp_MeshPart0
+    4300004: Lamp_MeshPart1
+    4300006: Lamp_MeshPart2
+    4300008: Lamp_MeshPart3
+    4300010: Lamp_MeshPart4
+    4300012: Lamp_MeshPart5
+    7400000: Default Take
+    7400002: ArmatureAction_001
+    9500000: //RootNode
+    13700000: Lamp_MeshPart0
+    13700002: Lamp_MeshPart1
+    13700004: Lamp_MeshPart2
+    13700006: Lamp_MeshPart3
+    13700008: Lamp_MeshPart4
+    13700010: Lamp_MeshPart5
+    13700012: Lichaam
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 21
+      lastFrame: 51
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/footCtrl_L
+        weight: 0
+      - path: Armature/footCtrl_L/footRollCtrl_L
+        weight: 0
+      - path: Armature/footCtrl_L/heelRoll_L
+        weight: 0
+      - path: Armature/footCtrl_L/heelRoll_L/toeRoll_L
+        weight: 0
+      - path: Armature/footCtrl_L/heelRoll_L/toeRoll_L/footIK_L
+        weight: 0
+      - path: Armature/footCtrl_L/kneeCtrl_L
+        weight: 0
+      - path: Armature/footCtrl_R
+        weight: 0
+      - path: Armature/footCtrl_R/footRollCtrl_R
+        weight: 0
+      - path: Armature/footCtrl_R/heelRoll_R
+        weight: 0
+      - path: Armature/footCtrl_R/heelRoll_R/toeRoll_R
+        weight: 0
+      - path: Armature/footCtrl_R/heelRoll_R/toeRoll_R/footIK_R
+        weight: 0
+      - path: Armature/footCtrl_R/kneeCtrl_R
+        weight: 0
+      - path: Armature/hipsCtrl
+        weight: 1
+      - path: Armature/hipsCtrl/Bone
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_L/upperArm_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_L/upperArm_L/lowerArm_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_L/upperArm_L/lowerArm_L/wrist_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_R
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_R/upperArm_R
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_R/upperArm_R/lowerArm_R
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_R/upperArm_R/lowerArm_R/wrist_R
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/Neck
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/Neck/Head
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_L/lowerLeg_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_L/lowerLeg_L/heel_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_L/lowerLeg_L/heel_L/foot_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_R
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_R/lowerLeg_R
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_R/lowerLeg_R/heel_R
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_R/lowerLeg_R/heel_R/foot_R
+        weight: 1
+      - path: Lamp
+        weight: 0
+      - path: Lamp/Lamp_MeshPart0
+        weight: 0
+      - path: Lamp/Lamp_MeshPart1
+        weight: 0
+      - path: Lamp/Lamp_MeshPart2
+        weight: 0
+      - path: Lamp/Lamp_MeshPart3
+        weight: 0
+      - path: Lamp/Lamp_MeshPart4
+        weight: 0
+      - path: Lamp/Lamp_MeshPart5
+        weight: 0
+      - path: Lichaam
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: ArmatureAction_001
+      takeName: ArmatureAction_001
+      firstFrame: 56
+      lastFrame: 85
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/footCtrl_L
+        weight: 0
+      - path: Armature/footCtrl_L/footRollCtrl_L
+        weight: 0
+      - path: Armature/footCtrl_L/heelRoll_L
+        weight: 0
+      - path: Armature/footCtrl_L/heelRoll_L/toeRoll_L
+        weight: 0
+      - path: Armature/footCtrl_L/heelRoll_L/toeRoll_L/footIK_L
+        weight: 0
+      - path: Armature/footCtrl_L/kneeCtrl_L
+        weight: 0
+      - path: Armature/footCtrl_R
+        weight: 0
+      - path: Armature/footCtrl_R/footRollCtrl_R
+        weight: 0
+      - path: Armature/footCtrl_R/heelRoll_R
+        weight: 0
+      - path: Armature/footCtrl_R/heelRoll_R/toeRoll_R
+        weight: 0
+      - path: Armature/footCtrl_R/heelRoll_R/toeRoll_R/footIK_R
+        weight: 0
+      - path: Armature/footCtrl_R/kneeCtrl_R
+        weight: 0
+      - path: Armature/hipsCtrl
+        weight: 1
+      - path: Armature/hipsCtrl/Bone
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_L/upperArm_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_L/upperArm_L/lowerArm_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_L/upperArm_L/lowerArm_L/wrist_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_R
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_R/upperArm_R
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_R/upperArm_R/lowerArm_R
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_R/upperArm_R/lowerArm_R/wrist_R
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/Neck
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/Neck/Head
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_L/lowerLeg_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_L/lowerLeg_L/heel_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_L/lowerLeg_L/heel_L/foot_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_R
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_R/lowerLeg_R
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_R/lowerLeg_R/heel_R
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_R/lowerLeg_R/heel_R/foot_R
+        weight: 1
+      - path: Lamp
+        weight: 0
+      - path: Lamp/Lamp_MeshPart0
+        weight: 0
+      - path: Lamp/Lamp_MeshPart1
+        weight: 0
+      - path: Lamp/Lamp_MeshPart2
+        weight: 0
+      - path: Lamp/Lamp_MeshPart3
+        weight: 0
+      - path: Lamp/Lamp_MeshPart4
+        weight: 0
+      - path: Lamp/Lamp_MeshPart5
+        weight: 0
+      - path: Lichaam
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human:
+    - boneName: Bone
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: upperLeg_L
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: upperLeg_R
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: lowerLeg_L
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: lowerLeg_R
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: heel_L
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: heel_R
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Lower_back
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Back
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: collar_L
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: collar_R
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: upperArm_L
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: upperArm_R
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: lowerArm_L
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: lowerArm_R
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: wrist_L
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: wrist_R
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: foot_L
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: foot_R
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Antaganimation(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Armature
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -.707106829, y: 0, z: -0, w: .707106829}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: footCtrl_L
+      position: {x: -.908731341, y: .530991971, z: 1.36370945}
+      rotation: {x: .707106829, y: 9.41569596e-08, z: .707106709, w: -9.41569667e-08}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: footRollCtrl_L
+      position: {x: -4.00887821e-08, y: 7.24942595e-09, z: -1.95158663e-08}
+      rotation: {x: .50000006, y: .49999997, z: .49999997, w: .50000006}
+      scale: {x: .999999821, y: .999999881, z: .99999994}
+      transformModified: 1
+    - name: heelRoll_L
+      position: {x: -1.08921337, y: -.46148631, z: 1.53253907e-08}
+      rotation: {x: .499999911, y: -.50000006, z: .500000119, w: -.49999997}
+      scale: {x: .99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: toeRoll_L
+      position: {x: -2, y: 1.44395699e-07, z: -1.49887995e-07}
+      rotation: {x: -1.49011683e-08, y: 1.589326e-08, z: 1, w: 1.75595806e-16}
+      scale: {x: .99999994, y: 1, z: .999999881}
+      transformModified: 1
+    - name: footIK_L
+      position: {x: -1.53851366, y: 9.96934233e-08, z: 1.08921313}
+      rotation: {x: 3.58028807e-08, y: .952933967, z: -1.13598603e-07, w: -.303177893}
+      scale: {x: 1.00000012, y: 1, z: 1.00000036}
+      transformModified: 1
+    - name: kneeCtrl_L
+      position: {x: 4.60192537, y: 2.95639896, z: -.13615191}
+      rotation: {x: 1.20849506e-07, y: .707106888, z: .707106709, w: -6.74644269e-08}
+      scale: {x: .999999821, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: footCtrl_R
+      position: {x: .908731341, y: .530991971, z: 1.36370945}
+      rotation: {x: .707106829, y: 9.41569596e-08, z: .707106709, w: -9.41569667e-08}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: footRollCtrl_R
+      position: {x: -4.0088775e-08, y: 2.52547494e-08, z: -1.95158663e-08}
+      rotation: {x: .50000006, y: .49999997, z: .49999997, w: .50000006}
+      scale: {x: .999999821, y: .999999881, z: .99999994}
+      transformModified: 1
+    - name: heelRoll_R
+      position: {x: -1.08921337, y: -.46148628, z: 1.53253907e-08}
+      rotation: {x: .499999881, y: -.5, z: .500000119, w: -.5}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: toeRoll_R
+      position: {x: -2, y: 1.50236062e-07, z: -1.43679699e-07}
+      rotation: {x: 1.02014497e-14, y: 1.35102539e-07, z: 1, w: 6.12309596e-17}
+      scale: {x: 1, y: 1, z: .999999881}
+      transformModified: 1
+    - name: footIK_R
+      position: {x: -1.53851378, y: 9.96934233e-08, z: 1.08921313}
+      rotation: {x: 3.58028664e-08, y: .952933967, z: -1.13598624e-07, w: -.303177893}
+      scale: {x: 1, y: 1, z: 1.00000036}
+      transformModified: 1
+    - name: kneeCtrl_R
+      position: {x: 4.60192537, y: 2.95639896, z: .136151433}
+      rotation: {x: 1.20849506e-07, y: .707106888, z: .707106709, w: -6.74644269e-08}
+      scale: {x: .999999821, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: hipsCtrl
+      position: {x: -0, y: .645493686, z: 10.7212849}
+      rotation: {x: .707106829, y: 9.41569596e-08, z: .707106709, w: -9.41569667e-08}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Bone
+      position: {x: -1.00000012, y: 1.33753929e-07, z: -4.99999991e-15}
+      rotation: {x: 1.62996372e-07, y: .707106829, z: .707106829, w: 2.5317572e-08}
+      scale: {x: .99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: Lower_back
+      position: {x: -1, y: 7.54978586e-08, z: 1.69e-13}
+      rotation: {x: 1.47189674e-08, y: -.00602377532, z: 9.14138071e-11, w: .99998188}
+      scale: {x: 1.00000012, y: 1, z: .999999881}
+      transformModified: 1
+    - name: Back
+      position: {x: -2.14319563, y: 1.61806796e-07, z: -1.49011612e-08}
+      rotation: {x: -6.30809982e-09, y: -.0323564783, z: -1.25148142e-10, w: .999476373}
+      scale: {x: 1.00000012, y: 1, z: 1}
+      transformModified: 1
+    - name: Neck
+      position: {x: -2.24432349, y: 1.69441876e-07, z: 5.96046448e-08}
+      rotation: {x: 1.55006266e-08, y: .0798714086, z: -7.58845431e-10, w: .996805191}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Head
+      position: {x: -1.2436434, y: 9.38925595e-08, z: 5.96046448e-08}
+      rotation: {x: 1.06383906e-08, y: .0551353619, z: -3.57588126e-10, w: .998478889}
+      scale: {x: 1, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: collar_L
+      position: {x: -1.99271214, y: -.545313001, z: .826582193}
+      rotation: {x: .132088989, y: -.125988424, z: .622114956, w: .761349142}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: upperArm_L
+      position: {x: -2.16294527, y: -.101428956, z: .168288946}
+      rotation: {x: .698617339, y: .229648188, z: -.0586444214, w: .675097287}
+      scale: {x: .99999994, y: 1, z: .99999994}
+      transformModified: 1
+    - name: lowerArm_L
+      position: {x: -2.25279546, y: 1.34110451e-07, z: -4.17232513e-07}
+      rotation: {x: -.692752898, y: -.064792864, z: -.0280978158, w: .717708766}
+      scale: {x: .99999994, y: 1, z: 1}
+      transformModified: 1
+    - name: wrist_L
+      position: {x: -2.23552084, y: -1.20140612e-07, z: 3.49245965e-08}
+      rotation: {x: .736636221, y: -.0302451104, z: -.0287014786, w: .675002635}
+      scale: {x: .999999881, y: .999999762, z: .999999881}
+      transformModified: 1
+    - name: collar_R
+      position: {x: -1.9927119, y: .545313358, z: .826582193}
+      rotation: {x: .614451349, y: -.597708404, z: -.151970029, w: .492035925}
+      scale: {x: 1.00000024, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: upperArm_R
+      position: {x: -2.21402216, y: .0240670443, z: -.40976271}
+      rotation: {x: .927932441, y: -.173628032, z: .217941716, w: .247580767}
+      scale: {x: 1.00000036, y: 1, z: 1.00000024}
+      transformModified: 1
+    - name: lowerArm_R
+      position: {x: -2.08098817, y: -8.94069672e-08, z: 2.38418579e-07}
+      rotation: {x: -.774887979, y: -.0273091923, z: -.0575489327, w: .628880739}
+      scale: {x: 1.00000012, y: .99999994, z: 1.00000012}
+      transformModified: 1
+    - name: wrist_R
+      position: {x: -2.2355206, y: 1.08778477e-06, z: -3.58559191e-08}
+      rotation: {x: .689150095, y: -.0272693746, z: -.0315423831, w: .723417997}
+      scale: {x: 1, y: .99999994, z: 1.00000012}
+      transformModified: 1
+    - name: upperLeg_L
+      position: {x: -.185199931, y: -1.01100695, z: -.157800943}
+      rotation: {x: .00559394108, y: .996534705, z: .0144319218, w: .0817253515}
+      scale: {x: 1.00000024, y: .999999881, z: 1.00000036}
+      transformModified: 1
+    - name: lowerLeg_L
+      position: {x: -3.99481487, y: 5.24800271e-07, z: 1.49011612e-07}
+      rotation: {x: -.00625492912, y: .123078227, z: -.0194482282, w: .992186666}
+      scale: {x: .999999881, y: .999999762, z: 1}
+      transformModified: 1
+    - name: heel_L
+      position: {x: -4.61969614, y: 3.50177288e-07, z: -6.70552254e-08}
+      rotation: {x: .0248601492, y: -.495545328, z: .0052876249, w: .868210196}
+      scale: {x: .999999881, y: .999999881, z: .99999994}
+      transformModified: 1
+    - name: foot_L
+      position: {x: -1.88504887, y: 1.55918684e-07, z: 2.29433823e-08}
+      rotation: {x: .952934027, y: -1.2041744e-07, z: .303177744, w: 1.52357913e-07}
+      scale: {x: 1.00000048, y: 1, z: 1}
+      transformModified: 1
+    - name: upperLeg_R
+      position: {x: -.185199544, y: 1.01100695, z: -.157800883}
+      rotation: {x: -.00426848792, y: .996524394, z: -.0143259754, w: .0819493905}
+      scale: {x: 1.00000012, y: 1, z: 1.00000048}
+      transformModified: 1
+    - name: lowerLeg_R
+      position: {x: -3.99481463, y: 6.79865479e-08, z: -9.31322575e-09}
+      rotation: {x: -.00366866379, y: .123266622, z: .0182161815, w: .9921996}
+      scale: {x: 1, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: heel_R
+      position: {x: -4.61969614, y: 3.70666385e-07, z: -6.33299351e-08}
+      rotation: {x: -.0155868875, y: -.495647579, z: -.00925616734, w: .868334532}
+      scale: {x: 1.00000012, y: .99999994, z: 1.00000012}
+      transformModified: 1
+    - name: foot_R
+      position: {x: -1.88504899, y: 1.55918684e-07, z: 6.85894008e-09}
+      rotation: {x: .952934027, y: -3.99936795e-08, z: .303177685, w: 1.26770942e-07}
+      scale: {x: 1.00000036, y: 1, z: 1}
+      transformModified: 1
+    - name: Lamp
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: -5.96046412e-08, w: 1}
+      scale: {x: 9.79502296, y: 9.79502296, z: 9.79502392}
+      transformModified: 1
+    - name: Lamp_MeshPart0
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Lamp_MeshPart1
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Lamp_MeshPart2
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Lamp_MeshPart3
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Lamp_MeshPart4
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Lamp_MeshPart5
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Lichaam
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: -5.96046412e-08, w: 1}
+      scale: {x: 9.79502296, y: 9.79502296, z: 9.79502392}
+      transformModified: 1
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
