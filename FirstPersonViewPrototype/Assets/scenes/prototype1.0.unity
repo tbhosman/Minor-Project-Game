@@ -728,6 +728,41 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300664, guid: 1a7272ea20ead8f42bc6dc0614f395fc, type: 3}
+--- !u!1 &32779227 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 144068, guid: b2f8af2d9e8578a4e8e2d276a9ffa4ca, type: 2}
+  m_PrefabInternal: {fileID: 897482972}
+--- !u!23 &32779230 stripped
+MeshRenderer:
+  m_PrefabParentObject: {fileID: 2339750, guid: b2f8af2d9e8578a4e8e2d276a9ffa4ca,
+    type: 2}
+  m_PrefabInternal: {fileID: 897482972}
+--- !u!65 &32779232
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 32779227}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 40.6851921, y: 99.8107147, z: 31.6634979}
+  m_Center: {x: -9.93160152, y: .397618562, z: -12.3470201}
+--- !u!114 &32779233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 32779227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13a718386bf34f740a82a2ac178d93e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstShader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  secondShader: {fileID: 4800000, guid: 6efd9c01a92df0145ac5b1225fce352d, type: 3}
+  render: {fileID: 32779230}
 --- !u!1 &35033587
 GameObject:
   m_ObjectHideFlags: 0
@@ -16362,11 +16397,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 10810076, guid: b2f8af2d9e8578a4e8e2d276a9ffa4ca, type: 2}
       propertyPath: m_Shadows.m_Type
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 10877746, guid: b2f8af2d9e8578a4e8e2d276a9ffa4ca, type: 2}
       propertyPath: m_Shadows.m_Type
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 10810076, guid: b2f8af2d9e8578a4e8e2d276a9ffa4ca, type: 2}
       propertyPath: m_BounceIntensity
@@ -16391,6 +16426,14 @@ Prefab:
     - target: {fileID: 198016, guid: b2f8af2d9e8578a4e8e2d276a9ffa4ca, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10810076, guid: b2f8af2d9e8578a4e8e2d276a9ffa4ca, type: 2}
+      propertyPath: m_Shadows.m_Strength
+      value: .167999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 10877746, guid: b2f8af2d9e8578a4e8e2d276a9ffa4ca, type: 2}
+      propertyPath: m_Shadows.m_Strength
+      value: .160999998
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2f8af2d9e8578a4e8e2d276a9ffa4ca, type: 2}
