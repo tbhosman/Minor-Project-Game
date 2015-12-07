@@ -337,6 +337,8 @@ MonoBehaviour:
   GeigerLevel3: {fileID: 0}
   GeigerLevel4: {fileID: 0}
   GeigerParameter: 50
+  radioactivityConstant: 2000
+  overloadValue: 2000
 --- !u!114 &11455966
 MonoBehaviour:
   m_ObjectHideFlags: 1
