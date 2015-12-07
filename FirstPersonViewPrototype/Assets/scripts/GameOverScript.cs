@@ -32,6 +32,7 @@ public class GameOverScript : MonoBehaviour {
 			alpha_value = 1;
 			GetComponent<AudioSource>().volume = maxVolume;
 			NoiseObject.GetComponent<NoiseAndGrain>().intensityMultiplier = 2;
+            Application.LoadLevel("menu");
 		} else if (PEDistance < DyingDistance) { //player is close to enemy but not GameOver, interpolate alpha
 			alpha_value = -1 / (DyingDistance - GameOverDistance) * PEDistance + DyingDistance / (DyingDistance - GameOverDistance);
 			GetComponent<AudioSource>().volume = maxVolume * alpha_value;
