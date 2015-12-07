@@ -51,17 +51,11 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Advertisements">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Advertisements.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Analytics">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
@@ -80,9 +74,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\DisableFlashlight.cs" />
-    <Compile Include="Assets\ShakeCameraScript.cs" />
-    <Compile Include="Assets\changeShader.cs" />
+    <Compile Include="Assets\disableOnActive.cs" />
     <Compile Include="Assets\imports\Industrial\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
     <Compile Include="Assets\imports\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
     <Compile Include="Assets\imports\Standard Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
@@ -118,8 +110,11 @@
     <Compile Include="Assets\imports\Standard Assets\Utility\TimedObjectDestructor.cs" />
     <Compile Include="Assets\imports\Standard Assets\Utility\WaypointCircuit.cs" />
     <Compile Include="Assets\imports\Standard Assets\Utility\WaypointProgressTracker.cs" />
+    <Compile Include="Assets\scripts\AdjustMotionBlur.cs" />
     <Compile Include="Assets\scripts\BooleanTrigger.cs" />
     <Compile Include="Assets\scripts\CanvasManager.cs" />
+    <Compile Include="Assets\scripts\Credits.cs" />
+    <Compile Include="Assets\scripts\DisableFlashlight.cs" />
     <Compile Include="Assets\scripts\DontLookMonster.cs" />
     <Compile Include="Assets\scripts\DontLookScareScript.cs" />
     <Compile Include="Assets\scripts\EndSceneScript.cs" />
@@ -134,6 +129,7 @@
     <Compile Include="Assets\scripts\HeadBob.cs" />
     <Compile Include="Assets\scripts\ImpulsOnActivation.cs" />
     <Compile Include="Assets\scripts\InspectScript.cs" />
+    <Compile Include="Assets\scripts\InventoryManager.cs" />
     <Compile Include="Assets\scripts\JumScareSystem.cs" />
     <Compile Include="Assets\scripts\JumpScareActivation.cs" />
     <Compile Include="Assets\scripts\JumpScareScript.cs" />
@@ -142,6 +138,7 @@
     <Compile Include="Assets\scripts\MouseLook.cs" />
     <Compile Include="Assets\scripts\Movie.cs" />
     <Compile Include="Assets\scripts\OpeningDoor.cs" />
+    <Compile Include="Assets\scripts\OptionsCanvas.cs" />
     <Compile Include="Assets\scripts\PlayAudioClip.cs" />
     <Compile Include="Assets\scripts\ReverseNormals.cs" />
     <Compile Include="Assets\scripts\RigidbodyFirstPersonController.cs" />
@@ -149,12 +146,20 @@
     <Compile Include="Assets\scripts\SaveLoadscript2.cs" />
     <Compile Include="Assets\scripts\SecurityPanelController.cs" />
     <Compile Include="Assets\scripts\SetActiveTrigger.cs" />
+    <Compile Include="Assets\scripts\ShakeCameraScript.cs" />
     <Compile Include="Assets\scripts\StickToPlayerScript.cs" />
     <Compile Include="Assets\scripts\TriggerObjectScript.cs" />
     <Compile Include="Assets\scripts\VanishScript.cs" />
+    <Compile Include="Assets\scripts\buttons.cs" />
+    <Compile Include="Assets\scripts\changeShader.cs" />
+    <Compile Include="Assets\scripts\fade2.cs" />
+    <Compile Include="Assets\scripts\highScore.cs" />
+    <Compile Include="Assets\scripts\mainMenuButtons.cs" />
     <Compile Include="Assets\scripts\proceduralGeneration.cs" />
     <Compile Include="Assets\scripts\rotatelight.cs" />
+    <Compile Include="Assets\scripts\shock.cs" />
     <Compile Include="Assets\scripts\toggleFlashLight.cs" />
+    <Compile Include="Assets\scripts\usernameMenuButtons.cs" />
     <Compile Include="Assets\scripts\vanishafterseconds.cs" />
   </ItemGroup>
   <ItemGroup>
