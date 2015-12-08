@@ -32,7 +32,9 @@ public class GameOverScript : MonoBehaviour {
 			alpha_value = 1;
 			GetComponent<AudioSource>().volume = maxVolume;
 			NoiseObject.GetComponent<NoiseAndGrain>().intensityMultiplier = 2;
-            Application.LoadLevel("menu");
+			if (canReachPlayer()){
+            	Application.LoadLevel("menu");
+			}
 		} else if (PEDistance < DyingDistance) { //player is close to enemy but not GameOver, interpolate alpha
 			alpha_value = -1 / (DyingDistance - GameOverDistance) * PEDistance + DyingDistance / (DyingDistance - GameOverDistance);
 			GetComponent<AudioSource>().volume = maxVolume * alpha_value;
@@ -44,5 +46,16 @@ public class GameOverScript : MonoBehaviour {
 		}
 
 		ToWhitePanel.GetComponent<Image> ().color = new Color(255,255,255,alpha_value);
+	}
+
+	bool canReachPlayer(){
+		RaycastHit hit;
+		Vector3 pos = GameObject.Find ("Enemy").transform.position;
+		Vector3 rayDirection = transform.position - pos;
+		
+		if (Physics.Raycast(pos,rayDirection, out hit)){
+			return hit.transform.CompareTag("Player");
+		}
+		return false;
 	}
 }
