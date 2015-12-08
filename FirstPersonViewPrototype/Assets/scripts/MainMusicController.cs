@@ -26,7 +26,7 @@ public class MainMusicController : MonoBehaviour {
 		}
 	}
 
-	void FadeIn(string track){
+	public void FadeIn(string track){
 		for (int i = 1; i < transform.childCount; i++) {
 			if (audioTracks[i].name == track){
 				audioTracks[i].gameObject.SetActive(true);

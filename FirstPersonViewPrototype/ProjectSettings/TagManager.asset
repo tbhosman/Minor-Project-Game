@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Key
+  - radioactive
+  - Waypoint
+  - Inventory
   layers:
   - Default
   - TransparentFX

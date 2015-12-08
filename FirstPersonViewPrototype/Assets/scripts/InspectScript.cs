@@ -14,7 +14,6 @@ public class InspectScript : MonoBehaviour {
 	private RaycastHit RayHit;
 	public GameObject DontLookMonster;
 	public int animationlength;
-	private FirstPersonController fps;
 	// Use this for initialization
 	void Start () {
 		Inspected = false;

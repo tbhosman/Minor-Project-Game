@@ -38,6 +38,8 @@ public class EndSceneScript : MonoBehaviour {
 			yield return null;
 		}
 	}
-
+    void LoadCredits() {
+        Application.LoadLevel("creditscene");
+    }
 }
 
