@@ -2,12 +2,16 @@
 using System.Collections;
 
 public class InventoryManager : MonoBehaviour {
+	public bool SecurityCodeNoteFound;
+	public bool ScaryNoteFound;
 
 	public GameObject SecurityCodeNote;
 	public GameObject ScaryNote;
 
 	// Use this for initialization
 	void Start () {
+		SecurityCodeNoteFound = false;
+		ScaryNoteFound = false;
 		SecurityCodeNote.SetActive (false);
 		ScaryNote.SetActive (false);
 	}
