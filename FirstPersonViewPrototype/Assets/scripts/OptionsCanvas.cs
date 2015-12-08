@@ -142,9 +142,8 @@ public class OptionsCanvas : MonoBehaviour {
         {
             scream.PlayOneShot(Screamsound, 1f);
             StartCoroutine(popupFace());
-            
-            
         }
+        PlayerPrefs.SetFloat("sensetivity", sensSlider.value);
     }
 
     public void back() {
