@@ -52,10 +52,20 @@ public class proceduralGeneration : MonoBehaviour {
             }
 
         array[x_coordinaatdeur, z_coordinaatdeur] = 1;
-        if (x_coordinaatdeur != 0) { array[x_coordinaatdeur - 1, z_coordinaatdeur] = 1; }
-        if (x_coordinaatdeur != 6) { array[x_coordinaatdeur + 1, z_coordinaatdeur] = 1; }
+        if (x_coordinaatdeur != 0){ array[x_coordinaatdeur - 1, z_coordinaatdeur] = 1; }
+        if (x_coordinaatdeur != 6){ array[x_coordinaatdeur + 1, z_coordinaatdeur] = 1; }
         if (z_coordinaatdeur !=0) { array[x_coordinaatdeur, z_coordinaatdeur - 1] = 1; }
-        if (z_coordinaatdeur != 5) { array[x_coordinaatdeur, z_coordinaatdeur + 1] = 1; }
+        if (z_coordinaatdeur != 5){ array[x_coordinaatdeur, z_coordinaatdeur + 1] = 1; }
+        if (x_coordinaatdeur > 1) { array[x_coordinaatdeur - 2, z_coordinaatdeur] = 1; }
+        if (x_coordinaatdeur < 5) { array[x_coordinaatdeur + 2, z_coordinaatdeur] = 1; }
+        if (z_coordinaatdeur > 1) { array[x_coordinaatdeur, z_coordinaatdeur - 2] = 1; }
+        if (z_coordinaatdeur < 5) { array[x_coordinaatdeur, z_coordinaatdeur + 2] = 1; }
+        if (x_coordinaatdeur != 0 && z_coordinaatdeur != 0) { array[x_coordinaatdeur - 1, z_coordinaatdeur - 1] = 1; }
+        if (x_coordinaatdeur != 6 && z_coordinaatdeur != 0) { array[x_coordinaatdeur + 1, z_coordinaatdeur - 1] = 1; }
+        if (z_coordinaatdeur != 5 && x_coordinaatdeur != 6) { array[x_coordinaatdeur + 1, z_coordinaatdeur +1] = 1; }
+        if (z_coordinaatdeur != 5 && x_coordinaatdeur !=0) { array[x_coordinaatdeur - 1, z_coordinaatdeur + 1] = 1; }
+
+
 
         for (int i = 0; i < 2; i++) {
             prullenbak = Random.Range(0, 4);
