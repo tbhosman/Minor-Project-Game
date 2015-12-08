@@ -156,6 +156,12 @@ public class EnemyRouting : MonoBehaviour {
 		//if a new waypoint is needed (enemy is close to current waypoint)
 		if (Mathf.Abs(Vector3.Distance (transform.position, waypoint.transform.position)) < reachDist) {
 
+			//debug for enemy passing a waypoint
+			if (prevDist < Vector3.Distance (transform.position, waypoint.transform.position)) { //enemy going further away
+				getNewWaypoint();
+			}
+			prevDist = Vector3.Distance (transform.position, waypoint.transform.position);
+
 			if (waypoint_index == waypointToPlayer){ //if final waypoint to player is reached, do not get a new waypoint
 				goingToPlayer = true;
 				return;
@@ -164,13 +170,6 @@ public class EnemyRouting : MonoBehaviour {
 			getNewWaypoint();
 			//rb.velocity = transform.TransformDirection(new Vector3(0,0,0));//StartCoroutine(RampSpeed(speed,0)); //set speed to 0 for turning to next waypoint
 		}
-
-		//debug for enemy passing a waypoint
-		if (prevDist < Vector3.Distance (transform.position, waypoint.transform.position)) { //enemy going further away
-			getNewWaypoint();
-		}
-		prevDist = Vector3.Distance (transform.position, waypoint.transform.position);
-
 	}
 
 	void getNewWaypoint(){

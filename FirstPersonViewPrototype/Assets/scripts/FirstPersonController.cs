@@ -48,10 +48,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public bool MakingWalkingSound;
 		public bool MakingRunningSound;
+        
 
         // Use this for initialization
         private void Start()
         {
+            
             wait = false;
             key1 = false;
             m_CharacterController = GetComponent<CharacterController>();

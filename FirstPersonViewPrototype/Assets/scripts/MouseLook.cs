@@ -18,15 +18,22 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private Quaternion m_CharacterTargetRot;
         private Quaternion m_CameraTargetRot;
-
+        private float sensetivity;
 
         public void Init(Transform character, Transform camera)
         {
             m_CharacterTargetRot = character.localRotation;
             m_CameraTargetRot = camera.localRotation;
+       
         }
 
-
+        public void Awake() {
+            sensetivity = PlayerPrefs.GetFloat("sensetivity");
+            XSensitivity = XSensitivity * sensetivity * 5;
+            YSensitivity = YSensitivity * sensetivity * 5;
+           Debug.Log("sensetivity"+sensetivity);
+        }
+        
         public void LookRotation(Transform character, Transform camera)
         {
             float yRot = CrossPlatformInputManager.GetAxis("Mouse X") * XSensitivity;
