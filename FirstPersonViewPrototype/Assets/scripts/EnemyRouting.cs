@@ -172,7 +172,7 @@ public class EnemyRouting : MonoBehaviour {
 		}
 	}
 
-	void getNewWaypoint(){
+	public void getNewWaypoint(){
 		//check which waypoints can be reached
 		for (int i = 0; i < waypoints.Length; i++)
 		{
