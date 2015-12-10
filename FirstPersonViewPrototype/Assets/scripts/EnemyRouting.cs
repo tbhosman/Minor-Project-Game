@@ -167,7 +167,7 @@ public class EnemyRouting : MonoBehaviour {
 		}
 
 		//debug for enemy passing a waypoint
-		if (prevDist < Vector3.Distance (transform.position, waypoint.transform.position)) { //enemy going further away
+		if ((prevDist - Vector3.Distance (transform.position, waypoint.transform.position))/Time.deltaTime < -1.9f) { //enemy going further away
 			getNewWaypoint();
 		}
 		prevDist = Vector3.Distance (transform.position, waypoint.transform.position);
@@ -189,6 +189,7 @@ public class EnemyRouting : MonoBehaviour {
 		
 		//set as new waypoint
 		waypoint = waypoints [waypoint_index];
+		prevDist = Vector3.Distance (transform.position, waypoint.transform.position);
 		wantTurn = true;
 	}
 

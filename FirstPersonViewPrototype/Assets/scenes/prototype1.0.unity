@@ -37078,7 +37078,7 @@ Transform:
   - {fileID: 1286457453}
   - {fileID: 1682975352}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
 --- !u!114 &1261894983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41013,7 +41013,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 475700, guid: 87e7e679ab66c1b40845d59b51810cec, type: 2}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11462274, guid: 87e7e679ab66c1b40845d59b51810cec, type: 2}
+      propertyPath: x_coordinaatdeur
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11462274, guid: 87e7e679ab66c1b40845d59b51810cec, type: 2}
+      propertyPath: z_coordinaatdeur
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87e7e679ab66c1b40845d59b51810cec, type: 2}
