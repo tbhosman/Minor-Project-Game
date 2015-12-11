@@ -9,25 +9,25 @@ using System.Collections;
 
 public class DataAquisitie : MonoBehaviour {
 
-	public float timeTaken;
+	public int timeTaken;
 
 	public void PickedUpItem (int item) {
-		timeTaken = Time.timeSinceLevelLoad;
+		timeTaken = Mathf.RoundToInt(Time.timeSinceLevelLoad/60);
 		//send item ID, player ID and time here
 	}
 
 	public void OpenedDoor (int door) {
-		timeTaken = Time.timeSinceLevelLoad;
+		timeTaken = Mathf.RoundToInt(Time.timeSinceLevelLoad/60);
 		//send door ID, player ID and time here
 	}
 
 	public void CompletedGame () {
-		timeTaken = Time.timeSinceLevelLoad;
+		timeTaken = Mathf.RoundToInt(Time.timeSinceLevelLoad/60);
 		//send player ID and time here
 	}
 
 	public void GameOver (Vector3 location) {
-		timeTaken = Time.timeSinceLevelLoad;
+		timeTaken = Mathf.RoundToInt(Time.timeSinceLevelLoad/60);
 		//send death location, player ID and time here
 	}
 }
