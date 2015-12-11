@@ -59,6 +59,7 @@ public class SecurityPanelController : MonoBehaviour {
 				yield return StartCoroutine (WaitForRealSeconds (2.0f));
 				codeDisplayText.text = "";
 				gameObject.SetActive(false);
+				GameObject.Find ("FPSController").GetComponent<FirstPersonController>().enabled = true;
 				MachineRoomDoor.GetComponent<Animation>().Play();
 				MachineRoomDoor.GetComponent<AudioSource>().Play();
 				codeDisplayPanel.GetComponent<Image> ().color = new Color (255, 255, 255, 100);
