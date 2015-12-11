@@ -8,6 +8,7 @@ public class MainAreaTriggerController : MonoBehaviour {
 	public bool inLab;
 	public bool inArchive;
 	public bool inMachine;
+	public bool inReaktor;
 	public GameObject EnemySpawnLocations;
 	private GameObject EnemyObject;
 	private Vector3 spawnLocation;
@@ -19,6 +20,7 @@ public class MainAreaTriggerController : MonoBehaviour {
 		inArchive = false;
 		inLab = false;
 		inMachine = false;
+		inReaktor = false;
 		EnemySpawnLocations = GameObject.Find ("EnemySpawnLocations");
 		EnemyObject = GameObject.Find ("Enemy");
 	}
@@ -35,6 +37,7 @@ public class MainAreaTriggerController : MonoBehaviour {
 			inArchive = false;
 			inLab = false;
 			inMachine = false;
+			inReaktor = false;
 			respawnIn(Area);
 			GameObject.Find ("MainMusicController").GetComponent<MainMusicController> ().FadeIn ("Office");
 		} else if (Area == "Storage" && inStorage == false) {
@@ -43,6 +46,7 @@ public class MainAreaTriggerController : MonoBehaviour {
 			inArchive = false;
 			inLab = false;
 			inMachine = false;
+			inReaktor = false;
 			respawnIn(Area);
 			GameObject.Find ("MainMusicController").GetComponent<MainMusicController> ().FadeIn ("Storage");
 		} else if (Area == "Lab" && inLab == false) {
@@ -51,6 +55,7 @@ public class MainAreaTriggerController : MonoBehaviour {
 			inArchive = false;
 			inLab = true;
 			inMachine = false;
+			inReaktor = false;
 			respawnIn(Area);
 			GameObject.Find ("MainMusicController").GetComponent<MainMusicController> ().FadeIn ("Laboratory");
 		} else if (Area == "Machine" && inMachine == false) {
@@ -59,6 +64,7 @@ public class MainAreaTriggerController : MonoBehaviour {
 			inArchive = false;
 			inLab = false;
 			inMachine = true;
+			inReaktor = false;
 			respawnIn(Area);
 			GameObject.Find ("MainMusicController").GetComponent<MainMusicController> ().FadeIn ("MachineRoom");
 		} else if (Area == "Archive" && inArchive == false) {
@@ -67,10 +73,18 @@ public class MainAreaTriggerController : MonoBehaviour {
 			inArchive = true;
 			inLab = false;
 			inMachine = false;
+			inReaktor = false;
 			respawnIn(Area);
 			GameObject.Find ("MainMusicController").GetComponent<MainMusicController> ().FadeIn ("Archive");
-		}
-	}
+		} else if (Area == "Reaktor" && inReaktor == false) {
+			inStorage = false;
+			inOffice = false;
+			inArchive = false;
+			inLab = false;
+			inMachine = false;
+			inReaktor = true;
+			GameObject.Find ("MainMusicController").GetComponent<MainMusicController> ().FadeIn ("Reaktor");
+		}	}
 
 	void respawnIn(string Area){
 		if (Area == "Office") {
