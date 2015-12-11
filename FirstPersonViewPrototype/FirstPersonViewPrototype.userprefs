@@ -1,11 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\FlagScaler.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\fade2.cs">
     <Files>
-      <File FileName="Assets\scripts\CanvasManager.cs" Line="58" Column="19" />
+      <File FileName="Assets\scripts\fade2.cs" Line="25" Column="63" />
+      <File FileName="Assets\scripts\CanvasManager.cs" Line="50" Column="23" />
       <File FileName="Assets\scripts\FirstPersonController.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\disableOnActive.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\FlagScaler.cs" Line="14" Column="85" />
+      <File FileName="Assets\scripts\FlagScaler.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\MainMusicController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -18287,6 +18287,10 @@ Prefab:
       propertyPath: m_Volume
       value: .150000006
       objectReference: {fileID: 0}
+    - target: {fileID: 174554, guid: 22e69c8f173481249b3ddcdb7c9abfc2, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 22e69c8f173481249b3ddcdb7c9abfc2, type: 2}
   m_IsPrefabParent: 0
@@ -39778,7 +39782,7 @@ Transform:
   - {fileID: 1286457453}
   - {fileID: 1682975352}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!114 &1261894983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53699,7 +53703,7 @@ Transform:
   m_Children:
   - {fileID: 1295403700}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
 --- !u!1 &1763518491
 GameObject:
   m_ObjectHideFlags: 0
