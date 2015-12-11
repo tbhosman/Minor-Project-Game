@@ -365,7 +365,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -.115000002, y: .209999993}
+  m_AnchoredPosition: {x: -.119999997, y: .25}
   m_SizeDelta: {x: 943, y: 5000}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &854442438
@@ -502,7 +502,7 @@ Cloth:
   m_UseGravity: 1
   m_Damping: 0
   m_ExternalAcceleration: {x: 0, y: 0, z: 0}
-  m_RandomAcceleration: {x: 4, y: 0, z: 12}
+  m_RandomAcceleration: {x: 0, y: 0, z: 15}
   m_WorldVelocityScale: .5
   m_WorldAccelerationScale: 1
   m_Friction: .5
@@ -1230,7 +1230,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1778442607}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.69999981, y: 5, z: -176}
+  m_LocalPosition: {x: -4, y: 5, z: -176}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1246,6 +1246,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f876f0de43b88f418aeb10d3cd766b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1857688893 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100004, guid: 0ab59fcf106213944a97985af73c63ae, type: 3}
+  m_PrefabInternal: {fileID: 4469668}
+--- !u!114 &1857688895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1857688893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f094197ab3306464f9fec701fbdca257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AspectRatio: 0
+  scaleFactor: 0
+  camPosY: 0
 --- !u!1 &1884011213
 GameObject:
   m_ObjectHideFlags: 0
