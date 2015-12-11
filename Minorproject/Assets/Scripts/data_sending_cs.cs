@@ -3,7 +3,7 @@ using System.Collections;
 
 public class data_sending_cs : MonoBehaviour {
 	
-	public string url = "http://drproject.twi.tudelft.nl:8086/userid";
+	public string url = "http://drproject.twi.tudelft.nl:8086";
 	
 	// Use this for initialization
 	
@@ -13,17 +13,17 @@ public class data_sending_cs : MonoBehaviour {
 		
 		
 		if (PlayerPrefs.GetInt ("ID") == 0) {
-			PlayerPrefs.SetInt ("ID", 0);
+			//PlayerPrefs.SetInt ("ID", 0);
+			WWW www = new WWW (url + "/userid" );  //+ PlayerPrefs.GetInt ("ID"));
+			yield return www;
+			
+			if (www.isDone) {
+				int user_id = int.Parse (www.text);
+				PlayerPrefs.SetInt ("ID", user_id); //DEZE MOET ER UIT BIJ TESTEN!
+				Debug.Log ("Player ID = " + user_id);	
+			}
 		} 
 		
-		WWW www = new WWW (url + "?ID=" + PlayerPrefs.GetInt ("ID"));
-		yield return www;
-
-		PlayerPrefs.SetInt ("ID", www.text);
-		Debug.Log ("Player ID = " + layerPrefs.SetInt ("ID", www.text));
-
-		//		Debug.Log (www.text);
-		//		Debug.Log ("Made it");
 		
 	}
 }
