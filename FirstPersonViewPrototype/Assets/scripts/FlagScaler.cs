@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CreditsCameraController : MonoBehaviour {
+public class FlagScaler : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

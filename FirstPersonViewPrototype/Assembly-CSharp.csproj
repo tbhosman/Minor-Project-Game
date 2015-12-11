@@ -45,10 +45,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CreditsCameraController.cs" />
-     <Compile Include="Assets\DataAquisitie.cs" />
-     <Compile Include="Assets\MachineDoorTriggerScript.cs" />
-     <Compile Include="Assets\PauseController.cs" />
      <Compile Include="Assets\imports\Industrial\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\imports\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
      <Compile Include="Assets\imports\Standard Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
@@ -90,6 +86,7 @@
      <Compile Include="Assets\scripts\BooleanTrigger.cs" />
      <Compile Include="Assets\scripts\CanvasManager.cs" />
      <Compile Include="Assets\scripts\Credits.cs" />
+     <Compile Include="Assets\scripts\DataAquisitie.cs" />
      <Compile Include="Assets\scripts\DisableFlashlight.cs" />
      <Compile Include="Assets\scripts\DontLookMonster.cs" />
      <Compile Include="Assets\scripts\DontLookScareScript.cs" />
@@ -98,6 +95,7 @@
      <Compile Include="Assets\scripts\EnemyRouting.cs" />
      <Compile Include="Assets\scripts\EnemySight.cs" />
      <Compile Include="Assets\scripts\FirstPersonController.cs" />
+     <Compile Include="Assets\scripts\FlagScaler.cs" />
      <Compile Include="Assets\scripts\FlashlightHitArea.cs" />
      <Compile Include="Assets\scripts\FlashlightScript.cs" />
      <Compile Include="Assets\scripts\GameOverScript.cs" />
@@ -111,6 +109,7 @@
      <Compile Include="Assets\scripts\JumScareSystem.cs" />
      <Compile Include="Assets\scripts\JumpScareActivation.cs" />
      <Compile Include="Assets\scripts\JumpScareScript.cs" />
+     <Compile Include="Assets\scripts\MachineDoorTriggerScript.cs" />
      <Compile Include="Assets\scripts\MainAreaTriggerController.cs" />
      <Compile Include="Assets\scripts\MainMusicController.cs" />
      <Compile Include="Assets\scripts\MapGenerator.cs" />
@@ -118,6 +117,7 @@
      <Compile Include="Assets\scripts\Movie.cs" />
      <Compile Include="Assets\scripts\OpeningDoor.cs" />
      <Compile Include="Assets\scripts\OptionsCanvas.cs" />
+     <Compile Include="Assets\scripts\PauseController.cs" />
      <Compile Include="Assets\scripts\PlayAudioClip.cs" />
      <Compile Include="Assets\scripts\ProceduralGenerationStorage.cs" />
      <Compile Include="Assets\scripts\ReverseNormals.cs" />
