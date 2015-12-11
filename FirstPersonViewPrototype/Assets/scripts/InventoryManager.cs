@@ -2,18 +2,24 @@
 using System.Collections;
 
 public class InventoryManager : MonoBehaviour {
-	public bool SecurityCodeNoteFound;
-	public bool ScaryNoteFound;
+	public bool KeyFound;
+	public bool CrowbarFound;
 
 	public GameObject SecurityCodeNote;
 	public GameObject ScaryNote;
 
+	public GameObject SecurityCodeNoteButtonObject;
+	public GameObject ScaryNoteButtonObject;
+
+
 	// Use this for initialization
 	void Start () {
-		SecurityCodeNoteFound = false;
-		ScaryNoteFound = false;
+		KeyFound = false;
+		CrowbarFound = false;
 		SecurityCodeNote.SetActive (false);
 		ScaryNote.SetActive (false);
+		SecurityCodeNoteButtonObject.SetActive (false);
+		ScaryNoteButtonObject.SetActive (false);
 	}
 	
 	// Update is called once per frame

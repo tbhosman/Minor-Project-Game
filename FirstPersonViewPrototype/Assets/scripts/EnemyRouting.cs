@@ -53,6 +53,7 @@ public class EnemyRouting : MonoBehaviour {
 		{
 			waypoints[i] = waypoints_parent.transform.GetChild(i).gameObject;
 			canReach[i] = Reachable(waypoints[i].transform.position);
+			waypoints[i].name = i.ToString();
 			if (canReach[i] == true){
 				Reachables.Add(waypoints[i]);
 			}
@@ -156,12 +157,6 @@ public class EnemyRouting : MonoBehaviour {
 		//if a new waypoint is needed (enemy is close to current waypoint)
 		if (Mathf.Abs(Vector3.Distance (transform.position, waypoint.transform.position)) < reachDist) {
 
-			//debug for enemy passing a waypoint
-			if (prevDist < Vector3.Distance (transform.position, waypoint.transform.position)) { //enemy going further away
-				getNewWaypoint();
-			}
-			prevDist = Vector3.Distance (transform.position, waypoint.transform.position);
-
 			if (waypoint_index == waypointToPlayer){ //if final waypoint to player is reached, do not get a new waypoint
 				goingToPlayer = true;
 				return;
@@ -170,9 +165,15 @@ public class EnemyRouting : MonoBehaviour {
 			getNewWaypoint();
 			//rb.velocity = transform.TransformDirection(new Vector3(0,0,0));//StartCoroutine(RampSpeed(speed,0)); //set speed to 0 for turning to next waypoint
 		}
+
+		//debug for enemy passing a waypoint
+		if ((prevDist - Vector3.Distance (transform.position, waypoint.transform.position))/Time.deltaTime < -1.9f) { //enemy going further away
+			getNewWaypoint();
+		}
+		prevDist = Vector3.Distance (transform.position, waypoint.transform.position);
 	}
 
-	void getNewWaypoint(){
+	public void getNewWaypoint(){
 		//check which waypoints can be reached
 		for (int i = 0; i < waypoints.Length; i++)
 		{
@@ -188,6 +189,7 @@ public class EnemyRouting : MonoBehaviour {
 		
 		//set as new waypoint
 		waypoint = waypoints [waypoint_index];
+		prevDist = Vector3.Distance (transform.position, waypoint.transform.position);
 		wantTurn = true;
 	}
 

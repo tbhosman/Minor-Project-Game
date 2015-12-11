@@ -1,16 +1,22 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\AreaTriggerController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\disableOnActive.cs">
     <Files>
-      <File FileName="Assets\AreaTriggerController.cs" Line="8" Column="34" />
-      <File FileName="Assets\InventoryManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\InventoryManager.cs" Line="18" Column="24" />
+      <File FileName="Assets\scripts\AnimatableDoorScript.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\JumpScareScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\MainAreaTriggerController.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\MainMusicController.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\proceduralGeneration.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\MainAreaTriggerController.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\EnemyRouting.cs" Line="228" Column="17" />
+      <File FileName="Assets\scripts\ReverseNormals.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\disableOnActive.cs" Line="10" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="Assets\scripts\EnemyRouting.cs" line="170" offsetX="1005" offsetY="2873" expression="prevDist" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
 </Properties>
