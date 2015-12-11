@@ -14,12 +14,15 @@ public class InspectScript : MonoBehaviour {
 	private RaycastHit RayHit;
 	public GameObject DontLookMonster;
 	public int animationlength;
-	// Use this for initialization
+	private GameObject Inventory;
+	public GameObject CrowbarPicture;
+
 	void Start () {
 		Inspected = false;
 		InspectInstructions.enabled = false;
 		Player = GameObject.FindGameObjectWithTag ("Player");
 		PlayerAnimator = Player.GetComponentInChildren<Animator>();
+		Inventory = GameObject.FindGameObjectWithTag ("Inventory");
 	}
 	
 
@@ -37,6 +40,7 @@ public class InspectScript : MonoBehaviour {
 					DontLookAnim.Play ();
 					PlayerAnimator.SetTrigger ("Inspect");
 					Inspected = true;
+					StartCoroutine(OnDontLookAnimationEnd());
 				}
 			}
 		}else {
@@ -47,5 +51,14 @@ public class InspectScript : MonoBehaviour {
 
 	void OnTriggerExit(){
 		InspectInstructions.enabled = false;
+	}
+
+	IEnumerator OnDontLookAnimationEnd(){
+		yield return new WaitForSeconds (animationlength);
+		InspectInstructions.enabled = true;
+		InspectInstructions.text = "You found a crowbar!!";
+		CrowbarPicture.SetActive(true);
+		yield return new WaitForSeconds (2);
+		InspectInstructions.enabled =false;
 	}
 }

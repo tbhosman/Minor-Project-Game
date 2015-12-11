@@ -14,6 +14,8 @@ public class AnimatableDoorScript : MonoBehaviour {
 	public bool Storagedoor;
 	public bool Labdoor;
 	private Transform DoorAnimation;
+	public GameObject Crowbarpicture;
+	public GameObject Keypicture;
 
 	void Start(){
 		DoorAnimation = gameObject.transform.GetChild (0);
@@ -33,7 +35,7 @@ public class AnimatableDoorScript : MonoBehaviour {
 	void OnTriggerStay(){
 		if (Input.GetKeyDown ("e")) {
 			if (Storagedoor){
-				if(Inventory.GetComponent<InventoryManager>().CrowbarFound == true){
+				if(Crowbarpicture.activeSelf){
 					StartCoroutine(DoorOpening());
 					OpenAnimation.Play ();
 					closed = false;
@@ -44,7 +46,7 @@ public class AnimatableDoorScript : MonoBehaviour {
 				}
 			}
 			if (Labdoor){
-				if(Inventory.GetComponent<InventoryManager>().KeyFound == true){
+				if(Keypicture.activeSelf){
 					StartCoroutine(DoorOpening());
 					OpenAnimation.Play ();
 					closed = false;
