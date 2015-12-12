@@ -9,6 +9,7 @@ public class SecurityPanelController : MonoBehaviour {
 	public Text codeDisplayText;
 	public string correctCode;
 	public GameObject MachineRoomDoor;
+	private GameObject DataAquisitie;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +19,7 @@ public class SecurityPanelController : MonoBehaviour {
 				codeDisplayText = codeDisplayPanel.transform.GetChild(0).GetComponent<Text>();
 			}
 		}
+		DataAquisitie = GameObject.Find ("DataAquisitie");
 		codeDisplayText.text = "";
 		gameObject.SetActive(false);
 		MachineRoomDoor = GameObject.Find ("MachineRoomDoor");
@@ -56,6 +58,7 @@ public class SecurityPanelController : MonoBehaviour {
 		if (codeDisplayText.text.Length > 3) {
 			if (codeDisplayText.text == correctCode) {
 				codeDisplayPanel.GetComponent<Image> ().color = Color.green;
+				DataAquisitie.GetComponent<DataAquisitie>().OpenedDoor(3);
 				yield return StartCoroutine (WaitForRealSeconds (2.0f));
 				codeDisplayText.text = "";
 				gameObject.SetActive(false);

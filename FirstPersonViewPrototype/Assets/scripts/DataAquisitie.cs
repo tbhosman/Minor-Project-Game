@@ -18,6 +18,7 @@ public class DataAquisitie : MonoBehaviour {
 
 	public void OpenedDoor (int door) {
 		timeTaken = Mathf.RoundToInt(Time.timeSinceLevelLoad/60);
+		Debug.Log ("Opened door: " + door + "  on time: " + timeTaken);
 		//send door ID, player ID and time here
 	}
 
