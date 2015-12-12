@@ -22,6 +22,7 @@ public class fade2 : MonoBehaviour {
 
          if (timer > 25.0f)
         {
+			DontDestroyOnLoad(GameObject.Find ("MainMusicController"));
             Application.LoadLevel(4);
         }
         timer += Time.deltaTime;
