@@ -45,6 +45,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
         private bool key1 = true;
+        public float stamina;
+        public Texture2D staminaTexture;
+        
 
         public bool MakingWalkingSound;
 		public bool MakingRunningSound;
@@ -53,7 +56,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Use this for initialization
         private void Start()
         {
-            
+            stamina = 100.0f;
             wait = false;
             key1 = false;
             m_CharacterController = GetComponent<CharacterController>();
@@ -77,6 +80,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
+            
+            if (!m_IsWalking)
+            {
+                stamina -= 1f;
+            }
+            else
+            {
+                stamina += 1f;
+            }
+
             RotateView();
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
@@ -241,9 +254,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
 #if !MOBILE_INPUT
                 // On standalone builds, walk/run speed is modified by a key press.
                 // keep track of whether or not the character is walking or running
-                m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
+                if (stamina > 0)
+                {
+                    m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
+                }
+                else {
+                    m_IsWalking = true;
+                }
                 MakingRunningSound = !m_IsWalking && MakingWalkingSound; //Information for enemy
 #endif
+
+               
 
                 // set the desired speed to be walking or running
                 speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
@@ -308,5 +329,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             return key1;
         }
+
     }
 }

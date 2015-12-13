@@ -39,7 +39,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbaf1cbac50eeec41ab5e02ff83ab834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kast: {fileID: 117548, guid: 57ae2307c60e03f4d8006509b94f38fd, type: 2}
+  kast1: {fileID: 155410, guid: 8108680d099ffc847bf671fb5bf69d09, type: 2}
+  kast2: {fileID: 159558, guid: ac37bf582f7f3aa41b0981a3ae45284a, type: 2}
+  kast3: {fileID: 185714, guid: 9b01479ad82740043a78114df7411f4a, type: 2}
   deurPositieveZRichting: 1
   deurNegatieveZRichting: 1
   deurPositieveXRichting: 0
@@ -50,7 +52,23 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: kast2
+      value: 
+      objectReference: {fileID: 159558, guid: ac37bf582f7f3aa41b0981a3ae45284a, type: 2}
+    - target: {fileID: 0}
+      propertyPath: kast3
+      value: 
+      objectReference: {fileID: 185714, guid: 9b01479ad82740043a78114df7411f4a, type: 2}
+    - target: {fileID: 0}
+      propertyPath: kast
+      value: 
+      objectReference: {fileID: 155410, guid: 8108680d099ffc847bf671fb5bf69d09, type: 2}
+    - target: {fileID: 0}
+      propertyPath: kast1
+      value: 
+      objectReference: {fileID: 155410, guid: 8108680d099ffc847bf671fb5bf69d09, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 165532}
