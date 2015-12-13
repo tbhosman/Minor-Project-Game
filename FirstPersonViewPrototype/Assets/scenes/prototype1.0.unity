@@ -9746,7 +9746,9 @@ MonoBehaviour:
   GeigerLevel2: {fileID: 8300000, guid: cf7ca96ca302813449b52fbb1286bd0e, type: 3}
   GeigerLevel3: {fileID: 8300000, guid: dc64fec4a4bf3de4688b3bf7cc6ef150, type: 3}
   GeigerLevel4: {fileID: 8300000, guid: 6a60767c58191b7448f66a2a80ea5b87, type: 3}
-  GeigerParameter: 50
+  GeigerLevel5: {fileID: 8300000, guid: 701cc6cba2ff4044890210bbeab104fe, type: 3}
+  GeigerLevel6: {fileID: 8300000, guid: eabcedfd33baab04cbb8e4d6d2ff1b56, type: 3}
+  audiolevel: 0
   radioactivityConstant: 2000
   overloadValue: 2000
 --- !u!82 &380339499

@@ -11,10 +11,12 @@ public class GeigerController : MonoBehaviour {
 	public AudioClip GeigerLevel2;
 	public AudioClip GeigerLevel3;
 	public AudioClip GeigerLevel4;
+	public AudioClip GeigerLevel5;
+	public AudioClip GeigerLevel6;
 
-	private int audiolevel = 0;
+	public int audiolevel = 0;
 	private bool canPlayAudio = true;
-	public float GeigerParameter;
+	//public float GeigerParameter;
 	public float radioactivityConstant = 2000;
 	public float overloadValue = 2000;
 	private float radiodistance;
@@ -76,26 +78,42 @@ public class GeigerController : MonoBehaviour {
 	}
 	
  	int ChooseAudioClip(float radiodistance, int previousaudiolevel){
-		if (radiodistance < 20 && radiodistance > 12) {
+		if (radiodistance < 50 && radiodistance > 40) {
 			audiolevel = 2;
 			if (audiolevel != previousaudiolevel){
-			GeigerAudioSource.clip = GeigerLevel2;
-			GeigerAudioSource.Play();
+				GeigerAudioSource.clip = GeigerLevel2;
+				GeigerAudioSource.Play();
 			}
-				return audiolevel;
+			return audiolevel;
 		}
-		if (radiodistance < 12 && radiodistance > 8) {
+		else if (radiodistance < 40 && radiodistance > 30) {
 			audiolevel = 3;
 			if (audiolevel != previousaudiolevel){
 				GeigerAudioSource.clip = GeigerLevel3;
 				GeigerAudioSource.Play();
 			}
-				return audiolevel;
+			return audiolevel;
 		}
-		if (radiodistance < 8) {
+		else if (radiodistance < 30 && radiodistance > 20) {
 			audiolevel = 4;
 			if (audiolevel != previousaudiolevel){
-				GeigerAudioSource.clip = GeigerLevel4;
+			GeigerAudioSource.clip = GeigerLevel4;
+			GeigerAudioSource.Play();
+			}
+				return audiolevel;
+		}
+		else if (radiodistance < 20 && radiodistance > 10) {
+			audiolevel = 5;
+			if (audiolevel != previousaudiolevel){
+				GeigerAudioSource.clip = GeigerLevel5;
+				GeigerAudioSource.Play();
+			}
+				return audiolevel;
+		}
+		else if (radiodistance < 10) {
+			audiolevel = 6;
+			if (audiolevel != previousaudiolevel){
+				GeigerAudioSource.clip = GeigerLevel6;
 				GeigerAudioSource.Play();
 			}
 				return audiolevel;
