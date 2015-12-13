@@ -2,8 +2,6 @@
 using System.Collections;
 
 public class InventoryManager : MonoBehaviour {
-	public bool KeyFound;
-	public bool CrowbarFound;
 
 	public GameObject SecurityCodeNote;
 	public GameObject ScaryNote;
@@ -14,8 +12,6 @@ public class InventoryManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		KeyFound = false;
-		CrowbarFound = false;
 		SecurityCodeNote.SetActive (false);
 		ScaryNote.SetActive (false);
 		SecurityCodeNoteButtonObject.SetActive (false);

@@ -14,6 +14,7 @@ public class InventoryPickupScript : MonoBehaviour {
 	public bool IsSecurityCodeNote;
 	public bool IsScaryNote;
 	public GameObject KeyObject;
+	public GameObject KeyPicture;
 
 	void Start(){
 		Inventory = GameObject.FindGameObjectWithTag ("Inventory");
@@ -26,23 +27,27 @@ public class InventoryPickupScript : MonoBehaviour {
 		if (RayHit.collider.gameObject == KeyObject) {
 			InspectInstructions.text = displayText;
 			InspectInstructions.enabled = true;
-				if (Input.GetKeyDown ("e")) {
-				KeyObject.SetActive(false);
-					StartCoroutine(ObjectPickup ());
-					if (IsSecurityCodeNote){
-					Inventory.GetComponent<InventoryManager>().SecurityCodeNoteButtonObject.SetActive(true);
-					}
-					if(IsScaryNote){
-						Inventory.GetComponent<InventoryManager>().ScaryNoteButtonObject.SetActive(true);
-					}
-					if(IsKey){
-						Inventory.GetComponent<InventoryManager>().KeyFound = true;
-					}
+			if (Input.GetKeyDown ("e")) {
+				KeyObject.SetActive (false);
+				StartCoroutine (ObjectPickup ());
+				gameObject.GetComponent<Collider>().enabled = false;
+				if (IsSecurityCodeNote) {
+					Inventory.GetComponent<InventoryManager> ().SecurityCodeNoteButtonObject.SetActive (true);
 				}
+				if (IsScaryNote) {
+					Inventory.GetComponent<InventoryManager> ().ScaryNoteButtonObject.SetActive (true);
+				}
+				if (IsKey) {
+					KeyPicture.SetActive (true);
+				}
+			}
+		} else {
+			InspectInstructions.enabled = false;
 		}
 	}
 
 	IEnumerator ObjectPickup(){
+		InspectInstructions.enabled = true;
 		InspectInstructions.text = afterPickupText;
 		yield return new WaitForSeconds (2);
 		InspectInstructions.enabled = false;

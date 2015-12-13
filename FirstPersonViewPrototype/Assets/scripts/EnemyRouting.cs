@@ -53,7 +53,7 @@ public class EnemyRouting : MonoBehaviour {
 		{
 			waypoints[i] = waypoints_parent.transform.GetChild(i).gameObject;
 			canReach[i] = Reachable(waypoints[i].transform.position);
-			waypoints[i].name = i.ToString();
+			//waypoints[i].name = i.ToString();
 			if (canReach[i] == true){
 				Reachables.Add(waypoints[i]);
 			}
@@ -298,20 +298,6 @@ public class EnemyRouting : MonoBehaviour {
 		}
 		return false;
 	}
-//
-//	protected bool enemyCanReachPlayer(){
-//		Vector3 location = GameObject.Find ("FPSController").transform.position;
-//		RaycastHit hit;
-//		Vector3 rayDirection = location - transform.position;
-//		Vector3 p1 = transform.position + Vector3.up * -enemyObject.transform.lossyScale.y * 0.5F;
-//		Vector3 p2 = p1 + Vector3.up * enemyObject.transform.lossyScale.y;
-//		
-//		if (Physics.CapsuleCast(p1, p2, CapsuleCastRangeCorrection*enemyObject.transform.lossyScale.x/2, rayDirection, out hit))
-//		{
-//			return (hit.transform.CompareTag("Player") && (Vector3.Distance(hit.transform.position,location) < CapsuleCastErrorDistance));
-//		}
-//		return false;
-//	}
 
 	protected bool enemyCanReachLocation(Vector3 location){
 		GameObject temp = GameObject.Instantiate (waypointObject);
