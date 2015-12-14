@@ -19884,7 +19884,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400672, guid: d9e34f6ada736cc49b0237bd166897d6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -.0500000007
       objectReference: {fileID: 0}
     - target: {fileID: 400672, guid: d9e34f6ada736cc49b0237bd166897d6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19908,7 +19908,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400672, guid: d9e34f6ada736cc49b0237bd166897d6, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 100672, guid: d9e34f6ada736cc49b0237bd166897d6, type: 3}
       propertyPath: m_Name
@@ -26268,6 +26268,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
+  stamina: 0
+  staminaTexture: {fileID: 0}
   MakingWalkingSound: 0
   MakingRunningSound: 0
 --- !u!143 &802715141
@@ -29874,7 +29876,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 480706, guid: b2f8af2d9e8578a4e8e2d276a9ffa4ca, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 11460532, guid: b2f8af2d9e8578a4e8e2d276a9ffa4ca, type: 2}
       propertyPath: FlashLightText
@@ -29923,6 +29925,14 @@ Prefab:
     - target: {fileID: 10877746, guid: b2f8af2d9e8578a4e8e2d276a9ffa4ca, type: 2}
       propertyPath: m_Shadows.m_Strength
       value: .160999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 10810076, guid: b2f8af2d9e8578a4e8e2d276a9ffa4ca, type: 2}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 10877746, guid: b2f8af2d9e8578a4e8e2d276a9ffa4ca, type: 2}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2f8af2d9e8578a4e8e2d276a9ffa4ca, type: 2}

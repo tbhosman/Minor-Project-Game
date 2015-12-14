@@ -58,6 +58,7 @@ public class InspectScript : MonoBehaviour {
 		InspectInstructions.enabled = true;
 		InspectInstructions.text = "You found a crowbar!!";
 		CrowbarPicture.SetActive(true);
+		GameObject.Find ("DataAquisitie").GetComponent<DataAquisitie> ().PickedUpItem (2);
 		yield return new WaitForSeconds (2);
 		InspectInstructions.enabled =false;
 	}
