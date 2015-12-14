@@ -30,6 +30,7 @@ public class DataAquisitie : MonoBehaviour {
 	}
 
 	IEnumerator SendPickedUpItem(int item){
+		Debug.Log ("Sending item..");
 		WWW www_pickUp = new WWW (url + "/pickUp" + item + "?Time=" + timeTaken + "&User_id=" + PlayerPrefs.GetInt("ID"));
 		yield return www_pickUp;
 	}
