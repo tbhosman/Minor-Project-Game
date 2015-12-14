@@ -85,7 +85,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 stamina -= 1f;
             }
-            else
+            else if(stamina<100)
             {
                 stamina += 1f;
             }
