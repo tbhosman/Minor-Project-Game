@@ -26,11 +26,10 @@ public class DataAquisitie : MonoBehaviour {
 	public void PickedUpItem (int item) {
 		timeTaken = Mathf.RoundToInt (Time.timeSinceLevelLoad / 60);
 		Debug.Log ("Found item: " + item + "  on time: " + timeTaken);
-		SendPickedUpItem (item);
+		StartCoroutine(SendPickedUpItem (item));
 	}
 
 	IEnumerator SendPickedUpItem(int item){
-		Debug.Log ("Sending item..");
 		WWW www_pickUp = new WWW (url + "/pickUp" + item + "?Time=" + timeTaken + "&User_id=" + PlayerPrefs.GetInt("ID"));
 		yield return www_pickUp;
 	}
@@ -38,7 +37,7 @@ public class DataAquisitie : MonoBehaviour {
 	public void OpenedDoor (int door) {
 		timeTaken = Mathf.RoundToInt (Time.timeSinceLevelLoad / 60);
 		Debug.Log ("Opened door: " + door + "  on time: " + timeTaken);
-		SendOpenedDoor (door);
+		StartCoroutine(SendOpenedDoor (door));
 	}
 
 	IEnumerator SendOpenedDoor (int door){
@@ -49,7 +48,7 @@ public class DataAquisitie : MonoBehaviour {
 	public void CompletedGame () {
 		timeTaken = Mathf.RoundToInt (Time.timeSinceLevelLoad / 60);
 		Debug.Log ("Finished game in " + timeTaken + " minutes");
-		SendCompletedGame ();
+		StartCoroutine(SendCompletedGame ());
 	}
 
 	IEnumerator SendCompletedGame(){
@@ -60,7 +59,7 @@ public class DataAquisitie : MonoBehaviour {
 	public void GameOver (Vector3 location) {
 		timeTaken = Mathf.RoundToInt (Time.timeSinceLevelLoad / 60);
 		Debug.Log ("Lost game in " + timeTaken + " minutes");
-		SendGameOver (location);
+		StartCoroutine(SendGameOver (location));
 	}
 
 	IEnumerator SendGameOver(Vector3 location){
