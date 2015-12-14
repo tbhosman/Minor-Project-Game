@@ -74,7 +74,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\fillStamina.cs" />
+    <Compile Include="Assets\Procedural_Generation_Archive.cs" />
     <Compile Include="Assets\imports\Industrial\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
     <Compile Include="Assets\imports\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
     <Compile Include="Assets\imports\Standard Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
@@ -164,6 +164,7 @@
     <Compile Include="Assets\scripts\changeShader.cs" />
     <Compile Include="Assets\scripts\disableOnActive.cs" />
     <Compile Include="Assets\scripts\fade2.cs" />
+    <Compile Include="Assets\scripts\fillStamina.cs" />
     <Compile Include="Assets\scripts\highScore.cs" />
     <Compile Include="Assets\scripts\mainMenuButtons.cs" />
     <Compile Include="Assets\scripts\proceduralGeneration.cs" />
