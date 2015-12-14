@@ -30,18 +30,22 @@ public class proceduralGeneration : MonoBehaviour {
     public GameObject computer5;
     public GameObject file;
     private GameObject computerkeuze;
+    public GameObject sleutel;
 
     // Use this for initialization
     void Start() {
+
+        //send raycast to obtain the scaling dimensions
         RaycastHit hit;
         RaycastHit hitZ;
         Physics.Raycast(new Vector3(transform.position.x,transform.position.y+2.3f,transform.position.z), Vector3.right, out hit);
         Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 2.3f, transform.position.z), Vector3.forward, out hitZ);
         scalingX = hit.distance / 3.58382364f;
         scalingZ = hitZ.distance/3.114922f;
-        Debug.Log(hitZ.distance);
-        if (hitZ.distance <2.5f) {
+       
 
+        //remove first and last rows in small rooms to minimise overcrowding
+        if (hitZ.distance <2.5f) {
             for (int i = 0; i < 7; i++)
             {
                 array[i, 0] = 1;
@@ -49,8 +53,9 @@ public class proceduralGeneration : MonoBehaviour {
                 array[i, 1] = 1;
                 array[i, 4] = 1;
             }
-            }
+        }
 
+        //Make sure there are no objects spawning in front of the door
         array[x_coordinaatdeur, z_coordinaatdeur] = 1;
         if (x_coordinaatdeur != 0){ array[x_coordinaatdeur - 1, z_coordinaatdeur] = 1; }
         if (x_coordinaatdeur != 6){ array[x_coordinaatdeur + 1, z_coordinaatdeur] = 1; }
@@ -66,7 +71,7 @@ public class proceduralGeneration : MonoBehaviour {
         if (z_coordinaatdeur != 5 && x_coordinaatdeur !=0) { array[x_coordinaatdeur - 1, z_coordinaatdeur + 1] = 1; }
 
 
-
+        //Generate trashcans in the corners
         for (int i = 0; i < 2; i++) {
             prullenbak = Random.Range(0, 4);
             switch (prullenbak) {
@@ -86,6 +91,7 @@ public class proceduralGeneration : MonoBehaviour {
             };
         }
 
+        //generate whiteboards on the wall
         for (int i = 0; i < 2; i++)
         {
             whiteboard = Random.Range(0, 3);
@@ -107,6 +113,7 @@ public class proceduralGeneration : MonoBehaviour {
             };
         }
 
+        //generate double desk in the middle
         for (int i = 0; i < 2; i++) {
             rij = Random.Range(3, 5);
             kolom = Random.Range(2, 3);
@@ -140,6 +147,7 @@ public class proceduralGeneration : MonoBehaviour {
 
         }
 
+        //generate desks with chairs elsewhere in the office
         for (int i = 0; i < 10; i++)
         {
             rij = Random.Range(0, 7);
@@ -211,7 +219,12 @@ public class proceduralGeneration : MonoBehaviour {
                 Instantiate(computerkeuze, new Vector3(transform.position.x + (rij  * scalingX - 3.0f*scalingX + stoeloffsetx * -0.2f), transform.position.y+0.86f, transform.position.z + (kolom - 2.5f+stoeloffsetz * -0.2f)*scalingZ), Quaternion.Euler(0, rotation, 0));
                 Instantiate(file, new Vector3(transform.position.x + (rij * scalingX - 3.0f*scalingX+deskoffsetRij + Random.Range(-0.3f,0.3f)), transform.position.y + 0.866f, transform.position.z + (kolom - 2.5f + deskoffsetKolom)*scalingZ + Random.Range(-0.3f, 0.3f)), Quaternion.Euler(180, Random.Range(0,360), 0));
                 if (array[(int)(rij+stoeloffsetx),(int)( kolom+stoeloffsetz)] ==0) { Instantiate(stoel, new Vector3(transform.position.x + ((rij) * scalingX - 3.0f * scalingX + stoeloffsetx * 0.75f), transform.position.y, transform.position.z + ((kolom) - 2.5f + stoeloffsetz * 0.75f)*scalingZ), Quaternion.Euler(0, rotation - 90 + Random.Range(-20, 20), 0)); }
-                Debug.Log(deskoffsetRij + " "  + deskoffsetKolom);
+
+                if (GameObject.FindWithTag("officeKey")==null&&Random.Range(0,1)<0.2f)
+                {
+                    Instantiate(sleutel, new Vector3(transform.position.x + (rij * scalingX - 3.0f * scalingX + deskoffsetRij*1.1f + Random.Range(-0.3f, 0.3f)), transform.position.y + 0.638f, transform.position.z + (kolom - 2.5f + deskoffsetKolom*1.1f) * scalingZ + Random.Range(-0.3f, 0.3f)), Quaternion.Euler(180, Random.Range(0, 360), 0));
+                }
+                
 
                 if (deskoffsetRij != 0)
                 {
@@ -231,6 +244,8 @@ public class proceduralGeneration : MonoBehaviour {
             stoeloffsetx = 0;
             stoeloffsetz = 0;
         }
+
+        //generate archiveclosets
         for (int i = 0;i<6;i++) {
             
             if (array[i, 0] == 0)
@@ -260,7 +275,7 @@ public class proceduralGeneration : MonoBehaviour {
         }
     }
 
-
+    //draw a matrix for testing
     void OnDrawGizmos()
 {
         for (int i = 0; i < 7; i++)
