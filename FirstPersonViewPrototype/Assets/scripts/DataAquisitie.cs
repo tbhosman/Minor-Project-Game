@@ -18,7 +18,7 @@ public class DataAquisitie : MonoBehaviour {
 		
 		if (www.isDone) {
 			int user_id = int.Parse (www.text);
-			PlayerPrefs.SetInt ("ID", user_id); //DEZE MOET ER UIT BIJ TESTEN!
+			//PlayerPrefs.SetInt ("ID", user_id); //DEZE MOET ER UIT BIJ TESTEN!
 			Debug.Log ("Player ID = " + user_id);	
 		}
 	}
