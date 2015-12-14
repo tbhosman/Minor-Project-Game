@@ -13,6 +13,7 @@ public class DataAquisitie : MonoBehaviour {
 
 	public void PickedUpItem (int item) {
 		timeTaken = Mathf.RoundToInt(Time.timeSinceLevelLoad/60);
+		Debug.Log ("Found item: " + item + "  on time: " + timeTaken);
 		//send item ID, player ID and time here
 	}
 
