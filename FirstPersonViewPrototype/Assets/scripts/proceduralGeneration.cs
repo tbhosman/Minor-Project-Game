@@ -289,6 +289,5 @@ public class proceduralGeneration : MonoBehaviour {
                 Gizmos.DrawSphere(new Vector3(transform.position.x+scalingX*i-3.0f*scalingX,transform.position.y,transform.position.z+(j-2.5f)*scalingZ), 0.1f);
             }
         }
-}
-
+    }
 }
