@@ -8,6 +8,7 @@ TagManager:
   - radioactive
   - Waypoint
   - Inventory
+  - officeKey
   layers:
   - Default
   - TransparentFX
