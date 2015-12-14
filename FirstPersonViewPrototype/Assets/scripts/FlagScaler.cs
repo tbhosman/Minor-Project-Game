@@ -22,7 +22,7 @@ public class FlagScaler : MonoBehaviour {
 		camPos.y = camPosY;
 		GameObject.Find ("Camera").transform.position = camPos;
 
-		if (AspectRatio < 1.6f) { //cloth is buggy at lower aspect ratios
+		if (AspectRatio < 1.6f || AspectRatio >= 1.9f) { //cloth is buggy at these aspect ratios
 			gameObject.GetComponentInChildren<Cloth> ().enabled = false;
 		}
 	}
