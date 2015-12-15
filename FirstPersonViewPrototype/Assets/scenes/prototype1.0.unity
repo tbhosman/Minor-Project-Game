@@ -5901,7 +5901,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .0500000007
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5934,7 +5934,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -7545,7 +7545,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1658766480}
-  - {fileID: 1123279214}
+  - {fileID: 607228985}
   - {fileID: 746799286}
   m_Father: {fileID: 0}
   m_RootOrder: 24
@@ -16155,33 +16155,10 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!1 &607228984
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 1123279213}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 607228985}
-  m_Layer: 0
-  m_Name: Missing Prefab (Dummy)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &607228985
+--- !u!4 &607228985 stripped
 Transform:
-  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: fe65174987fb60d42bf993ce1d40e39f, type: 3}
   m_PrefabInternal: {fileID: 1123279213}
-  m_GameObject: {fileID: 607228984}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1123279214}
-  m_RootOrder: 2
 --- !u!1 &610294187
 GameObject:
   m_ObjectHideFlags: 0
@@ -28758,7 +28735,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b2a5e9478fc193448199357906a9a3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 802715136}
   FieldOfVanishDegree: 80
   noAnimation: 0
   ActivateObjectOnLookAt: 1
@@ -32943,7 +32919,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b2a5e9478fc193448199357906a9a3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 802715136}
   FieldOfVanishDegree: 50
   noAnimation: 1
   ActivateObjectOnLookAt: 1
@@ -36934,7 +36909,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b2a5e9478fc193448199357906a9a3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 802715136}
   FieldOfVanishDegree: 30
   noAnimation: 0
   ActivateObjectOnLookAt: 0
@@ -37177,43 +37151,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe65174987fb60d42bf993ce1d40e39f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fe65174987fb60d42bf993ce1d40e39f, type: 3}
   m_IsPrefabParent: 0
---- !u!4 &1123279214
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 1123279213}
-  m_GameObject: {fileID: 1835657500}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1123279218}
-  - {fileID: 1394085033}
-  - {fileID: 607228985}
-  m_Father: {fileID: 287552373}
-  m_RootOrder: 1
---- !u!1 &1123279215
+--- !u!1 &1123279215 stripped
 GameObject:
-  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: fe65174987fb60d42bf993ce1d40e39f, type: 3}
   m_PrefabInternal: {fileID: 1123279213}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1123279218}
-  - 64: {fileID: 1123279217}
-  - 114: {fileID: 1123279216}
-  m_Layer: 0
-  m_Name: Missing Prefab (Dummy)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
 --- !u!114 &1123279216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37237,18 +37183,6 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 0}
---- !u!4 &1123279218
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 1123279213}
-  m_GameObject: {fileID: 1123279215}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1123279214}
-  m_RootOrder: 0
 --- !u!1 &1124038137
 GameObject:
   m_ObjectHideFlags: 0
@@ -40389,7 +40323,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b2a5e9478fc193448199357906a9a3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 802715136}
   FieldOfVanishDegree: 80
   noAnimation: 0
   ActivateObjectOnLookAt: 0
@@ -44710,35 +44643,10 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: .25
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1394085032
+--- !u!1 &1394085032 stripped
 GameObject:
-  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100068, guid: fe65174987fb60d42bf993ce1d40e39f, type: 3}
   m_PrefabInternal: {fileID: 1123279213}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1394085033}
-  - 33: {fileID: 1394085034}
-  - 114: {fileID: 1394085035}
-  m_Layer: 0
-  m_Name: Missing Prefab (Dummy)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1394085033
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 1123279213}
-  m_GameObject: {fileID: 1394085032}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1123279214}
-  m_RootOrder: 1
 --- !u!33 &1394085034
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -53278,7 +53186,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b2a5e9478fc193448199357906a9a3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 802715136}
   FieldOfVanishDegree: 30
   noAnimation: 0
   ActivateObjectOnLookAt: 0
@@ -54252,7 +54159,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b2a5e9478fc193448199357906a9a3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 802715136}
   FieldOfVanishDegree: 40
   noAnimation: 0
   ActivateObjectOnLookAt: 0
@@ -57546,21 +57452,6 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300304, guid: 1a7272ea20ead8f42bc6dc0614f395fc, type: 3}
---- !u!1 &1835657500
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 1123279213}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1123279214}
-  m_Layer: 0
-  m_Name: Missing Prefab
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1836465047
 GameObject:
   m_ObjectHideFlags: 0
