@@ -37147,7 +37147,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe65174987fb60d42bf993ce1d40e39f, type: 3}
       propertyPath: m_Name
-      value: EnemyObject 0
+      value: EnemyObject
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: fe65174987fb60d42bf993ce1d40e39f, type: 3}
       propertyPath: m_IsActive
