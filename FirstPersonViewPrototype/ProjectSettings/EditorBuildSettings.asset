@@ -17,3 +17,5 @@ EditorBuildSettings:
     path: Assets/scenes/prototype1.0.unity
   - enabled: 1
     path: Assets/scenes/creditscene.unity
+  - enabled: 1
+    path: Assets/scenes/GameOverScene.unity
