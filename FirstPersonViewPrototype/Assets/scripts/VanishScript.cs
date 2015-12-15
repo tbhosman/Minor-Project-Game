@@ -4,7 +4,7 @@ using System.Collections;
 //Object verdwijnt als de player bijnen fieldofvanishdegree kijkt naar het object. Zet noAnimation true als hij geen animatie bevat.
 public class VanishScript : MonoBehaviour {
 
-	public GameObject player;
+	private GameObject player;
 	private Ray ObjectToPlayerRay;
 	private RaycastHit RayHit;
 	public float FieldOfVanishDegree;
@@ -14,6 +14,7 @@ public class VanishScript : MonoBehaviour {
 	public GameObject ObjectToActivateOnLookAt;
 
 	void Start () {
+        player = GameObject.FindGameObjectWithTag("Player");
 		if (!noAnimation) {
 			gameObject.GetComponent<Animation> ().Stop ();
 		}
