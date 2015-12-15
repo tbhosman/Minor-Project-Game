@@ -13,8 +13,10 @@ public class ProceduralGenerationStorage : MonoBehaviour {
     public GameObject kast1;
     public GameObject kast2;
     public GameObject kast3;
-    private GameObject[] arrayKasten; 
-
+    public GameObject scare;
+    private GameObject[] arrayKasten;
+    private GameObject kastclone;
+    public static int Instantiated;
     public bool deurPositieveZRichting;
     public bool deurNegatieveZRichting;
     public bool deurPositieveXRichting;
@@ -26,7 +28,12 @@ public class ProceduralGenerationStorage : MonoBehaviour {
     private int rijNummer;
     private int kolomNummer;
 
+    void Awake()
+    {
+        Instantiated = 0;
+    }
     void Start() {
+        
         arrayKasten = new GameObject[] { kast1, kast2, kast3 };
         kast = arrayKasten[Random.Range(0, 3)];
         rijZ = 1.6638886666666666666666666666666666666666666666666666f;
@@ -67,13 +74,16 @@ public class ProceduralGenerationStorage : MonoBehaviour {
         {
             if (arrayZ[0, 1] != 1)
             {
-                Instantiate(kast, new Vector3(transform.position.x - 2.5f * rijZ, transform.position.y, transform.position.z + kolomZ), Quaternion.Euler(0, 90, 0));
-                Instantiate(kast, new Vector3(transform.position.x - 2.5f * rijZ, transform.position.y, transform.position.z), Quaternion.Euler(0, 90, 0));
+                kastclone = (GameObject)Instantiate(kast, new Vector3(transform.position.x - 2.5f * rijZ, transform.position.y, transform.position.z + kolomZ), Quaternion.Euler(0, 90, 0));
+                kastclone.transform.parent = transform;
+                kastclone = (GameObject)Instantiate(kast, new Vector3(transform.position.x - 2.5f * rijZ, transform.position.y, transform.position.z), Quaternion.Euler(0, 90, 0));
+                kastclone.transform.parent = transform;
                 arrayZ[0, 1] = 1;
             }
             if (arrayZ[0, 0] != 1)
             {
-                Instantiate(kast, new Vector3(transform.position.x - 2.5f * rijZ, transform.position.y, transform.position.z + -kolomZ), Quaternion.Euler(0, 90, 0));
+                kastclone = (GameObject)Instantiate(kast, new Vector3(transform.position.x - 2.5f * rijZ, transform.position.y, transform.position.z + -kolomZ), Quaternion.Euler(0, 90, 0));
+                kastclone.transform.parent = transform;
                 arrayZ[0, 0] = 1;
             }
         }
@@ -81,13 +91,16 @@ public class ProceduralGenerationStorage : MonoBehaviour {
         {
             if (arrayX[1, 5] != 1)
             {
-                Instantiate(kast, new Vector3(transform.position.x + kolomZ, transform.position.y, transform.position.z + rijZ*2.5f), Quaternion.Euler(0, 0, 0));
-                Instantiate(kast, new Vector3(transform.position.x, transform.position.y, transform.position.z + rijZ * 2.5f), Quaternion.Euler(0, 0, 0));
+                kastclone = (GameObject)Instantiate(kast, new Vector3(transform.position.x + kolomZ, transform.position.y, transform.position.z + rijZ*2.5f), Quaternion.Euler(0, 0, 0));
+                kastclone.transform.parent = transform;
+                kastclone = (GameObject)Instantiate(kast, new Vector3(transform.position.x, transform.position.y, transform.position.z + rijZ * 2.5f), Quaternion.Euler(0, 0, 0));
+                kastclone.transform.parent = transform;
                 arrayX[1, 5] = 1;
             }
             if (arrayX[0, 5] != 1)
             {
-                Instantiate(kast, new Vector3(transform.position.x - kolomZ, transform.position.y, transform.position.z + rijZ * 2.5f), Quaternion.Euler(0, 0, 0));
+                kastclone = (GameObject)Instantiate(kast, new Vector3(transform.position.x - kolomZ, transform.position.y, transform.position.z + rijZ * 2.5f), Quaternion.Euler(0, 0, 0));
+                kastclone.transform.parent = transform;
                 arrayX[0, 5] = 1;
             }
         }
@@ -96,13 +109,16 @@ public class ProceduralGenerationStorage : MonoBehaviour {
         {
             if (arrayX[1, 0] != 1)
             {
-                Instantiate(kast, new Vector3(transform.position.x + kolomZ, transform.position.y, transform.position.z - rijZ * 2.5f), Quaternion.Euler(0, 0, 0));
-                Instantiate(kast, new Vector3(transform.position.x, transform.position.y, transform.position.z - rijZ * 2.5f), Quaternion.Euler(0, 0, 0));
+                kastclone = (GameObject)Instantiate(kast, new Vector3(transform.position.x + kolomZ, transform.position.y, transform.position.z - rijZ * 2.5f), Quaternion.Euler(0, 0, 0));
+                kastclone.transform.parent = transform;
+                kastclone = (GameObject)Instantiate(kast, new Vector3(transform.position.x, transform.position.y, transform.position.z - rijZ * 2.5f), Quaternion.Euler(0, 0, 0));
+                kastclone.transform.parent = transform;
                 arrayX[1, 0] = 1;
             }
             if (arrayX[0, 0] != 1)
             {
-                Instantiate(kast, new Vector3(transform.position.x - kolomZ, transform.position.y, transform.position.z - rijZ * 2.5f), Quaternion.Euler(0, 0, 0));
+                kastclone = (GameObject)Instantiate(kast, new Vector3(transform.position.x - kolomZ, transform.position.y, transform.position.z - rijZ * 2.5f), Quaternion.Euler(0, 0, 0));
+                kastclone.transform.parent = transform;
                 arrayX[0, 0] = 1;
             }
         }
@@ -110,13 +126,16 @@ public class ProceduralGenerationStorage : MonoBehaviour {
         {
             if (arrayZ[5, 1] != 1)
             {
-                Instantiate(kast, new Vector3(transform.position.x + (5 - 2.5f) * rijZ, transform.position.y, transform.position.z + kolomZ), Quaternion.Euler(0, 90, 0));
-                Instantiate(kast, new Vector3(transform.position.x + (5 - 2.5f) * rijZ, transform.position.y, transform.position.z), Quaternion.Euler(0, 90, 0));
+                kastclone = (GameObject)Instantiate(kast, new Vector3(transform.position.x + (5 - 2.5f) * rijZ, transform.position.y, transform.position.z + kolomZ), Quaternion.Euler(0, 90, 0));
+                kastclone.transform.parent = transform;
+                kastclone = (GameObject)Instantiate(kast, new Vector3(transform.position.x + (5 - 2.5f) * rijZ, transform.position.y, transform.position.z), Quaternion.Euler(0, 90, 0));
+                kastclone.transform.parent = transform;
                 arrayZ[5, 1] = 1;
             }
             if (arrayZ[5, 0] != 1)
             {
-                Instantiate(kast, new Vector3(transform.position.x + (5 - 2.5f) * rijZ, transform.position.y, transform.position.z + -kolomZ), Quaternion.Euler(0, 90, 0));
+                kastclone = (GameObject)Instantiate(kast, new Vector3(transform.position.x + (5 - 2.5f) * rijZ, transform.position.y, transform.position.z + -kolomZ), Quaternion.Euler(0, 90, 0));
+                kastclone.transform.parent = transform;
                 arrayZ[5, 0] = 1;
             }
         }
@@ -127,7 +146,8 @@ public class ProceduralGenerationStorage : MonoBehaviour {
             kolomNummer = Random.Range(0,2);
             if (arrayX[kolomNummer, rijNummer] != 1)
             {
-                Instantiate(kast, new Vector3(transform.position.x + kolomZ * (2*kolomNummer-1), transform.position.y, transform.position.z + rijZ * (rijNummer-2.5f)), Quaternion.Euler(0, 0, 0));
+                kastclone = (GameObject)Instantiate(kast, new Vector3(transform.position.x + kolomZ * (2*kolomNummer-1), transform.position.y, transform.position.z + rijZ * (rijNummer-2.5f)), Quaternion.Euler(0, 0, 0));
+                kastclone.transform.parent = transform;
                 arrayX[kolomNummer, rijNummer] = 1;
                 if (rijNummer != 0) { arrayX[kolomNummer, rijNummer - 1] = 1; }
                 if (rijNummer != 5) { arrayX[kolomNummer, rijNummer + 1] = 1; }
@@ -142,7 +162,8 @@ public class ProceduralGenerationStorage : MonoBehaviour {
             kolomNummer = Random.Range(0, 2);
             if (arrayZ[rijNummer, kolomNummer] != 1)
             {
-                Instantiate(kast, new Vector3(transform.position.x + rijZ * (rijNummer-2.5f), transform.position.y, transform.position.z + kolomZ * (2 * kolomNummer - 1)), Quaternion.Euler(0, 90, 0));
+                kastclone = (GameObject)Instantiate(kast, new Vector3(transform.position.x + rijZ * (rijNummer-2.5f), transform.position.y, transform.position.z + kolomZ * (2 * kolomNummer - 1)), Quaternion.Euler(0, 90, 0));
+                kastclone.transform.parent = transform;
                 arrayZ[rijNummer, kolomNummer] = 1;
                 if (rijNummer != 0) { arrayZ[rijNummer - 1, kolomNummer] = 1; }
                 if (rijNummer != 5) { arrayZ[rijNummer + 1, kolomNummer] = 1; }
@@ -150,10 +171,10 @@ public class ProceduralGenerationStorage : MonoBehaviour {
                 if (kolomNummer != 1) { arrayZ[rijNummer, kolomNummer + 1] = 1; }
             }
         }
-    }
 
-    // Update is called once per frame
-    void Update () {
-	
-	}
+        if (Random.Range(0, 20) > 15 && (Instantiated <4)) { Instantiate(scare, new Vector3(transform.position.x,transform.position.y+0.2f,transform.position.z), Quaternion.identity);
+            Instantiated = Instantiated + 1;
+        }
+        kastclone.transform.parent = transform;
+    }
 }
