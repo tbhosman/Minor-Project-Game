@@ -1,0 +1,194 @@
+fileFormatVersion: 2
+guid: c25228931be260440b8c1326655a4745
+timeCreated: 1450168225
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Back
+    100004: Bone
+    100006: Broek
+    100008: collar_L
+    100010: collar_R
+    100012: //RootNode
+    100014: Filter
+    100016: foot_L
+    100018: foot_R
+    100020: footCtrl_L
+    100022: footCtrl_R
+    100024: footIK_L
+    100026: footIK_R
+    100028: footRollCtrl_L
+    100030: footRollCtrl_R
+    100032: Gasmasker
+    100034: Handschoenen
+    100036: Head
+    100038: heel_L
+    100040: heel_R
+    100042: heelRoll_L
+    100044: heelRoll_R
+    100046: hipsCtrl
+    100048: Kap
+    100050: kneeCtrl_L
+    100052: kneeCtrl_R
+    100054: Lamp
+    100056: Lower_back
+    100058: lowerArm_L
+    100060: lowerArm_R
+    100062: lowerLeg_L
+    100064: lowerLeg_R
+    100066: Neck
+    100068: Ogen_
+    100070: Riem
+    100072: Schoenen
+    100074: Spot
+    100076: toeRoll_L
+    100078: toeRoll_R
+    100080: Torso
+    100082: upperArm_L
+    100084: upperArm_R
+    100086: upperLeg_L
+    100088: upperLeg_R
+    100090: Walkie_talkie
+    100092: wrist_L
+    100094: wrist_R
+    400000: Armature
+    400002: Back
+    400004: Bone
+    400006: Broek
+    400008: collar_L
+    400010: collar_R
+    400012: //RootNode
+    400014: Filter
+    400016: foot_L
+    400018: foot_R
+    400020: footCtrl_L
+    400022: footCtrl_R
+    400024: footIK_L
+    400026: footIK_R
+    400028: footRollCtrl_L
+    400030: footRollCtrl_R
+    400032: Gasmasker
+    400034: Handschoenen
+    400036: Head
+    400038: heel_L
+    400040: heel_R
+    400042: heelRoll_L
+    400044: heelRoll_R
+    400046: hipsCtrl
+    400048: Kap
+    400050: kneeCtrl_L
+    400052: kneeCtrl_R
+    400054: Lamp
+    400056: Lower_back
+    400058: lowerArm_L
+    400060: lowerArm_R
+    400062: lowerLeg_L
+    400064: lowerLeg_R
+    400066: Neck
+    400068: Ogen_
+    400070: Riem
+    400072: Schoenen
+    400074: Spot
+    400076: toeRoll_L
+    400078: toeRoll_R
+    400080: Torso
+    400082: upperArm_L
+    400084: upperArm_R
+    400086: upperLeg_L
+    400088: upperLeg_R
+    400090: Walkie_talkie
+    400092: wrist_L
+    400094: wrist_R
+    4300000: Filter
+    4300002: Schoenen
+    4300004: Broek
+    4300006: Kap
+    4300008: Ogen_
+    4300010: Handschoenen
+    4300012: Torso
+    4300014: Walkie_talkie
+    4300016: Riem
+    4300018: Gasmasker
+    4300020: Spot
+    4300022: Lamp
+    7400000: Default Take
+    7400002: ArmatureAction
+    9500000: //RootNode
+    13700000: Broek
+    13700002: Filter
+    13700004: Gasmasker
+    13700006: Handschoenen
+    13700008: Kap
+    13700010: Lamp
+    13700012: Ogen_
+    13700014: Riem
+    13700016: Schoenen
+    13700018: Spot
+    13700020: Torso
+    13700022: Walkie_talkie
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -39,7 +39,6 @@ public class EndSceneScript : MonoBehaviour {
 		}
 	}
     void LoadCredits() {
-		GameObject.Find("DataAquisitie").GetComponent<DataAquisitie>().CompletedGame();
         Application.LoadLevel("creditscene");
     }
 }
