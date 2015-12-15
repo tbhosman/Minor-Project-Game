@@ -9,9 +9,14 @@ public class mainMenuButtons : MonoBehaviour {
 	private InputField input;
 	public Canvas optionsCanvas;
 	private bool infoOpen = false;
+	public GameObject MainMenuMusic;
 
 	// Use this for initialization
 	void Start () {
+		if (GameObject.Find ("MainMenuMusic(Clone)") == null) {
+			Instantiate(MainMenuMusic);
+		}
+		DontDestroyOnLoad(GameObject.Find("MainMenuMusic(Clone)"));
 		//optionsCanvas.enabled = false;
 	}
 	
