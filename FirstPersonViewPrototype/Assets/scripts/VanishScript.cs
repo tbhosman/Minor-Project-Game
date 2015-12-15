@@ -40,5 +40,11 @@ public class VanishScript : MonoBehaviour {
 			}
 		}
 	}
+
+
+	//To use in animation events!!
+	void Deactivate(){
+		gameObject.SetActive (false);
+	}
 }	
 
