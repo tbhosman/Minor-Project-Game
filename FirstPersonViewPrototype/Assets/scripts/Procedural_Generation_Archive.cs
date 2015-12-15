@@ -11,13 +11,15 @@ public class Procedural_Generation_Archive : MonoBehaviour
     private float matrixHokjeX;
     private float matrixHokjeZ;
 
+    public GameObject shelf;
+   
 
     void Start()
     {
         RaycastHit hitX;
         RaycastHit hitZ;
-        Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 2.3f, transform.position.z), Vector3.right, out hitX);
-        Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 2.3f, transform.position.z), Vector3.forward, out hitZ);
+        Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 2.5f, transform.position.z), Vector3.right, out hitX);
+        Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 2.5f, transform.position.z), Vector3.back, out hitZ);
         scalingX = hitX.distance;
         scalingZ = hitZ.distance;
 
@@ -26,8 +28,15 @@ public class Procedural_Generation_Archive : MonoBehaviour
         matrixHokjeX = scalingX * 2 / matrixGrootteX;
         matrixHokjeZ = scalingZ * 2 / matrixGrootteZ;
         matrix = new int[matrixGrootteX, matrixGrootteZ];
-
-    }
+        for (int i = 0; i < matrixGrootteX; i++)
+        {
+            for (int j = 0; j < matrixGrootteZ; j++)
+            {
+                GameObject scaledkast = (GameObject)Instantiate(shelf, new Vector3(transform.position.x + i * matrixHokjeX - scalingX + matrixHokjeX / 2, transform.position.y, transform.position.z + j * matrixHokjeZ - scalingZ + matrixHokjeZ / 2), Quaternion.Euler(0, 0, 0));
+                scaledkast.transform.localScale = new Vector3(matrixHokjeX / 2, 1, 1);
+            }
+         }
+   }
 
 
     void Update()
@@ -42,8 +51,9 @@ public class Procedural_Generation_Archive : MonoBehaviour
             {
 
                 Gizmos.color = Color.blue;
-                Gizmos.DrawSphere(new Vector3(transform.position.x - i * ((2*scalingX)/matrixGrootteX) , transform.position.y, transform.position.z - j* ((2 * scalingZ) / matrixGrootteZ)), 0.1f);
-                Gizmos.DrawWireCube(new Vector3(transform.position.x + (i*matrixHokjeX)+matrixGrootteX/2-scalingX, transform.position.y, transform.position.z + (j*matrixHokjeZ)+matrixGrootteZ/2-scalingZ), new Vector3(matrixHokjeX,1, scalingZ * 2 / matrixHokjeZ));
+                Gizmos.DrawSphere(new Vector3(transform.position.x + i * matrixHokjeX - scalingX + matrixHokjeX / 2, transform.position.y, transform.position.z + j * matrixHokjeZ - scalingZ + matrixHokjeZ / 2), 0.1f);
+                Gizmos.color = Color.green;
+                Gizmos.DrawWireCube(new Vector3(transform.position.x + i*matrixHokjeX-scalingX+matrixHokjeX/2, transform.position.y, transform.position.z + j*matrixHokjeZ- scalingZ + matrixHokjeZ / 2), new Vector3(matrixHokjeX,1, matrixHokjeZ));
             }
         }
     }
