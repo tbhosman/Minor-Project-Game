@@ -28,12 +28,15 @@ public class Procedural_Generation_Archive : MonoBehaviour
         matrixHokjeX = scalingX * 2 / matrixGrootteX;
         matrixHokjeZ = scalingZ * 2 / matrixGrootteZ;
         matrix = new int[matrixGrootteX, matrixGrootteZ];
+
+        
         for (int i = 0; i < matrixGrootteX; i++)
         {
             for (int j = 0; j < matrixGrootteZ; j++)
             {
-                GameObject scaledkast = (GameObject)Instantiate(shelf, new Vector3(transform.position.x + i * matrixHokjeX - scalingX + matrixHokjeX / 2, transform.position.y, transform.position.z + j * matrixHokjeZ - scalingZ + matrixHokjeZ / 2), Quaternion.Euler(0, 0, 0));
-                scaledkast.transform.localScale = new Vector3(matrixHokjeX / 2, 1, 1);
+                if (Random.Range(0, 10) < 8) { GameObject scaledkast = (GameObject)Instantiate(shelf, new Vector3(transform.position.x + i * matrixHokjeX - scalingX + matrixHokjeX / 2, transform.position.y, transform.position.z + j * matrixHokjeZ - scalingZ + matrixHokjeZ / 2), Quaternion.Euler(0, 0, 0)); 
+                    scaledkast.transform.localScale = new Vector3(matrixHokjeX / 2, 1, 1);
+                }
             }
          }
    }

@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+    <title>Reaktor Data - Group 5</title>
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+    body {
+        font-family: 'Inconsolata', sans-serif;
+        background: #404040;
+        color: #d9d9d9;
+    }
+    table {
+        border: 1px solid #777;
+        border-collapse: collapse;
+    } 
+
+    table tr th {
+        border: 1px solid #777;
+        color: white;
+    }
+    table tr td {
+        border: 1px solid #777;
+        color: #d9d9d9;
+    }
+    </style>
+</head>
+<body>
+    <!--<img src="client/reaktor.png">-->
+    <p>Reaktor Data - Group 5</p>
+    <div id="datalist"></div>
+    
+    <ul>
+    <li> Item 1 - Key</li>
+    <li> Item 2 - Crow Bar</li>
+    <li> Item 3 - Security Note</li>
+    <li> Item 4 - Reactor Door</li>
+    <li> Item 5 - Scare Note</li>
+    </ul>
+    
+    <div id="aver"></div>
+
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script>
+         $(document).ready(function() {
+        var data = $.getJSON("/overview", function(){
+            data1 = data.responseJSON;
+            //console.log(data1[5]);
+            var obj = [];
+            for (var i = 0; i < data1.length; i++){
+                obj[i] = JSON.parse(JSON.stringify(data1[i]));
+            }
+            //var object = JSON.parse(JSON.stringify(data));
+            //console.log(obj[2]);
+            var table = '<table><thead><th colspan = "3"></th><th colspan = "3">Game Over</th><th colspan = "5">Pick Up Item Time</th><th colspan = "5">Open Door With Item Time</th></thead><thead><th width = "60">User ID</th><th>Start Time</th><th> Total Play Time </th><th width = "40"> x </th><th width = "40"> y </th><th width = "40"> z </th><th width = "40"> 1 </th><th width = "40"> 2 </th><th width = "40"> 3 </th><th width = "40"> 4 </th><th width = "40"> 5 </th><th width = "40"> 1 </th><th width = "40"> 2 </th><th width = "40"> 3 </th><th width = "40"> 4 </th><th width = "40"> 5 </th></thead><tbody>';
+            $.each(obj, function() {
+               table += '<tr><td align="center">' + this['User_id'] + '</td><td align="center">' + this['StartGameTime'] + '</td><td align="center">' + this['TotalGameTime'] + '</td><td align="center">' + this['GameOver_x'] + '</td><td align="center">' + this['GameOver_y'] + '</td><td align="center">' + this['GameOver_z'] + '</td><td align="center">' + this['PickUpTime_Key'] + '</td><td align="center">' + this['PickUpTime_Koevoet'] + '</td><td align="center">' + this['PickUpTime_SecurityCode'] + '</td><td align="center">' + this['PickUpTime_ReactorDoor'] + '</td><td align="center">' + this['PickUpTime_ScareNote'] + '</td><td align="center">' + this['PickUpTime_ScareNote'] + '</td><td align="center">' + this['OpenedDoor_Key'] + '</td><td align="center">' + this['OpenedDoor_Koevoet'] + '</td><td align="center">' + this['OpenedDoor_SecurityNode'] + '</td><td align="center">' + this['OpenedDoor_ScareNote'] + '</td></tr>';
+            });
+        table += '</tbody></table>';
+        document.getElementById("datalist").innerHTML = table;
+        });
+        
+        
+        var data2 = $.getJSON("/average", function(){
+            data3 = JSON.parse(JSON.stringify(data2.responseText));
+            console.log("DATA" + data3);
+            var average = '<p>' + data3 + '</p>';
+            document.getElementById("aver").innerHTML = average;
+            
+        //console.log(data);
+            });
+    });
+    </script>
+    
+    <!--<script>
+         $(document).ready(function() {
+        var data = $.getJSON("/average", function(){
+            //data1 = data.responseJSON;
+            console.log(data);
+            var average = '<p>' + data + '</p>';
+            document.getElementById("aver").innerHTML = average;
+            });
+        });
+    </script>-->
+   
+</body>
+</html>
