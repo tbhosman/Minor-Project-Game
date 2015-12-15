@@ -32,6 +32,7 @@ public class GameOverScript : MonoBehaviour {
 			alpha_value = 1;
 			GetComponent<AudioSource>().volume = maxVolume;
 			NoiseObject.GetComponent<NoiseAndGrain>().intensityMultiplier = 2;
+			GameObject.Find("DataAquisitie").GetComponent<DataAquisitie>().GameOver(transform.position);
 			if (canReachPlayer()){
             	Application.LoadLevel("menu");
 			}

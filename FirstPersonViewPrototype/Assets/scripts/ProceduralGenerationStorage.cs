@@ -9,7 +9,12 @@ public class ProceduralGenerationStorage : MonoBehaviour {
     //width-scale:0.8231241009103847317316067819395322830819746132816759
     //length-scale:0.8484844642050983599938696551126567129108748989919702
     // Use this for initialization
-    public GameObject kast;
+    private GameObject kast;
+    public GameObject kast1;
+    public GameObject kast2;
+    public GameObject kast3;
+    private GameObject[] arrayKasten; 
+
     public bool deurPositieveZRichting;
     public bool deurNegatieveZRichting;
     public bool deurPositieveXRichting;
@@ -20,65 +25,98 @@ public class ProceduralGenerationStorage : MonoBehaviour {
     private int [,] arrayX = new int[2, 6];
     private int rijNummer;
     private int kolomNummer;
+
     void Start() {
+        arrayKasten = new GameObject[] { kast1, kast2, kast3 };
+        kast = arrayKasten[Random.Range(0, 3)];
         rijZ = 1.6638886666666666666666666666666666666666666666666666f;
-        kolomZ = 4.939287f;
-        //for (int i = 0; i < arrayZ.GetLength(0); i++) {
-        //if (arrayZ[i, 1] != 1) {
-        //Instantiate(kast, new Vector3(transform.position.x  + (i-2.5f)*rijZ, transform.position.y, transform.position.z +kolomZ/2) , Quaternion.Euler(0, 90, 0));
-        //Instantiate(kast, new Vector3(transform.position.x  + (i-2.5f)*rijZ, transform.position.y, transform.position.z+ - kolomZ/2), Quaternion.Euler(0, 90, 0));
-        //}
-        //}
-        if (deurNegatieveXRichting == false)
+        kolomZ = 3.292858f;
+        
+        if (deurPositieveXRichting) {
+            arrayZ[5, 0] = 1;
+            arrayZ[5, 1] = 1;
+            arrayX[1, 2] = 1;
+            arrayX[1, 3] = 1;
+        }
+
+        if (deurNegatieveXRichting)
+        {
+            arrayZ[0, 0] = 1;
+            arrayZ[0, 1] = 1;
+            arrayX[0, 2] = 1;
+            arrayX[0, 3] = 1;
+        }
+
+        if (deurPositieveZRichting)
+        {
+            arrayX[0, 5] = 1;
+            arrayX[1, 5] = 1;
+            arrayZ[2, 1] = 1;
+            arrayZ[3, 1] = 1;
+        }
+
+        if (deurNegatieveZRichting)
+        {
+            arrayX[0, 0] = 1;
+            arrayX[1, 0] = 1;
+            arrayZ[2, 0] = 1;
+            arrayZ[3, 0] = 1;
+        }
+
+        if (!deurNegatieveXRichting)
         {
             if (arrayZ[0, 1] != 1)
             {
-                Instantiate(kast, new Vector3(transform.position.x - 2.5f * rijZ, transform.position.y, transform.position.z + kolomZ / 2), Quaternion.Euler(0, 90, 0));
+                Instantiate(kast, new Vector3(transform.position.x - 2.5f * rijZ, transform.position.y, transform.position.z + kolomZ), Quaternion.Euler(0, 90, 0));
+                Instantiate(kast, new Vector3(transform.position.x - 2.5f * rijZ, transform.position.y, transform.position.z), Quaternion.Euler(0, 90, 0));
                 arrayZ[0, 1] = 1;
             }
             if (arrayZ[0, 0] != 1)
             {
-                Instantiate(kast, new Vector3(transform.position.x - 2.5f * rijZ, transform.position.y, transform.position.z + -kolomZ / 2), Quaternion.Euler(0, 90, 0));
+                Instantiate(kast, new Vector3(transform.position.x - 2.5f * rijZ, transform.position.y, transform.position.z + -kolomZ), Quaternion.Euler(0, 90, 0));
                 arrayZ[0, 0] = 1;
             }
         }
-        if (deurPositieveZRichting == false)
+        if (!deurPositieveZRichting)
         {
             if (arrayX[1, 5] != 1)
             {
-                Instantiate(kast, new Vector3(transform.position.x + (kolomZ*0.5f), transform.position.y, transform.position.z + rijZ*2.5f), Quaternion.Euler(0, 0, 0));
+                Instantiate(kast, new Vector3(transform.position.x + kolomZ, transform.position.y, transform.position.z + rijZ*2.5f), Quaternion.Euler(0, 0, 0));
+                Instantiate(kast, new Vector3(transform.position.x, transform.position.y, transform.position.z + rijZ * 2.5f), Quaternion.Euler(0, 0, 0));
                 arrayX[1, 5] = 1;
             }
             if (arrayX[0, 5] != 1)
             {
-                Instantiate(kast, new Vector3(transform.position.x - (kolomZ * 0.5f), transform.position.y, transform.position.z + rijZ * 2.5f), Quaternion.Euler(0, 0, 0));
+                Instantiate(kast, new Vector3(transform.position.x - kolomZ, transform.position.y, transform.position.z + rijZ * 2.5f), Quaternion.Euler(0, 0, 0));
                 arrayX[0, 5] = 1;
             }
         }
 
-        if (deurNegatieveZRichting == false)
+        if (!deurNegatieveZRichting)
         {
             if (arrayX[1, 0] != 1)
             {
-                Instantiate(kast, new Vector3(transform.position.x + (kolomZ * 0.5f), transform.position.y, transform.position.z - rijZ * 2.5f), Quaternion.Euler(0, 0, 0));
+                Instantiate(kast, new Vector3(transform.position.x + kolomZ, transform.position.y, transform.position.z - rijZ * 2.5f), Quaternion.Euler(0, 0, 0));
+                Instantiate(kast, new Vector3(transform.position.x, transform.position.y, transform.position.z - rijZ * 2.5f), Quaternion.Euler(0, 0, 0));
                 arrayX[1, 0] = 1;
             }
             if (arrayX[0, 0] != 1)
             {
-                Instantiate(kast, new Vector3(transform.position.x - (kolomZ * 0.5f), transform.position.y, transform.position.z - rijZ * 2.5f), Quaternion.Euler(0, 0, 0));
+                Instantiate(kast, new Vector3(transform.position.x - kolomZ, transform.position.y, transform.position.z - rijZ * 2.5f), Quaternion.Euler(0, 0, 0));
                 arrayX[0, 0] = 1;
             }
         }
-        if (deurPositieveXRichting == false)
+        if (!deurPositieveXRichting)
         {
             if (arrayZ[5, 1] != 1)
             {
-                Instantiate(kast, new Vector3(transform.position.x + (5 - 2.5f) * rijZ, transform.position.y, transform.position.z + kolomZ / 2), Quaternion.Euler(0, 90, 0));
+                Instantiate(kast, new Vector3(transform.position.x + (5 - 2.5f) * rijZ, transform.position.y, transform.position.z + kolomZ), Quaternion.Euler(0, 90, 0));
+                Instantiate(kast, new Vector3(transform.position.x + (5 - 2.5f) * rijZ, transform.position.y, transform.position.z), Quaternion.Euler(0, 90, 0));
                 arrayZ[5, 1] = 1;
             }
             if (arrayZ[5, 0] != 1)
             {
-                Instantiate(kast, new Vector3(transform.position.x + (5 - 2.5f) * rijZ, transform.position.y, transform.position.z + -kolomZ / 2), Quaternion.Euler(0, 90, 0));
+                Instantiate(kast, new Vector3(transform.position.x + (5 - 2.5f) * rijZ, transform.position.y, transform.position.z + -kolomZ), Quaternion.Euler(0, 90, 0));
                 arrayZ[5, 0] = 1;
             }
         }
@@ -89,10 +127,27 @@ public class ProceduralGenerationStorage : MonoBehaviour {
             kolomNummer = Random.Range(0,2);
             if (arrayX[kolomNummer, rijNummer] != 1)
             {
-                Instantiate(kast, new Vector3(transform.position.x + kolomZ * (kolomNummer-0.5f), transform.position.y, transform.position.z + rijZ * (rijNummer-2.5f)), Quaternion.Euler(0, 0, 0));
+                Instantiate(kast, new Vector3(transform.position.x + kolomZ * (2*kolomNummer-1), transform.position.y, transform.position.z + rijZ * (rijNummer-2.5f)), Quaternion.Euler(0, 0, 0));
                 arrayX[kolomNummer, rijNummer] = 1;
                 if (rijNummer != 0) { arrayX[kolomNummer, rijNummer - 1] = 1; }
                 if (rijNummer != 5) { arrayX[kolomNummer, rijNummer + 1] = 1; }
+                if (kolomNummer != 0) { arrayX[kolomNummer - 1, rijNummer] = 1; }
+                if (kolomNummer != 1) { arrayX[kolomNummer + 1, rijNummer] = 1; }
+            }
+        }
+
+        for (int i = 0; i < 4; i++)
+        {
+            rijNummer = Random.Range(0, 6);
+            kolomNummer = Random.Range(0, 2);
+            if (arrayZ[rijNummer, kolomNummer] != 1)
+            {
+                Instantiate(kast, new Vector3(transform.position.x + rijZ * (rijNummer-2.5f), transform.position.y, transform.position.z + kolomZ * (2 * kolomNummer - 1)), Quaternion.Euler(0, 90, 0));
+                arrayZ[rijNummer, kolomNummer] = 1;
+                if (rijNummer != 0) { arrayZ[rijNummer - 1, kolomNummer] = 1; }
+                if (rijNummer != 5) { arrayZ[rijNummer + 1, kolomNummer] = 1; }
+                if (kolomNummer != 0) { arrayZ[rijNummer, kolomNummer - 1] = 1; }
+                if (kolomNummer != 1) { arrayZ[rijNummer, kolomNummer + 1] = 1; }
             }
         }
     }
