@@ -4,8 +4,16 @@ using System.Collections;
 public class MainMusicController : MonoBehaviour {
 
 	public GameObject[] audioTracks;
-	public float fadeTime = 2;
-	public float maxVolume = 1;
+	private float fadeTime = 2;
+	private float maxVolumeAlarm;
+	private float maxVolumeMachine;
+	private float maxVolumeOffice;
+	private float maxVolumeLab;
+	private float maxVolumeReaktor;
+	private float maxVolumeStorage;
+	private float maxVolumeArchive;
+
+
 	private int toFadeOut;
 
 	// Use this for initialization
@@ -17,6 +25,14 @@ public class MainMusicController : MonoBehaviour {
 				audioTracks[i].gameObject.SetActive (false);
 			}
 		}
+
+		maxVolumeAlarm = GameObject.Find ("MainMusicController").transform.FindChild("Alarm").GetComponent<AudioSource>().volume;
+		maxVolumeMachine = GameObject.Find ("MainMusicController").transform.FindChild("MachineRoom").GetComponent<AudioSource>().volume;
+		maxVolumeOffice = GameObject.Find ("MainMusicController").transform.FindChild("Office").GetComponent<AudioSource>().volume;
+		maxVolumeLab = GameObject.Find ("MainMusicController").transform.FindChild("Laboratory").GetComponent<AudioSource>().volume;
+		maxVolumeReaktor = GameObject.Find ("MainMusicController").transform.FindChild("Reaktor").GetComponent<AudioSource>().volume;
+		maxVolumeStorage = GameObject.Find ("MainMusicController").transform.FindChild("Storage").GetComponent<AudioSource>().volume;
+		maxVolumeArchive = GameObject.Find ("MainMusicController").transform.FindChild("Archive").GetComponent<AudioSource>().volume;
 	}
 	
 	// Update is called once per frame
@@ -30,6 +46,7 @@ public class MainMusicController : MonoBehaviour {
 		for (int i = 1; i < transform.childCount; i++) {
 			if (audioTracks[i].name == track){
 				audioTracks[i].gameObject.SetActive(true);
+				float maxVolume = getVolumeOf(track);
 				StartCoroutine(FadeMusic (audioTracks[i].GetComponent<AudioSource>(), maxVolume, fadeTime));
 			} else {
 				if (audioTracks[i].gameObject.activeSelf == true){
@@ -40,7 +57,27 @@ public class MainMusicController : MonoBehaviour {
 		}
 	}
 
-	private IEnumerator FadeMusic(AudioSource audio, float targetVolume, float duration)
+	private float getVolumeOf(string track){
+		if (track == "Alarm") {
+			return maxVolumeAlarm;
+		} else if (track == "Office") {
+			return maxVolumeOffice;
+		} else if (track == "MachineRoom") {
+			return maxVolumeMachine;
+		} else if (track == "Lab") {
+			return maxVolumeLab;
+		} else if (track == "Storage") {
+			return maxVolumeStorage;
+		} else if (track == "Reaktor") {
+			return maxVolumeReaktor;
+		} else if (track == "Archive") {
+			return maxVolumeArchive;
+		} else {
+			return 1.0f;
+		}
+	}
+
+private IEnumerator FadeMusic(AudioSource audio, float targetVolume, float duration)
 	{
 		float startVolume = audio.volume;
 		float inverseDuration = 1.0f / duration;
