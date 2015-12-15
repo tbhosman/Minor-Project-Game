@@ -45,7 +45,7 @@ public class DataAquisitie : MonoBehaviour {
 
 	public void GameOver (Vector3 location) {
 		timeTaken = Mathf.RoundToInt(Time.timeSinceLevelLoad/60);
-		string location_string = "?Location_x=" + location.x + "?Location_y=" + location.y + "?Location_z=" + location.z;
+		string location_string = "&Location_x=" + location.x + "&Location_y=" + location.y + "&Location_z=" + location.z;
 		WWW www_pickUp = new WWW (url + "/gameOver" + "?Time=" + timeTaken + location_string + "&User_id=" + PlayerPrefs.GetInt("ID"));
 		yield return www_pickUp;	}
 } 
