@@ -22,7 +22,7 @@ public class mainMenuButtons : MonoBehaviour {
 	}
 
 	public void startGame () {
-		Application.LoadLevel("username");
+		Application.LoadLevel("intro");
 
 	}
 
