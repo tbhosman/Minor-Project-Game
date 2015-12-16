@@ -1,0 +1,125 @@
+fileFormatVersion: 2
+guid: d5d56125655354a4dafb20a83beadd84
+timeCreated: 1450301973
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: archiveCeiling
+    100002: archiveFloor
+    100004: labCeiling
+    100006: labFloor
+    100008: machineroomCeiling
+    100010: machineroomFloor
+    100012: officesCeiling
+    100014: officesFloor
+    100016: storageCeiling
+    100018: storageFloor
+    100020: //RootNode
+    400000: archiveCeiling
+    400002: archiveFloor
+    400004: labCeiling
+    400006: labFloor
+    400008: machineroomCeiling
+    400010: machineroomFloor
+    400012: officesCeiling
+    400014: officesFloor
+    400016: storageCeiling
+    400018: storageFloor
+    400020: //RootNode
+    2300000: archiveCeiling
+    2300002: archiveFloor
+    2300004: labCeiling
+    2300006: labFloor
+    2300008: machineroomCeiling
+    2300010: machineroomFloor
+    2300012: officesCeiling
+    2300014: officesFloor
+    2300016: storageCeiling
+    2300018: storageFloor
+    3300000: archiveCeiling
+    3300002: archiveFloor
+    3300004: labCeiling
+    3300006: labFloor
+    3300008: machineroomCeiling
+    3300010: machineroomFloor
+    3300012: officesCeiling
+    3300014: officesFloor
+    3300016: storageCeiling
+    3300018: storageFloor
+    4300000: machineroomFloor
+    4300002: officesFloor
+    4300004: archiveFloor
+    4300006: storageFloor
+    4300008: officesCeiling
+    4300010: storageCeiling
+    4300012: archiveCeiling
+    4300014: labFloor
+    4300016: labCeiling
+    4300018: machineroomCeiling
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
