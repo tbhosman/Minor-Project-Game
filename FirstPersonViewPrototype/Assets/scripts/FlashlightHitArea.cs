@@ -13,10 +13,13 @@ public class FlashlightHitArea : MonoBehaviour {
 	public Vector3 hitLeftPosition;
 	public RaycastHit hitRight;
 	public Vector3 hitRightPosition;
+	public bool seeingEnemy;
+	public AudioSource scareSoundOnSeeingEnemy;
+	public AudioClip[] scareSounds = new AudioClip[3];
 
 	// Use this for initialization
 	void Start () {
-	
+		scareSoundOnSeeingEnemy = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -41,6 +44,38 @@ public class FlashlightHitArea : MonoBehaviour {
 		if (Physics.Raycast (transform.position, transform.forward + Quaternion.AngleAxis (-angle, transform.right) * transform.forward, out hitLeft)){
 			hitLeftPosition = hitLeft.point;
 			//Debug.DrawRay(transform.position, Quaternion.AngleAxis(-angle, transform.right) * transform.forward);
+		}
+
+		CheckEnemyInSight ();
+	}
+
+	void CheckEnemyInSight(){
+		RaycastHit hit;
+		Vector3 rayDirection = GameObject.Find ("Enemy").transform.position - transform.position;
+
+		if ((Vector3.Angle(rayDirection, transform.forward)) <= GetComponent<Light>().spotAngle * 0.5f)
+		{
+			// Detect if player is within the field of view
+			if (Physics.Raycast(transform.position, rayDirection, out hit))
+			{
+				seeingEnemy = hit.transform.CompareTag("radioactive");
+			}else{seeingEnemy = false;}
+		}else{seeingEnemy = false;}
+
+		if (seeingEnemy && !scareSoundOnSeeingEnemy.isPlaying) {
+			float rand = Random.Range(0.0f,1.0f);
+			if (rand < 1.0f/3.0f){
+				//scareSoundOnSeeingEnemy.clip = scareSounds[0];
+				scareSoundOnSeeingEnemy.PlayOneShot(scareSounds[0]);
+			}
+			else if (rand < 2.0f/3.0f){
+				//scareSoundOnSeeingEnemy.clip = scareSounds[1];
+				scareSoundOnSeeingEnemy.PlayOneShot(scareSounds[1]);			
+			}
+			else{
+				//scareSoundOnSeeingEnemy.clip = scareSounds[2];
+				scareSoundOnSeeingEnemy.PlayOneShot(scareSounds[2]);
+			}
 		}
 	}
 }
