@@ -26,4 +26,9 @@ public class ShakeCameraScript : MonoBehaviour {
 		
 		Camera.main.transform.position = originalCamPos;
 	}
+
+	void OnTriggerEnter(){
+		StartCoroutine (Shake());
+		gameObject.GetComponent<Collider> ().enabled = false;
+	}
 }
