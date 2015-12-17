@@ -55,7 +55,7 @@ public class FlashlightHitArea : MonoBehaviour {
 
 		if ((Vector3.Angle(rayDirection, transform.forward)) <= GetComponent<Light>().spotAngle * 0.5f)
 		{
-			// Detect if player is within the field of view
+			// Detect if enemy is within the field of view
 			if (Physics.Raycast(transform.position, rayDirection, out hit))
 			{
 				seeingEnemy = hit.transform.CompareTag("radioactive");
@@ -65,15 +65,12 @@ public class FlashlightHitArea : MonoBehaviour {
 		if (seeingEnemy && !scareSoundOnSeeingEnemy.isPlaying) {
 			float rand = Random.Range(0.0f,1.0f);
 			if (rand < 1.0f/3.0f){
-				//scareSoundOnSeeingEnemy.clip = scareSounds[0];
 				scareSoundOnSeeingEnemy.PlayOneShot(scareSounds[0]);
 			}
 			else if (rand < 2.0f/3.0f){
-				//scareSoundOnSeeingEnemy.clip = scareSounds[1];
 				scareSoundOnSeeingEnemy.PlayOneShot(scareSounds[1]);			
 			}
 			else{
-				//scareSoundOnSeeingEnemy.clip = scareSounds[2];
 				scareSoundOnSeeingEnemy.PlayOneShot(scareSounds[2]);
 			}
 		}
