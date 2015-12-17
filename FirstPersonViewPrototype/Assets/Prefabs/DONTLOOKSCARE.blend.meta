@@ -147,7 +147,251 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 69
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/footCtrl_L
+        weight: 1
+      - path: Armature/footCtrl_L/footRollCtrl_L
+        weight: 1
+      - path: Armature/footCtrl_L/heelRoll_L
+        weight: 1
+      - path: Armature/footCtrl_L/heelRoll_L/toeRoll_L
+        weight: 1
+      - path: Armature/footCtrl_L/heelRoll_L/toeRoll_L/footIK_L
+        weight: 1
+      - path: Armature/footCtrl_L/kneeCtrl_L
+        weight: 1
+      - path: Armature/footCtrl_R
+        weight: 1
+      - path: Armature/footCtrl_R/footRollCtrl_R
+        weight: 1
+      - path: Armature/footCtrl_R/heelRoll_R
+        weight: 1
+      - path: Armature/footCtrl_R/heelRoll_R/toeRoll_R
+        weight: 1
+      - path: Armature/footCtrl_R/heelRoll_R/toeRoll_R/footIK_R
+        weight: 1
+      - path: Armature/footCtrl_R/kneeCtrl_R
+        weight: 1
+      - path: Armature/hipsCtrl
+        weight: 1
+      - path: Armature/hipsCtrl/Bone
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_L/upperArm_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_L/upperArm_L/lowerArm_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_L/upperArm_L/lowerArm_L/wrist_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_R
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_R/upperArm_R
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_R/upperArm_R/lowerArm_R
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_R/upperArm_R/lowerArm_R/wrist_R
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/Neck
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/Neck/Head
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_L/lowerLeg_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_L/lowerLeg_L/heel_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_L/lowerLeg_L/heel_L/foot_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_R
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_R/lowerLeg_R
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_R/lowerLeg_R/heel_R
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_R/lowerLeg_R/heel_R/foot_R
+        weight: 1
+      - path: Broek
+        weight: 1
+      - path: Filter
+        weight: 1
+      - path: Gasmasker
+        weight: 1
+      - path: Handschoenen
+        weight: 1
+      - path: Kap
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Ogen_
+        weight: 1
+      - path: Riem
+        weight: 1
+      - path: Schoenen
+        weight: 1
+      - path: Spot
+        weight: 1
+      - path: Torso
+        weight: 1
+      - path: Walkie_talkie
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: ArmatureAction
+      takeName: ArmatureAction
+      firstFrame: 0
+      lastFrame: 69
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/footCtrl_L
+        weight: 1
+      - path: Armature/footCtrl_L/footRollCtrl_L
+        weight: 1
+      - path: Armature/footCtrl_L/heelRoll_L
+        weight: 1
+      - path: Armature/footCtrl_L/heelRoll_L/toeRoll_L
+        weight: 1
+      - path: Armature/footCtrl_L/heelRoll_L/toeRoll_L/footIK_L
+        weight: 1
+      - path: Armature/footCtrl_L/kneeCtrl_L
+        weight: 1
+      - path: Armature/footCtrl_R
+        weight: 1
+      - path: Armature/footCtrl_R/footRollCtrl_R
+        weight: 1
+      - path: Armature/footCtrl_R/heelRoll_R
+        weight: 1
+      - path: Armature/footCtrl_R/heelRoll_R/toeRoll_R
+        weight: 1
+      - path: Armature/footCtrl_R/heelRoll_R/toeRoll_R/footIK_R
+        weight: 1
+      - path: Armature/footCtrl_R/kneeCtrl_R
+        weight: 1
+      - path: Armature/hipsCtrl
+        weight: 1
+      - path: Armature/hipsCtrl/Bone
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_L/upperArm_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_L/upperArm_L/lowerArm_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_L/upperArm_L/lowerArm_L/wrist_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_R
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_R/upperArm_R
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_R/upperArm_R/lowerArm_R
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/collar_R/upperArm_R/lowerArm_R/wrist_R
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/Neck
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/Lower_back/Back/Neck/Head
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_L/lowerLeg_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_L/lowerLeg_L/heel_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_L/lowerLeg_L/heel_L/foot_L
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_R
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_R/lowerLeg_R
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_R/lowerLeg_R/heel_R
+        weight: 1
+      - path: Armature/hipsCtrl/Bone/upperLeg_R/lowerLeg_R/heel_R/foot_R
+        weight: 1
+      - path: Broek
+        weight: 1
+      - path: Filter
+        weight: 1
+      - path: Gasmasker
+        weight: 1
+      - path: Handschoenen
+        weight: 1
+      - path: Kap
+        weight: 1
+      - path: Lamp
+        weight: 1
+      - path: Ogen_
+        weight: 1
+      - path: Riem
+        weight: 1
+      - path: Schoenen
+        weight: 1
+      - path: Spot
+        weight: 1
+      - path: Torso
+        weight: 1
+      - path: Walkie_talkie
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
