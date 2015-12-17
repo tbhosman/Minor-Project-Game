@@ -1,12 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\FlashlightHitArea.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ShakeCameraScript.cs">
     <Files>
-      <File FileName="Assets\scripts\VanishScript.cs" Line="75" Column="1" />
-      <File FileName="Assets\scripts\FlashlightHitArea.cs" Line="65" Column="56" />
-      <File FileName="Assets\scripts\InspectScript.cs" Line="66" Column="1" />
-      <File FileName="Assets\scripts\ProceduralGenerationStorage.cs" Line="181" Column="1" />
-      <File FileName="Assets\scripts\disableOnActive.cs" Line="14" Column="1" />
+      <File FileName="Assets\scripts\ShakeCameraScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\BlurManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\InspectScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ProceduralGenerationStorage.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\disableOnActive.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\GlowScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Effects\ImageEffects\Scripts\MotionBlur.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
