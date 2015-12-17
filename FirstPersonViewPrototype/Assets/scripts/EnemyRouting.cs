@@ -155,7 +155,7 @@ public class EnemyRouting : MonoBehaviour {
 		}
 
 		//if a new waypoint is needed (enemy is close to current waypoint)
-		if (!wantWalk && !wantTurn){//Mathf.Abs(Vector3.Distance (transform.position, waypoint.transform.position)) < reachDist) {
+		if (Mathf.Abs(Vector3.Distance (transform.position, waypoint.transform.position)) < reachDist) {
 
 			if (waypoint_index == waypointToPlayer){ //if final waypoint to player is reached, do not get a new waypoint
 				goingToPlayer = true;
