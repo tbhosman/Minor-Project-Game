@@ -35,6 +35,7 @@ public class MachineDoorTriggerScript : MonoBehaviour {
 				if (Inventory.GetComponent<InventoryManager> ().SecurityCodeNoteButtonObject.activeSelf) {
 					PlayerInfo.text = OnOpenText;
 					SecurityPanelCanvas.SetActive (true);
+					Cursor.visible = true;
 					StartCoroutine (OnOpenCoroutine ());
 
 				} else {
