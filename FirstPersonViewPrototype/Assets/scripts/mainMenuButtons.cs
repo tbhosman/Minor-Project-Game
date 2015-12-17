@@ -17,6 +17,7 @@ public class mainMenuButtons : MonoBehaviour {
 			Instantiate(MainMenuMusic);
 		}
 		DontDestroyOnLoad(GameObject.Find("MainMenuMusic(Clone)"));
+		Cursor.visible = true;
 		//optionsCanvas.enabled = false;
 	}
 	
