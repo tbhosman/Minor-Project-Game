@@ -62,6 +62,7 @@ public class FlashlightHitArea : MonoBehaviour {
 			for (int i=rays.Length-1; i>0; i--){
 				if (rays[i].transform.name == "Enemy"){
 					seeingEnemy = true;
+					Debug.Log(rays[rays.Length-1].transform.position);
 					break;
 				}
 				else if (!rays[i].transform.CompareTag ("Waypoint")){ //if a hit is not a waypoint, player is not seeing enemy

@@ -16,6 +16,7 @@ public class InspectScript : MonoBehaviour {
 	public int animationlength;
 	private GameObject Inventory;
 	public GameObject CrowbarPicture;
+	public GameObject Crowbar;
 
 	void Start () {
 		Inspected = false;
@@ -57,6 +58,7 @@ public class InspectScript : MonoBehaviour {
 		yield return new WaitForSeconds (animationlength);
 		InspectInstructions.enabled = true;
 		InspectInstructions.text = "You found a crowbar!!";
+		Crowbar.SetActive (false);
 		CrowbarPicture.SetActive(true);
 		GameObject.Find ("DataAquisitie").GetComponent<DataAquisitie> ().PickedUpItem (2);
 		yield return new WaitForSeconds (2);
