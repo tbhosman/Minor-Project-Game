@@ -1,10 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ShakeCameraScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\InspectScript.cs">
     <Files>
-      <File FileName="Assets\scripts\ShakeCameraScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\ShakeCameraScript.cs" Line="30" Column="24" />
       <File FileName="Assets\scripts\BlurManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\InspectScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\InspectScript.cs" Line="40" Column="25" />
       <File FileName="Assets\scripts\ProceduralGenerationStorage.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\disableOnActive.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\GlowScript.cs" Line="1" Column="1" />
