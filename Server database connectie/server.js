@@ -7,7 +7,7 @@ var url = require('url');
 
 var connection = mysql.createConnection({
   host     : 'localhost',
-  user     : 'ewi3620tu5', 
+  user     : 'ewi3620tu5',
   password : 'GorcOgMeys3',
   database : 'ewi3620tu5'
 });
@@ -41,6 +41,7 @@ app.get("/userid", function (req, res) {
 		}
 		res.send(JSON.stringify(size));
 		});
+		
 	});
 });
 
@@ -51,9 +52,8 @@ app.get("/overview", function (req, res) {
 });
 
 app.get("/average", function(req, res) {
-	connection.query("SELECT avg(TotalGameTime) AS AverageGameTime FROM Unity_data WHERE TotalGameTime > 0", function(err, rows, fields){
+	connection.query("SELECT avg(TotalGameTime), avg(PickUpTime_Key), avg(PickUpTime_Koevoet), avg(PickUpTime_SecurityCode), avg(PickUpTime_ReactorDoor), avg(PickUpTime_ScareNote), avg(OpenedDoor_Key), avg(OpenedDoor_Koevoet), avg(OpenedDoor_SecurityCode), avg(OpenedDoor_ReactorDoor), avg(OpenedDoor_ScareNote) FROM Unity_data WHERE TotalGameTime > 0", function(err, rows, fields){
 		res.send(JSON.parse(JSON.stringify(rows)));
-		console.log(JSON.parse(JSON.stringify(rows)));
 	});
 });
 
@@ -152,7 +152,7 @@ app.get("/openedDoor2", function (req, res) {
 app.get("/openedDoor3", function (req, res) {
 	var time_door3 = req.param('Time');
 	var user_id = req.param('User_id');
-	connection.query("UPDATE Unity_data SET OpenedDoor_SecurityNode = " + time_door3 + " WHERE User_id = " + user_id, function(err, result) {
+	connection.query("UPDATE Unity_data SET OpenedDoor_SecurityCode = " + time_door3 + " WHERE User_id = " + user_id, function(err, result) {
 	if (err){
 		res.send("error2");
 	}
