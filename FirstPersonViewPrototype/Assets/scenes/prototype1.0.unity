@@ -7466,7 +7466,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 287552371}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -88.0999985, y: 1.10000002, z: 76.2699966}
+  m_LocalPosition: {x: -83.7269974, y: 1.10000002, z: 93.6999969}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1658766480}
@@ -22543,6 +22543,8 @@ MonoBehaviour:
   noAnimation: 0
   ActivateObjectOnLookAt: 1
   ObjectToActivateOnLookAt: {fileID: 1535557934}
+  useDistance: 0
+  minDistance: 0
 --- !u!114 &836335774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26672,6 +26674,8 @@ MonoBehaviour:
   noAnimation: 1
   ActivateObjectOnLookAt: 1
   ObjectToActivateOnLookAt: {fileID: 836335768}
+  useDistance: 0
+  minDistance: 0
 --- !u!108 &972957383
 Light:
   m_ObjectHideFlags: 0
@@ -30569,6 +30573,8 @@ MonoBehaviour:
   noAnimation: 0
   ActivateObjectOnLookAt: 0
   ObjectToActivateOnLookAt: {fileID: 0}
+  useDistance: 0
+  minDistance: 0
 --- !u!1 &1114723293
 GameObject:
   m_ObjectHideFlags: 0
@@ -33875,6 +33881,8 @@ MonoBehaviour:
   noAnimation: 0
   ActivateObjectOnLookAt: 0
   ObjectToActivateOnLookAt: {fileID: 0}
+  useDistance: 0
+  minDistance: 0
 --- !u!114 &1234821734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45951,6 +45959,8 @@ MonoBehaviour:
   noAnimation: 0
   ActivateObjectOnLookAt: 0
   ObjectToActivateOnLookAt: {fileID: 0}
+  useDistance: 0
+  minDistance: 0
 --- !u!1 &1689764642
 GameObject:
   m_ObjectHideFlags: 0
@@ -46924,6 +46934,8 @@ MonoBehaviour:
   noAnimation: 0
   ActivateObjectOnLookAt: 0
   ObjectToActivateOnLookAt: {fileID: 0}
+  useDistance: 0
+  minDistance: 0
 --- !u!82 &1720928344
 AudioSource:
   m_ObjectHideFlags: 0
