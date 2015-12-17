@@ -29608,19 +29608,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 141544, guid: db4e3557030f9a24e8591a8588fa0430, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 199870, guid: db4e3557030f9a24e8591a8588fa0430, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 155112, guid: db4e3557030f9a24e8591a8588fa0430, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 193090, guid: db4e3557030f9a24e8591a8588fa0430, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: db4e3557030f9a24e8591a8588fa0430, type: 2}
