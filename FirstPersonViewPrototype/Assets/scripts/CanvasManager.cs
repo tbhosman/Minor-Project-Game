@@ -38,6 +38,7 @@ public class CanvasManager : MonoBehaviour {
 			if (isPause){
 					Time.timeScale = 0;
 					pauseCanvas.SetActive(true);
+					Cursor.visible = true;
 					GameObject.Find ("FPSController").GetComponent<FirstPersonController>().enabled = false;
 			}else{
 				if (QuitToCanvas.activeSelf){
@@ -47,6 +48,7 @@ public class CanvasManager : MonoBehaviour {
 				}else{
 					Time.timeScale = 1;
 					pauseCanvas.SetActive(false);
+					Cursor.visible = false;
 					GameObject.Find ("FPSController").GetComponent<FirstPersonController>().enabled = true;
 				}
 			}
@@ -55,6 +57,7 @@ public class CanvasManager : MonoBehaviour {
 
 	public void resumeFromPause(){
 		pauseCanvas.SetActive(false);
+		Cursor.visible = false;
 		isPause = false;
 		Time.timeScale = 1;
 		GameObject.Find ("FPSController").GetComponent<FirstPersonController>().enabled = true;
