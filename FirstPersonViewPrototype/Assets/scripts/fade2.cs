@@ -15,6 +15,7 @@ public class fade2 : MonoBehaviour {
 	void Start () {
 		timer = 0.0f;
 		Destroy (GameObject.Find("MainMenuMusic(Clone)"));
+		Destroy (GameObject.Find ("DataAquisitie"));
 	}
 
 	// Update is called once per frame

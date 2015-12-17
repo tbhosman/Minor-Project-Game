@@ -13,6 +13,7 @@ public class DataAquisitie : MonoBehaviour {
 	public string url = "http://drproject.twi.tudelft.nl:8086";
 
 	IEnumerator Start(){
+		DontDestroyOnLoad (gameObject);
 		WWW www = new WWW (url + "/userid" );  //+ PlayerPrefs.GetInt ("ID"));
 		yield return www;
 		
