@@ -83,6 +83,7 @@
      <Compile Include="Assets\scripts\AdjustMotionBlur.cs" />
      <Compile Include="Assets\scripts\AnimatableDoorScript.cs" />
      <Compile Include="Assets\scripts\AreaTriggerController.cs" />
+     <Compile Include="Assets\scripts\BlurManager.cs" />
      <Compile Include="Assets\scripts\CanvasManager.cs" />
      <Compile Include="Assets\scripts\Credits.cs" />
      <Compile Include="Assets\scripts\DataAquisitie.cs" />
