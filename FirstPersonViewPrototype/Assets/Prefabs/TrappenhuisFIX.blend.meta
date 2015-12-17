@@ -1,0 +1,145 @@
+fileFormatVersion: 2
+guid: dc96604e440c8b640ad47502e80d1ca2
+timeCreated: 1450303805
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Basic_Wall_Generic_-_150mm__224458_
+    100002: Basic_Wall_Generic_-_150mm__224517_
+    100004: Floor_160mm_Concrete_With_50mm_Metal_Deck__279480__001
+    100006: Monolithic_Landing_220mm_Thickness__231877_
+    100008: Monolithic_Landing_220mm_Thickness__231980_
+    100010: Monolithic_Landing_220mm_Thickness__232062_
+    100012: Monolithic_Landing_220mm_Thickness__232176_
+    100014: Monolithic_Landing_220mm_Thickness__232339_
+    100016: Monolithic_Run_190mm_Depth__231545_
+    100018: Monolithic_Run_190mm_Depth__231875_
+    100020: Monolithic_Run_190mm_Depth__231978_
+    100022: Monolithic_Run_190mm_Depth__232060_
+    100024: Monolithic_Run_190mm_Depth__232174_
+    100026: Monolithic_Run_190mm_Depth__232337_
+    100028: //RootNode
+    400000: Basic_Wall_Generic_-_150mm__224458_
+    400002: Basic_Wall_Generic_-_150mm__224517_
+    400004: Floor_160mm_Concrete_With_50mm_Metal_Deck__279480__001
+    400006: Monolithic_Landing_220mm_Thickness__231877_
+    400008: Monolithic_Landing_220mm_Thickness__231980_
+    400010: Monolithic_Landing_220mm_Thickness__232062_
+    400012: Monolithic_Landing_220mm_Thickness__232176_
+    400014: Monolithic_Landing_220mm_Thickness__232339_
+    400016: Monolithic_Run_190mm_Depth__231545_
+    400018: Monolithic_Run_190mm_Depth__231875_
+    400020: Monolithic_Run_190mm_Depth__231978_
+    400022: Monolithic_Run_190mm_Depth__232060_
+    400024: Monolithic_Run_190mm_Depth__232174_
+    400026: Monolithic_Run_190mm_Depth__232337_
+    400028: //RootNode
+    2300000: Basic_Wall_Generic_-_150mm__224458_
+    2300002: Basic_Wall_Generic_-_150mm__224517_
+    2300004: Floor_160mm_Concrete_With_50mm_Metal_Deck__279480__001
+    2300006: Monolithic_Landing_220mm_Thickness__231877_
+    2300008: Monolithic_Landing_220mm_Thickness__231980_
+    2300010: Monolithic_Landing_220mm_Thickness__232062_
+    2300012: Monolithic_Landing_220mm_Thickness__232176_
+    2300014: Monolithic_Landing_220mm_Thickness__232339_
+    2300016: Monolithic_Run_190mm_Depth__231545_
+    2300018: Monolithic_Run_190mm_Depth__231875_
+    2300020: Monolithic_Run_190mm_Depth__231978_
+    2300022: Monolithic_Run_190mm_Depth__232060_
+    2300024: Monolithic_Run_190mm_Depth__232174_
+    2300026: Monolithic_Run_190mm_Depth__232337_
+    3300000: Basic_Wall_Generic_-_150mm__224458_
+    3300002: Basic_Wall_Generic_-_150mm__224517_
+    3300004: Floor_160mm_Concrete_With_50mm_Metal_Deck__279480__001
+    3300006: Monolithic_Landing_220mm_Thickness__231877_
+    3300008: Monolithic_Landing_220mm_Thickness__231980_
+    3300010: Monolithic_Landing_220mm_Thickness__232062_
+    3300012: Monolithic_Landing_220mm_Thickness__232176_
+    3300014: Monolithic_Landing_220mm_Thickness__232339_
+    3300016: Monolithic_Run_190mm_Depth__231545_
+    3300018: Monolithic_Run_190mm_Depth__231875_
+    3300020: Monolithic_Run_190mm_Depth__231978_
+    3300022: Monolithic_Run_190mm_Depth__232060_
+    3300024: Monolithic_Run_190mm_Depth__232174_
+    3300026: Monolithic_Run_190mm_Depth__232337_
+    4300000: Floor_160mm_Concrete_With_50mm_Metal_Deck__279480__001
+    4300002: Monolithic_Landing_220mm_Thickness__232339_
+    4300004: Monolithic_Run_190mm_Depth__232337_
+    4300006: Monolithic_Landing_220mm_Thickness__232176_
+    4300008: Monolithic_Run_190mm_Depth__232174_
+    4300010: Monolithic_Landing_220mm_Thickness__232062_
+    4300012: Monolithic_Run_190mm_Depth__232060_
+    4300014: Monolithic_Landing_220mm_Thickness__231980_
+    4300016: Monolithic_Run_190mm_Depth__231978_
+    4300018: Monolithic_Landing_220mm_Thickness__231877_
+    4300020: Monolithic_Run_190mm_Depth__231875_
+    4300022: Monolithic_Run_190mm_Depth__231545_
+    4300024: Basic_Wall_Generic_-_150mm__224517_
+    4300026: Basic_Wall_Generic_-_150mm__224458_
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

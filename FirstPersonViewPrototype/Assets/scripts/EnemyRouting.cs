@@ -155,7 +155,7 @@ public class EnemyRouting : MonoBehaviour {
 		}
 
 		//if a new waypoint is needed (enemy is close to current waypoint)
-		if (Mathf.Abs(Vector3.Distance (transform.position, waypoint.transform.position)) < reachDist) {
+		if (!wantWalk && !wantTurn){//Mathf.Abs(Vector3.Distance (transform.position, waypoint.transform.position)) < reachDist) {
 
 			if (waypoint_index == waypointToPlayer){ //if final waypoint to player is reached, do not get a new waypoint
 				goingToPlayer = true;
@@ -223,6 +223,13 @@ public class EnemyRouting : MonoBehaviour {
 			return (hit.transform.CompareTag("Waypoint") && (Vector3.Distance(hit.transform.position,location) < CapsuleCastErrorDistance));
 		}
 		return false;
+	}
+
+	void OnCollisionStay(Collision collisionInfo) {
+		if (!collisionInfo.transform.CompareTag ("Waypoint") && (rb.velocity.magnitude < 0.01f) && isAnimWalk){ //enemy is now stuck
+			getNewWaypoint();
+			transform.position = waypoint.transform.position;
+		}
 	}
 
 	int newWaypoint(){

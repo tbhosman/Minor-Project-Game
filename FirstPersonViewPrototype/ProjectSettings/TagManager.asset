@@ -9,6 +9,7 @@ TagManager:
   - Waypoint
   - Inventory
   - officeKey
+  - Enemy
   layers:
   - Default
   - TransparentFX
