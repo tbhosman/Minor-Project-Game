@@ -5,6 +5,7 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 public class InspectScript : MonoBehaviour {
 
+	private AudioSource audiosource;
 	private bool Inspected;
 	private GameObject Player;
 	private Animator PlayerAnimator;
@@ -19,6 +20,7 @@ public class InspectScript : MonoBehaviour {
 	public GameObject Crowbar;
 
 	void Start () {
+		audiosource = gameObject.GetComponent<AudioSource> ();
 		Inspected = false;
 		InspectInstructions.enabled = false;
 		Player = GameObject.FindGameObjectWithTag ("Player");
@@ -35,6 +37,7 @@ public class InspectScript : MonoBehaviour {
 				InspectInstructions.text = "Press E to inspect";
 				InspectInstructions.enabled = true;
 				if (Input.GetKeyDown ("e")) {
+					audiosource.Play();
 					StartCoroutine(Player.GetComponent<FirstPersonController>().Wait(animationlength));
 					DontLookMonster.SetActive(true);
 					InspectInstructions.enabled = false;
