@@ -32,8 +32,8 @@ public class GameOverScript : MonoBehaviour {
 			alpha_value = 1;
 			GetComponent<AudioSource>().volume = maxVolume;
 			NoiseObject.GetComponent<NoiseAndGrain>().intensityMultiplier = 2;
-			GameObject.Find("DataAquisitie").GetComponent<DataAquisitie>().GameOver(transform.position);
 			if (canReachPlayer()){
+				GameObject.Find("DataAquisitie").GetComponent<DataAquisitie>().GameOver(transform.position);
             	Application.LoadLevel("GameOverScene");
 			}
 		} else if (PEDistance < DyingDistance) { //player is close to enemy but not GameOver, interpolate alpha

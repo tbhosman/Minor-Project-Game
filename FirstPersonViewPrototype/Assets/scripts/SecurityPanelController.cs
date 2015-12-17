@@ -29,6 +29,7 @@ public class SecurityPanelController : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			gameObject.SetActive(false);
+			Cursor.visible = false;
 		}
 
 		if (isActiveAndEnabled) {
@@ -62,6 +63,7 @@ public class SecurityPanelController : MonoBehaviour {
 				yield return StartCoroutine (WaitForRealSeconds (2.0f));
 				codeDisplayText.text = "";
 				gameObject.SetActive(false);
+				Cursor.visible = false;
 				GameObject.Find ("FPSController").GetComponent<FirstPersonController>().enabled = true;
 				MachineRoomDoor.GetComponent<Animation>().Play();
 				MachineRoomDoor.GetComponent<AudioSource>().Play();

@@ -51,16 +51,19 @@ public class FlashlightHitArea : MonoBehaviour {
 
 	void CheckEnemyInSight(){
 		RaycastHit hit;
-		Vector3 rayDirection = GameObject.Find ("Enemy").transform.position - transform.position;
+		Vector3 rayDirection = GameObject.Find ("Enemy").transform.position - transform.position + new Vector3(0,0.3f,0);
+
+		seeingEnemy = false;
 
 		if ((Vector3.Angle(rayDirection, transform.forward)) <= GetComponent<Light>().spotAngle * 0.5f)
 		{
-			// Detect if enemy is within the field of view
+			// Detect if player is within the field of view
 			if (Physics.Raycast(transform.position, rayDirection, out hit))
 			{
 				seeingEnemy = hit.transform.CompareTag("radioactive");
 			}else{seeingEnemy = false;}
 		}else{seeingEnemy = false;}
+
 
 		if (seeingEnemy && !scareSoundOnSeeingEnemy.isPlaying) {
 			float rand = Random.Range(0.0f,1.0f);
