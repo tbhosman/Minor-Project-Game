@@ -225,6 +225,13 @@ public class EnemyRouting : MonoBehaviour {
 		return false;
 	}
 
+	void OnCollisionStay(Collision collisionInfo) {
+		if (!collisionInfo.transform.CompareTag ("Waypoint") && (rb.velocity.magnitude < 0.01f) && isAnimWalk){ //enemy is now stuck
+			getNewWaypoint();
+			transform.position = waypoint.transform.position;
+		}
+	}
+
 	int newWaypoint(){
 		if (RouteToPlayer.Count == 0) { //enemy is not following a route to the player
 
