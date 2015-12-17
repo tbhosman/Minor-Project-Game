@@ -10,6 +10,7 @@ TagManager:
   - Inventory
   - officeKey
   - Enemy
+  - SecurityNote
   layers:
   - Default
   - TransparentFX

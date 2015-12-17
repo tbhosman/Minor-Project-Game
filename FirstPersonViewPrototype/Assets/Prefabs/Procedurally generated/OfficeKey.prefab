@@ -91,7 +91,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 122446}
   m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106709}
-  m_LocalPosition: {x: 0, y: -.802999973, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: .100000001, y: .100000001, z: .100000001}
   m_Children:
   - {fileID: 483744}
@@ -105,7 +105,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101952}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -153.110001, y: .819999993, z: 61.7200012}
+  m_LocalPosition: {x: -158.843994, y: 1.20000005, z: 67.1800003}
   m_LocalScale: {x: .300000012, y: .300000012, z: .300000012}
   m_Children:
   - {fileID: 499094}
@@ -226,14 +226,14 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 116962}
-  m_Mesh: {fileID: 4300000, guid: 82e8f4e66c4ed6b46915d057b7ec20e2, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 34bafb5c6c21a8544876624125f8dc17, type: 3}
 --- !u!33 &3350042
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 121932}
-  m_Mesh: {fileID: 4300002, guid: 82e8f4e66c4ed6b46915d057b7ec20e2, type: 3}
+  m_Mesh: {fileID: 4300002, guid: 34bafb5c6c21a8544876624125f8dc17, type: 3}
 --- !u!65 &6533472
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -244,8 +244,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.38149977, y: 2.364887, z: 29.8602123}
-  m_Center: {x: 1.36505127, y: -.245704815, z: 1.56903553}
+  m_Size: {x: 11.3525467, y: 4.89366627, z: 90.702301}
+  m_Center: {x: .278218567, y: -.780995846, z: 2.75052333}
 --- !u!65 &6533602
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -256,8 +256,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.80886817, y: 10, z: 3.05713177}
-  m_Center: {x: -.178710938, y: .693008661, z: .0443878174}
+  m_Size: {x: 7.05588484, y: 10, z: 7.83622551}
+  m_Center: {x: -.459899902, y: .6930089, z: -.297724396}
 --- !u!114 &11487024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -269,14 +269,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ffdd3e0268ce68479082ef421bf1f2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InspectInstructions: {fileID: 0}
+  InspectInstructions: {fileID: 11495328, guid: 00736b84187598b44a6f171576041158,
+    type: 2}
   displayText: Looks like a key! Press E to pick it up
   afterPickupText: You found a key!
   IsKey: 1
   IsSecurityCodeNote: 0
   IsScaryNote: 0
   KeyObject: {fileID: 122446}
-  KeyPicture: {fileID: 0}
+  KeyPicture: {fileID: 194632, guid: 726d515bf5760da4caa4053ec62ab230, type: 2}
+  DataAquisitie: {fileID: 172682, guid: d7fdb2ca5098cbc4ba3c6161cac8c52b, type: 2}
 --- !u!114 &11499204
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -317,6 +319,19 @@ Prefab:
       propertyPath: m_Size.y
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: InspectInstructions
+      value: 
+      objectReference: {fileID: 11495328, guid: 00736b84187598b44a6f171576041158,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: DataAquisitie
+      value: 
+      objectReference: {fileID: 172682, guid: d7fdb2ca5098cbc4ba3c6161cac8c52b, type: 2}
+    - target: {fileID: 0}
+      propertyPath: KeyPicture
+      value: 
+      objectReference: {fileID: 194632, guid: 726d515bf5760da4caa4053ec62ab230, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 101952}

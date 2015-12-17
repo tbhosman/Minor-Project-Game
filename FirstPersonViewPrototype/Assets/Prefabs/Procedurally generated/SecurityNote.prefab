@@ -168,20 +168,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ffdd3e0268ce68479082ef421bf1f2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InspectInstructions: {fileID: 0}
+  InspectInstructions: {fileID: 11495328, guid: 00736b84187598b44a6f171576041158,
+    type: 2}
   displayText: Looks like a note! Press E to pick it up
   afterPickupText: you found a note with a code on it!
-  IsKey: 1
+  IsKey: 0
   IsSecurityCodeNote: 1
   IsScaryNote: 0
   KeyObject: {fileID: 131976}
+  KeyPicture: {fileID: 185166, guid: e81f81a14ae0d59458b9f8a0f2621f37, type: 2}
+  DataAquisitie: {fileID: 172682, guid: d7fdb2ca5098cbc4ba3c6161cac8c52b, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: InspectInstructions
+      value: 
+      objectReference: {fileID: 11495328, guid: 00736b84187598b44a6f171576041158,
+        type: 2}
+    - target: {fileID: 0}
+      propertyPath: KeyPicture
+      value: 
+      objectReference: {fileID: 185166, guid: e81f81a14ae0d59458b9f8a0f2621f37, type: 2}
+    - target: {fileID: 0}
+      propertyPath: DataAquisitie
+      value: 
+      objectReference: {fileID: 172682, guid: d7fdb2ca5098cbc4ba3c6161cac8c52b, type: 2}
+    - target: {fileID: 0}
+      propertyPath: IsKey
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 197028}

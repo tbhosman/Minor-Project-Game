@@ -18,7 +18,21 @@ public class InventoryPickupScript : MonoBehaviour {
 	public GameObject DataAquisitie;
 
 	void Start(){
-		Inventory = GameObject.FindGameObjectWithTag ("Inventory");
+        if (IsKey)
+        {
+            KeyPicture = GameObject.Find("KeysIcon");
+            KeyPicture.SetActive(false);
+        }
+
+        if (IsSecurityCodeNote)
+        {
+            
+            KeyPicture = GameObject.Find("SecurityCodeNoteButton");
+           KeyPicture.SetActive(false);
+        }
+
+        InspectInstructions =GameObject.Find("PlayerInfo").GetComponent<Text>(); ;
+        Inventory = GameObject.FindGameObjectWithTag ("Inventory");
 		Player = GameObject.FindGameObjectWithTag ("Player");
 		DataAquisitie = GameObject.Find ("DataAquisitie");
 

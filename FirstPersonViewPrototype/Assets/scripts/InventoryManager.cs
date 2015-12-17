@@ -14,7 +14,7 @@ public class InventoryManager : MonoBehaviour {
 	void Start () {
 		SecurityCodeNote.SetActive (false);
 		ScaryNote.SetActive (false);
-		SecurityCodeNoteButtonObject.SetActive (false);
+		//SecurityCodeNoteButtonObject.SetActive (false);
 		ScaryNoteButtonObject.SetActive (false);
 	}
 	

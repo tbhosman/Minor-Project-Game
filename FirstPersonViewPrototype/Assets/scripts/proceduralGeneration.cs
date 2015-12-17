@@ -222,7 +222,7 @@ public class proceduralGeneration : MonoBehaviour {
 
                 if (GameObject.FindWithTag("officeKey")==null&&Random.Range(0,1)<0.2f)
                 {
-                    Instantiate(sleutel, new Vector3(transform.position.x + (rij * scalingX - 3.0f * scalingX + deskoffsetRij*1.1f + Random.Range(-0.3f, 0.3f)), transform.position.y + 0.638f, transform.position.z + (kolom - 2.5f + deskoffsetKolom*1.1f) * scalingZ + Random.Range(-0.3f, 0.3f)), Quaternion.Euler(180, Random.Range(0, 360), 0));
+                    Instantiate(sleutel, new Vector3(transform.position.x + (rij * scalingX - 3.0f * scalingX + deskoffsetRij*1.1f + Random.Range(-0.3f, 0.3f)), transform.position.y + 0.873f, transform.position.z + (kolom - 2.5f + deskoffsetKolom*1.1f) * scalingZ + Random.Range(-0.3f, 0.3f)), Quaternion.Euler(180, 0, 0));
                 }
                 
 
