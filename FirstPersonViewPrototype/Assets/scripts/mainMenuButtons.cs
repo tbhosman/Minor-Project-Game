@@ -13,6 +13,9 @@ public class mainMenuButtons : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Time.timeScale = 1;
+		Destroy (GameObject.Find("MainMusicController"));
+
 		if (GameObject.Find ("MainMenuMusic(Clone)") == null) {
 			Instantiate(MainMenuMusic);
 		}

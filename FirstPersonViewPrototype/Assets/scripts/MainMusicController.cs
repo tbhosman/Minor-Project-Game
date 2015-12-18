@@ -37,7 +37,7 @@ public class MainMusicController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (!(audioTracks[0].GetComponent<AudioSource>().isPlaying) && audioTracks[0].gameObject.activeSelf) {
+		if (!(audioTracks[0].GetComponent<AudioSource>().isPlaying) && audioTracks[0].gameObject.activeSelf && Time.timeScale == 1) {
 			FadeIn("Office");
 		}
 	}

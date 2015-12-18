@@ -10,6 +10,7 @@ public class CanvasManager : MonoBehaviour {
 	private GameObject pauseCanvas;
 	private GameObject QuitToCanvas;
 	private bool isPause = false;
+	private AudioSource[] audios;
 
 	void Start () {
 		GasMaskOverlay.enabled = false;
@@ -35,11 +36,13 @@ public class CanvasManager : MonoBehaviour {
 		if( Input.GetKeyDown(KeyCode.Escape))
 		{
 			isPause = !isPause;
+
 			if (isPause){
-					Time.timeScale = 0;
-					pauseCanvas.SetActive(true);
-					Cursor.visible = true;
-					GameObject.Find ("FPSController").GetComponent<FirstPersonController>().enabled = false;
+				Time.timeScale = 0;
+				pauseCanvas.SetActive(true);
+				Cursor.visible = true;
+				GameObject.Find ("FPSController").GetComponent<FirstPersonController>().enabled = false;
+				PauseAllAudio();
 			}else{
 				if (QuitToCanvas.activeSelf){
 					pauseCanvas.SetActive(true);
@@ -50,6 +53,7 @@ public class CanvasManager : MonoBehaviour {
 					pauseCanvas.SetActive(false);
 					Cursor.visible = false;
 					GameObject.Find ("FPSController").GetComponent<FirstPersonController>().enabled = true;
+					UnpauseAllAudio();
 				}
 			}
 		}
@@ -61,6 +65,7 @@ public class CanvasManager : MonoBehaviour {
 		isPause = false;
 		Time.timeScale = 1;
 		GameObject.Find ("FPSController").GetComponent<FirstPersonController>().enabled = true;
+		UnpauseAllAudio ();
 	}
 	
 	public void QuitGame (){
@@ -68,6 +73,7 @@ public class CanvasManager : MonoBehaviour {
 	}
 
 	public void QuitToMenu(){
+		Time.timeScale = 1;
 		Application.LoadLevel ("menu");
 	}
 
@@ -79,5 +85,21 @@ public class CanvasManager : MonoBehaviour {
 	public void BackToPause(){
 		pauseCanvas.SetActive (true);
 		QuitToCanvas.SetActive (false);
+	}
+
+	void PauseAllAudio(){
+		audios = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
+
+		foreach (AudioSource aud in audios) {
+			aud.Pause();
+		}
+	}
+
+	void UnpauseAllAudio(){
+		audios = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
+
+		foreach (AudioSource aud in audios) {
+			aud.UnPause();
+		}
 	}
 }
