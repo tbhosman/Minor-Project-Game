@@ -16,7 +16,8 @@ public class InventoryPickupScript : MonoBehaviour {
 	public GameObject KeyObject;
 	public GameObject KeyPicture;
 	public GameObject DataAquisitie;
-
+	public bool IsFlashlight;
+	public GameObject flashlight;
 	void Start(){
         if (IsKey)
         {
@@ -47,6 +48,9 @@ public class InventoryPickupScript : MonoBehaviour {
 				KeyObject.SetActive (false);
 				StartCoroutine (ObjectPickup ());
 				gameObject.GetComponent<Collider>().enabled = false;
+				if (IsFlashlight){
+					Debug.Log ("picked up flashlight");
+				}
 				if (IsSecurityCodeNote) {
 					Inventory.GetComponent<InventoryManager> ().SecurityCodeNoteButtonObject.SetActive (true);
 					DataAquisitie.GetComponent<DataAquisitie>().PickedUpItem(3);
@@ -66,9 +70,26 @@ public class InventoryPickupScript : MonoBehaviour {
 	}
 
 	IEnumerator ObjectPickup(){
+		if (IsFlashlight) {
+			InspectInstructions.enabled = false;
+			Debug.Log ("Light toggled");
+			flashlight.SetActive(!flashlight.activeSelf);
+			yield return new WaitForSeconds (0.5f);
+			flashlight.SetActive(!flashlight.activeSelf);
+			yield return new WaitForSeconds (0.4f);
+			flashlight.SetActive(!flashlight.activeSelf);
+			yield return new WaitForSeconds (0.3f);
+			flashlight.SetActive(!flashlight.activeSelf);
+			yield return new WaitForSeconds (0.2f);
+			flashlight.SetActive(!flashlight.activeSelf);
+			yield return new WaitForSeconds (0.1f);
+			flashlight.SetActive(!flashlight.activeSelf);
+			yield return new WaitForSeconds(0.1f);
+			flashlight.SetActive (!flashlight.activeSelf);
+		}
 		InspectInstructions.enabled = true;
 		InspectInstructions.text = afterPickupText;
-		yield return new WaitForSeconds (2);
+		yield return new WaitForSeconds (2f);
 		InspectInstructions.enabled = false;
 		gameObject.SetActive (false);
 	}
