@@ -7165,7 +7165,7 @@ MonoBehaviour:
   canReach: 
   waypoint: {fileID: 0}
   reachDist: .5
-  speed: 0
+  speed: 2
   rb: {fileID: 0}
   cacheSize: 10
   waypointcache: 
