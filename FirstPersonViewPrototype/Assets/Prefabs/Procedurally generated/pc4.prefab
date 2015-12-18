@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 464736}
   - 33: {fileID: 3320982}
   - 23: {fileID: 2315968}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ GameObject:
   - 33: {fileID: 3366736}
   - 23: {fileID: 2357016}
   - 114: {fileID: 11466168}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Scherm (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - 4: {fileID: 427360}
   - 33: {fileID: 3374436}
   - 23: {fileID: 2343988}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Scherm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ GameObject:
   - 4: {fileID: 453444}
   - 33: {fileID: 3394392}
   - 23: {fileID: 2300740}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Toetsenbordtoetsenbord
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 438860}
   - 95: {fileID: 9575888}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pc4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - 4: {fileID: 492776}
   - 33: {fileID: 3367652}
   - 23: {fileID: 2302986}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Schermbeelscherm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - 4: {fileID: 495874}
   - 33: {fileID: 3320024}
   - 23: {fileID: 2351800}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Toetsenbord
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   - 4: {fileID: 458228}
   - 33: {fileID: 3399222}
   - 23: {fileID: 2330312}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PCcdkast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -490,7 +490,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 158334}

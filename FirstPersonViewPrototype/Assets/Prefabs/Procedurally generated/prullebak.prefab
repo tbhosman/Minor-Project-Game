@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 488070}
   - 33: {fileID: 3395432}
   - 23: {fileID: 2307546}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder_008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ GameObject:
   - 23: {fileID: 2398686}
   - 95: {fileID: 9559490}
   - 65: {fileID: 6504482}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: prullebak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - 4: {fileID: 414150}
   - 33: {fileID: 3342382}
   - 23: {fileID: 2387980}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder_005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63,7 +63,7 @@ GameObject:
   - 4: {fileID: 492786}
   - 33: {fileID: 3379554}
   - 23: {fileID: 2370158}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ GameObject:
   - 4: {fileID: 497240}
   - 33: {fileID: 3396770}
   - 23: {fileID: 2315124}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder_008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   - 23: {fileID: 2396028}
   - 95: {fileID: 9586636}
   - 114: {fileID: 11496720}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: prullebak (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   - 4: {fileID: 472604}
   - 33: {fileID: 3397034}
   - 23: {fileID: 2306760}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder_005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   - 4: {fileID: 469544}
   - 33: {fileID: 3361488}
   - 23: {fileID: 2306556}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ GameObject:
   - 4: {fileID: 444912}
   - 33: {fileID: 3343338}
   - 23: {fileID: 2347236}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   - 4: {fileID: 478552}
   - 33: {fileID: 3311256}
   - 23: {fileID: 2348578}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   - 4: {fileID: 489246}
   - 33: {fileID: 3371838}
   - 23: {fileID: 2331196}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder_004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   - 4: {fileID: 484240}
   - 33: {fileID: 3380028}
   - 23: {fileID: 2318226}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -826,6 +826,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Center.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
