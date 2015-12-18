@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 443768}
   - 33: {fileID: 3329752}
   - 23: {fileID: 2331628}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: folder_w_paper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 435088}
   - 95: {fileID: 9573740}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: FolderConfidential
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 436612}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: FolderOffice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 165730}

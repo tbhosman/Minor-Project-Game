@@ -9,12 +9,12 @@ public class FlashlightScript : MonoBehaviour {
     void Start()
     {
         flashlight = this.GetComponent<Light>();
-        flashlight.enabled = false;
     }
+
 	void Update () {
 
   
-        if (Input.GetKeyDown("f")&&toggleflashlight.getLight()){
+        if (Input.GetKeyDown("f")){
 			
 			if (flashlight.enabled == true)
 			{
