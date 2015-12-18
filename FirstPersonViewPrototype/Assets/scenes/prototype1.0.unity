@@ -5663,7 +5663,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 20
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -19878,7 +19878,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 452444, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
@@ -29051,7 +29051,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 425346, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2340298, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
       propertyPath: m_Materials.Array.data[0]
@@ -49637,7 +49637,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 464078, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
       propertyPath: m_Name

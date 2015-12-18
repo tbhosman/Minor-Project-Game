@@ -15,6 +15,7 @@ public class proceduralGeneration : MonoBehaviour {
     private int deskoffsetKolom = 0;
     public int x_coordinaatdeur;
     public int z_coordinaatdeur;
+    public static int kamernummer;
     private float scalingX;
     private float scalingZ;
 
@@ -55,6 +56,12 @@ public class proceduralGeneration : MonoBehaviour {
             }
         }
 
+        //generate kamernummer;
+        if (GameObject.FindWithTag("officeKey") == null)
+        {
+            kamernummer++;
+            Debug.Log(kamernummer);
+        }
         //Make sure there are no objects spawning in front of the door
         array[x_coordinaatdeur, z_coordinaatdeur] = 1;
         if (x_coordinaatdeur != 0){ array[x_coordinaatdeur - 1, z_coordinaatdeur] = 1; }
@@ -118,8 +125,8 @@ public class proceduralGeneration : MonoBehaviour {
             rij = Random.Range(3, 5);
             kolom = Random.Range(2, 3);
             if (array[rij,kolom]==0 && Random.Range(0,12) > 1 && hitZ.distance>2.5f) {
-                Instantiate(desk, new Vector3(transform.position.x + (rij * scalingX - 3.0f*scalingX), transform.position.y, transform.position.z + (kolom*scalingZ - 2.5f*scalingZ)), Quaternion.Euler(0, rotation, 0));
-                Instantiate(desk, new Vector3(transform.position.x + (rij * scalingX - 3.0f*scalingX), transform.position.y, transform.position.z + (kolom-1)*scalingZ - 2.5f*scalingZ), Quaternion.Euler(0, 180, 0));
+                //Instantiate(desk, new Vector3(transform.position.x + (rij * scalingX - 3.0f*scalingX), transform.position.y, transform.position.z + (kolom*scalingZ - 2.5f*scalingZ)), Quaternion.Euler(0, rotation, 0));
+                //Instantiate(desk, new Vector3(transform.position.x + (rij * scalingX - 3.0f*scalingX), transform.position.y, transform.position.z + (kolom-1)*scalingZ - 2.5f*scalingZ), Quaternion.Euler(0, 180, 0));
                 array[rij, kolom] = 1;
                 array[rij, kolom-1] = 1;
 
@@ -220,11 +227,12 @@ public class proceduralGeneration : MonoBehaviour {
                 Instantiate(file, new Vector3(transform.position.x + (rij * scalingX - 3.0f*scalingX+deskoffsetRij + Random.Range(-0.3f,0.3f)), transform.position.y + 0.866f, transform.position.z + (kolom - 2.5f + deskoffsetKolom)*scalingZ + Random.Range(-0.3f, 0.3f)), Quaternion.Euler(180, Random.Range(0,360), 0));
                 if (array[(int)(rij+stoeloffsetx),(int)( kolom+stoeloffsetz)] ==0) { Instantiate(stoel, new Vector3(transform.position.x + ((rij) * scalingX - 3.0f * scalingX + stoeloffsetx * 0.75f), transform.position.y, transform.position.z + ((kolom) - 2.5f + stoeloffsetz * 0.75f)*scalingZ), Quaternion.Euler(0, rotation - 90 + Random.Range(-20, 20), 0)); }
 
-                if (GameObject.FindWithTag("officeKey")==null&&Random.Range(0,1)<0.2f)
+                
+                if (GameObject.FindWithTag("officeKey")==null&&(Random.Range(0,50)<1||kamernummer==26))
                 {
                     Instantiate(sleutel, new Vector3(transform.position.x + (rij * scalingX - 3.0f * scalingX + deskoffsetRij*1.1f + Random.Range(-0.3f, 0.3f)), transform.position.y + 0.873f, transform.position.z + (kolom - 2.5f + deskoffsetKolom*1.1f) * scalingZ + Random.Range(-0.3f, 0.3f)), Quaternion.Euler(180, 0, 0));
                 }
-                
+               
 
                 if (deskoffsetRij != 0)
                 {
