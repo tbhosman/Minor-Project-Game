@@ -80,6 +80,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\LoadIntro.cs" />
     <Compile Include="Assets\imports\Industrial\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
     <Compile Include="Assets\imports\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
     <Compile Include="Assets\imports\Standard Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />

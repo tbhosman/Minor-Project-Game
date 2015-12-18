@@ -257,7 +257,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.05588484, y: 10, z: 7.83622551}
+  m_Size: {x: 14.0558853, y: 10, z: 14.8362265}
   m_Center: {x: -.459899902, y: .6930089, z: -.297724396}
 --- !u!108 &10858738
 Light:
@@ -368,6 +368,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Size.x
+      value: 14.0558853
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Size.z
+      value: 14.8362265
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -373,7 +373,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 20.3799992, y: 42, z: 19.2000008}
+  m_Size: {x: 15, y: 32, z: 15}
   m_Center: {x: 0, y: 21.3899994, z: 0}
 --- !u!1001 &100100000
 Prefab:
@@ -388,15 +388,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Size.x
-      value: 20.3799992
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Size.y
-      value: 42
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Size.z
-      value: 19.2000008
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Layer
