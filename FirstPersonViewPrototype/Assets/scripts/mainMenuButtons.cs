@@ -28,7 +28,7 @@ public class mainMenuButtons : MonoBehaviour {
 	}
 
 	public void startGame () {
-		Application.LoadLevel("intro");
+		Application.LoadLevel("LoadingScreen");
 
 	}
 
