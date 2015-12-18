@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 458888}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: drawer_002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23,7 +23,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 405312}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: drawer_003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 432660}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: cabinet_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 411634}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: drawer_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   - 4: {fileID: 422604}
   - 95: {fileID: 9592734}
   - 65: {fileID: 6530006}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: file_cabinet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 456538}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: file_cabinet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 428756}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: drawer_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 411690}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: drawer_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 492932}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: cabinet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 485350}
   - 137: {fileID: 13799074}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: metal_file_cabinet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 478082}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: file_cabinet_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 445452}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: drawer_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -437,6 +437,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Size.z
       value: .639999986
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

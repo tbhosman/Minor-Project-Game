@@ -228,7 +228,9 @@ public class EnemyRouting : MonoBehaviour {
 	void OnCollisionStay(Collision collisionInfo) {
 		if (!collisionInfo.transform.CompareTag ("Waypoint") && (rb.velocity.magnitude < 0.01f) && isAnimWalk){ //enemy is now stuck
 			getNewWaypoint();
-			transform.position = waypoint.transform.position;
+			if (Vector3.Distance (lastPlayerLocation, waypoint.transform.position) > 10.0f){ //only do debug-teleport if not killing player
+				transform.position = waypoint.transform.position;
+			}
 		}
 	}
 

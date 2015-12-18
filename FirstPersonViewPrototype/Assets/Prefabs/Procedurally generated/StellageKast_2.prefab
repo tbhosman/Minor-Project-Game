@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3323694}
   - 23: {fileID: 2302630}
   - 65: {fileID: 6554264}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Shelf_GT01_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ GameObject:
   - 33: {fileID: 3359434}
   - 23: {fileID: 2312394}
   - 65: {fileID: 6555240}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Shelf_GT01_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 435594}
   - 205: {fileID: 20542896}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: StellageKast_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -213,6 +213,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalScale.x
       value: .803333342
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
