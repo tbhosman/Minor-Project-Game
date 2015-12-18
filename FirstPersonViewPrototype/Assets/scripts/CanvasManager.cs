@@ -73,7 +73,6 @@ public class CanvasManager : MonoBehaviour {
 	}
 
 	public void QuitToMenu(){
-		Time.timeScale = 1;
 		Application.LoadLevel ("menu");
 	}
 
