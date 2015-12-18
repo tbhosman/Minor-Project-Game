@@ -12,7 +12,7 @@ GameObject:
   - 65: {fileID: 6581348}
   - 23: {fileID: 2329876}
   - 114: {fileID: 11408514}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Note
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ GameObject:
   - 4: {fileID: 480120}
   - 65: {fileID: 6505956}
   - 114: {fileID: 11498262}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,6 +178,8 @@ MonoBehaviour:
   KeyObject: {fileID: 131976}
   KeyPicture: {fileID: 185166, guid: e81f81a14ae0d59458b9f8a0f2621f37, type: 2}
   DataAquisitie: {fileID: 172682, guid: d7fdb2ca5098cbc4ba3c6161cac8c52b, type: 2}
+  IsFlashlight: 0
+  flashlight: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -204,7 +206,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Layer
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
