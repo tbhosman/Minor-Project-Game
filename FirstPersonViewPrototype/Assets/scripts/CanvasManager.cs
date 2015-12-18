@@ -69,10 +69,12 @@ public class CanvasManager : MonoBehaviour {
 	}
 	
 	public void QuitGame (){
+		GameObject.Find ("DataAquisitie").GetComponent<DataAquisitie> ().CompletedGame ();
 		Application.Quit ();
 	}
 
 	public void QuitToMenu(){
+		GameObject.Find ("DataAquisitie").GetComponent<DataAquisitie> ().CompletedGame ();
 		Application.LoadLevel ("menu");
 	}
 
