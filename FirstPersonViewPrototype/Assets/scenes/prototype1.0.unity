@@ -5183,7 +5183,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 457148, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
@@ -7091,8 +7091,8 @@ MonoBehaviour:
   visibilityDistance: 120
   deathDistance: 10
   hearDistanceStanding: 1
-  hearDistanceWalking: 25
-  hearDistanceRunning: 50
+  hearDistanceWalking: 12.5
+  hearDistanceRunning: 25
   hearingPlayer: 0
   seeingPlayer: 0
   canSeeLocationError: .0500000007
@@ -19753,7 +19753,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 452444, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
@@ -20152,8 +20152,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IsWalking: 0
-  m_WalkSpeed: 1.5
-  m_RunSpeed: 3
+  m_WalkSpeed: 3
+  m_RunSpeed: 5
   m_RunstepLenghten: 1
   m_JumpSpeed: 10
   m_StickToGroundForce: 10
@@ -28840,7 +28840,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 425346, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2340298, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
       propertyPath: m_Materials.Array.data[0]
@@ -31515,7 +31515,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 422604, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
@@ -48932,7 +48932,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 452804, guid: 38471986e4c54a042b8334888fd166e1, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 11498262, guid: 38471986e4c54a042b8334888fd166e1, type: 2}
       propertyPath: InspectInstructions
@@ -49470,7 +49470,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 464078, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
       propertyPath: m_Name

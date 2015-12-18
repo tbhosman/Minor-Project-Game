@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 482762}
   - 33: {fileID: 3350982}
   - 23: {fileID: 2340298}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 425346}
   - 65: {fileID: 6554946}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: stoel 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - 4: {fileID: 428076}
   - 33: {fileID: 3306884}
   - 23: {fileID: 2327604}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder_MeshPart2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ GameObject:
   - 4: {fileID: 422942}
   - 33: {fileID: 3392488}
   - 23: {fileID: 2396988}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder_MeshPart1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 441686}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - 4: {fileID: 423454}
   - 33: {fileID: 3324064}
   - 23: {fileID: 2321040}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder_MeshPart0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - 4: {fileID: 433420}
   - 33: {fileID: 3326542}
   - 23: {fileID: 2301372}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BezierCurve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,6 +397,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Size.z
       value: 19.2000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
