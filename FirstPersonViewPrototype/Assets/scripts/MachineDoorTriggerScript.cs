@@ -28,15 +28,16 @@ public class MachineDoorTriggerScript : MonoBehaviour {
 	void OnTriggerStay(){
 		PlayerRay = new Ray (FPS.transform.position, FPS.transform.forward);
 		Physics.Raycast (PlayerRay, out RayHit);
-		if (RayHit.collider.gameObject == SecurityPanelGameObject) {
+		if (RayHit.collider.gameObject == SecurityPanelGameObject && !SecurityPanelCanvas.activeSelf) {
 			PlayerInfo.enabled = true;
 			if (Input.GetKeyDown ("e")) {
 
 				if (Inventory.GetComponent<InventoryManager> ().SecurityCodeNoteButtonObject.activeSelf) {
-					PlayerInfo.text = OnOpenText;
+					//PlayerInfo.text = OnOpenText;
+					PlayerInfo.enabled = false;
 					SecurityPanelCanvas.SetActive (true);
 					Cursor.visible = true;
-					StartCoroutine (OnOpenCoroutine ());
+					//StartCoroutine (OnOpenCoroutine ());
 
 				} else {
 					PlayerInfo.text = OnClosedText;
