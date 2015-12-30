@@ -7201,22 +7201,22 @@ MonoBehaviour:
   waypoints: []
   canReach: 
   waypoint: {fileID: 0}
-  reachDist: .5
+  reachDist: .200000003
   speed: 2
   rb: {fileID: 0}
-  cacheSize: 10
+  cacheSize: 20
   waypointcache: 
   enemyObject: {fileID: 746799288}
   CapsuleCastErrorDistance: .100000001
   angleError: 5
-  turnSpeed: 4
+  turnSpeed: 3
   rampUpDuration: 2
   wantIdle: 0
   wantWalk: 0
   isAnimIdle: 0
   isAnimWalk: 0
   CapsuleCastRangeCorrection: 8
-  animStopDist: .5
+  animStopDist: .200000003
   lastPlayerLocation: {x: 0, y: 0, z: 0}
   waypointToPlayer: 0
   RouteToPlayer: 
@@ -24235,7 +24235,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 910692393}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -178.7845, y: -.110000014, z: 16.1100006}
+  m_LocalPosition: {x: -178.7845, y: 0, z: 16.1100006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1261894982}
@@ -29561,7 +29561,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 193090, guid: db4e3557030f9a24e8591a8588fa0430, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 193430, guid: db4e3557030f9a24e8591a8588fa0430, type: 2}
       propertyPath: m_IsActive

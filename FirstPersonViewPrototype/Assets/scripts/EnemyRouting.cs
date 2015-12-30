@@ -75,32 +75,14 @@ public class EnemyRouting : MonoBehaviour {
 		prevDist = Vector3.Distance (transform.position, waypoint.transform.position);
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
-		//check what animation is running and change speed accordingly
-		if (isAnimIdle == true){
-			rb.velocity = transform.TransformDirection(new Vector3(0,0,0));
-		}
-		else if (isAnimWalk == true){
+		if (isAnimWalk == true){ //moving to a waypoint
 			rb.velocity = transform.TransformDirection(new Vector3(0,0,speed));
-			//StartCoroutine(RampSpeed(0,speed));
 		}
 
 		if (goingToPlayer && RouteToPlayer.Count == 0) {
-			//wantWalk = true;
-			//wantIdle = false;
-			//rb.velocity = transform.TransformDirection(new Vector3(0,0,speed));
-			//if enemy can walk to player directly, go there
-//			if (enemyCanReachPlayer()){
-//				TurnTowards(GameObject.Find("FPSController").gameObject.transform.position);
-//				if (Mathf.Abs(Vector3.Distance(transform.position,GameObject.Find("FPSController").gameObject.transform.position)) < reachedLastPlayerLocationDistance){
-//					goingToPlayer = false;
-//					//getNewWaypoint();
-//				}
-//				return;
-//			}
-			//if enemy cannot reach player, try last found location
+			//if enemy can reach player or it's last known location
 			if(enemyCanReachLocation(lastPlayerLocation)){
 				TurnTowards (lastPlayerLocation);
 				//if last found location is reached, end search
@@ -151,19 +133,20 @@ public class EnemyRouting : MonoBehaviour {
 		if (Vector3.Distance (transform.position, waypoint.transform.position) < animStopDist) {
 			
 			wantWalk = false;
+			wantIdle = true;
+			rb.velocity = transform.TransformDirection(new Vector3(0,0,0));
 
 		}
 
 		//if a new waypoint is needed (enemy is close to current waypoint)
-		if (Mathf.Abs(Vector3.Distance (transform.position, waypoint.transform.position)) < reachDist) {
+		if (Mathf.Abs (Vector3.Distance (transform.position, waypoint.transform.position)) < reachDist) {
 
-			if (waypoint_index == waypointToPlayer){ //if final waypoint to player is reached, do not get a new waypoint
+			if (waypoint_index == waypointToPlayer) { //if final waypoint to player is reached, do not get a new waypoint
 				goingToPlayer = true;
 				return;
 			}
 
-			getNewWaypoint();
-			//rb.velocity = transform.TransformDirection(new Vector3(0,0,0));//StartCoroutine(RampSpeed(speed,0)); //set speed to 0 for turning to next waypoint
+			getNewWaypoint ();
 		}
 
 		//debug for enemy passing a waypoint
@@ -171,6 +154,11 @@ public class EnemyRouting : MonoBehaviour {
 			getNewWaypoint();
 		}
 		prevDist = Vector3.Distance (transform.position, waypoint.transform.position);
+
+		//keep looking at waypoint to reach
+		if (wantWalk && !goingToPlayer && prevDist > reachDist) {
+			rb.transform.LookAt (waypoint.transform.position + new Vector3(0,0.1f,0));
+		}
 	}
 
 	public void getNewWaypoint(){
@@ -206,9 +194,11 @@ public class EnemyRouting : MonoBehaviour {
 		} else if (rb.velocity == new Vector3 (0, 0, 0)) {
 			wantIdle = true;
 			wantWalk = false;
+			rb.velocity = transform.TransformDirection(new Vector3(0,0,0));
 			rb.transform.rotation = Quaternion.Lerp (transform.rotation, Quaternion.Euler (newRotation), Time.deltaTime * turnSpeed);
 		} else {
 			wantIdle = true;
+			rb.velocity = transform.TransformDirection(new Vector3(0,0,0));
 		}
 	}
 
