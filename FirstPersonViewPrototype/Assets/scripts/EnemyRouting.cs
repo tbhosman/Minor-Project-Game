@@ -77,9 +77,9 @@ public class EnemyRouting : MonoBehaviour {
 	
 	void FixedUpdate () {
 
-		if (isAnimWalk == true){ //moving to a waypoint
-			rb.velocity = transform.TransformDirection(new Vector3(0,0,speed));
-		}
+//		if (isAnimWalk == true){ //moving to a waypoint
+//			rb.velocity = transform.TransformDirection(new Vector3(0,0,speed));
+//		}
 
 		if (goingToPlayer && RouteToPlayer.Count == 0) {
 			//if enemy can reach player or it's last known location
@@ -122,10 +122,10 @@ public class EnemyRouting : MonoBehaviour {
 		if (wantTurn) { //turning to new waypoint
 			TurnTowards(waypoint.transform.position);
 		}
-		else if (isAnimWalk == true){ //moving to a waypoint
-			rb.velocity = transform.TransformDirection(new Vector3(0,0,speed));
-			//rb.transform.LookAt (waypoint.transform.position + new Vector3(0,0.1f,0));
-		}
+//		else if (isAnimWalk == true){ //moving to a waypoint
+//			rb.velocity = transform.TransformDirection(new Vector3(0,0,speed));
+//			//rb.transform.LookAt (waypoint.transform.position + new Vector3(0,0.1f,0));
+//		}
 
 	}
 
@@ -187,6 +187,8 @@ public class EnemyRouting : MonoBehaviour {
 		newRotation.z = 0.0f;
 		if (Mathf.Abs ((float)transform.rotation.eulerAngles.y - newRotation.y) < angleError) { //pointing towards new waypoint
 			wantWalk = true;
+			rb.velocity = transform.TransformDirection(new Vector3(0,0,speed));
+		
 			wantTurn = false;
 			wantIdle = false;
 			rb.transform.LookAt (location + new Vector3(0,0.1f,0));

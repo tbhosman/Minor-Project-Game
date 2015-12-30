@@ -11,11 +11,14 @@ public class EnemyAnimationScript : MonoBehaviour {
 	}
 
 	public void Update() {
+
 		if (GameObject.Find ("Enemy").GetComponent<EnemyRouting> ().wantIdle) {
 			animator.SetFloat("Speed", 0); //sets animation to idle
 		}
 		else if (GameObject.Find ("Enemy").GetComponent<EnemyRouting> ().wantWalk) {
 			animator.SetFloat("Speed", GameObject.Find ("Enemy").GetComponent<EnemyRouting> ().speed); //sets animation to walking
+			GameObject.Find ("Enemy").GetComponent<Rigidbody>().velocity = transform.TransformDirection(new Vector3(0,0,GameObject.Find ("Enemy").GetComponent<EnemyRouting> ().speed));
+
 		}
 
 		if (animator.GetCurrentAnimatorStateInfo (0).IsName("Idle")) {
