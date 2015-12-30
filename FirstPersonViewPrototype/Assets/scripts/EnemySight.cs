@@ -81,7 +81,7 @@ public class EnemySight : MonoBehaviour {
 	}
 
 	protected bool CanSeePlayerLight(){
-		if (GameObject.Find("FirstPersonCharacter").transform.GetChild(0).GetComponent<Light>().enabled){
+		if (GameObject.Find("FirstPersonCharacter").transform.GetChild(0).gameObject.activeSelf && GameObject.Find("FirstPersonCharacter").transform.GetChild(0).GetComponent<Light>().enabled){
 
 			if (CanSeeLocation (GameObject.Find("PlayerLight").GetComponent<FlashlightHitArea>().hitDownPosition)){
 				return true;
