@@ -1,6 +1,6 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ProceduralGenerationStorage.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\EnemySight.cs">
     <Files>
       <File FileName="Assets\scripts\EnemyRouting.cs" Line="125" Column="5" />
       <File FileName="Assets\scripts\SecurityPanelController.cs" Line="1" Column="1" />
@@ -20,8 +20,9 @@
       <File FileName="Assets\scripts\Movie.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\FirstPersonController.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\RigidbodyFirstPersonController.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\EnemyAnimationScript.cs" Line="20" Column="28" />
+      <File FileName="Assets\scripts\EnemyAnimationScript.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\ProceduralGenerationStorage.cs" Line="167" Column="52" />
+      <File FileName="Assets\scripts\EnemySight.cs" Line="83" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
