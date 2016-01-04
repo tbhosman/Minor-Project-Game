@@ -49,6 +49,9 @@ public class DataAquisitie : MonoBehaviour {
 	public void CompletedGame () {
 		timeTaken = Mathf.RoundToInt (Time.timeSinceLevelLoad / 60);
 		Debug.Log ("Finished game in " + timeTaken + " minutes");
+		if (PlayerPrefs.GetInt ("highscore") > timeTaken) { //set local highscore
+			PlayerPrefs.SetInt ("highscore", timeTaken);
+		}
 		StartCoroutine(SendCompletedGame ());
 	}
 
