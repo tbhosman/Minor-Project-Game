@@ -9,6 +9,8 @@ using System.Collections;
 
 public class DataAquisitie : MonoBehaviour {
 
+	public GameObject SaveLoadManager;
+	public float savetimeplayed;
 	public int timeTaken;
 	public string url = "http://drproject.twi.tudelft.nl:8086";
 
@@ -22,10 +24,13 @@ public class DataAquisitie : MonoBehaviour {
 			PlayerPrefs.SetInt ("ID", user_id); //DEZE MOET ER UIT BIJ TESTEN!
 			Debug.Log ("Player ID = " + user_id);	
 		}
+
 	}
 
 	public void PickedUpItem (int item) {
-		timeTaken = Mathf.RoundToInt (Time.timeSinceLevelLoad / 60);
+		savetimeplayed = SaveLoadManager.GetComponent<SaveLoadScript> ().savertimeplayed;
+		timeTaken = Mathf.RoundToInt ((Time.timeSinceLevelLoad + savetimeplayed)/ 60);
+		SaveLoadManager.GetComponent<SaveLoadScript> ().Save ();
 		Debug.Log ("Found item: " + item + "  on time: " + timeTaken);
 		StartCoroutine(SendPickedUpItem (item));
 	}
@@ -36,7 +41,9 @@ public class DataAquisitie : MonoBehaviour {
 	}
 
 	public void OpenedDoor (int door) {
-		timeTaken = Mathf.RoundToInt (Time.timeSinceLevelLoad / 60);
+		savetimeplayed = SaveLoadManager.GetComponent<SaveLoadScript> ().savertimeplayed;
+		timeTaken = Mathf.RoundToInt ((Time.timeSinceLevelLoad + savetimeplayed)/ 60);
+		SaveLoadManager.GetComponent<SaveLoadScript> ().Save ();
 		Debug.Log ("Opened door: " + door + "  on time: " + timeTaken);
 		StartCoroutine(SendOpenedDoor (door));
 	}
@@ -47,7 +54,9 @@ public class DataAquisitie : MonoBehaviour {
 	}
 
 	public void CompletedGame () {
-		timeTaken = Mathf.RoundToInt (Time.timeSinceLevelLoad / 60);
+		savetimeplayed = SaveLoadManager.GetComponent<SaveLoadScript> ().savertimeplayed;
+		timeTaken = Mathf.RoundToInt ((Time.timeSinceLevelLoad + savetimeplayed)/ 60);
+		SaveLoadManager.GetComponent<SaveLoadScript> ().Save ();
 		Debug.Log ("Finished game in " + timeTaken + " minutes");
 		StartCoroutine(SendCompletedGame ());
 	}
@@ -58,7 +67,9 @@ public class DataAquisitie : MonoBehaviour {
 	}
 
 	public void GameOver (Vector3 location) {
-		timeTaken = Mathf.RoundToInt (Time.timeSinceLevelLoad / 60);
+		savetimeplayed = SaveLoadManager.GetComponent<SaveLoadScript> ().savertimeplayed;
+		timeTaken = Mathf.RoundToInt ((Time.timeSinceLevelLoad + savetimeplayed)/ 60);
+		SaveLoadManager.GetComponent<SaveLoadScript> ().Save ();
 		Debug.Log ("Lost game in " + timeTaken + " minutes");
 		StartCoroutine(SendGameOver (location));
 	}
