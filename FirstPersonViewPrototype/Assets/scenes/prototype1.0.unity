@@ -3936,7 +3936,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 139839655}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 64.5599976, y: 2.89499903, z: -7.80000305}
+  m_LocalPosition: {x: 64.5599976, y: 2.82999992, z: -7.80000305}
   m_LocalScale: {x: 72.1699982, y: .100000001, z: 43.8600006}
   m_Children: []
   m_Father: {fileID: 2120850591}
@@ -7179,7 +7179,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 287552371}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -162.100006, y: 1.10000002, z: 32.2779999}
+  m_LocalPosition: {x: -162.100006, y: 1.10000002, z: 39.7900009}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1658766480}
@@ -7201,22 +7201,22 @@ MonoBehaviour:
   waypoints: []
   canReach: 
   waypoint: {fileID: 0}
-  reachDist: .5
+  reachDist: .200000003
   speed: 2
   rb: {fileID: 0}
-  cacheSize: 10
+  cacheSize: 20
   waypointcache: 
   enemyObject: {fileID: 746799288}
   CapsuleCastErrorDistance: .100000001
   angleError: 5
-  turnSpeed: 4
+  turnSpeed: 3
   rampUpDuration: 2
   wantIdle: 0
   wantWalk: 0
   isAnimIdle: 0
   isAnimWalk: 0
   CapsuleCastRangeCorrection: 8
-  animStopDist: .5
+  animStopDist: .200000003
   lastPlayerLocation: {x: 0, y: 0, z: 0}
   waypointToPlayer: 0
   RouteToPlayer: 
@@ -20197,7 +20197,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 802715136}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -96.6500015, y: 0, z: 93.75}
+  m_LocalPosition: {x: -96, y: 1.57799995, z: 93.2399979}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1825868970}
@@ -24235,7 +24235,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 910692393}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -178.7845, y: -.110000014, z: 16.1100006}
+  m_LocalPosition: {x: -178.7845, y: 0, z: 16.1100006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1261894982}
@@ -29565,7 +29565,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 193430, guid: db4e3557030f9a24e8591a8588fa0430, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2312308, guid: db4e3557030f9a24e8591a8588fa0430, type: 2}
       propertyPath: m_Materials.Array.data[0]
@@ -29618,10 +29618,6 @@ Prefab:
     - target: {fileID: 166164, guid: db4e3557030f9a24e8591a8588fa0430, type: 2}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 135386, guid: db4e3557030f9a24e8591a8588fa0430, type: 2}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6408166, guid: db4e3557030f9a24e8591a8588fa0430, type: 2}
@@ -30638,6 +30634,10 @@ Prefab:
       propertyPath: matrixDeur.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11484898, guid: 0e54e1b7020db1a419ff46fff282fe72, type: 2}
+      propertyPath: matrixDeur.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 448402, guid: 0e54e1b7020db1a419ff46fff282fe72, type: 2}
       propertyPath: m_LocalPosition.x
       value: -43.6352539
@@ -30691,6 +30691,14 @@ Prefab:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11420134, guid: 0e54e1b7020db1a419ff46fff282fe72, type: 2}
+      propertyPath: matrixDeur.Array.data[2].y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11484898, guid: 0e54e1b7020db1a419ff46fff282fe72, type: 2}
+      propertyPath: matrixDeur.Array.data[2].x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11484898, guid: 0e54e1b7020db1a419ff46fff282fe72, type: 2}
       propertyPath: matrixDeur.Array.data[2].y
       value: 1
       objectReference: {fileID: 0}
@@ -45850,7 +45858,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1730628220}
   m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: 43.7010841, y: 2.95000005, z: 44.6029358}
+  m_LocalPosition: {x: 43.7010841, y: 2.79999995, z: 44.6029358}
   m_LocalScale: {x: 30, y: 61.0000153, z: .100000031}
   m_Children: []
   m_Father: {fileID: 2120850591}
@@ -47443,7 +47451,7 @@ Transform:
   - {fileID: 986974626}
   - {fileID: 729550841}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 12
 --- !u!1 &1766922520
 GameObject:
   m_ObjectHideFlags: 0

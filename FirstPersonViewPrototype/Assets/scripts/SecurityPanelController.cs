@@ -58,6 +58,7 @@ public class SecurityPanelController : MonoBehaviour {
 	IEnumerator UpdateTextField(){
 		if (codeDisplayText.text.Length > 3) {
 			if (codeDisplayText.text == correctCode) {
+				GameObject.Find ("MachineRoomDoorTrigger").GetComponent<Collider> ().enabled = false;
 				codeDisplayPanel.GetComponent<Image> ().color = Color.green;
 				DataAquisitie.GetComponent<DataAquisitie>().OpenedDoor(3);
 				yield return StartCoroutine (WaitForRealSeconds (2.0f));
