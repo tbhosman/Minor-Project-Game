@@ -21,7 +21,6 @@ public class SecurityPanelController : MonoBehaviour {
 		}
 		DataAquisitie = GameObject.Find ("DataAquisitie");
 		codeDisplayText.text = "";
-		gameObject.SetActive(false);
 		MachineRoomDoor = GameObject.Find ("MachineRoomDoor");
 	}
 

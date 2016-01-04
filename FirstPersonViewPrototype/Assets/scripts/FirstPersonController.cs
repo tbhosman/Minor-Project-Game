@@ -30,6 +30,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
 
+        private bool buitenadem;
         private bool wait;
         private Camera m_Camera;
         private bool m_Jump;
@@ -57,6 +58,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void Start()
         {
             stamina = 100.0f;
+            buitenadem = false;
             wait = false;
             key1 = false;
             m_CharacterController = GetComponent<CharacterController>();
@@ -81,14 +83,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void Update()
         {
             
-            if (!m_IsWalking)
-            {
-                stamina -= 1f;
-            }
-            else if(stamina<100)
-            {
-                stamina += 1f;
-            }
+            
+
 
             RotateView();
             // the jump state needs to read here to make sure it is not missed
@@ -123,6 +119,22 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void FixedUpdate()
         {
+
+            //implements stamina so you can run for a limited time.
+            if (Input.GetKey(KeyCode.LeftShift) && stamina > -1)
+            {
+                stamina -= 1f;
+            }
+            else if (stamina < 100 && !buitenadem)
+            {
+                stamina += 1f;
+            }
+            if (stamina <= 1 && !buitenadem)
+            {
+
+                StartCoroutine(WaitOnStamina(10));
+            }
+
             float speed;
             GetInput(out speed);
             // always move along the camera forward as it is the direction that it being aimed at
@@ -210,6 +222,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
             setWait(true);
         }
 
+        public IEnumerator WaitOnStamina(int getal) {
+            buitenadem = true;
+            yield return new WaitForSeconds(getal);
+            stamina = 100;
+            buitenadem = false;
+        }
+
+
         private void setWait(bool a) {
             wait = a;
         }
@@ -280,7 +300,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 // only if the player is going to a run, is running and the fovkick is to be used
                 if (m_IsWalking != waswalking && m_UseFovKick && m_CharacterController.velocity.sqrMagnitude > 0)
                 {
-                    StopAllCoroutines();
+                    StopCoroutine(m_FovKick.FOVKickUp());
+                    StopCoroutine(m_FovKick.FOVKickDown());
+                    StopCoroutine(m_JumpBob.DoBobCycle());
                     StartCoroutine(!m_IsWalking ? m_FovKick.FOVKickUp() : m_FovKick.FOVKickDown());
                 }
             }

@@ -33,11 +33,12 @@ public class MachineDoorTriggerScript : MonoBehaviour {
 			if (Input.GetKeyDown ("e")) {
 
 				if (Inventory.GetComponent<InventoryManager> ().SecurityCodeNoteButtonObject.activeSelf) {
-					//PlayerInfo.text = OnOpenText;
+					PlayerInfo.text = OnOpenText;
+					Debug.Log ("machinedooropened");
 					PlayerInfo.enabled = false;
 					SecurityPanelCanvas.SetActive (true);
 					Cursor.visible = true;
-					//StartCoroutine (OnOpenCoroutine ());
+					StartCoroutine (OnOpenCoroutine ());
 
 				} else {
 					PlayerInfo.text = OnClosedText;
