@@ -5,6 +5,6 @@ public class LoadIntro : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Application.LoadLevel ("intro");
+		Application.LoadLevel (mainMenuButtons.leveltoload);
 	}
 }
