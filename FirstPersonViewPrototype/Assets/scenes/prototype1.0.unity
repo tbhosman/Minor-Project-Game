@@ -6464,6 +6464,30 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: .25
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &256966261 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 173452, guid: 87e7e679ab66c1b40845d59b51810cec, type: 2}
+  m_PrefabInternal: {fileID: 1400250613}
+--- !u!114 &256966263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 256966261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
 --- !u!1 &259288333
 GameObject:
   m_ObjectHideFlags: 0
@@ -37476,7 +37500,8 @@ Prefab:
       propertyPath: z_coordinaatdeur
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11416960, guid: 87e7e679ab66c1b40845d59b51810cec, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 87e7e679ab66c1b40845d59b51810cec, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1400990886
