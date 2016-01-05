@@ -20270,8 +20270,8 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 802715136}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -86.9899979, y: 1.57799995, z: 93.2399979}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
+  m_LocalPosition: {x: -96.6999969, y: 1.57799995, z: 93.8000031}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1825868970}
@@ -48097,6 +48097,9 @@ MonoBehaviour:
   - {fileID: 1634370794}
   savertimeplayed: 0
   Playerlight: {fileID: 1386179270}
+  Player: {fileID: 802715136}
+  Antag: {fileID: 287552371}
+  DoorOpened: 000000
 --- !u!1 &1786643225
 GameObject:
   m_ObjectHideFlags: 0
@@ -53534,6 +53537,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11489020, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
+      propertyPath: doorOpened.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 419832, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
       propertyPath: m_LocalPosition.x
       value: -79.5
@@ -53602,6 +53609,10 @@ Prefab:
       propertyPath: Keypicture
       value: 
       objectReference: {fileID: 1483879227}
+    - target: {fileID: 11489020, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
+      propertyPath: SaveLoadManager
+      value: 
+      objectReference: {fileID: 1781624102}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
   m_IsPrefabParent: 0
@@ -57043,6 +57054,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11489020, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
+      propertyPath: doorOpened.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 419832, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
       propertyPath: m_LocalPosition.x
       value: -59.2840004
@@ -57091,6 +57106,10 @@ Prefab:
       propertyPath: Crowbarpicture
       value: 
       objectReference: {fileID: 436355951}
+    - target: {fileID: 11489020, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
+      propertyPath: SaveLoadManager
+      value: 
+      objectReference: {fileID: 1781624102}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
   m_IsPrefabParent: 0
