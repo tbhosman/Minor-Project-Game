@@ -14,6 +14,10 @@ public class mainMenuButtons : MonoBehaviour {
 	public GameObject MainMenuMusic;
 	public GameObject mainbuttons;
 	public GameObject newGamePopup;
+	public GameObject continuePopup;
+	public static string leveltoload;
+	public Button continuebutton;
+	public Text continuetext;
 	// Use this for initialization
 	void Start () {
 		Time.timeScale = 1;
@@ -24,6 +28,15 @@ public class mainMenuButtons : MonoBehaviour {
 		}
 		DontDestroyOnLoad(GameObject.Find("MainMenuMusic(Clone)"));
 		Cursor.visible = true;
+		if (!File.Exists (Application.persistentDataPath + "/savefile.sav")) {
+			continuebutton.interactable = false;
+			continuetext.color = new Color(65f/255f,65/255f,65/255f);
+			Debug.Log ("continue disbaled");
+		}
+		else{
+			continuetext.color = new Color(174/255f,178/255f,178/255f);
+			Debug.Log ("continue enabled");
+		}
 		//optionsCanvas.enabled = false;
 	}
 	
@@ -34,13 +47,19 @@ public class mainMenuButtons : MonoBehaviour {
 	}
 
 	public void BackToMainMenu(){
+		continuePopup.SetActive (false);
 		newGamePopup.SetActive (false);
 		mainbuttons.SetActive (true);
 	}
 
 	public void newGameClick(){
-		newGamePopup.SetActive (true);
-		mainbuttons.SetActive (false);
+		leveltoload = "intro";
+		if (File.Exists (Application.persistentDataPath + "/savefile.sav")) {
+			newGamePopup.SetActive (true);
+			mainbuttons.SetActive (false);
+		} else {
+			Application.LoadLevel("LoadingScreen");
+		}
 	}
 
 	public void newGameStart(){
@@ -53,8 +72,8 @@ public class mainMenuButtons : MonoBehaviour {
 	}
 
 	public void Continue(){
-		if(File.Exists(Application.persistentDataPath + "/savefile.sav"));
-		Application.LoadLevel("prototype1.0");
+		leveltoload = "prototype1.0";
+		Application.LoadLevel ("LoadingScreen");
 	}
 
     public void quitGame () {

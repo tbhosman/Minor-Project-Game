@@ -11,12 +11,16 @@ public class SaveLoadScript : MonoBehaviour {
 	public GameObject[] ObjectsToSave;
 	public float savertimeplayed;
 	public GameObject Playerlight;
+	public GameObject Player;
+	public GameObject Antag;
+	public bool[] DoorOpened;
 
-	void Start () {
+	void Awake(){
+		Debug.Log ("Game Awake");
 		savertimeplayed = 0;
 		Load ();
-		//initialize allobjectsarray
 	}
+
 
 	public void Save() {
 
@@ -28,11 +32,29 @@ public class SaveLoadScript : MonoBehaviour {
 
 		//initialize arrays
 		saver.active = new bool[ObjectsToSave.Length];
+		saver.antagcoordinates = new float[3];
+		saver.playercoordinates = new float[3];
+		saver.dooropened = new bool[DoorOpened.Length];
 		//Stuff to save!!!
 		for (int i = 0; i < ObjectsToSave.Length; i++ ) {
 			saver.active[i] = ObjectsToSave[i].activeSelf;
 		}
+
+		for (int i = 0; i < DoorOpened.Length; i++ ) {
+			saver.dooropened[i] = DoorOpened[i];
+		}
+
 		saver.timeplayed = Time.timeSinceLevelLoad + savertimeplayed;
+
+		saver.playercoordinates [0] = Player.transform.position.x;
+		saver.playercoordinates [1] = Player.transform.position.y;
+		saver.playercoordinates [2] = Player.transform.position.z;
+
+		saver.antagcoordinates [0] = Antag.transform.position.x;
+		saver.antagcoordinates [1] = Antag.transform.position.y;
+		saver.antagcoordinates [2] = Antag.transform.position.z;
+
+
 
 		binary.Serialize (fStream, saver);
 		fStream.Close ();
@@ -50,8 +72,19 @@ public class SaveLoadScript : MonoBehaviour {
 			for (int i = 0; i < ObjectsToSave.Length; i++ ) {
 				ObjectsToSave[i].SetActive (saver.active[i]);
 			}
+
+			for (int i = 0; i < DoorOpened.Length; i++ ) {
+				DoorOpened[i] = saver.dooropened[i];
+			}
+
 			savertimeplayed = saver.timeplayed;
+
 			Playerlight.SetActive (true);
+
+			Player.transform.position = new Vector3(saver.playercoordinates [0],saver.playercoordinates [1],saver.playercoordinates [2]);
+
+			Antag.transform.position = new Vector3(saver.antagcoordinates[0],saver.antagcoordinates[1],saver.antagcoordinates[2]);
+
 			print ("game loaded, playtime: " + savertimeplayed);
 		} else {
 			print ("No SaveFile Exists yet");
@@ -69,7 +102,10 @@ public class SaveLoadScript : MonoBehaviour {
 	[Serializable]
 	class SaveManager
 	{
+		public float[] playercoordinates;
+		public float[] antagcoordinates;
 		public float timeplayed;
 		public bool[] active;
+		public bool[] dooropened;
 	}
 }
