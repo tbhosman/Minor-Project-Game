@@ -10,6 +10,7 @@ public class SaveLoadScript : MonoBehaviour {
 
 	public GameObject[] ObjectsToSave;
 	public float savertimeplayed;
+	public GameObject Playerlight;
 
 	void Start () {
 		savertimeplayed = 0;
@@ -50,6 +51,7 @@ public class SaveLoadScript : MonoBehaviour {
 				ObjectsToSave[i].SetActive (saver.active[i]);
 			}
 			savertimeplayed = saver.timeplayed;
+			Playerlight.SetActive (true);
 			print ("game loaded, playtime: " + savertimeplayed);
 		} else {
 			print ("No SaveFile Exists yet");
