@@ -32,9 +32,11 @@ public class mainMenuButtons : MonoBehaviour {
 
 	public void startGame () {
 		Application.LoadLevel("LoadingScreen");
-
 	}
 
+	public void openHighscores () {
+		Application.LoadLevel("Highscores");
+	}
 
     public void quitGame () {
 		Application.Quit ();

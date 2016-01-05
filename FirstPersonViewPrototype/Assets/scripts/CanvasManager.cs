@@ -24,7 +24,6 @@ public class CanvasManager : MonoBehaviour {
 	}
 
 	void Update(){
-		Debug.Log (Time.timeScale);
 		updatePause ();
 		updateInventory ();
 	}
