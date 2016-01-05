@@ -58,6 +58,9 @@ public class DataAquisitie : MonoBehaviour {
 		timeTaken = Mathf.RoundToInt ((Time.timeSinceLevelLoad + savetimeplayed)/ 60);
 		SaveLoadManager.GetComponent<SaveLoadScript> ().Save ();
 		Debug.Log ("Finished game in " + timeTaken + " minutes");
+		if (PlayerPrefs.GetInt ("highscore") > timeTaken) { //set local highscore
+			PlayerPrefs.SetInt ("highscore", timeTaken);
+		}
 		StartCoroutine(SendCompletedGame ());
 	}
 
