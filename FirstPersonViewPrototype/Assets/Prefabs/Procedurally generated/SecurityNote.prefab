@@ -173,7 +173,7 @@ MonoBehaviour:
   displayText: Looks like a note! Press E to pick it up
   afterPickupText: you found a note with a code on it!
   IsKey: 0
-  IsSecurityCodeNote: 1
+  IsSecurityCodeNote: 0
   IsScaryNote: 0
   KeyObject: {fileID: 131976}
   KeyPicture: {fileID: 185166, guid: e81f81a14ae0d59458b9f8a0f2621f37, type: 2}
@@ -206,6 +206,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: IsSecurityCodeNote
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
