@@ -1,13 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\mainMenuButtons.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\CanvasManager.cs">
     <Files>
-      <File FileName="Assets\scripts\SaveLoadScript.cs" Line="5" Column="1" />
+      <File FileName="Assets\scripts\CanvasManager.cs" Line="27" Column="1" />
       <File FileName="Assets\scripts\EnemyRouting.cs" Line="227" Column="3" />
       <File FileName="Assets\scripts\DataAquisitie.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\CanvasManager.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\InventoryManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\mainMenuButtons.cs" Line="59" Column="1" />
+      <File FileName="Assets\scripts\mainMenuButtons.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

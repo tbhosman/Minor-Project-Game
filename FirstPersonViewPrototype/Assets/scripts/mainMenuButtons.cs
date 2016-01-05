@@ -68,6 +68,9 @@ public class mainMenuButtons : MonoBehaviour {
 	public void optionsPanel () {
 		Application.LoadLevel ("options");
 		//optionsCanvas.enabled = !optionsCanvas.enabled;
+	}
 
+	public void openControls(){
+		Application.LoadLevel ("Controls");
 	}
 }
