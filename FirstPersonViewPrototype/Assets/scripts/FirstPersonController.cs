@@ -119,20 +119,23 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void FixedUpdate()
         {
-
+			float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
+			float vertical = CrossPlatformInputManager.GetAxis("Vertical");
+			
+			MakingWalkingSound = !(horizontal == 0 && vertical == 0); //Information for enemy
             //implements stamina so you can run for a limited time.
-            if (Input.GetKey(KeyCode.LeftShift) && stamina > -1)
+            if (Input.GetKey(KeyCode.LeftShift) && stamina > -1 && MakingWalkingSound)
             {
-                stamina -= 1f;
+                stamina -= 0.5f;
             }
             else if (stamina < 100 && !buitenadem)
             {
-                stamina += 1f;
+                stamina += 0.25f;
             }
             if (stamina <= 1 && !buitenadem)
             {
 
-                StartCoroutine(WaitOnStamina(10));
+                StartCoroutine(WaitOnStamina(5));
             }
 
             float speed;
@@ -225,7 +228,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public IEnumerator WaitOnStamina(int getal) {
             buitenadem = true;
             yield return new WaitForSeconds(getal);
-            stamina = 100;
+            stamina = 2;
             buitenadem = false;
         }
 
