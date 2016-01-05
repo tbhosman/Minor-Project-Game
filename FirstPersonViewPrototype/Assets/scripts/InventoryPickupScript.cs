@@ -22,14 +22,12 @@ public class InventoryPickupScript : MonoBehaviour {
         if (IsKey)
         {
             KeyPicture = GameObject.Find("KeysIcon");
-            KeyPicture.SetActive(false);
         }
 
         if (IsSecurityCodeNote)
         {
             
-            KeyPicture = GameObject.Find("SecurityCodeNoteButton");
-           KeyPicture.SetActive(false);
+			KeyPicture = GameObject.Find("SecurityCodeNoteButton");
         }
 
         InspectInstructions =GameObject.Find("PlayerInfo").GetComponent<Text>(); ;

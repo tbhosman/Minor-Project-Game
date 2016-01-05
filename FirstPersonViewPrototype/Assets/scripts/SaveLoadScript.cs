@@ -8,18 +8,16 @@ using System.Collections.Generic;
 
 public class SaveLoadScript : MonoBehaviour {
 
-	public string parentstosave;
-	public GameObject[] allObjects;
-	public int AOGameObjects;
-
+	public GameObject[] ObjectsToSave;
+	public float savertimeplayed;
+	public GameObject Playerlight;
 
 	void Start () {
-	
+		savertimeplayed = 0;
+		Load ();
 		//initialize allobjectsarray
-		allObjects = (GameObject[])Resources.FindObjectsOfTypeAll(typeof(GameObject)) ;
-		AOGameObjects = allObjects.Length;
 	}
-	
+
 	public void Save() {
 
 		BinaryFormatter binary = new BinaryFormatter ();
@@ -29,33 +27,16 @@ public class SaveLoadScript : MonoBehaviour {
 		SaveManager saver = new SaveManager ();
 
 		//initialize arrays
-		saver.xcoordinates = new float[AOGameObjects];
-		saver.ycoordinates = new float[AOGameObjects];
-		saver.zcoordinates = new float[AOGameObjects];
-		saver.rotationx = new float[AOGameObjects];
-		saver.rotationy = new float[AOGameObjects];
-		saver.rotationz = new float[AOGameObjects];
-		saver.rotationw = new float[AOGameObjects];
-		saver.active = new bool[AOGameObjects];
-
-
+		saver.active = new bool[ObjectsToSave.Length];
 		//Stuff to save!!!
-		for (int i = 0; i < AOGameObjects; i++) {
-			GameObject ObjectToSave = allObjects[i];
-			saver.xcoordinates [i] = ObjectToSave.transform.position.x;
-			saver.ycoordinates [i] = ObjectToSave.transform.position.y;
-			saver.zcoordinates [i] = ObjectToSave.transform.position.z;
-			saver.rotationx [i] = ObjectToSave.transform.forward.x;
-			saver.rotationy [i] = ObjectToSave.transform.forward.y;
-			saver.rotationz [i] = ObjectToSave.transform.forward.z;
-			saver.rotationw [i] = ObjectToSave.transform.localRotation.w;
-			saver.active[i] = ObjectToSave.activeInHierarchy;
+		for (int i = 0; i < ObjectsToSave.Length; i++ ) {
+			saver.active[i] = ObjectsToSave[i].activeSelf;
 		}
-
+		saver.timeplayed = Time.timeSinceLevelLoad + savertimeplayed;
 
 		binary.Serialize (fStream, saver);
 		fStream.Close ();
-		print ("game saved");
+		print ("game saved to " + Application.persistentDataPath + "/savefile.sav,  playtime: " + saver.timeplayed);
 	}
 
 	public void Load()	{
@@ -66,12 +47,12 @@ public class SaveLoadScript : MonoBehaviour {
 			fStream.Close ();
 
 			//Stuff to load!!!
-			for (int i = 0; i < AOGameObjects; i++) {
-				GameObject ObjectToLoad = allObjects[i];
-				ObjectToLoad.transform.position = new Vector3 (saver.xcoordinates [i], saver.ycoordinates [i], saver.zcoordinates [i]);
-				ObjectToLoad.SetActive(saver.active[i]);
+			for (int i = 0; i < ObjectsToSave.Length; i++ ) {
+				ObjectsToSave[i].SetActive (saver.active[i]);
 			}
-			print ("game loaded");
+			savertimeplayed = saver.timeplayed;
+			Playerlight.SetActive (true);
+			print ("game loaded, playtime: " + savertimeplayed);
 		} else {
 			print ("No SaveFile Exists yet");
 		}
@@ -88,13 +69,7 @@ public class SaveLoadScript : MonoBehaviour {
 	[Serializable]
 	class SaveManager
 	{
-		public float[] xcoordinates;
-		public float[] ycoordinates;
-		public float[] zcoordinates;
-		public float[] rotationx;
-		public float[] rotationy;
-		public float[] rotationz;
-		public float[] rotationw;
+		public float timeplayed;
 		public bool[] active;
 	}
 }

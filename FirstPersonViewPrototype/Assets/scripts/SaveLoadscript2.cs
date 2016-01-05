@@ -17,8 +17,14 @@ public class SaveLoadscript2 : MonoBehaviour {
 		//initialize allobjectsarray
 		allObjects = (GameObject[])Resources.FindObjectsOfTypeAll(typeof(GameObject)) ;
 		AOGameObjects = allObjects.Length;
+		Load ();
 	}
-	
+
+	void OnLevelWasLoaded(int level) {
+		if (level == Application.loadedLevel)
+		Load ();
+	}
+
 	public void Save() {
 		
 		BinaryFormatter binary = new BinaryFormatter ();

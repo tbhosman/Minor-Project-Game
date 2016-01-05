@@ -12,10 +12,6 @@ public class InventoryManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		SecurityCodeNote.SetActive (false);
-		ScaryNote.SetActive (false);
-		//SecurityCodeNoteButtonObject.SetActive (false);
-		ScaryNoteButtonObject.SetActive (false);
 	}
 	
 	// Update is called once per frame
