@@ -6494,6 +6494,7 @@ MonoBehaviour:
   Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
 --- !u!1 &259288333
 GameObject:
   m_ObjectHideFlags: 0
@@ -37354,7 +37355,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 475700, guid: 87e7e679ab66c1b40845d59b51810cec, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11462274, guid: 87e7e679ab66c1b40845d59b51810cec, type: 2}
       propertyPath: x_coordinaatdeur
@@ -37363,6 +37364,10 @@ Prefab:
     - target: {fileID: 11462274, guid: 87e7e679ab66c1b40845d59b51810cec, type: 2}
       propertyPath: z_coordinaatdeur
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11462126, guid: 87e7e679ab66c1b40845d59b51810cec, type: 2}
+      propertyPath: ZLowSide
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11416960, guid: 87e7e679ab66c1b40845d59b51810cec, type: 2}
@@ -50180,7 +50185,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 464078, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
       propertyPath: m_Name

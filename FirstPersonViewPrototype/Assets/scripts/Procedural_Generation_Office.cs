@@ -11,6 +11,7 @@ public class Procedural_Generation_Office : MonoBehaviour {
     private float matrixHokjeX;
     private float matrixHokjeZ;
     private int rij_open;
+    public static int kamernummer;
 
     private int rij;
     private int kolom;
@@ -39,6 +40,7 @@ public class Procedural_Generation_Office : MonoBehaviour {
     public GameObject Prullenbak;
     public GameObject Whiteboard;
     public GameObject archiefkast;
+    public GameObject sleutel;
 
     void Start () {
         RaycastHit hitX;
@@ -55,10 +57,17 @@ public class Procedural_Generation_Office : MonoBehaviour {
         Debug.Log("X: " + matrixHokjeX + "Z: " + matrixHokjeZ);
         matrix = new int[matrixGrootteX, matrixGrootteZ];
 
-        if (XHighSide) { matrix[matrixGrootteX-1, (int)((matrixGrootteZ - 1) / 2)] = 1; }
-        if (ZHighSide) { matrix[(int)((matrixGrootteX - 1) / 2), matrixGrootteZ-1 ] = 1; }
-        if (XLowSide) { matrix[0, (int)((matrixGrootteZ - 1) / 2)] = 1; }
-        if (ZLowSide) { matrix[(int)((matrixGrootteX - 1) / 2), 0] = 1; }
+        if (XHighSide) { matrix[matrixGrootteX-1, (int)((matrixGrootteZ - 1) / 2)] = 1; if (matrixGrootteZ % 2 == 1) { matrix[matrixGrootteX - 1,-1 + (int)((matrixGrootteZ - 1) / 2)] = 1; } }
+        if (ZHighSide) { matrix[(int)((matrixGrootteX - 1) / 2), matrixGrootteZ-1 ] = 1; if (matrixGrootteX % 2 == 1) { matrix[-1+(int)((matrixGrootteX - 1) / 2), (matrixGrootteZ - 1)] = 1; } }
+        if (XLowSide) { matrix[0, (int)((matrixGrootteZ - 1) / 2)] = 1; if (matrixGrootteZ % 2 == 1) { matrix[0, -1 + (int)((matrixGrootteZ - 1) / 2)] = 1; } }
+        if (ZLowSide) { matrix[(int)((matrixGrootteX - 1) / 2), 0] = 1; if (matrixGrootteX % 2 == 1) { matrix[-1 + (int)((matrixGrootteX - 1) / 2), 0] = 1; } }
+
+        //initialises a room number
+        if (GameObject.FindWithTag("officeKey") == null)
+        {
+            kamernummer++;
+            Debug.Log(kamernummer);
+        }
 
         //generates desks on the south side of the room
         for (int i = 0; i < 5; i++)
@@ -116,7 +125,7 @@ public class Procedural_Generation_Office : MonoBehaviour {
                     matrix[kolom, 1] = 1;
                     matrix[kolom + 1, rij] = 1;
                     matrix[kolom + 1, 1] = 1;
-                    if (rij < matrixGrootteZ - 2) { matrix[kolom, 2]=1; }
+                    if (rij < matrixGrootteZ - 2) { matrix[kolom, 2]=1; matrix[kolom + 1, 2] = 1; if (kolom > 0) { matrix[kolom - 1, 2] = 1; } }
                 }
                 else if (rotation == -90 && kolom >0  && matrix[kolom, 1] == 0 && matrix[kolom -1 , 1] == 0)
                 {
@@ -126,11 +135,18 @@ public class Procedural_Generation_Office : MonoBehaviour {
                     Instantiate(file, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2 - Random.Range(-0.2f, -0.4f), transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ + 3 * matrixHokjeZ / 2), Quaternion.Euler(0, Random.Range(0, 359), 180));
                     cloneburo.transform.localScale = new Vector3(0.395f * matrixHokjeX, 0.5f, 0.5f * matrixHokjeZ);
                     clonestoel.transform.localScale = new Vector3(0.03f * matrixHokjeX, 0.03f, 0.03f * matrixHokjeZ);
+
+                    //een kans om een sleutel te genereren
+                    if (GameObject.FindWithTag("officeKey") == null && (Random.Range(0, 50) < 1 || kamernummer == 26))
+                    {
+                        Instantiate(sleutel, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2 - Random.Range(-0.18f, -0.22f), transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ + 3 * matrixHokjeZ / 2-0.2f), Quaternion.Euler(180, 0, 0));
+                    }
+
                     matrix[kolom, rij] = 1;
                     matrix[kolom, 1]   = 1;
                     matrix[kolom - 1, rij] = 1;
                     matrix[kolom - 1, 1] = 1;
-                    if (rij < matrixGrootteZ - 2) { matrix[kolom, 2] = 1; }
+                    if (rij < matrixGrootteZ - 2) { matrix[kolom, 2] = 1; matrix[kolom - 1, 2] = 1; if (kolom < matrixGrootteX-1) { matrix[kolom + 1, 2] = 1; } }
                 }
             }
         }
@@ -190,7 +206,7 @@ public class Procedural_Generation_Office : MonoBehaviour {
                     matrix[kolom, rij-1] = 1;
                     matrix[kolom + 1, rij] = 1;
                     matrix[kolom + 1, rij-1] = 1;
-                    if (matrixGrootteZ>1) { matrix[kolom, rij-2] = 1; }
+                    if (matrixGrootteZ>1) { matrix[kolom, rij-2] = 1; matrix[kolom + 1, rij - 2] = 1; if (kolom > 0) { matrix[kolom - 1, rij - 2] = 1; } }
                 }
                 else if (rotation == 270 && kolom > 0 && matrix[kolom, 1] == 0 && matrix[kolom - 1, rij-1] == 0)
                 {
@@ -204,7 +220,7 @@ public class Procedural_Generation_Office : MonoBehaviour {
                     matrix[kolom, rij-1] = 1;
                     matrix[kolom - 1, rij] = 1;
                     matrix[kolom - 1, rij-1] = 1;
-                    if (matrixGrootteZ > 1) { matrix[kolom, rij - 2] = 1; }
+                    if (matrixGrootteZ > 1) { matrix[kolom, rij - 2] = 1; matrix[kolom - 1, rij - 2] = 1; if (kolom < matrixGrootteX-1) { matrix[kolom + 1, rij - 2] = 1; } }
                 }
             }
         }

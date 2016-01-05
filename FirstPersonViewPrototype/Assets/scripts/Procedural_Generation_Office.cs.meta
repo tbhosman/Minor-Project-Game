@@ -1,10 +1,22 @@
 fileFormatVersion: 2
 guid: a5dc182027991604791887ae01cf0c5d
-timeCreated: 1451934456
+timeCreated: 1451989729
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  - stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  - computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  - computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  - computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  - computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  - computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  - file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  - Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  - Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  - archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  - sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
