@@ -72,7 +72,6 @@ public class DataAquisitie : MonoBehaviour {
 	public void GameOver (Vector3 location) {
 		savetimeplayed = SaveLoadManager.GetComponent<SaveLoadScript> ().savertimeplayed;
 		timeTaken = Mathf.RoundToInt ((Time.timeSinceLevelLoad + savetimeplayed)/ 60);
-		SaveLoadManager.GetComponent<SaveLoadScript> ().Save ();
 		Debug.Log ("Lost game in " + timeTaken + " minutes");
 		StartCoroutine(SendGameOver (location));
 	}
