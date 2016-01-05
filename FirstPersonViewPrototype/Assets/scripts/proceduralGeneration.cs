@@ -62,6 +62,8 @@ public class proceduralGeneration : MonoBehaviour {
             kamernummer++;
             Debug.Log(kamernummer);
         }
+
+
         //Make sure there are no objects spawning in front of the door
         array[x_coordinaatdeur, z_coordinaatdeur] = 1;
         if (x_coordinaatdeur != 0){ array[x_coordinaatdeur - 1, z_coordinaatdeur] = 1; }

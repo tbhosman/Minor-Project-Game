@@ -57,10 +57,10 @@ public class Procedural_Generation_Office : MonoBehaviour {
         Debug.Log("X: " + matrixHokjeX + "Z: " + matrixHokjeZ);
         matrix = new int[matrixGrootteX, matrixGrootteZ];
 
-        if (XHighSide) { matrix[matrixGrootteX-1, (int)((matrixGrootteZ - 1) / 2)] = 1; if (matrixGrootteZ % 2 == 1) { matrix[matrixGrootteX - 1,-1 + (int)((matrixGrootteZ - 1) / 2)] = 1; } }
-        if (ZHighSide) { matrix[(int)((matrixGrootteX - 1) / 2), matrixGrootteZ-1 ] = 1; if (matrixGrootteX % 2 == 1) { matrix[-1+(int)((matrixGrootteX - 1) / 2), (matrixGrootteZ - 1)] = 1; } }
-        if (XLowSide) { matrix[0, (int)((matrixGrootteZ - 1) / 2)] = 1; if (matrixGrootteZ % 2 == 1) { matrix[0, -1 + (int)((matrixGrootteZ - 1) / 2)] = 1; } }
-        if (ZLowSide) { matrix[(int)((matrixGrootteX - 1) / 2), 0] = 1; if (matrixGrootteX % 2 == 1) { matrix[-1 + (int)((matrixGrootteX - 1) / 2), 0] = 1; } }
+        if (XHighSide) { matrix[matrixGrootteX-1, (int)((matrixGrootteZ - 1) / 2)] = 1; if (matrixGrootteZ % 2 == 0) { matrix[matrixGrootteX - 1,1 + (int)((matrixGrootteZ - 1) / 2)] = 1; } }
+        if (ZHighSide) { matrix[(int)((matrixGrootteX - 1) / 2), matrixGrootteZ-1 ] = 1; if (matrixGrootteX % 2 == 0) { matrix[1+(int)((matrixGrootteX - 1) / 2), (matrixGrootteZ - 1)] = 1; } }
+        if (XLowSide) { matrix[0, (int)((matrixGrootteZ - 1) / 2)] = 1; if (matrixGrootteZ % 2 == 0) { matrix[0, 1 + (int)((matrixGrootteZ - 1) / 2)] = 1; } }
+        if (ZLowSide) { matrix[(int)((matrixGrootteX - 1) / 2), 0] = 1; if (matrixGrootteX % 2 == 0) { matrix[1 + (int)((matrixGrootteX - 1) / 2), 0] = 1; } }
 
         //initialises a room number
         if (GameObject.FindWithTag("officeKey") == null)
