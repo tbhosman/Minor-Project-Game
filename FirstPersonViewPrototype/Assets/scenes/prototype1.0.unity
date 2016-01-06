@@ -1182,6 +1182,7 @@ RectTransform:
   - {fileID: 1838304186}
   - {fileID: 1448326916}
   - {fileID: 1541144145}
+  - {fileID: 168194404}
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_AnchorMin: {x: 0, y: 0}
@@ -2037,6 +2038,24 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 81571640}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &82781248 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 173452, guid: 87e7e679ab66c1b40845d59b51810cec, type: 2}
+  m_PrefabInternal: {fileID: 1400250613}
+--- !u!114 &82781250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 82781248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  matrixDeur:
+  - {x: 3, y: 3}
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
 --- !u!1 &84493140
 GameObject:
   m_ObjectHideFlags: 0
@@ -4612,6 +4631,73 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: .25
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &168194403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 168194404}
+  - 222: {fileID: 168194406}
+  - 114: {fileID: 168194405}
+  m_Layer: 5
+  m_Name: PanelStamina
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &168194404
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 168194403}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 40429111}
+  m_RootOrder: 10
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &168194405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 168194403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: .191}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &168194406
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 168194403}
 --- !u!1 &168626398
 GameObject:
   m_ObjectHideFlags: 0
@@ -24906,6 +24992,25 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300330, guid: 1a7272ea20ead8f42bc6dc0614f395fc, type: 3}
+--- !u!1 &948876222 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 170052, guid: 87e7e679ab66c1b40845d59b51810cec, type: 2}
+  m_PrefabInternal: {fileID: 1400250613}
+--- !u!114 &948876224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 948876222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  matrixDeur:
+  - {x: 1, y: 1}
+  - {x: 3, y: 3}
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
 --- !u!1 &949290642
 GameObject:
   m_ObjectHideFlags: 0
@@ -29561,7 +29666,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 193090, guid: db4e3557030f9a24e8591a8588fa0430, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 193430, guid: db4e3557030f9a24e8591a8588fa0430, type: 2}
       propertyPath: m_IsActive
@@ -37372,7 +37477,9 @@ Prefab:
       propertyPath: z_coordinaatdeur
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11413564, guid: 87e7e679ab66c1b40845d59b51810cec, type: 2}
+    - {fileID: 11416960, guid: 87e7e679ab66c1b40845d59b51810cec, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 87e7e679ab66c1b40845d59b51810cec, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1400990886
@@ -41608,6 +41715,30 @@ Prefab:
       propertyPath: fpsController
       value: 
       objectReference: {fileID: 802715136}
+    - target: {fileID: 22489794, guid: bc67028bd6ac5b741b5484c0468b556b, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 11486614, guid: bc67028bd6ac5b741b5484c0468b556b, type: 2}
+      propertyPath: m_Color.g
+      value: .972549081
+      objectReference: {fileID: 0}
+    - target: {fileID: 11486614, guid: bc67028bd6ac5b741b5484c0468b556b, type: 2}
+      propertyPath: m_Color.b
+      value: .972549081
+      objectReference: {fileID: 0}
+    - target: {fileID: 11486614, guid: bc67028bd6ac5b741b5484c0468b556b, type: 2}
+      propertyPath: m_Color.r
+      value: .972549081
+      objectReference: {fileID: 0}
+    - target: {fileID: 11428698, guid: bc67028bd6ac5b741b5484c0468b556b, type: 2}
+      propertyPath: m_ShowMaskGraphic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11444216, guid: bc67028bd6ac5b741b5484c0468b556b, type: 2}
+      propertyPath: roodPanel
+      value: 
+      objectReference: {fileID: 168194403}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc67028bd6ac5b741b5484c0468b556b, type: 2}
   m_IsPrefabParent: 0
