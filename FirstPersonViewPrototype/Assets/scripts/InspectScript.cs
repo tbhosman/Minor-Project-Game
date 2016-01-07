@@ -7,7 +7,7 @@ public class InspectScript : MonoBehaviour {
 
 	private AudioSource audiosource;
 	private bool Inspected;
-	private GameObject Player;
+	public GameObject Player;
 	private Animator PlayerAnimator;
 	public Text InspectInstructions;
 	public Animation DontLookAnim;
@@ -15,17 +15,21 @@ public class InspectScript : MonoBehaviour {
 	private RaycastHit RayHit;
 	public GameObject DontLookMonster;
 	public int animationlength;
-	private GameObject Inventory;
+	public GameObject Inventory;
 	public GameObject CrowbarPicture;
 	public GameObject Crowbar;
+	public GameObject SaveLoadManager;
 
 	void Start () {
+		if (SaveLoadManager.GetComponent<SaveLoadScript>().keyObjectsPickedUp[1]){
+			Crowbar.SetActive(false);
+			DontLookAnim.Play ();
+			gameObject.GetComponent<Collider>().enabled = false;
+		}
 		audiosource = gameObject.GetComponent<AudioSource> ();
 		Inspected = false;
 		InspectInstructions.enabled = false;
-		Player = GameObject.FindGameObjectWithTag ("Player");
 		PlayerAnimator = Player.GetComponentInChildren<Animator>();
-		Inventory = GameObject.FindGameObjectWithTag ("Inventory");
 	}
 	
 
