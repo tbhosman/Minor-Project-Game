@@ -305,7 +305,7 @@ MonoBehaviour:
   InspectInstructions: {fileID: 11495328, guid: 00736b84187598b44a6f171576041158,
     type: 2}
   displayText: Looks like a key! Press E to pick it up
-  afterPickupText: to toYou found a key! Press i to inspect your inventory
+  afterPickupText: You found a key! Press i to inspect your inventory
   Player: {fileID: 0}
   Inventory: {fileID: 0}
   IsKey: 1
@@ -384,7 +384,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: afterPickupText
-      value: to toYou found a key! Press i to inspect your inventory
+      value: You found a key! Press i to inspect your inventory
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Range
