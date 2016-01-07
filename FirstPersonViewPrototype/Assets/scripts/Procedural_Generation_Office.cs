@@ -11,6 +11,7 @@ public class Procedural_Generation_Office : MonoBehaviour {
     private float matrixHokjeX;
     private float matrixHokjeZ;
     private int rij_open;
+    public static int kamernummer;
 
     private int rij;
     private int kolom;
@@ -39,8 +40,14 @@ public class Procedural_Generation_Office : MonoBehaviour {
     public GameObject Prullenbak;
     public GameObject Whiteboard;
     public GameObject archiefkast;
+    public GameObject sleutel;
+    public GameObject pennenbakje;
+    public GameObject boek;
+    private GameObject kantoorartikel;
 
     void Start () {
+
+        //sends a raycast to obtain information about the dimensions of the room and scale the generation matrix accordingly
         RaycastHit hitX;
         RaycastHit hitZ;
         Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 2.5f, transform.position.z), Vector3.right, out hitX);
@@ -55,10 +62,17 @@ public class Procedural_Generation_Office : MonoBehaviour {
         Debug.Log("X: " + matrixHokjeX + "Z: " + matrixHokjeZ);
         matrix = new int[matrixGrootteX, matrixGrootteZ];
 
-        if (XHighSide) { matrix[matrixGrootteX-1, (int)((matrixGrootteZ - 1) / 2)] = 1; }
-        if (ZHighSide) { matrix[(int)((matrixGrootteX - 1) / 2), matrixGrootteZ-1 ] = 1; }
-        if (XLowSide) { matrix[0, (int)((matrixGrootteZ - 1) / 2)] = 1; }
-        if (ZLowSide) { matrix[(int)((matrixGrootteX - 1) / 2), 0] = 1; }
+        if (XHighSide) { matrix[matrixGrootteX-1, (int)((matrixGrootteZ - 1) / 2)] = 1; if (matrixGrootteZ % 2 == 0) { matrix[matrixGrootteX - 1,1 + (int)((matrixGrootteZ - 1) / 2)] = 1; } }
+        if (ZHighSide) { matrix[(int)((matrixGrootteX - 1) / 2), matrixGrootteZ-1 ] = 1; if (matrixGrootteX % 2 == 0) { matrix[1+(int)((matrixGrootteX - 1) / 2), (matrixGrootteZ - 1)] = 1; } }
+        if (XLowSide) { matrix[0, (int)((matrixGrootteZ - 1) / 2)] = 1; if (matrixGrootteZ % 2 == 0) { matrix[0, 1 + (int)((matrixGrootteZ - 1) / 2)] = 1; } }
+        if (ZLowSide) { matrix[(int)((matrixGrootteX - 1) / 2), 0] = 1; if (matrixGrootteX % 2 == 0) { matrix[1 + (int)((matrixGrootteX - 1) / 2), 0] = 1; } }
+
+        //initialises a room number
+        if (GameObject.FindWithTag("officeKey") == null)
+        {
+            kamernummer++;
+            Debug.Log(kamernummer);
+        }
 
         //generates desks on the south side of the room
         for (int i = 0; i < 5; i++)
@@ -87,6 +101,16 @@ public class Procedural_Generation_Office : MonoBehaviour {
                     break;
             }
 
+            //chooses a officearticle out of 2 models: de pennenbak and the books
+            switch (Random.Range(0, 2)) {
+                case 0:
+                    kantoorartikel = boek;
+                    break;
+                case 1:
+                    kantoorartikel = pennenbakje;
+                    break;
+            }
+
             //generate the desk according to the rotation of the desk
             if (matrix[kolom, rij] == 0)
             {
@@ -96,6 +120,7 @@ public class Procedural_Generation_Office : MonoBehaviour {
                     GameObject clonestoel = (GameObject)Instantiate(stoel, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX, transform.position.y, transform.position.z + rij * matrixHokjeZ - scalingZ + 21 * matrixHokjeZ / 20), Quaternion.Euler(0, 270 + Random.Range(-20, 20), 0));
                     Instantiate(computerkeuze, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + 3*matrixHokjeX/2, transform.position.y+0.9f, transform.position.z + rij * matrixHokjeZ - scalingZ +  matrixHokjeZ / 2+Random.Range(-0.2f,-0.4f)),Quaternion.Euler(0,0,0));
                     Instantiate(file, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2, transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ + matrixHokjeZ / 2 - Random.Range(-0.2f, -0.4f)), Quaternion.Euler(0, Random.Range(0,359), 180));
+                    Instantiate(kantoorartikel, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 6, transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ + matrixHokjeZ / 2 - Random.Range(0.2f, 0.4f)), Quaternion.Euler(0, Random.Range(0, 359), 0));
 
                     cloneburo.transform.localScale = new Vector3(0.395f * matrixHokjeX, 0.5f, 0.5f * matrixHokjeZ);
                     clonestoel.transform.localScale = new Vector3(0.03f * matrixHokjeX, 0.03f, 0.03f * matrixHokjeZ);
@@ -110,13 +135,15 @@ public class Procedural_Generation_Office : MonoBehaviour {
                     GameObject clonestoel = (GameObject)Instantiate(stoel, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX * 21 / 20, transform.position.y, transform.position.z + rij * matrixHokjeZ - scalingZ + matrixHokjeZ), Quaternion.Euler(0, 0 + Random.Range(-20, 20), 0));
                     Instantiate(computerkeuze, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2+Random.Range(-0.2f,-0.4f), transform.position.y+0.9f, transform.position.z + rij * matrixHokjeZ - scalingZ + matrixHokjeZ/2), Quaternion.Euler(0, 90, 0));
                     Instantiate(file, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2 - Random.Range(-0.2f, -0.4f), transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ + 3*matrixHokjeZ / 2), Quaternion.Euler(0, Random.Range(0,359), 180));
+                    Instantiate(kantoorartikel, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2-Random.Range(-0.1f,0.1f), transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ + 3*matrixHokjeZ / 2), Quaternion.Euler(0, Random.Range(0, 359), 0));
+
                     cloneburo.transform.localScale = new Vector3(0.395f * matrixHokjeX, 0.5f, 0.5f * matrixHokjeZ);
                     clonestoel.transform.localScale = new Vector3(0.03f * matrixHokjeX, 0.03f, 0.03f * matrixHokjeZ);
                     matrix[kolom, rij] = 1;
                     matrix[kolom, 1] = 1;
                     matrix[kolom + 1, rij] = 1;
                     matrix[kolom + 1, 1] = 1;
-                    if (rij < matrixGrootteZ - 2) { matrix[kolom, 2]=1; }
+                    if (rij < matrixGrootteZ - 2) { matrix[kolom, 2]=1; matrix[kolom + 1, 2] = 1; if (kolom > 0) { matrix[kolom - 1, 2] = 1; } }
                 }
                 else if (rotation == -90 && kolom >0  && matrix[kolom, 1] == 0 && matrix[kolom -1 , 1] == 0)
                 {
@@ -124,13 +151,22 @@ public class Procedural_Generation_Office : MonoBehaviour {
                     GameObject clonestoel = (GameObject)Instantiate(stoel, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX - matrixHokjeX / 20, transform.position.y, transform.position.z + rij * matrixHokjeZ - scalingZ + matrixHokjeZ), Quaternion.Euler(0, 180 + Random.Range(-20, 20), 0));
                     Instantiate(computerkeuze, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2 - Random.Range(-0.2f, -0.4f), transform.position.y + 0.9f, transform.position.z + rij * matrixHokjeZ - scalingZ + matrixHokjeZ / 2), Quaternion.Euler(0, -90, 0));
                     Instantiate(file, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2 - Random.Range(-0.2f, -0.4f), transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ + 3 * matrixHokjeZ / 2), Quaternion.Euler(0, Random.Range(0, 359), 180));
+                    Instantiate(kantoorartikel, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2 - Random.Range(-0.1f, 0.1f), transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ + 5 * matrixHokjeZ / 4), Quaternion.Euler(0, Random.Range(0, 359), 0));
+
                     cloneburo.transform.localScale = new Vector3(0.395f * matrixHokjeX, 0.5f, 0.5f * matrixHokjeZ);
                     clonestoel.transform.localScale = new Vector3(0.03f * matrixHokjeX, 0.03f, 0.03f * matrixHokjeZ);
+
+                    //een kans om een sleutel te genereren
+                    if (GameObject.FindWithTag("officeKey") == null && (Random.Range(0, 50) < 1 || kamernummer == 26))
+                    {
+                        Instantiate(sleutel, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2 - Random.Range(-0.18f, -0.22f), transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ + 3 * matrixHokjeZ / 2-0.2f), Quaternion.Euler(180, 0, 0));
+                    }
+
                     matrix[kolom, rij] = 1;
                     matrix[kolom, 1]   = 1;
                     matrix[kolom - 1, rij] = 1;
                     matrix[kolom - 1, 1] = 1;
-                    if (rij < matrixGrootteZ - 2) { matrix[kolom, 2] = 1; }
+                    if (rij < matrixGrootteZ - 2) { matrix[kolom, 2] = 1; matrix[kolom - 1, 2] = 1; if (kolom < matrixGrootteX-1) { matrix[kolom + 1, 2] = 1; } }
                 }
             }
         }
@@ -161,6 +197,17 @@ public class Procedural_Generation_Office : MonoBehaviour {
                     break;
             }
 
+            //chooses a officearticle out of 2 models: de pennenbak and the books
+            switch (Random.Range(0, 2))
+            {
+                case 0:
+                    kantoorartikel = boek;
+                    break;
+                case 1:
+                    kantoorartikel = pennenbakje;
+                    break;
+            }
+
             if (matrix[kolom, rij] == 0)
             {
                 if (rotation == 180 && kolom < matrixGrootteX - 1 && matrix[kolom + 1, rij] == 0 && matrix[kolom + 1, rij - 1] == 0)
@@ -169,6 +216,8 @@ public class Procedural_Generation_Office : MonoBehaviour {
                     GameObject clonestoel = (GameObject)Instantiate(stoel, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX, transform.position.y, transform.position.z + rij * matrixHokjeZ - scalingZ - matrixHokjeZ / 20), Quaternion.Euler(0, 90 + Random.Range(-20, 20), 0));
                     Instantiate(computerkeuze, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + 3 * matrixHokjeX / 2, transform.position.y + 0.9f, transform.position.z + rij * matrixHokjeZ - scalingZ + matrixHokjeZ / 2 - Random.Range(-0.2f, -0.4f)), Quaternion.Euler(0, 180, 0));
                     Instantiate(file, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2, transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ + matrixHokjeZ / 2 - Random.Range(-0.2f, -0.4f)), Quaternion.Euler(0, Random.Range(0, 359), 180));
+                    Instantiate(kantoorartikel, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2, transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ + matrixHokjeZ / 2 - Random.Range(0, 0.2f)), Quaternion.Euler(0, Random.Range(0, 359), 0));
+
 
                     cloneburo.transform.localScale = new Vector3(0.395f * matrixHokjeX, 0.5f, 0.5f * matrixHokjeZ);
                     clonestoel.transform.localScale = new Vector3(0.03f * matrixHokjeX, 0.03f, 0.03f * matrixHokjeZ);
@@ -184,13 +233,15 @@ public class Procedural_Generation_Office : MonoBehaviour {
                     GameObject clonestoel = (GameObject)Instantiate(stoel, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX * 21 / 20, transform.position.y, transform.position.z + rij * matrixHokjeZ - scalingZ), Quaternion.Euler(0, 0 + Random.Range(-20, 20), 0));
                     Instantiate(computerkeuze, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2 + Random.Range(-0.2f, -0.4f), transform.position.y + 0.9f, transform.position.z + rij * matrixHokjeZ - scalingZ + matrixHokjeZ / 2), Quaternion.Euler(0, 90, 0));
                     Instantiate(file, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2 - Random.Range(-0.2f, -0.4f), transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ - matrixHokjeZ / 2), Quaternion.Euler(0, Random.Range(0, 359), 180));
+                    Instantiate(kantoorartikel, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2 - Random.Range(0, 0.2f), transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ - matrixHokjeZ / 2), Quaternion.Euler(0, Random.Range(0, 359), 0));
+
                     cloneburo.transform.localScale = new Vector3(0.395f * matrixHokjeX, 0.5f, 0.5f * matrixHokjeZ);
                     clonestoel.transform.localScale = new Vector3(0.03f * matrixHokjeX, 0.03f, 0.03f * matrixHokjeZ);
                     matrix[kolom, rij] = 1;
                     matrix[kolom, rij-1] = 1;
                     matrix[kolom + 1, rij] = 1;
                     matrix[kolom + 1, rij-1] = 1;
-                    if (matrixGrootteZ>1) { matrix[kolom, rij-2] = 1; }
+                    if (matrixGrootteZ>1) { matrix[kolom, rij-2] = 1; matrix[kolom + 1, rij - 2] = 1; if (kolom > 0) { matrix[kolom - 1, rij - 2] = 1; } }
                 }
                 else if (rotation == 270 && kolom > 0 && matrix[kolom, 1] == 0 && matrix[kolom - 1, rij-1] == 0)
                 {
@@ -198,13 +249,16 @@ public class Procedural_Generation_Office : MonoBehaviour {
                     GameObject clonestoel = (GameObject)Instantiate(stoel, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX - matrixHokjeX / 20, transform.position.y, transform.position.z + rij * matrixHokjeZ - scalingZ), Quaternion.Euler(0, 180 + Random.Range(-20, 20), 0));
                     Instantiate(computerkeuze, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2 - Random.Range(-0.2f, -0.4f), transform.position.y + 0.9f, transform.position.z + rij * matrixHokjeZ - scalingZ + matrixHokjeZ / 2), Quaternion.Euler(0, -90, 0));
                     Instantiate(file, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2 - Random.Range(-0.2f, -0.4f), transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ - matrixHokjeZ / 2), Quaternion.Euler(0, Random.Range(0, 359), 180));
+                    Instantiate(kantoorartikel, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2 - Random.Range(0, 0.2f), transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ - matrixHokjeZ / 2), Quaternion.Euler(0, Random.Range(0, 359), 0));
+
+
                     cloneburo.transform.localScale = new Vector3(0.395f * matrixHokjeX, 0.5f, 0.5f * matrixHokjeZ);
                     clonestoel.transform.localScale = new Vector3(0.03f * matrixHokjeX, 0.03f, 0.03f * matrixHokjeZ);
                     matrix[kolom, rij] = 1;
                     matrix[kolom, rij-1] = 1;
                     matrix[kolom - 1, rij] = 1;
                     matrix[kolom - 1, rij-1] = 1;
-                    if (matrixGrootteZ > 1) { matrix[kolom, rij - 2] = 1; }
+                    if (matrixGrootteZ > 1) { matrix[kolom, rij - 2] = 1; matrix[kolom - 1, rij - 2] = 1; if (kolom < matrixGrootteX-1) { matrix[kolom + 1, rij - 2] = 1; } }
                 }
             }
         }

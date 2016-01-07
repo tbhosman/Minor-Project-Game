@@ -147,7 +147,9 @@ public class OptionsCanvas : MonoBehaviour {
     }
 
     public void back() {
-        Application.LoadLevel("menu");
+		GameObject.Find ("SceneFader").GetComponent<SceneFadeInOut> ().scene = "menu";
+		GameObject.Find ("SceneFader").GetComponent<SceneFadeInOut> ().sceneEnding = true;
+        //Application.LoadLevel("menu");
     } 
 
     void Update () {

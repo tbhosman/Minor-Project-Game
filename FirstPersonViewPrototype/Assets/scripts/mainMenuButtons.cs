@@ -18,6 +18,8 @@ public class mainMenuButtons : MonoBehaviour {
 	public static string leveltoload;
 	public Button continuebutton;
 	public Text continuetext;
+	private SceneFadeInOut SceneFader;
+
 	// Use this for initialization
 	void Start () {
 		Time.timeScale = 1;
@@ -38,6 +40,7 @@ public class mainMenuButtons : MonoBehaviour {
 			Debug.Log ("continue enabled");
 		}
 		//optionsCanvas.enabled = false;
+		SceneFader = GameObject.Find ("SceneFader").GetComponent<SceneFadeInOut> ();
 	}
 	
 
@@ -58,26 +61,41 @@ public class mainMenuButtons : MonoBehaviour {
 			newGamePopup.SetActive (true);
 			mainbuttons.SetActive (false);
 		} else {
-			Application.LoadLevel("LoadingScreen");
+			SceneFader.scene = "LoadingScreen";
+			SceneFader.sceneEnding = true;
+			//SceneFader.EndScene("LoadingScreen");
+			//Application.LoadLevel("LoadingScreen");
 		}
 	}
 
 	public void newGameStart(){
 		File.Delete (Application.persistentDataPath + "/savefile.sav");
-		Application.LoadLevel("LoadingScreen");
+		SceneFader.scene = "LoadingScreen";
+		SceneFader.sceneEnding = true;
+		//SceneFader.EndScene("LoadingScreen");
+		//Application.LoadLevel("LoadingScreen");
 	}
 
 	public void openHighscores () {
-		Application.LoadLevel("Highscores");
+		SceneFader.scene = "Highscores";
+		SceneFader.sceneEnding = true;
+		//SceneFader.EndScene("Highscores");
+		//Application.LoadLevel("Highscores");
 	}
 
 	public void Continue(){
 		leveltoload = "prototype1.0";
-		Application.LoadLevel ("LoadingScreen");
+		SceneFader.scene = "LoadingScreen";
+		SceneFader.sceneEnding = true;
+		//SceneFader.EndScene("LoadingScreen");
+		//Application.LoadLevel ("LoadingScreen");
 	}
 
     public void quitGame () {
-		Application.Quit ();
+		SceneFader.scene = "";
+		SceneFader.sceneEnding = true;
+		//SceneFader.EndScene("");
+		//Application.Quit ();
 	}
 
 	public void getInput(string name){
@@ -85,11 +103,16 @@ public class mainMenuButtons : MonoBehaviour {
 	}
 
 	public void optionsPanel () {
-		Application.LoadLevel ("options");
+		SceneFader.scene = "options";
+		SceneFader.sceneEnding = true;
+		//Application.LoadLevel ("options");
 		//optionsCanvas.enabled = !optionsCanvas.enabled;
 	}
 
 	public void openControls(){
-		Application.LoadLevel ("Controls");
+		SceneFader.scene = "Controls";
+		SceneFader.sceneEnding = true;
+		//SceneFader.EndScene("Controls");
+		//Application.LoadLevel ("Controls");
 	}
 }

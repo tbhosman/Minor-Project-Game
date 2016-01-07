@@ -1,5 +1,37 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &104354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 483256}
+  - 114: {fileID: 11475976}
+  m_Layer: 0
+  m_Name: OfficeGenerator (34)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &105940
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 476608}
+  - 114: {fileID: 11413916}
+  m_Layer: 0
+  m_Name: OfficeGenerator (27)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &106594
 GameObject:
   m_ObjectHideFlags: 0
@@ -8,9 +40,41 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 485440}
-  - 114: {fileID: 11440332}
+  - 114: {fileID: 11485484}
   m_Layer: 0
   m_Name: OfficeGenerator (15)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &108176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 461666}
+  - 114: {fileID: 11463896}
+  m_Layer: 0
+  m_Name: OfficeGenerator (40)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &110358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 480256}
+  - 114: {fileID: 11409296}
+  m_Layer: 0
+  m_Name: OfficeGenerator (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,9 +88,25 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 414642}
-  - 114: {fileID: 11474292}
+  - 114: {fileID: 11483206}
   m_Layer: 0
   m_Name: OfficeGenerator (14)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &122108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 428914}
+  - 114: {fileID: 11488870}
+  m_Layer: 0
+  m_Name: OfficeGenerator (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,9 +120,41 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 472762}
-  - 114: {fileID: 11423684}
+  - 114: {fileID: 11445168}
   m_Layer: 0
   m_Name: OfficeGenerator (13)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &126670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 421290}
+  - 114: {fileID: 11460014}
+  m_Layer: 0
+  m_Name: OfficeGenerator (28)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &127550
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 491232}
+  - 114: {fileID: 11436636}
+  m_Layer: 0
+  m_Name: OfficeGenerator (39)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,7 +168,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 479706}
-  - 114: {fileID: 11455064}
+  - 114: {fileID: 11406948}
   m_Layer: 0
   m_Name: OfficeGenerator (21)
   m_TagString: Untagged
@@ -72,7 +184,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 412976}
-  - 114: {fileID: 11484374}
+  - 114: {fileID: 11427854}
   m_Layer: 0
   m_Name: OfficeGenerator (9)
   m_TagString: Untagged
@@ -88,7 +200,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 495578}
-  - 114: {fileID: 11407544}
+  - 114: {fileID: 11440156}
   m_Layer: 0
   m_Name: OfficeGenerator (3)
   m_TagString: Untagged
@@ -104,9 +216,41 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 424388}
-  - 114: {fileID: 11478934}
+  - 114: {fileID: 11459288}
   m_Layer: 0
   m_Name: OfficeGenerator (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &143878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 403146}
+  - 114: {fileID: 11462596}
+  m_Layer: 0
+  m_Name: OfficeGenerator (31)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &146322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 495580}
+  - 114: {fileID: 11434222}
+  m_Layer: 0
+  m_Name: OfficeGenerator (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,7 +264,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 434724}
-  - 114: {fileID: 11402916}
+  - 114: {fileID: 11409984}
   m_Layer: 0
   m_Name: OfficeGenerator (20)
   m_TagString: Untagged
@@ -136,7 +280,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 477852}
-  - 114: {fileID: 11459978}
+  - 114: {fileID: 11427374}
   m_Layer: 0
   m_Name: OfficeGenerator (12)
   m_TagString: Untagged
@@ -152,9 +296,25 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 422246}
-  - 114: {fileID: 11454794}
+  - 114: {fileID: 11431008}
   m_Layer: 0
   m_Name: OfficeGenerator (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &162396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 446402}
+  - 114: {fileID: 11499990}
+  m_Layer: 0
+  m_Name: OfficeGenerator (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -168,7 +328,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 484634}
-  - 114: {fileID: 11401422}
+  - 114: {fileID: 11454320}
   m_Layer: 0
   m_Name: OfficeGenerator (24)
   m_TagString: Untagged
@@ -184,7 +344,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 464502}
-  - 114: {fileID: 11465714}
+  - 114: {fileID: 11472454}
   m_Layer: 0
   m_Name: OfficeGenerator (7)
   m_TagString: Untagged
@@ -200,7 +360,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 477964}
-  - 114: {fileID: 11497280}
+  - 114: {fileID: 11420146}
   m_Layer: 0
   m_Name: OfficeGenerator (25)
   m_TagString: Untagged
@@ -223,6 +383,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &165720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 458960}
+  - 114: {fileID: 11459650}
+  m_Layer: 0
+  m_Name: OfficeGenerator (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &170052
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,9 +407,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 498434}
-  - 114: {fileID: 11413564}
+  - 114: {fileID: 11462126}
   m_Layer: 0
-  m_Name: OfficeGenerator (10)
+  m_Name: OfficeGenerator (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -247,7 +423,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 409126}
-  - 114: {fileID: 11462274}
+  - 114: {fileID: 11495370}
   m_Layer: 0
   m_Name: OfficeGenerator (23)
   m_TagString: Untagged
@@ -263,9 +439,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 404428}
-  - 114: {fileID: 11495390}
+  - 114: {fileID: 11420128}
   m_Layer: 0
-  m_Name: OfficeGenerator (4)
+  m_Name: OfficeGenerator (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -279,7 +455,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 407940}
-  - 114: {fileID: 11453654}
+  - 114: {fileID: 11405516}
   m_Layer: 0
   m_Name: OfficeGenerator (17)
   m_TagString: Untagged
@@ -295,9 +471,25 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 482162}
-  - 114: {fileID: 11416960}
+  - 114: {fileID: 11418650}
   m_Layer: 0
   m_Name: OfficeGenerator (16)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &175260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 412706}
+  - 114: {fileID: 11437110}
+  m_Layer: 0
+  m_Name: OfficeGenerator (38)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -311,7 +503,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 425884}
-  - 114: {fileID: 11487016}
+  - 114: {fileID: 11413580}
   m_Layer: 0
   m_Name: OfficeGenerator (19)
   m_TagString: Untagged
@@ -327,7 +519,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 480202}
-  - 114: {fileID: 11467128}
+  - 114: {fileID: 11412184}
   m_Layer: 0
   m_Name: OfficeGenerator (22)
   m_TagString: Untagged
@@ -343,9 +535,25 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 479194}
-  - 114: {fileID: 11439852}
+  - 114: {fileID: 11410160}
   m_Layer: 0
   m_Name: OfficeGenerator (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &186888
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 498606}
+  - 114: {fileID: 11420244}
+  m_Layer: 0
+  m_Name: OfficeGenerator (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -359,9 +567,25 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 424140}
-  - 114: {fileID: 11467592}
+  - 114: {fileID: 11409550}
   m_Layer: 0
   m_Name: OfficeGenerator (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &191996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 404254}
+  - 114: {fileID: 11461294}
+  m_Layer: 0
+  m_Name: OfficeGenerator (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -375,7 +599,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 456040}
-  - 114: {fileID: 11466318}
+  - 114: {fileID: 11489000}
   m_Layer: 0
   m_Name: OfficeGenerator (11)
   m_TagString: Untagged
@@ -391,7 +615,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 497046}
-  - 114: {fileID: 11472138}
+  - 114: {fileID: 11454928}
   m_Layer: 0
   m_Name: OfficeGenerator (5)
   m_TagString: Untagged
@@ -407,9 +631,25 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 423166}
-  - 114: {fileID: 11468486}
+  - 114: {fileID: 11460402}
   m_Layer: 0
   m_Name: OfficeGenerator (18)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &199756
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 412886}
+  - 114: {fileID: 11429620}
+  m_Layer: 0
+  m_Name: OfficeGenerator (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -423,7 +663,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 408258}
-  - 114: {fileID: 11427552}
+  - 114: {fileID: 11459286}
   m_Layer: 0
   m_Name: OfficeGenerator
   m_TagString: Untagged
@@ -431,6 +671,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &403146
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143878}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 63.7900009, y: -20.041954, z: 5.83011627}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 475700}
+  m_RootOrder: 31
+--- !u!4 &404254
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 191996}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 48.5350037, y: -20.041954, z: 12.1599998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 475700}
+  m_RootOrder: 33
 --- !u!4 &404428
 Transform:
   m_ObjectHideFlags: 1
@@ -438,11 +702,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 170744}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.404892, y: -20.041954, z: 5.83011627}
+  m_LocalPosition: {x: 63.7900009, y: -20.041954, z: 24.3199997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 475700}
-  m_RootOrder: 22
+  m_RootOrder: 37
 --- !u!4 &407940
 Transform:
   m_ObjectHideFlags: 1
@@ -479,6 +743,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 475700}
   m_RootOrder: 8
+--- !u!4 &412706
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 175260}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 44.0599976, y: -20.041954, z: 27.5450001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 475700}
+  m_RootOrder: 38
+--- !u!4 &412886
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199756}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 58.2550049, y: -20.041954, z: 12.1599998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 475700}
+  m_RootOrder: 35
 --- !u!4 &412976
 Transform:
   m_ObjectHideFlags: 1
@@ -503,6 +791,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 475700}
   m_RootOrder: 16
+--- !u!4 &421290
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126670}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 48.5349998, y: -20.041954, z: 5.83011627}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 475700}
+  m_RootOrder: 28
 --- !u!4 &422246
 Transform:
   m_ObjectHideFlags: 1
@@ -563,6 +863,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 475700}
   m_RootOrder: 3
+--- !u!4 &428914
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122108}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 26.404892, y: -20.041954, z: 5.83011627}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 475700}
+  m_RootOrder: 22
 --- !u!4 &434724
 Transform:
   m_ObjectHideFlags: 1
@@ -575,6 +887,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 475700}
   m_RootOrder: 2
+--- !u!4 &446402
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 162396}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 53, y: -20.041954, z: 5.83011627}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 475700}
+  m_RootOrder: 29
 --- !u!4 &456040
 Transform:
   m_ObjectHideFlags: 1
@@ -587,6 +911,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 475700}
   m_RootOrder: 15
+--- !u!4 &458960
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165720}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.34489441, y: -20.041954, z: -8.45788193}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 475700}
+  m_RootOrder: 14
+--- !u!4 &461666
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108176}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 53, y: -20.041954, z: 27.5450001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 475700}
+  m_RootOrder: 40
 --- !u!4 &464502
 Transform:
   m_ObjectHideFlags: 1
@@ -618,7 +966,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 165216}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -146.71489, y: 20.041954, z: 50.1978836}
+  m_LocalPosition: {x: -146.714905, y: 20.0400009, z: 50.1977997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 479706}
@@ -635,7 +983,7 @@ Transform:
   - {fileID: 482162}
   - {fileID: 412976}
   - {fileID: 422246}
-  - {fileID: 498434}
+  - {fileID: 458960}
   - {fileID: 456040}
   - {fileID: 414642}
   - {fileID: 472762}
@@ -643,12 +991,39 @@ Transform:
   - {fileID: 495578}
   - {fileID: 424388}
   - {fileID: 424140}
-  - {fileID: 404428}
+  - {fileID: 428914}
   - {fileID: 497046}
   - {fileID: 479194}
   - {fileID: 464502}
+  - {fileID: 498434}
+  - {fileID: 476608}
+  - {fileID: 421290}
+  - {fileID: 446402}
+  - {fileID: 498606}
+  - {fileID: 403146}
+  - {fileID: 480256}
+  - {fileID: 404254}
+  - {fileID: 483256}
+  - {fileID: 412886}
+  - {fileID: 495580}
+  - {fileID: 404428}
+  - {fileID: 412706}
+  - {fileID: 491232}
+  - {fileID: 461666}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &476608
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105940}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 44.0600014, y: -20.041954, z: 5.83011627}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 475700}
+  m_RootOrder: 27
 --- !u!4 &477852
 Transform:
   m_ObjectHideFlags: 1
@@ -709,6 +1084,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 475700}
   m_RootOrder: 7
+--- !u!4 &480256
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 110358}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 44.0599976, y: -20.041954, z: 12.1599998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 475700}
+  m_RootOrder: 32
 --- !u!4 &482162
 Transform:
   m_ObjectHideFlags: 1
@@ -721,6 +1108,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 475700}
   m_RootOrder: 11
+--- !u!4 &483256
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104354}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 53, y: -20.041954, z: 12.1599998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 475700}
+  m_RootOrder: 34
 --- !u!4 &484634
 Transform:
   m_ObjectHideFlags: 1
@@ -745,6 +1144,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 475700}
   m_RootOrder: 18
+--- !u!4 &491232
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 127550}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 48.5350037, y: -20.041954, z: 27.5450001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 475700}
+  m_RootOrder: 39
 --- !u!4 &495578
 Transform:
   m_ObjectHideFlags: 1
@@ -757,6 +1168,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 475700}
   m_RootOrder: 19
+--- !u!4 &495580
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146322}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 63.7900009, y: -20.041954, z: 12.1599998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 475700}
+  m_RootOrder: 36
 --- !u!4 &497046
 Transform:
   m_ObjectHideFlags: 1
@@ -776,237 +1199,24 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 170052}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.34489441, y: -20.041954, z: -8.45788193}
+  m_LocalPosition: {x: 1.34489441, y: -20.041954, z: -3.00999999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 475700}
-  m_RootOrder: 14
---- !u!114 &11401422
-MonoBehaviour:
+  m_RootOrder: 26
+--- !u!4 &498606
+Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 163078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6079500c871323409c77deffdebe329, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x_coordinaatdeur: 0
-  z_coordinaatdeur: 3
-  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
-  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
-  desk: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
-  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
-  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
-  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
-  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
-  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
-  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
-  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
-  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
-  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
---- !u!114 &11402916
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 147394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6079500c871323409c77deffdebe329, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x_coordinaatdeur: 3
-  z_coordinaatdeur: 0
-  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
-  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
-  desk: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
-  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
-  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
-  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
-  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
-  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
-  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
-  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
-  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
-  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
---- !u!114 &11407544
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 141732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6079500c871323409c77deffdebe329, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x_coordinaatdeur: 0
-  z_coordinaatdeur: 3
-  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
-  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
-  desk: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
-  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
-  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
-  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
-  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
-  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
-  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
-  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
-  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
-  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
---- !u!114 &11413564
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 170052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6079500c871323409c77deffdebe329, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x_coordinaatdeur: 3
-  z_coordinaatdeur: 0
-  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
-  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
-  desk: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
-  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
-  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
-  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
-  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
-  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
-  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
-  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
-  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
-  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
---- !u!114 &11416960
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 173452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6079500c871323409c77deffdebe329, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x_coordinaatdeur: 3
-  z_coordinaatdeur: 5
-  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
-  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
-  desk: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
-  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
-  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
-  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
-  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
-  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
-  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
-  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
-  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
-  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
---- !u!114 &11423684
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 123404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6079500c871323409c77deffdebe329, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x_coordinaatdeur: 0
-  z_coordinaatdeur: 3
-  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
-  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
-  desk: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
-  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
-  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
-  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
-  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
-  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
-  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
-  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
-  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
-  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
---- !u!114 &11427552
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 199904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6079500c871323409c77deffdebe329, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x_coordinaatdeur: 3
-  z_coordinaatdeur: 0
-  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
-  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
-  desk: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
-  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
-  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
-  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
-  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
-  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
-  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
-  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
-  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
-  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
---- !u!114 &11439852
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 183796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6079500c871323409c77deffdebe329, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x_coordinaatdeur: 0
-  z_coordinaatdeur: 3
-  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
-  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
-  desk: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
-  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
-  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
-  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
-  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
-  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
-  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
-  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
-  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
-  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
---- !u!114 &11440332
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 106594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6079500c871323409c77deffdebe329, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x_coordinaatdeur: 0
-  z_coordinaatdeur: 3
-  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
-  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
-  desk: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
-  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
-  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
-  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
-  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
-  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
-  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
-  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
-  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
-  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
---- !u!114 &11453654
+  m_GameObject: {fileID: 186888}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 58.2550011, y: -20.041954, z: 5.83011627}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 475700}
+  m_RootOrder: 30
+--- !u!114 &11405516
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1014,49 +1224,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 173250}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6079500c871323409c77deffdebe329, type: 3}
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x_coordinaatdeur: 3
-  z_coordinaatdeur: 5
-  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 1
+  ZLowSide: 0
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
   stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
-  desk: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
-  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
-  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
   computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
   computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
   computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
   computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
   file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
-  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
---- !u!114 &11454794
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 158304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6079500c871323409c77deffdebe329, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x_coordinaatdeur: 3
-  z_coordinaatdeur: 5
-  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
-  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
-  desk: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
   Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
-  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
-  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
-  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
-  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
-  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
-  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
---- !u!114 &11455064
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11406948
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1064,149 +1254,59 @@ MonoBehaviour:
   m_GameObject: {fileID: 129590}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6079500c871323409c77deffdebe329, type: 3}
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x_coordinaatdeur: 3
-  z_coordinaatdeur: 0
-  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 0
+  ZLowSide: 1
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
   stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
-  desk: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
-  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
-  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
   computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
   computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
   computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
   computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
   file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
---- !u!114 &11459978
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11409296
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 150332}
+  m_GameObject: {fileID: 110358}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6079500c871323409c77deffdebe329, type: 3}
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x_coordinaatdeur: 3
-  z_coordinaatdeur: 5
-  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 1
+  ZLowSide: 0
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
   stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
-  desk: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
-  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
-  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
   computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
   computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
   computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
   computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
   file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
-  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
---- !u!114 &11462274
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 170288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6079500c871323409c77deffdebe329, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x_coordinaatdeur: 3
-  z_coordinaatdeur: 5
-  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
-  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
-  desk: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
   Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
-  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
-  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
-  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
-  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
-  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
-  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
-  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
---- !u!114 &11465714
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 163200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6079500c871323409c77deffdebe329, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x_coordinaatdeur: 3
-  z_coordinaatdeur: 5
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
-  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
-  desk: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
-  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
-  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
-  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
-  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
-  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
-  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
-  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
-  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
---- !u!114 &11466318
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 195722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6079500c871323409c77deffdebe329, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x_coordinaatdeur: 3
-  z_coordinaatdeur: 0
-  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
-  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
-  desk: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
-  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
-  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
-  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
-  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
-  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
-  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
-  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
-  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
-  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
---- !u!114 &11467128
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 178024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6079500c871323409c77deffdebe329, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x_coordinaatdeur: 3
-  z_coordinaatdeur: 5
-  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
-  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
-  desk: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
-  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
-  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
-  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
-  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
-  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
-  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
-  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
-  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
-  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
---- !u!114 &11467592
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11409550
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1214,149 +1314,119 @@ MonoBehaviour:
   m_GameObject: {fileID: 187452}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6079500c871323409c77deffdebe329, type: 3}
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x_coordinaatdeur: 3
-  z_coordinaatdeur: 0
-  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 0
+  ZLowSide: 1
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
   stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
-  desk: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
-  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
-  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
   computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
   computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
   computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
   computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
   file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
---- !u!114 &11468486
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11409984
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 196130}
+  m_GameObject: {fileID: 147394}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6079500c871323409c77deffdebe329, type: 3}
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x_coordinaatdeur: 3
-  z_coordinaatdeur: 5
-  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 0
+  ZLowSide: 1
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
   stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
-  desk: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
-  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
-  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
   computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
   computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
   computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
   computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
   file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
---- !u!114 &11472138
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11410160
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 196032}
+  m_GameObject: {fileID: 183796}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6079500c871323409c77deffdebe329, type: 3}
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x_coordinaatdeur: 0
-  z_coordinaatdeur: 3
-  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  XHighSide: 0
+  XLowSide: 1
+  ZHighSide: 0
+  ZLowSide: 0
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
   stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
-  desk: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
-  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
-  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
   computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
   computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
   computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
   computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
   file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
---- !u!114 &11474292
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11412184
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 121598}
+  m_GameObject: {fileID: 178024}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6079500c871323409c77deffdebe329, type: 3}
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x_coordinaatdeur: 6
-  z_coordinaatdeur: 3
-  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 1
+  ZLowSide: 0
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
   stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
-  desk: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
-  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
-  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
   computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
   computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
   computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
   computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
   file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
-  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
---- !u!114 &11478934
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 143522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6079500c871323409c77deffdebe329, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x_coordinaatdeur: 3
-  z_coordinaatdeur: 0
-  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
-  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
-  desk: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
   Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
-  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
-  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
-  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
-  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
-  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
-  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
-  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
---- !u!114 &11484374
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 131278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6079500c871323409c77deffdebe329, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x_coordinaatdeur: 3
-  z_coordinaatdeur: 5
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
-  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
-  desk: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
-  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
-  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
-  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
-  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
-  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
-  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
-  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
-  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
---- !u!114 &11487016
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11413580
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1364,24 +1434,89 @@ MonoBehaviour:
   m_GameObject: {fileID: 175272}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6079500c871323409c77deffdebe329, type: 3}
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x_coordinaatdeur: 3
-  z_coordinaatdeur: 0
-  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 0
+  ZLowSide: 1
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
   stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
-  desk: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
-  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
-  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
   computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
   computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
   computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
   computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
   file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
---- !u!114 &11495390
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11413916
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 0
+  ZLowSide: 1
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11418650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 173452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 1
+  ZLowSide: 0
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11420128
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1389,24 +1524,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 170744}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6079500c871323409c77deffdebe329, type: 3}
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x_coordinaatdeur: 0
-  z_coordinaatdeur: 3
-  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 1
+  ZLowSide: 0
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
   stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
-  desk: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
-  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
-  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
   computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
   computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
   computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
   computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
   file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
---- !u!114 &11497280
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 0}
+--- !u!114 &11420146
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1414,23 +1554,898 @@ MonoBehaviour:
   m_GameObject: {fileID: 164674}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6079500c871323409c77deffdebe329, type: 3}
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x_coordinaatdeur: 3
-  z_coordinaatdeur: 0
-  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 0
+  ZLowSide: 1
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
   stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
-  desk: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
-  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
-  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
   computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
   computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
   computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
   computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
   file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11420244
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 0
+  ZLowSide: 1
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11427374
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 1
+  ZLowSide: 0
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11427854
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 131278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 1
+  ZLowSide: 0
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11429620
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 1
+  ZLowSide: 0
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 0}
+--- !u!114 &11431008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 158304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 1
+  ZLowSide: 0
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11434222
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 146322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 1
+  ZLowSide: 0
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 0}
+--- !u!114 &11436636
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 127550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 1
+  ZLowSide: 0
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 0}
+--- !u!114 &11437110
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 175260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 1
+  ZLowSide: 0
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 0}
+--- !u!114 &11440156
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 1
+  ZHighSide: 0
+  ZLowSide: 0
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11445168
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 1
+  ZHighSide: 0
+  ZLowSide: 0
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11454320
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 1
+  ZHighSide: 0
+  ZLowSide: 0
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11454928
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 1
+  ZHighSide: 0
+  ZLowSide: 0
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11459286
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 0
+  ZLowSide: 1
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11459288
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 0
+  ZLowSide: 1
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11459650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 0
+  ZLowSide: 1
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11460014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 0
+  ZLowSide: 1
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11460402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 1
+  ZLowSide: 0
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11461294
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 191996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 1
+  ZLowSide: 0
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11462126
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 1
+  ZLowSide: 0
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11462596
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 0
+  ZLowSide: 1
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11463896
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 1
+  ZLowSide: 0
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 0}
+--- !u!114 &11472454
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 1
+  ZLowSide: 0
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11475976
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 1
+  ZLowSide: 0
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 0}
+--- !u!114 &11483206
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 1
+  XLowSide: 0
+  ZHighSide: 0
+  ZLowSide: 0
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11485484
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 1
+  ZHighSide: 0
+  ZLowSide: 0
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11488870
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 1
+  ZHighSide: 0
+  ZLowSide: 0
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11489000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 195722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 0
+  ZLowSide: 1
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11495370
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 1
+  ZHighSide: 0
+  ZLowSide: 0
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
+--- !u!114 &11499990
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 162396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5dc182027991604791887ae01cf0c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XHighSide: 0
+  XLowSide: 0
+  ZHighSide: 0
+  ZLowSide: 1
+  matrixDeur: []
+  buro: {fileID: 137024, guid: b8a6bf52f45ecac4884657e1fd65b4bd, type: 2}
+  stoel: {fileID: 132486, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
+  computer1: {fileID: 104578, guid: 8ad2a3749070c9e4a966c8b683c6bd69, type: 2}
+  computer2: {fileID: 161670, guid: ec152c70b87ad2f45a7ff24428675578, type: 2}
+  computer3: {fileID: 173822, guid: bcefd0c41071245419a5655bf07291ff, type: 2}
+  computer4: {fileID: 158334, guid: 0ec9fc6bbef395940afa53bfdae2d823, type: 2}
+  computer5: {fileID: 110098, guid: 55f759909623b5a49be7d845bd96a01c, type: 2}
+  file: {fileID: 165730, guid: 8f4a380b378d11045bdad19f948b9c96, type: 2}
+  Prullenbak: {fileID: 104474, guid: ff1bbe44f0f0b4540820ea05fa973d8d, type: 2}
+  Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
+  archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
+  sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
