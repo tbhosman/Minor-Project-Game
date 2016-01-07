@@ -5,6 +5,8 @@ public class InventoryManager : MonoBehaviour {
 
 	public GameObject SecurityCodeNote;
 	public GameObject ScaryNote;
+	public GameObject Key;
+	public GameObject Crowbar;
 
 	public GameObject SecurityCodeNoteButtonObject;
 	public GameObject ScaryNoteButtonObject;

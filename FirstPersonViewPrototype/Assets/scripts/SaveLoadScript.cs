@@ -14,9 +14,9 @@ public class SaveLoadScript : MonoBehaviour {
 	public GameObject Player;
 	public GameObject Antag;
 	public bool[] DoorOpened;
+	public bool[] keyObjectsPickedUp;
 
 	void Awake(){
-		Debug.Log ("Game Awake");
 		savertimeplayed = 0;
 		Load ();
 	}
@@ -36,6 +36,11 @@ public class SaveLoadScript : MonoBehaviour {
 		saver.playercoordinates = new float[3];
 		saver.dooropened = new bool[DoorOpened.Length];
 		//Stuff to save!!!
+		saver.ObjectsPickedUp = keyObjectsPickedUp;
+
+		saver.PlayerYRotation = Player.transform.eulerAngles.y;
+
+		Debug.Log ("Y rotation = " + saver.PlayerYRotation);
 		for (int i = 0; i < ObjectsToSave.Length; i++ ) {
 			saver.active[i] = ObjectsToSave[i].activeSelf;
 		}
@@ -69,12 +74,19 @@ public class SaveLoadScript : MonoBehaviour {
 			fStream.Close ();
 
 			//Stuff to load!!!
+			keyObjectsPickedUp = saver.ObjectsPickedUp;
+
+			Debug.Log ("Y rotation = " + saver.PlayerYRotation);
+
+			Player.transform.rotation = Quaternion.Euler(0,saver.PlayerYRotation,0);
+
 			for (int i = 0; i < ObjectsToSave.Length; i++ ) {
 				ObjectsToSave[i].SetActive (saver.active[i]);
 			}
 
 			for (int i = 0; i < DoorOpened.Length; i++ ) {
 				DoorOpened[i] = saver.dooropened[i];
+				Debug.Log ("Door opened " + i + " " + DoorOpened[i]);
 			}
 
 			savertimeplayed = saver.timeplayed;
@@ -107,5 +119,7 @@ public class SaveLoadScript : MonoBehaviour {
 		public float timeplayed;
 		public bool[] active;
 		public bool[] dooropened;
+		public float PlayerYRotation;
+		public bool[] ObjectsPickedUp;
 	}
 }
