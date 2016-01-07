@@ -39,6 +39,8 @@ public class ProceduralGenerationStorage : MonoBehaviour {
         rijZ = 1.6638886666666666666666666666666666666666666666666666f;
         kolomZ = 3.292858f;
         
+
+        //makes sure the door is always free
         if (deurPositieveXRichting) {
             arrayZ[5, 0] = 1;
             arrayZ[5, 1] = 1;
@@ -70,6 +72,7 @@ public class ProceduralGenerationStorage : MonoBehaviour {
             arrayZ[3, 0] = 1;
         }
 
+        //generates containers
         if (!deurNegatieveXRichting)
         {
             if (arrayZ[0, 1] != 1)

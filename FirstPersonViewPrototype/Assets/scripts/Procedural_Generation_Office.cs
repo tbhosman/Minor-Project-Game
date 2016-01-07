@@ -17,8 +17,6 @@ public class Procedural_Generation_Office : MonoBehaviour {
     private int kolom;
     private int rotation;
     private int whiteboard;
-
-    private float[] matrixDeurY;
     private int aantaldozen;
 
 
@@ -27,7 +25,6 @@ public class Procedural_Generation_Office : MonoBehaviour {
     public bool ZHighSide;
     public bool ZLowSide;
 
-    public Vector2[] matrixDeur;
     public GameObject buro;
     public GameObject stoel;
     private GameObject computerkeuze;
@@ -59,9 +56,9 @@ public class Procedural_Generation_Office : MonoBehaviour {
         matrixGrootteZ = (int)(scalingZ*2);
         matrixHokjeX = scalingX * 2 / matrixGrootteX;
         matrixHokjeZ = scalingZ * 2 / matrixGrootteZ;
-        Debug.Log("X: " + matrixHokjeX + "Z: " + matrixHokjeZ);
         matrix = new int[matrixGrootteX, matrixGrootteZ];
 
+        //make sure nothing spawns in front of the door
         if (XHighSide) { matrix[matrixGrootteX-1, (int)((matrixGrootteZ - 1) / 2)] = 1; if (matrixGrootteZ % 2 == 0) { matrix[matrixGrootteX - 1,1 + (int)((matrixGrootteZ - 1) / 2)] = 1; } }
         if (ZHighSide) { matrix[(int)((matrixGrootteX - 1) / 2), matrixGrootteZ-1 ] = 1; if (matrixGrootteX % 2 == 0) { matrix[1+(int)((matrixGrootteX - 1) / 2), (matrixGrootteZ - 1)] = 1; } }
         if (XLowSide) { matrix[0, (int)((matrixGrootteZ - 1) / 2)] = 1; if (matrixGrootteZ % 2 == 0) { matrix[0, 1 + (int)((matrixGrootteZ - 1) / 2)] = 1; } }
@@ -71,7 +68,6 @@ public class Procedural_Generation_Office : MonoBehaviour {
         if (GameObject.FindWithTag("officeKey") == null)
         {
             kamernummer++;
-            Debug.Log(kamernummer);
         }
 
         //generates desks on the south side of the room
@@ -157,7 +153,7 @@ public class Procedural_Generation_Office : MonoBehaviour {
                     clonestoel.transform.localScale = new Vector3(0.03f * matrixHokjeX, 0.03f, 0.03f * matrixHokjeZ);
 
                     //een kans om een sleutel te genereren
-                    if (GameObject.FindWithTag("officeKey") == null && (Random.Range(0, 50) < 1 || kamernummer == 26))
+                    if (GameObject.FindWithTag("officeKey") == null && (Random.Range(0, 25) < 1 || kamernummer == 26))
                     {
                         Instantiate(sleutel, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2 - Random.Range(-0.18f, -0.22f), transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ + 3 * matrixHokjeZ / 2-0.2f), Quaternion.Euler(180, 0, 0));
                     }
@@ -208,6 +204,7 @@ public class Procedural_Generation_Office : MonoBehaviour {
                     break;
             }
 
+            //generates the desks with office equipment according to the direction
             if (matrix[kolom, rij] == 0)
             {
                 if (rotation == 180 && kolom < matrixGrootteX - 1 && matrix[kolom + 1, rij] == 0 && matrix[kolom + 1, rij - 1] == 0)
@@ -325,7 +322,7 @@ public class Procedural_Generation_Office : MonoBehaviour {
     }
 	
 
-
+    //show the generation matrix in the scene. is only used for debugging purposes
     void OnDrawGizmos()
     {
         for (int i = 0; i < matrixGrootteX; i++)
