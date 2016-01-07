@@ -34861,7 +34861,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1235712511}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.5, y: 12.9949999, z: 23.0799999}
+  m_LocalPosition: {x: -26.5, y: 12.0299997, z: 23.0799999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1847230569}
@@ -46671,7 +46671,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 41
+  m_RootOrder: 40
 --- !u!114 &1647620358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50829,6 +50829,7 @@ MonoBehaviour:
   Antag: {fileID: 287552371}
   DoorOpened: 000000
   keyObjectsPickedUp: 000000
+  PlayerID: 0
 --- !u!1 &1786643225
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,9 +20,15 @@ public class DataAquisitie : MonoBehaviour {
 		yield return www;
 		
 		if (www.isDone) {
+			if(SaveLoadManager.GetComponent<SaveLoadScript>().PlayerID == 0){
 			int user_id = int.Parse (www.text);
-			PlayerPrefs.SetInt ("ID", user_id); //DEZE MOET ER UIT BIJ TESTEN!
-			Debug.Log ("Player ID = " + user_id);	
+			PlayerPrefs.SetInt ("ID", user_id);
+				Debug.Log ("New Player, ID = " + user_id);
+			}
+			else{
+			int user_id = PlayerPrefs.GetInt("ID");
+			Debug.Log ("Player ID = " + user_id);
+			}
 		}
 
 	}

@@ -19,8 +19,6 @@ public class Procedural_Generation_Lab : MonoBehaviour {
         Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 2.5f, transform.position.z), Vector3.back, out hitZ);
         scalingX = hitX.distance;
         scalingZ = hitZ.distance;
-
-        Debug.Log("scalingX: " + scalingX + "  scalingz: " + scalingZ);
         matrixGrootteX = (int)(scalingX / 2);
         matrixGrootteZ = (int)(scalingZ / 2);
         matrixHokjeX = scalingX  / matrixGrootteX;
