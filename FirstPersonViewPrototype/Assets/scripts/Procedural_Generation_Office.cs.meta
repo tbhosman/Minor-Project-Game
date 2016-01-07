@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a5dc182027991604791887ae01cf0c5d
-timeCreated: 1451989729
+timeCreated: 1452159894
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
@@ -17,6 +17,8 @@ MonoImporter:
   - Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   - archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   - sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  - pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  - boek: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

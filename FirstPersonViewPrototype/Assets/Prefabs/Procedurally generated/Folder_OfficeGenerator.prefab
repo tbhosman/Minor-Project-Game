@@ -1244,6 +1244,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11406948
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1272,6 +1274,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11409296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1300,6 +1304,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11409550
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1328,6 +1334,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11409984
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1356,6 +1364,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11410160
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1384,6 +1394,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11412184
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1412,6 +1424,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11413580
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1440,6 +1454,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11413916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1468,6 +1484,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11418650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1496,6 +1514,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11420128
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1524,6 +1544,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 0}
 --- !u!114 &11420146
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1552,6 +1574,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11420244
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1580,6 +1604,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11427374
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1608,6 +1634,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11427854
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1636,6 +1664,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11429620
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1664,6 +1694,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 0}
 --- !u!114 &11431008
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1692,6 +1724,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11434222
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1720,6 +1754,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 0}
 --- !u!114 &11436636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1748,6 +1784,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 0}
 --- !u!114 &11437110
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1776,6 +1814,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 0}
 --- !u!114 &11440156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1804,6 +1844,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11445168
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1832,6 +1874,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11454320
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1860,6 +1904,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11454928
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1888,6 +1934,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11459286
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1916,6 +1964,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11459288
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1944,6 +1994,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11459650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1972,6 +2024,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11460014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2000,6 +2054,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11460402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2028,6 +2084,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11461294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2056,6 +2114,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11462126
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2084,6 +2144,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11462596
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2112,6 +2174,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11463896
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2140,6 +2204,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 0}
 --- !u!114 &11472454
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2168,6 +2234,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11475976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2196,6 +2264,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 0}
 --- !u!114 &11483206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2224,6 +2294,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11485484
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2252,6 +2324,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11488870
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2280,6 +2354,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11489000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2308,6 +2384,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11495370
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2336,6 +2414,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!114 &11499990
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2364,6 +2444,8 @@ MonoBehaviour:
   Whiteboard: {fileID: 169796, guid: b87a8968774573e4e85b85d5529a7031, type: 2}
   archiefkast: {fileID: 136486, guid: a216be042bcc8ff4ca4107924bbbe3e2, type: 2}
   sleutel: {fileID: 101952, guid: 0202b8c1a1361f645b1484e160204628, type: 2}
+  pennenbakje: {fileID: 101290, guid: 768a2b132bf339742a8e878819ce42ce, type: 2}
+  boek: {fileID: 141440, guid: 13f133d24db975b4b992708a76065399, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
