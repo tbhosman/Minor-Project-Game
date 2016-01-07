@@ -41,9 +41,10 @@ public class Procedural_Generation_Office : MonoBehaviour {
     public GameObject pennenbakje;
     public GameObject boek;
     private GameObject kantoorartikel;
+	public GameObject SaveLoadManager;
 
     void Start () {
-
+		SaveLoadManager = GameObject.Find ("SaveLoadManager");
         //sends a raycast to obtain information about the dimensions of the room and scale the generation matrix accordingly
         RaycastHit hitX;
         RaycastHit hitZ;
@@ -153,7 +154,7 @@ public class Procedural_Generation_Office : MonoBehaviour {
                     clonestoel.transform.localScale = new Vector3(0.03f * matrixHokjeX, 0.03f, 0.03f * matrixHokjeZ);
 
                     //een kans om een sleutel te genereren
-                    if (GameObject.FindWithTag("officeKey") == null && (Random.Range(0, 25) < 1 || kamernummer == 26))
+                    if ((GameObject.FindWithTag("officeKey") == null && (Random.Range(0, 25) < 1 || kamernummer == 26))&&!SaveLoadManager.GetComponent<SaveLoadScript>().keyObjectsPickedUp[0])
                     {
                         Instantiate(sleutel, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2 - Random.Range(-0.18f, -0.22f), transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ + 3 * matrixHokjeZ / 2-0.2f), Quaternion.Euler(180, 0, 0));
                     }

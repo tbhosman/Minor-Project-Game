@@ -39,8 +39,6 @@ public class SaveLoadScript : MonoBehaviour {
 		saver.ObjectsPickedUp = keyObjectsPickedUp;
 
 		saver.PlayerYRotation = Player.transform.eulerAngles.y;
-
-		Debug.Log ("Y rotation = " + saver.PlayerYRotation);
 		for (int i = 0; i < ObjectsToSave.Length; i++ ) {
 			saver.active[i] = ObjectsToSave[i].activeSelf;
 		}
@@ -76,7 +74,6 @@ public class SaveLoadScript : MonoBehaviour {
 			//Stuff to load!!!
 			keyObjectsPickedUp = saver.ObjectsPickedUp;
 
-			Debug.Log ("Y rotation = " + saver.PlayerYRotation);
 
 			Player.transform.rotation = Quaternion.Euler(0,saver.PlayerYRotation,0);
 
@@ -86,7 +83,6 @@ public class SaveLoadScript : MonoBehaviour {
 
 			for (int i = 0; i < DoorOpened.Length; i++ ) {
 				DoorOpened[i] = saver.dooropened[i];
-				Debug.Log ("Door opened " + i + " " + DoorOpened[i]);
 			}
 
 			savertimeplayed = saver.timeplayed;
