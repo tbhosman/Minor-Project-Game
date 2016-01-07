@@ -76,7 +76,7 @@ public class SceneFadeInOut : MonoBehaviour
 		// If the screen is almost black...
 		if (fadeTexture.color.a >= 0.95f) {
 			// ... reload the level.
-			if (scene == null) Application.Quit();
+			if (scene == "") Application.Quit();
 			else Application.LoadLevel (scene);
 		}
 	}

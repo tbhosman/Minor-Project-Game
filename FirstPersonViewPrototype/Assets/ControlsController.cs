@@ -14,6 +14,8 @@ public class ControlsController : MonoBehaviour {
 	}
 
 	public void BackToMenu(){
-		Application.LoadLevel ("menu");
+		GameObject.Find ("SceneFader").GetComponent<SceneFadeInOut> ().scene = "menu";
+		GameObject.Find ("SceneFader").GetComponent<SceneFadeInOut> ().sceneEnding = true;
+		//Application.LoadLevel ("menu");
 	}
 }
