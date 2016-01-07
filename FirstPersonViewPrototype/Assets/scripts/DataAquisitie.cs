@@ -33,8 +33,11 @@ public class DataAquisitie : MonoBehaviour {
 		if (item == 1){
 			SaveLoadManager.GetComponent<SaveLoadScript>().keyObjectsPickedUp[0] = true;
 		};
-		if (item == 3) {
+		if (item == 2) {
 			SaveLoadManager.GetComponent<SaveLoadScript>().keyObjectsPickedUp[1] = true;
+		}
+		if (item == 3) {
+			SaveLoadManager.GetComponent<SaveLoadScript>().keyObjectsPickedUp[2] = true;
 		}
 		SaveLoadManager.GetComponent<SaveLoadScript> ().Save ();
 		Debug.Log ("Found item: " + item + "  on time: " + timeTaken);
