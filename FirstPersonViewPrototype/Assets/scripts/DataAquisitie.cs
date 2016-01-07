@@ -30,6 +30,12 @@ public class DataAquisitie : MonoBehaviour {
 	public void PickedUpItem (int item) {
 		savetimeplayed = SaveLoadManager.GetComponent<SaveLoadScript> ().savertimeplayed;
 		timeTaken = Mathf.RoundToInt ((Time.timeSinceLevelLoad + savetimeplayed)/ 60);
+		if (item == 1){
+			SaveLoadManager.GetComponent<SaveLoadScript>().keyObjectsPickedUp[0] = true;
+		};
+		if (item == 3) {
+			SaveLoadManager.GetComponent<SaveLoadScript>().keyObjectsPickedUp[1] = true;
+		}
 		SaveLoadManager.GetComponent<SaveLoadScript> ().Save ();
 		Debug.Log ("Found item: " + item + "  on time: " + timeTaken);
 		StartCoroutine(SendPickedUpItem (item));
@@ -43,6 +49,7 @@ public class DataAquisitie : MonoBehaviour {
 	public void OpenedDoor (int door) {
 		savetimeplayed = SaveLoadManager.GetComponent<SaveLoadScript> ().savertimeplayed;
 		timeTaken = Mathf.RoundToInt ((Time.timeSinceLevelLoad + savetimeplayed)/ 60);
+		SaveLoadManager.GetComponent<SaveLoadScript> ().DoorOpened [door - 1] = true;
 		SaveLoadManager.GetComponent<SaveLoadScript> ().Save ();
 		Debug.Log ("Opened door: " + door + "  on time: " + timeTaken);
 		StartCoroutine(SendOpenedDoor (door));

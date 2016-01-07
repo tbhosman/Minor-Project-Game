@@ -11,6 +11,7 @@ TagManager:
   - officeKey
   - Enemy
   - SecurityNote
+  - ProcedureHelp
   layers:
   - Default
   - TransparentFX

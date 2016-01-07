@@ -14083,6 +14083,49 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: .25
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &564307796
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 564307798}
+  - 114: {fileID: 564307797}
+  m_Layer: 0
+  m_Name: ProcedurallyGeneratedHelp
+  m_TagString: ProcedureHelp
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &564307797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 564307796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae9b31d4ee05b8b4595056daa564a094, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Inventory: {fileID: 1838304185}
+  Player: {fileID: 802715136}
+  KeysIcon: {fileID: 1483879227}
+  SecurityNoteButton: {fileID: 1916320949}
+--- !u!4 &564307798
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 564307796}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -130.516571, y: .87104702, z: 59.985733}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 40
 --- !u!1 &564546583
 GameObject:
   m_ObjectHideFlags: 0
@@ -32407,8 +32450,11 @@ MonoBehaviour:
   PlayerinfoText: Looks like a security panel! Press E to interact
   OnClosedText: You need the security code to be able to open this door
   OnOpenText: Enter the code you found on the note!
+  Inventory: {fileID: 1838304185}
   SecurityPanelCanvas: {fileID: 118609566}
   SecurityPanelGameObject: {fileID: 1127650299}
+  SaveLoadManager: {fileID: 1781624102}
+  MachineRoomDoor: {fileID: 2075862146}
 --- !u!65 &1208635965
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34714,6 +34760,10 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: .25
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1293036800 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 197028, guid: 38471986e4c54a042b8334888fd166e1, type: 2}
+  m_PrefabInternal: {fileID: 1864580359}
 --- !u!1 &1298123399
 GameObject:
   m_ObjectHideFlags: 0
@@ -45721,6 +45771,14 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11499084, guid: e44bbd0cba7ddef48958973d85947dba, type: 2}
+      propertyPath: Key
+      value: 
+      objectReference: {fileID: 1483879227}
+    - target: {fileID: 11499084, guid: e44bbd0cba7ddef48958973d85947dba, type: 2}
+      propertyPath: Crowbar
+      value: 
+      objectReference: {fileID: 436355951}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e44bbd0cba7ddef48958973d85947dba, type: 2}
   m_IsPrefabParent: 0
@@ -47903,11 +47961,13 @@ MonoBehaviour:
   - {fileID: 436355951}
   - {fileID: 1483879227}
   - {fileID: 1634370794}
+  - {fileID: 1293036800}
   savertimeplayed: 0
   Playerlight: {fileID: 1386179270}
   Player: {fileID: 802715136}
   Antag: {fileID: 287552371}
   DoorOpened: 000000
+  keyObjectsPickedUp: 0000
 --- !u!1 &1786643225
 GameObject:
   m_ObjectHideFlags: 0
@@ -49645,7 +49705,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 452804, guid: 38471986e4c54a042b8334888fd166e1, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 11498262, guid: 38471986e4c54a042b8334888fd166e1, type: 2}
       propertyPath: InspectInstructions
@@ -55418,6 +55478,10 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300202, guid: 1a7272ea20ead8f42bc6dc0614f395fc, type: 3}
+--- !u!1 &2075862146 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 196658, guid: dc142bafbdee8984d8a9edef1e40a9ed, type: 2}
+  m_PrefabInternal: {fileID: 1423737000}
 --- !u!1 &2077535195
 GameObject:
   m_ObjectHideFlags: 0
