@@ -156,7 +156,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 20
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -204,7 +204,7 @@ MonoBehaviour:
   InspectInstructions: {fileID: 11495328, guid: 00736b84187598b44a6f171576041158,
     type: 2}
   displayText: Looks like a note! Press E to pick it up
-  afterPickupText: you found a note with a code on it!
+  afterPickupText: you found a note with a code on it! Press i to inspect your inventory
   Player: {fileID: 0}
   Inventory: {fileID: 0}
   IsKey: 0
@@ -247,6 +247,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: IsSecurityCodeNote
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Range
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: afterPickupText
+      value: you found a note with a code on it! Press i to inspect your inventory
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

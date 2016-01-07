@@ -270,7 +270,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 20
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -305,13 +305,18 @@ MonoBehaviour:
   InspectInstructions: {fileID: 11495328, guid: 00736b84187598b44a6f171576041158,
     type: 2}
   displayText: Looks like a key! Press E to pick it up
-  afterPickupText: You found a key!
+  afterPickupText: to toYou found a key! Press i to inspect your inventory
+  Player: {fileID: 0}
+  Inventory: {fileID: 0}
   IsKey: 1
   IsSecurityCodeNote: 0
   IsScaryNote: 0
   KeyObject: {fileID: 122446}
   KeyPicture: {fileID: 194632, guid: 726d515bf5760da4caa4053ec62ab230, type: 2}
   DataAquisitie: {fileID: 172682, guid: d7fdb2ca5098cbc4ba3c6161cac8c52b, type: 2}
+  IsFlashlight: 0
+  flashlight: {fileID: 0}
+  ProcedureHelp: {fileID: 0}
 --- !u!114 &11499204
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -376,6 +381,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Size.z
       value: 14.8362265
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: afterPickupText
+      value: to toYou found a key! Press i to inspect your inventory
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Range
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

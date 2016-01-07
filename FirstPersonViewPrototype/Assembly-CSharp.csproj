@@ -127,6 +127,7 @@
      <Compile Include="Assets\scripts\PlayAudioClip.cs" />
      <Compile Include="Assets\scripts\ProceduralGenerationStorage.cs" />
      <Compile Include="Assets\scripts\Procedural_Generation_Archive.cs" />
+     <Compile Include="Assets\scripts\Procedural_Generation_Lab.cs" />
      <Compile Include="Assets\scripts\Procedural_Generation_Office.cs" />
      <Compile Include="Assets\scripts\ProcedureHelp.cs" />
      <Compile Include="Assets\scripts\ReverseNormals.cs" />

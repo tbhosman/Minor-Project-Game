@@ -64,7 +64,7 @@ public class InspectScript : MonoBehaviour {
 	IEnumerator OnDontLookAnimationEnd(){
 		yield return new WaitForSeconds (animationlength);
 		InspectInstructions.enabled = true;
-		InspectInstructions.text = "You found a crowbar!!";
+		InspectInstructions.text = "You found a crowbar! Press i to inspect your inventory";
 		Crowbar.SetActive (false);
 		CrowbarPicture.SetActive(true);
 		GameObject.Find ("DataAquisitie").GetComponent<DataAquisitie> ().PickedUpItem (2);
