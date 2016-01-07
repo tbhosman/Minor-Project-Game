@@ -23,8 +23,8 @@ public class Procedural_Generation_Lab : MonoBehaviour {
         Debug.Log("scalingX: " + scalingX + "  scalingz: " + scalingZ);
         matrixGrootteX = (int)(scalingX / 2);
         matrixGrootteZ = (int)(scalingZ / 2);
-        matrixHokjeX = scalingX * 2 / matrixGrootteX;
-        matrixHokjeZ = scalingZ * 2 / matrixGrootteZ;
+        matrixHokjeX = scalingX  / matrixGrootteX;
+        matrixHokjeZ = scalingZ / matrixGrootteZ;
         matrix = new int[matrixGrootteX, matrixGrootteZ];
     }
 

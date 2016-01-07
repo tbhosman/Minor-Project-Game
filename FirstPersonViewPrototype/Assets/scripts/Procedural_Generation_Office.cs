@@ -18,6 +18,8 @@ public class Procedural_Generation_Office : MonoBehaviour {
     private int rotation;
     private int whiteboard;
     private int aantaldozen;
+    private int kanssleutel;
+    private int kamernummersleutel;
 
 
     public bool XHighSide;
@@ -44,6 +46,9 @@ public class Procedural_Generation_Office : MonoBehaviour {
 
     void Start () {
 
+        kanssleutel = 50;
+        kamernummersleutel = 41;
+
         //sends a raycast to obtain information about the dimensions of the room and scale the generation matrix accordingly
         RaycastHit hitX;
         RaycastHit hitZ;
@@ -68,6 +73,7 @@ public class Procedural_Generation_Office : MonoBehaviour {
         if (GameObject.FindWithTag("officeKey") == null)
         {
             kamernummer++;
+            Debug.Log("kamernummer " + kamernummer);
         }
 
         //generates desks on the south side of the room
@@ -118,6 +124,12 @@ public class Procedural_Generation_Office : MonoBehaviour {
                     Instantiate(file, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2, transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ + matrixHokjeZ / 2 - Random.Range(-0.2f, -0.4f)), Quaternion.Euler(0, Random.Range(0,359), 180));
                     Instantiate(kantoorartikel, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 6, transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ + matrixHokjeZ / 2 - Random.Range(0.2f, 0.4f)), Quaternion.Euler(0, Random.Range(0, 359), 0));
 
+                    //een kans om een sleutel te genereren
+                    if (GameObject.FindWithTag("officeKey") == null && (Random.Range(0, kanssleutel) < 1 || kamernummer > kamernummersleutel))
+                    {
+                        Instantiate(sleutel, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX  + matrixHokjeX, transform.position.y + 0.865f + matrixHokjeX, transform.position.z + rij * matrixHokjeZ - scalingZ + matrixHokjeZ/2), Quaternion.Euler(180, 0, 0));
+                    }
+
                     cloneburo.transform.localScale = new Vector3(0.395f * matrixHokjeX, 0.5f, 0.5f * matrixHokjeZ);
                     clonestoel.transform.localScale = new Vector3(0.03f * matrixHokjeX, 0.03f, 0.03f * matrixHokjeZ);
                     matrix[kolom, rij] = 1;
@@ -135,6 +147,13 @@ public class Procedural_Generation_Office : MonoBehaviour {
 
                     cloneburo.transform.localScale = new Vector3(0.395f * matrixHokjeX, 0.5f, 0.5f * matrixHokjeZ);
                     clonestoel.transform.localScale = new Vector3(0.03f * matrixHokjeX, 0.03f, 0.03f * matrixHokjeZ);
+
+                    //een kans om een sleutel te genereren
+                    if (GameObject.FindWithTag("officeKey") == null && (Random.Range(0, kanssleutel) < 1 || kamernummer > kamernummersleutel))
+                    {
+                        Instantiate(sleutel, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX/2, transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ +  matrixHokjeZ), Quaternion.Euler(180, 0, 0));
+                    }
+
                     matrix[kolom, rij] = 1;
                     matrix[kolom, 1] = 1;
                     matrix[kolom + 1, rij] = 1;
@@ -153,9 +172,9 @@ public class Procedural_Generation_Office : MonoBehaviour {
                     clonestoel.transform.localScale = new Vector3(0.03f * matrixHokjeX, 0.03f, 0.03f * matrixHokjeZ);
 
                     //een kans om een sleutel te genereren
-                    if (GameObject.FindWithTag("officeKey") == null && (Random.Range(0, 25) < 1 || kamernummer > 26))
+                    if (GameObject.FindWithTag("officeKey") == null && (Random.Range(0, kanssleutel) < 1 || kamernummer > kamernummersleutel))
                     {
-                        Instantiate(sleutel, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2 - Random.Range(-0.18f, -0.22f), transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ + 3 * matrixHokjeZ / 2-0.2f), Quaternion.Euler(180, 0, 0));
+                        Instantiate(sleutel, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX/2, transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ + matrixHokjeZ), Quaternion.Euler(180, 0, 0));
                     }
 
                     matrix[kolom, rij] = 1;
@@ -215,6 +234,11 @@ public class Procedural_Generation_Office : MonoBehaviour {
                     Instantiate(file, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2, transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ + matrixHokjeZ / 2 - Random.Range(-0.2f, -0.4f)), Quaternion.Euler(0, Random.Range(0, 359), 180));
                     Instantiate(kantoorartikel, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2, transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ + matrixHokjeZ / 2 - Random.Range(0, 0.2f)), Quaternion.Euler(0, Random.Range(0, 359), 0));
 
+                    //een kans om een sleutel te genereren
+                    if (GameObject.FindWithTag("officeKey") == null && (Random.Range(0, kanssleutel) < 1 || kamernummer > kamernummersleutel))
+                    {
+                        Instantiate(sleutel, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX, transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ+matrixHokjeZ/2), Quaternion.Euler(180, 0, 0));
+                    }
 
                     cloneburo.transform.localScale = new Vector3(0.395f * matrixHokjeX, 0.5f, 0.5f * matrixHokjeZ);
                     clonestoel.transform.localScale = new Vector3(0.03f * matrixHokjeX, 0.03f, 0.03f * matrixHokjeZ);
@@ -232,6 +256,12 @@ public class Procedural_Generation_Office : MonoBehaviour {
                     Instantiate(file, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2 - Random.Range(-0.2f, -0.4f), transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ - matrixHokjeZ / 2), Quaternion.Euler(0, Random.Range(0, 359), 180));
                     Instantiate(kantoorartikel, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2 - Random.Range(0, 0.2f), transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ - matrixHokjeZ / 2), Quaternion.Euler(0, Random.Range(0, 359), 0));
 
+                    //een kans om een sleutel te genereren
+                    if (GameObject.FindWithTag("officeKey") == null && (Random.Range(0, kanssleutel) < 1 || kamernummer > kamernummersleutel))
+                    {
+                        Instantiate(sleutel, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX+matrixHokjeX/2, transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ), Quaternion.Euler(180, 0, 0));
+                    }
+
                     cloneburo.transform.localScale = new Vector3(0.395f * matrixHokjeX, 0.5f, 0.5f * matrixHokjeZ);
                     clonestoel.transform.localScale = new Vector3(0.03f * matrixHokjeX, 0.03f, 0.03f * matrixHokjeZ);
                     matrix[kolom, rij] = 1;
@@ -248,6 +278,12 @@ public class Procedural_Generation_Office : MonoBehaviour {
                     Instantiate(file, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2 - Random.Range(-0.2f, -0.4f), transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ - matrixHokjeZ / 2), Quaternion.Euler(0, Random.Range(0, 359), 180));
                     Instantiate(kantoorartikel, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2 - Random.Range(0, 0.2f), transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ - matrixHokjeZ / 2), Quaternion.Euler(0, Random.Range(0, 359), 0));
 
+
+                    //een kans om een sleutel te genereren
+                    if (GameObject.FindWithTag("officeKey") == null && (Random.Range(0, kanssleutel) < 1 || kamernummer > kamernummersleutel))
+                    {
+                        Instantiate(sleutel, new Vector3(transform.position.x + kolom * matrixHokjeX - scalingX + matrixHokjeX / 2, transform.position.y + 0.865f, transform.position.z + rij * matrixHokjeZ - scalingZ+matrixHokjeZ/2), Quaternion.Euler(180, 0, 0));
+                    }
 
                     cloneburo.transform.localScale = new Vector3(0.395f * matrixHokjeX, 0.5f, 0.5f * matrixHokjeZ);
                     clonestoel.transform.localScale = new Vector3(0.03f * matrixHokjeX, 0.03f, 0.03f * matrixHokjeZ);

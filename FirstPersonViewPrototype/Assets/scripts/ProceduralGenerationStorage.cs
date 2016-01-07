@@ -178,6 +178,6 @@ public class ProceduralGenerationStorage : MonoBehaviour {
         if (Random.Range(0, 20) > 15 && (Instantiated <4)) { Instantiate(scare, new Vector3(transform.position.x,transform.position.y+0.2f,transform.position.z), Quaternion.identity);
             Instantiated = Instantiated + 1;
         }
-        kastclone.transform.parent = transform;
+        //kastclone.transform.parent = transform;
     }
 }
