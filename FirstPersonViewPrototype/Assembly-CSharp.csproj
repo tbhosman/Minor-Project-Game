@@ -46,7 +46,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\ControlsController.cs" />
-     <Compile Include="Assets\Procedural_Generation_Lab.cs" />
      <Compile Include="Assets\SceneFadeInOut.cs" />
      <Compile Include="Assets\imports\Industrial\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\imports\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
@@ -128,6 +127,7 @@
      <Compile Include="Assets\scripts\PlayAudioClip.cs" />
      <Compile Include="Assets\scripts\ProceduralGenerationStorage.cs" />
      <Compile Include="Assets\scripts\Procedural_Generation_Archive.cs" />
+     <Compile Include="Assets\scripts\Procedural_Generation_Lab.cs" />
      <Compile Include="Assets\scripts\Procedural_Generation_Office.cs" />
      <Compile Include="Assets\scripts\ProcedureHelp.cs" />
      <Compile Include="Assets\scripts\ReverseNormals.cs" />
