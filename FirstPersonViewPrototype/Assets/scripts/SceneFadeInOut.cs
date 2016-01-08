@@ -40,7 +40,7 @@ public class SceneFadeInOut : MonoBehaviour
 	}
 	
 	
-	void FadeToBlack ()
+	public void FadeToBlack ()
 	{
 		// Lerp the colour of the texture between itself and black.
 		fadeTexture.color = Color.Lerp(fadeTexture.color, Color.black, fadeSpeed * Time.deltaTime);

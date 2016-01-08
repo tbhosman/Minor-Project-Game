@@ -29,10 +29,11 @@ public class AnimatableDoorScript : MonoBehaviour {
 		DataAquisitie = GameObject.Find ("DataAquisitie");
 		doorOpened = SaveLoadManager.GetComponent<SaveLoadScript> ().DoorOpened;
 		if (Storagedoor && doorOpened[1]) {
+			gameObject.GetComponent<Collider>().enabled = false;
 			OpenAnimation.Play ();
 		}
 		if (Labdoor && doorOpened [0]) {
-			Debug.Log ("Playing labdoor animation");
+			gameObject.GetComponent<Collider>().enabled = false;
 			OpenAnimation.Play ();
 		}
 	}

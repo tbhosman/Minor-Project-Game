@@ -73,7 +73,6 @@ public class Procedural_Generation_Office : MonoBehaviour {
         if (GameObject.FindWithTag("officeKey") == null)
         {
             kamernummer++;
-            Debug.Log("kamernummer " + kamernummer);
         }
 
         //generates desks on the south side of the room
