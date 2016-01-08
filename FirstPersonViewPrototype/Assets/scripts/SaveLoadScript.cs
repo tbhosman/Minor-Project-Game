@@ -14,9 +14,10 @@ public class SaveLoadScript : MonoBehaviour {
 	public GameObject Player;
 	public GameObject Antag;
 	public bool[] DoorOpened;
+	public bool[] keyObjectsPickedUp;
+	public int PlayerID;
 
 	void Awake(){
-		Debug.Log ("Game Awake");
 		savertimeplayed = 0;
 		Load ();
 	}
@@ -36,6 +37,12 @@ public class SaveLoadScript : MonoBehaviour {
 		saver.playercoordinates = new float[3];
 		saver.dooropened = new bool[DoorOpened.Length];
 		//Stuff to save!!!
+
+		saver.PlayerID = PlayerPrefs.GetInt ("ID");
+
+		saver.ObjectsPickedUp = keyObjectsPickedUp;
+
+		saver.PlayerYRotation = Player.transform.eulerAngles.y;
 		for (int i = 0; i < ObjectsToSave.Length; i++ ) {
 			saver.active[i] = ObjectsToSave[i].activeSelf;
 		}
@@ -58,7 +65,7 @@ public class SaveLoadScript : MonoBehaviour {
 
 		binary.Serialize (fStream, saver);
 		fStream.Close ();
-		print ("game saved to " + Application.persistentDataPath + "/savefile.sav,  playtime: " + saver.timeplayed);
+		print ("game saved to " + Application.persistentDataPath + "/savefile.sav,  playtime: " + saver.timeplayed + " Player ID: " + saver.PlayerID);
 	}
 
 	public void Load()	{
@@ -69,6 +76,12 @@ public class SaveLoadScript : MonoBehaviour {
 			fStream.Close ();
 
 			//Stuff to load!!!
+			PlayerPrefs.SetInt("ID",saver.PlayerID);
+
+			keyObjectsPickedUp = saver.ObjectsPickedUp;
+
+			Player.transform.rotation = Quaternion.Euler(0,saver.PlayerYRotation,0);
+
 			for (int i = 0; i < ObjectsToSave.Length; i++ ) {
 				ObjectsToSave[i].SetActive (saver.active[i]);
 			}
@@ -85,7 +98,7 @@ public class SaveLoadScript : MonoBehaviour {
 
 			Antag.transform.position = new Vector3(saver.antagcoordinates[0],saver.antagcoordinates[1],saver.antagcoordinates[2]);
 
-			print ("game loaded, playtime: " + savertimeplayed);
+			print ("game loaded, playtime: " + savertimeplayed + " Player ID: " + saver.PlayerID);
 		} else {
 			print ("No SaveFile Exists yet");
 		}
@@ -107,5 +120,8 @@ public class SaveLoadScript : MonoBehaviour {
 		public float timeplayed;
 		public bool[] active;
 		public bool[] dooropened;
+		public float PlayerYRotation;
+		public bool[] ObjectsPickedUp;
+		public int PlayerID;
 	}
 }

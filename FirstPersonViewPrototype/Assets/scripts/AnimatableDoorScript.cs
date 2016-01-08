@@ -27,10 +27,13 @@ public class AnimatableDoorScript : MonoBehaviour {
 		DoorTrigger = gameObject.GetComponent<Collider> ();
 		Inventory = GameObject.FindGameObjectWithTag ("Inventory");
 		DataAquisitie = GameObject.Find ("DataAquisitie");
+		doorOpened = SaveLoadManager.GetComponent<SaveLoadScript> ().DoorOpened;
 		if (Storagedoor && doorOpened[1]) {
+			gameObject.GetComponent<Collider>().enabled = false;
 			OpenAnimation.Play ();
 		}
 		if (Labdoor && doorOpened [0]) {
+			gameObject.GetComponent<Collider>().enabled = false;
 			OpenAnimation.Play ();
 		}
 	}
@@ -50,7 +53,6 @@ public class AnimatableDoorScript : MonoBehaviour {
 					OpenAnimation.Play ();
 					closed = false;
 					DoorTrigger.enabled = false;
-					SaveLoadManager.GetComponent<SaveLoadScript>().DoorOpened[1] = true;
 					DataAquisitie.GetComponent<DataAquisitie>().OpenedDoor(2);
 				}
 				else{
@@ -63,7 +65,6 @@ public class AnimatableDoorScript : MonoBehaviour {
 					OpenAnimation.Play ();
 					closed = false;
 					DoorTrigger.enabled = false;
-					SaveLoadManager.GetComponent<SaveLoadScript>().DoorOpened[0] = true;
 					DataAquisitie.GetComponent<DataAquisitie>().OpenedDoor(1);
 				}
 				else{

@@ -20,9 +20,15 @@ public class DataAquisitie : MonoBehaviour {
 		yield return www;
 		
 		if (www.isDone) {
+			if(SaveLoadManager.GetComponent<SaveLoadScript>().PlayerID == 0){
 			int user_id = int.Parse (www.text);
-			PlayerPrefs.SetInt ("ID", user_id); //DEZE MOET ER UIT BIJ TESTEN!
-			Debug.Log ("Player ID = " + user_id);	
+			PlayerPrefs.SetInt ("ID", user_id);
+				Debug.Log ("New Player, ID = " + user_id);
+			}
+			else{
+			int user_id = PlayerPrefs.GetInt("ID");
+			Debug.Log ("Player ID = " + user_id);
+			}
 		}
 
 	}
@@ -30,6 +36,15 @@ public class DataAquisitie : MonoBehaviour {
 	public void PickedUpItem (int item) {
 		savetimeplayed = SaveLoadManager.GetComponent<SaveLoadScript> ().savertimeplayed;
 		timeTaken = Mathf.RoundToInt ((Time.timeSinceLevelLoad + savetimeplayed)/ 60);
+		if (item == 1){
+			SaveLoadManager.GetComponent<SaveLoadScript>().keyObjectsPickedUp[0] = true;
+		};
+		if (item == 2) {
+			SaveLoadManager.GetComponent<SaveLoadScript>().keyObjectsPickedUp[1] = true;
+		}
+		if (item == 3) {
+			SaveLoadManager.GetComponent<SaveLoadScript>().keyObjectsPickedUp[2] = true;
+		}
 		SaveLoadManager.GetComponent<SaveLoadScript> ().Save ();
 		Debug.Log ("Found item: " + item + "  on time: " + timeTaken);
 		StartCoroutine(SendPickedUpItem (item));
@@ -43,6 +58,7 @@ public class DataAquisitie : MonoBehaviour {
 	public void OpenedDoor (int door) {
 		savetimeplayed = SaveLoadManager.GetComponent<SaveLoadScript> ().savertimeplayed;
 		timeTaken = Mathf.RoundToInt ((Time.timeSinceLevelLoad + savetimeplayed)/ 60);
+		SaveLoadManager.GetComponent<SaveLoadScript> ().DoorOpened [door - 1] = true;
 		SaveLoadManager.GetComponent<SaveLoadScript> ().Save ();
 		Debug.Log ("Opened door: " + door + "  on time: " + timeTaken);
 		StartCoroutine(SendOpenedDoor (door));

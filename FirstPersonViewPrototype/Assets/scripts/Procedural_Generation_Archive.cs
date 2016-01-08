@@ -22,8 +22,11 @@ public class Procedural_Generation_Archive : MonoBehaviour
     public GameObject note;
     private GameObject[] doosKeuze = new GameObject[3];
 
+	public GameObject SaveLoadManager;
+
     void Start()
     {
+		SaveLoadManager = GameObject.Find ("SaveLoadManager");
         doosKeuze[0] = doosH;
         doosKeuze[1] = doosS;
         doosKeuze[2] = note;
@@ -70,7 +73,7 @@ public class Procedural_Generation_Archive : MonoBehaviour
                         {
                             if (UnityEngine.Random.Range(0, 10) < 8) { GameObject doos = (GameObject)Instantiate(doosKeuze[UnityEngine.Random.Range(0, 2)], new Vector3(scaledkast.transform.position.x - matrixHokjeX / 2 + 0.4f + k * (matrixHokjeX / (aantaldozen) - 0.05f) + UnityEngine.Random.Range(-0.05f, 0.05f), scaledkast.transform.position.y + 0.867f, scaledkast.transform.position.z + UnityEngine.Random.Range(-0.1f, 0.1f)), Quaternion.Euler(270, UnityEngine.Random.Range(-90, 90), 0)); }
                         }
-                        else if(!GameObject.Find("SecurityNote(Clone)"))
+                        else if(!GameObject.Find("SecurityNote(Clone)")&&!SaveLoadManager.GetComponent<SaveLoadScript>().keyObjectsPickedUp[2])
                         {
                             GameObject noteClone = (GameObject)Instantiate(doosKeuze[2], new Vector3(scaledkast.transform.position.x - matrixHokjeX / 2 + 0.4f + k * (matrixHokjeX / (aantaldozen) - 0.05f) + UnityEngine.Random.Range(-0.05f, 0.05f), scaledkast.transform.position.y + 0.88f, scaledkast.transform.position.z + UnityEngine.Random.Range(-0.1f, 0.1f)), Quaternion.Euler(0, 5, 0));
                         }

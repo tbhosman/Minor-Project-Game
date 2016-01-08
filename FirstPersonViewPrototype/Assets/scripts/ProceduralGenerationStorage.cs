@@ -39,6 +39,8 @@ public class ProceduralGenerationStorage : MonoBehaviour {
         rijZ = 1.6638886666666666666666666666666666666666666666666666f;
         kolomZ = 3.292858f;
         
+
+        //makes sure the door is always free
         if (deurPositieveXRichting) {
             arrayZ[5, 0] = 1;
             arrayZ[5, 1] = 1;
@@ -70,6 +72,7 @@ public class ProceduralGenerationStorage : MonoBehaviour {
             arrayZ[3, 0] = 1;
         }
 
+        //generates containers
         if (!deurNegatieveXRichting)
         {
             if (arrayZ[0, 1] != 1)
@@ -175,6 +178,6 @@ public class ProceduralGenerationStorage : MonoBehaviour {
         if (Random.Range(0, 20) > 15 && (Instantiated <4)) { Instantiate(scare, new Vector3(transform.position.x,transform.position.y+0.2f,transform.position.z), Quaternion.identity);
             Instantiated = Instantiated + 1;
         }
-        kastclone.transform.parent = transform;
+        //kastclone.transform.parent = transform;
     }
 }
