@@ -16,7 +16,7 @@ public class MachineDoorTriggerScript : MonoBehaviour {
 	private RaycastHit RayHit;
 	public GameObject SaveLoadManager;
 	public GameObject MachineRoomDoor;
-
+   
 
 	void Start(){
 		if (SaveLoadManager.GetComponent<SaveLoadScript> ().DoorOpened [2]) {

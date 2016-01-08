@@ -10,9 +10,11 @@ public class SecurityPanelController : MonoBehaviour {
 	public string correctCode;
 	public GameObject MachineRoomDoor;
 	private GameObject DataAquisitie;
+    public ParticleSystem steamLinks;
+    public ParticleSystem steamRechts;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		for (int i = 0; i < transform.childCount; i++) {
 			if (transform.GetChild(i).name == "CodePanel"){
 				codeDisplayPanel = transform.GetChild (i).gameObject;
@@ -68,7 +70,9 @@ public class SecurityPanelController : MonoBehaviour {
 				MachineRoomDoor.GetComponent<Animation>().Play();
 				MachineRoomDoor.GetComponent<AudioSource>().Play();
 				codeDisplayPanel.GetComponent<Image> ().color = new Color (255, 255, 255, 100);
-			}
+                steamLinks.Play();
+                steamRechts.Play();
+            }
 			else {
 				codeDisplayPanel.GetComponent<Image> ().color = Color.red;
 				yield return StartCoroutine (WaitForRealSeconds (2.0f));

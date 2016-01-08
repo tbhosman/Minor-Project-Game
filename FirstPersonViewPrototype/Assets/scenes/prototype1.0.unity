@@ -38296,6 +38296,14 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11435766, guid: 438572e3b8ad9cf4f9176d6f7440d57b, type: 2}
+      propertyPath: steamRechts
+      value: 
+      objectReference: {fileID: 1461810453}
+    - target: {fileID: 11435766, guid: 438572e3b8ad9cf4f9176d6f7440d57b, type: 2}
+      propertyPath: steamLinks
+      value: 
+      objectReference: {fileID: 1615762372}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 438572e3b8ad9cf4f9176d6f7440d57b, type: 2}
   m_IsPrefabParent: 0
@@ -41734,7 +41742,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 19811754, guid: 89343bc63d014c1439954f41cea3e0a9, type: 2}
       propertyPath: lengthInSec
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 19811754, guid: 89343bc63d014c1439954f41cea3e0a9, type: 2}
       propertyPath: InitialModule.startSpeed.scalar
@@ -41750,7 +41758,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 19811754, guid: 89343bc63d014c1439954f41cea3e0a9, type: 2}
       propertyPath: EmissionModule.rate.scalar
-      value: 300
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 19811754, guid: 89343bc63d014c1439954f41cea3e0a9, type: 2}
       propertyPath: SizeModule.enabled
@@ -41802,7 +41810,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 19811754, guid: 89343bc63d014c1439954f41cea3e0a9, type: 2}
       propertyPath: looping
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19811754, guid: 89343bc63d014c1439954f41cea3e0a9, type: 2}
       propertyPath: prewarm
@@ -41820,9 +41828,22 @@ Prefab:
       propertyPath: EmissionModule.cnt0
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 19811754, guid: 89343bc63d014c1439954f41cea3e0a9, type: 2}
+      propertyPath: startDelay
+      value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 19811754, guid: 89343bc63d014c1439954f41cea3e0a9, type: 2}
+      propertyPath: InitialModule.maxNumParticles
+      value: 3000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 89343bc63d014c1439954f41cea3e0a9, type: 2}
   m_IsPrefabParent: 0
+--- !u!198 &1461810453 stripped
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 19811754, guid: 89343bc63d014c1439954f41cea3e0a9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1461810452}
 --- !u!1 &1462434129
 GameObject:
   m_ObjectHideFlags: 0
@@ -45936,6 +45957,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 89343bc63d014c1439954f41cea3e0a9, type: 2}
   m_IsPrefabParent: 0
+--- !u!198 &1615762372 stripped
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 19811754, guid: 89343bc63d014c1439954f41cea3e0a9,
+    type: 2}
+  m_PrefabInternal: {fileID: 1615762371}
 --- !u!1 &1616567840
 GameObject:
   m_ObjectHideFlags: 0
@@ -51112,7 +51138,7 @@ MonoBehaviour:
   Player: {fileID: 802715136}
   Antag: {fileID: 287552371}
   DoorOpened: 000000
-  keyObjectsPickedUp: 000000
+  keyObjectsPickedUp: 000001
 --- !u!1 &1786643225
 GameObject:
   m_ObjectHideFlags: 0
