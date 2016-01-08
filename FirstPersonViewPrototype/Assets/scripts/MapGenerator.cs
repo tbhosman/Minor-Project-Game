@@ -70,7 +70,7 @@ public class MapGenerator : MonoBehaviour {
 			this.vertices [name].Remove(neighbor);
 		}
 		
-		public List<int> shortest_path(int start, int finish)
+		public IEnumerator shortest_path(int start, int finish)
 		{
 			var previous = new Dictionary<int, int>();
 			var distances = new Dictionary<int, float>();
@@ -125,9 +125,13 @@ public class MapGenerator : MonoBehaviour {
 						previous[neighbor.Key] = smallest;
 					}
 				}
+				yield return null;
 			}
-			
-			return path;
+
+			GameObject.Find ("Enemy").GetComponent<EnemyRouting> ().calculatingRoute = false;
+			GameObject.Find ("Enemy").GetComponent<EnemyRouting> ().RouteToPlayer = path;
+
+			return true;//path;
 		}
 	}
 }

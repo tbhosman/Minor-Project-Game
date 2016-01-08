@@ -38,9 +38,11 @@ public class EnemyRouting : MonoBehaviour {
 	public bool goingToPlayer;
 	public bool wantTurn;
 	private float prevDist;
+	public bool calculatingRoute;
 
 	// Use this for initialization
 	void Start () {
+		calculatingRoute = false;
 		RouteToPlayer = new List<int>();
 		//wantIdle = false;
 		//wantWalk = false;
@@ -103,7 +105,11 @@ public class EnemyRouting : MonoBehaviour {
 			lastPlayerLocation = GameObject.Find("FPSController").gameObject.transform.position;
 			lastPlayerLocation.y = transform.position.y;
 			waypointToPlayer = findWaypointToPlayer();
-			RouteToPlayer = GameObject.Find("Waypoints").GetComponent<MapGenerator>().map.shortest_path(waypoint_index,waypointToPlayer);
+			//RouteToPlayer = 
+			if (!calculatingRoute){
+				calculatingRoute = true;
+				StartCoroutine(GameObject.Find("Waypoints").GetComponent<MapGenerator>().map.shortest_path(waypoint_index,waypointToPlayer));
+			}
 		}
 
 		//Check if enemy can hear player
@@ -117,7 +123,11 @@ public class EnemyRouting : MonoBehaviour {
 				lastPlayerLocation = waypoints[waypointToPlayer].transform.position;
 			}
 
-			RouteToPlayer = GameObject.Find("Waypoints").GetComponent<MapGenerator>().map.shortest_path(waypoint_index,waypointToPlayer);
+			//RouteToPlayer = 
+			if (!calculatingRoute){
+				calculatingRoute = true;
+				StartCoroutine(GameObject.Find("Waypoints").GetComponent<MapGenerator>().map.shortest_path(waypoint_index,waypointToPlayer));
+			}
 		}
 
 		if (wantTurn) { //turning to new waypoint
