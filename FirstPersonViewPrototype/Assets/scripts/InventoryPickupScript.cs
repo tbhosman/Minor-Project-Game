@@ -7,9 +7,9 @@ public class InventoryPickupScript : MonoBehaviour {
 	public string displayText;
 	public string afterPickupText;
 	private Ray PlayerRay;
-	private GameObject Player;
+	public GameObject Player;
 	private RaycastHit RayHit;
-	private GameObject Inventory;
+	public GameObject Inventory;
 	public bool IsKey;
 	public bool IsSecurityCodeNote;
 	public bool IsScaryNote;
@@ -18,21 +18,23 @@ public class InventoryPickupScript : MonoBehaviour {
 	public GameObject DataAquisitie;
 	public bool IsFlashlight;
 	public GameObject flashlight;
+	public GameObject ProcedureHelp;
+
+
 	void Start(){
+		ProcedureHelp = GameObject.FindGameObjectWithTag ("ProcedureHelp");
         if (IsKey)
         {
-            KeyPicture = GameObject.Find("KeysIcon");
+            KeyPicture = ProcedureHelp.GetComponent<ProcedureHelp>().KeysIcon;
         }
 
         if (IsSecurityCodeNote)
-        {
-            
-			KeyPicture = GameObject.Find("SecurityCodeNoteButton");
+		{  
+			KeyPicture = ProcedureHelp.GetComponent<ProcedureHelp>().SecurityNoteButton;
         }
-
+		Inventory = ProcedureHelp.GetComponent<ProcedureHelp> ().Inventory;
         InspectInstructions =GameObject.Find("PlayerInfo").GetComponent<Text>(); ;
-        Inventory = GameObject.FindGameObjectWithTag ("Inventory");
-		Player = GameObject.FindGameObjectWithTag ("Player");
+		Player = ProcedureHelp.GetComponent<ProcedureHelp>().Player;
 		DataAquisitie = GameObject.Find ("DataAquisitie");
 
 	}
@@ -51,14 +53,17 @@ public class InventoryPickupScript : MonoBehaviour {
 				}
 				if (IsSecurityCodeNote) {
 					Inventory.GetComponent<InventoryManager> ().SecurityCodeNoteButtonObject.SetActive (true);
+					Debug.Log ("picked up SecurityNote");
 					DataAquisitie.GetComponent<DataAquisitie>().PickedUpItem(3);
 				}
 				if (IsScaryNote) {
 					Inventory.GetComponent<InventoryManager> ().ScaryNoteButtonObject.SetActive (true);
+					Debug.Log ("picked up ScaryNote");
 					DataAquisitie.GetComponent<DataAquisitie>().PickedUpItem(5);
 				}
 				if (IsKey) {
-					KeyPicture.SetActive (true);
+					Inventory.GetComponent<InventoryManager> ().Key.SetActive (true);
+					Debug.Log ("picked up Key");
 					DataAquisitie.GetComponent<DataAquisitie>().PickedUpItem(1);
 				}
 			}

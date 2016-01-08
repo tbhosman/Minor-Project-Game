@@ -14,17 +14,34 @@ public class mainMenuButtons : MonoBehaviour {
 	public GameObject MainMenuMusic;
 	public GameObject mainbuttons;
 	public GameObject newGamePopup;
+	public GameObject continuePopup;
+	public static string leveltoload;
+	public Button continuebutton;
+	public Text continuetext;
+	private SceneFadeInOut SceneFader;
+
 	// Use this for initialization
 	void Start () {
 		Time.timeScale = 1;
 		Destroy (GameObject.Find("MainMusicController"));
+		Destroy (GameObject.Find("MainMusicController(Clone)"));
 
 		if (GameObject.Find ("MainMenuMusic(Clone)") == null) {
 			Instantiate(MainMenuMusic);
 		}
 		DontDestroyOnLoad(GameObject.Find("MainMenuMusic(Clone)"));
 		Cursor.visible = true;
+		if (!File.Exists (Application.persistentDataPath + "/savefile.sav")) {
+			continuebutton.interactable = false;
+			continuetext.color = new Color(65f/255f,65/255f,65/255f);
+			Debug.Log ("continue disbaled");
+		}
+		else{
+			continuetext.color = new Color(174/255f,178/255f,178/255f);
+			Debug.Log ("continue enabled");
+		}
 		//optionsCanvas.enabled = false;
+		SceneFader = GameObject.Find ("SceneFader").GetComponent<SceneFadeInOut> ();
 	}
 	
 
@@ -34,31 +51,52 @@ public class mainMenuButtons : MonoBehaviour {
 	}
 
 	public void BackToMainMenu(){
+		continuePopup.SetActive (false);
 		newGamePopup.SetActive (false);
 		mainbuttons.SetActive (true);
 	}
 
 	public void newGameClick(){
-		newGamePopup.SetActive (true);
-		mainbuttons.SetActive (false);
+		leveltoload = "intro";
+		if (File.Exists (Application.persistentDataPath + "/savefile.sav")) {
+			newGamePopup.SetActive (true);
+			mainbuttons.SetActive (false);
+		} else {
+			SceneFader.scene = "LoadingScreen";
+			SceneFader.sceneEnding = true;
+			//SceneFader.EndScene("LoadingScreen");
+			//Application.LoadLevel("LoadingScreen");
+		}
 	}
 
 	public void newGameStart(){
 		File.Delete (Application.persistentDataPath + "/savefile.sav");
-		Application.LoadLevel("LoadingScreen");
+		SceneFader.scene = "LoadingScreen";
+		SceneFader.sceneEnding = true;
+		//SceneFader.EndScene("LoadingScreen");
+		//Application.LoadLevel("LoadingScreen");
 	}
 
 	public void openHighscores () {
-		Application.LoadLevel("Highscores");
+		SceneFader.scene = "Highscores";
+		SceneFader.sceneEnding = true;
+		//SceneFader.EndScene("Highscores");
+		//Application.LoadLevel("Highscores");
 	}
 
 	public void Continue(){
-		if(File.Exists(Application.persistentDataPath + "/savefile.sav"));
-		Application.LoadLevel("prototype1.0");
+		leveltoload = "prototype1.0";
+		SceneFader.scene = "LoadingScreen";
+		SceneFader.sceneEnding = true;
+		//SceneFader.EndScene("LoadingScreen");
+		//Application.LoadLevel ("LoadingScreen");
 	}
 
     public void quitGame () {
-		Application.Quit ();
+		SceneFader.scene = "";
+		SceneFader.sceneEnding = true;
+		//SceneFader.EndScene("");
+		//Application.Quit ();
 	}
 
 	public void getInput(string name){
@@ -66,11 +104,16 @@ public class mainMenuButtons : MonoBehaviour {
 	}
 
 	public void optionsPanel () {
-		Application.LoadLevel ("options");
+		SceneFader.scene = "options";
+		SceneFader.sceneEnding = true;
+		//Application.LoadLevel ("options");
 		//optionsCanvas.enabled = !optionsCanvas.enabled;
 	}
 
 	public void openControls(){
-		Application.LoadLevel ("Controls");
+		SceneFader.scene = "Controls";
+		SceneFader.sceneEnding = true;
+		//SceneFader.EndScene("Controls");
+		//Application.LoadLevel ("Controls");
 	}
 }

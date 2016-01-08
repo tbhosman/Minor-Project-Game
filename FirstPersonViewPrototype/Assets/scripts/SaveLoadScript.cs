@@ -11,12 +11,17 @@ public class SaveLoadScript : MonoBehaviour {
 	public GameObject[] ObjectsToSave;
 	public float savertimeplayed;
 	public GameObject Playerlight;
+	public GameObject Player;
+	public GameObject Antag;
+	public bool[] DoorOpened;
+	public bool[] keyObjectsPickedUp;
+	public int PlayerID;
 
-	void Start () {
+	void Awake(){
 		savertimeplayed = 0;
 		Load ();
-		//initialize allobjectsarray
 	}
+
 
 	public void Save() {
 
@@ -28,15 +33,39 @@ public class SaveLoadScript : MonoBehaviour {
 
 		//initialize arrays
 		saver.active = new bool[ObjectsToSave.Length];
+		saver.antagcoordinates = new float[3];
+		saver.playercoordinates = new float[3];
+		saver.dooropened = new bool[DoorOpened.Length];
 		//Stuff to save!!!
+
+		saver.PlayerID = PlayerPrefs.GetInt ("ID");
+
+		saver.ObjectsPickedUp = keyObjectsPickedUp;
+
+		saver.PlayerYRotation = Player.transform.eulerAngles.y;
 		for (int i = 0; i < ObjectsToSave.Length; i++ ) {
 			saver.active[i] = ObjectsToSave[i].activeSelf;
 		}
+
+		for (int i = 0; i < DoorOpened.Length; i++ ) {
+			saver.dooropened[i] = DoorOpened[i];
+		}
+
 		saver.timeplayed = Time.timeSinceLevelLoad + savertimeplayed;
+
+		saver.playercoordinates [0] = Player.transform.position.x;
+		saver.playercoordinates [1] = Player.transform.position.y;
+		saver.playercoordinates [2] = Player.transform.position.z;
+
+		saver.antagcoordinates [0] = Antag.transform.position.x;
+		saver.antagcoordinates [1] = Antag.transform.position.y;
+		saver.antagcoordinates [2] = Antag.transform.position.z;
+
+
 
 		binary.Serialize (fStream, saver);
 		fStream.Close ();
-		print ("game saved to " + Application.persistentDataPath + "/savefile.sav,  playtime: " + saver.timeplayed);
+		print ("game saved to " + Application.persistentDataPath + "/savefile.sav,  playtime: " + saver.timeplayed + " Player ID: " + saver.PlayerID);
 	}
 
 	public void Load()	{
@@ -47,12 +76,29 @@ public class SaveLoadScript : MonoBehaviour {
 			fStream.Close ();
 
 			//Stuff to load!!!
+			PlayerPrefs.SetInt("ID",saver.PlayerID);
+
+			keyObjectsPickedUp = saver.ObjectsPickedUp;
+
+			Player.transform.rotation = Quaternion.Euler(0,saver.PlayerYRotation,0);
+
 			for (int i = 0; i < ObjectsToSave.Length; i++ ) {
 				ObjectsToSave[i].SetActive (saver.active[i]);
 			}
+
+			for (int i = 0; i < DoorOpened.Length; i++ ) {
+				DoorOpened[i] = saver.dooropened[i];
+			}
+
 			savertimeplayed = saver.timeplayed;
+
 			Playerlight.SetActive (true);
-			print ("game loaded, playtime: " + savertimeplayed);
+
+			Player.transform.position = new Vector3(saver.playercoordinates [0],saver.playercoordinates [1],saver.playercoordinates [2]);
+
+			Antag.transform.position = new Vector3(saver.antagcoordinates[0],saver.antagcoordinates[1],saver.antagcoordinates[2]);
+
+			print ("game loaded, playtime: " + savertimeplayed + " Player ID: " + saver.PlayerID);
 		} else {
 			print ("No SaveFile Exists yet");
 		}
@@ -69,7 +115,13 @@ public class SaveLoadScript : MonoBehaviour {
 	[Serializable]
 	class SaveManager
 	{
+		public float[] playercoordinates;
+		public float[] antagcoordinates;
 		public float timeplayed;
 		public bool[] active;
+		public bool[] dooropened;
+		public float PlayerYRotation;
+		public bool[] ObjectsPickedUp;
+		public int PlayerID;
 	}
 }

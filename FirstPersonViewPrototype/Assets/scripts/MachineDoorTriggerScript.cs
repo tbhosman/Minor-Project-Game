@@ -8,16 +8,21 @@ public class MachineDoorTriggerScript : MonoBehaviour {
 	public string	PlayerinfoText;
 	public string OnClosedText;
 	public string OnOpenText;
-	private GameObject Inventory;
+	public GameObject Inventory;
 	public GameObject SecurityPanelCanvas;
 	public GameObject SecurityPanelGameObject;
 	private GameObject FPS;
 	private Ray PlayerRay;
 	private RaycastHit RayHit;
+	public GameObject SaveLoadManager;
+	public GameObject MachineRoomDoor;
 
 
 	void Start(){
-		Inventory = GameObject.FindGameObjectWithTag ("Inventory");
+		if (SaveLoadManager.GetComponent<SaveLoadScript> ().DoorOpened [2]) {
+			MachineRoomDoor.GetComponent<Animation>().Play();
+			gameObject.GetComponent<Collider>().enabled = false;
+		};
 		FPS = GameObject.FindGameObjectWithTag ("Player");
 	}
 
@@ -34,7 +39,6 @@ public class MachineDoorTriggerScript : MonoBehaviour {
 
 				if (Inventory.GetComponent<InventoryManager> ().SecurityCodeNoteButtonObject.activeSelf) {
 					PlayerInfo.text = OnOpenText;
-					Debug.Log ("machinedooropened");
 					PlayerInfo.enabled = false;
 					SecurityPanelCanvas.SetActive (true);
 					Cursor.visible = true;

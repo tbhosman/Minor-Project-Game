@@ -26,13 +26,13 @@ public class MainMusicController : MonoBehaviour {
 			}
 		}
 
-		maxVolumeAlarm = GameObject.Find ("MainMusicController").transform.FindChild("Alarm").GetComponent<AudioSource>().volume;
-		maxVolumeMachine = GameObject.Find ("MainMusicController").transform.FindChild("MachineRoom").GetComponent<AudioSource>().volume;
-		maxVolumeOffice = GameObject.Find ("MainMusicController").transform.FindChild("Office").GetComponent<AudioSource>().volume;
-		maxVolumeLab = GameObject.Find ("MainMusicController").transform.FindChild("Laboratory").GetComponent<AudioSource>().volume;
-		maxVolumeReaktor = GameObject.Find ("MainMusicController").transform.FindChild("Reaktor").GetComponent<AudioSource>().volume;
-		maxVolumeStorage = GameObject.Find ("MainMusicController").transform.FindChild("Storage").GetComponent<AudioSource>().volume;
-		maxVolumeArchive = GameObject.Find ("MainMusicController").transform.FindChild("Archive").GetComponent<AudioSource>().volume;
+		maxVolumeAlarm = audioTracks[0].GetComponent<AudioSource>().volume;
+		maxVolumeMachine = audioTracks[1].GetComponent<AudioSource>().volume;
+		maxVolumeOffice = audioTracks[2].GetComponent<AudioSource>().volume;
+		maxVolumeLab = audioTracks[3].GetComponent<AudioSource>().volume;
+		maxVolumeReaktor = audioTracks[4].GetComponent<AudioSource>().volume;
+		maxVolumeStorage = audioTracks[5].GetComponent<AudioSource>().volume;
+		maxVolumeArchive = audioTracks[6].GetComponent<AudioSource>().volume;
 	}
 	
 	// Update is called once per frame

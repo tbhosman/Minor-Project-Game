@@ -17,6 +17,8 @@ public class AnimatableDoorScript : MonoBehaviour {
 	public GameObject Crowbarpicture;
 	public GameObject Keypicture;
 	private GameObject DataAquisitie;
+	public GameObject SaveLoadManager;
+	public bool[] doorOpened;
 
 	void Start(){
 		DoorAnimation = gameObject.transform.GetChild (0);
@@ -25,6 +27,15 @@ public class AnimatableDoorScript : MonoBehaviour {
 		DoorTrigger = gameObject.GetComponent<Collider> ();
 		Inventory = GameObject.FindGameObjectWithTag ("Inventory");
 		DataAquisitie = GameObject.Find ("DataAquisitie");
+		doorOpened = SaveLoadManager.GetComponent<SaveLoadScript> ().DoorOpened;
+		if (Storagedoor && doorOpened[1]) {
+			gameObject.GetComponent<Collider>().enabled = false;
+			OpenAnimation.Play ();
+		}
+		if (Labdoor && doorOpened [0]) {
+			gameObject.GetComponent<Collider>().enabled = false;
+			OpenAnimation.Play ();
+		}
 	}
 
 	void OnTriggerEnter(){
@@ -38,11 +49,11 @@ public class AnimatableDoorScript : MonoBehaviour {
 		if (Input.GetKeyDown ("e")) {
 			if (Storagedoor){
 				if(Crowbarpicture.activeSelf){
-					DataAquisitie.GetComponent<DataAquisitie>().OpenedDoor(2);
 					StartCoroutine(DoorOpening());
 					OpenAnimation.Play ();
 					closed = false;
 					DoorTrigger.enabled = false;
+					DataAquisitie.GetComponent<DataAquisitie>().OpenedDoor(2);
 				}
 				else{
 					PlayerInstructions.text = DoorClosedString;
@@ -50,11 +61,11 @@ public class AnimatableDoorScript : MonoBehaviour {
 			}
 			if (Labdoor){
 				if(Keypicture.activeSelf){
-					DataAquisitie.GetComponent<DataAquisitie>().OpenedDoor(1);
 					StartCoroutine(DoorOpening());
 					OpenAnimation.Play ();
 					closed = false;
 					DoorTrigger.enabled = false;
+					DataAquisitie.GetComponent<DataAquisitie>().OpenedDoor(1);
 				}
 				else{
 					PlayerInstructions.text = DoorClosedString;
