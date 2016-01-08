@@ -220,6 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b10795bcba9aef4e91c373a54bd277b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MMCPrefab: {fileID: 174554, guid: 22e69c8f173481249b3ddcdb7c9abfc2, type: 2}
 --- !u!114 &446823810
 MonoBehaviour:
   m_ObjectHideFlags: 0

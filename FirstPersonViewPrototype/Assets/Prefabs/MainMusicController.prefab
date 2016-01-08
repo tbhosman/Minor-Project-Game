@@ -91,7 +91,7 @@ GameObject:
   - 114: {fileID: 11442200}
   m_Layer: 0
   m_Name: MainMusicController
-  m_TagString: Untagged
+  m_TagString: MainMusicController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -743,6 +743,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Volume
       value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: MainMusicController
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

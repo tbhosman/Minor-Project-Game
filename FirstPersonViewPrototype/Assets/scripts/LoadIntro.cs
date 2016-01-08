@@ -8,18 +8,30 @@ public class LoadIntro : MonoBehaviour {
 	private bool fadingOut;
 	private bool loading;
 	AsyncOperation async;
+	public GameObject MMCPrefab;
+	private GameObject MainMusicController;
 
 	void Start(){
 		loaded = false;
 		fadingOut = false;
 		loading = false;
 		Application.backgroundLoadingPriority = ThreadPriority.Low;
+		if (mainMenuButtons.leveltoload == "prototype1.0"){
+			Destroy (GameObject.Find("MainMenuMusic(Clone)"));
+			Destroy (GameObject.Find ("DataAquisitie"));
+			Destroy (GameObject.Find ("DataAquisitie(Clone)"));
+			Cursor.visible = false;
+			MainMusicController = GameObject.Instantiate(MMCPrefab);
+			GameObject.DontDestroyOnLoad(MainMusicController);
+			MainMusicController.transform.FindChild("Alarm").gameObject.SetActive(false); //do not boot with alarm on
+		}
 	}
 
 	// Use this for initialization
 	void Update() {
 		//wait for loading screen to fade in, then execute once
 		if (!GameObject.Find ("SceneFader").GetComponent<Image> ().enabled && !loaded && !loading) {
+			MainMusicController.GetComponent<MainMusicController>().FadeIn("Office"); //NOT FINAL LOCATION, SEE BELOW
 			loading = true;
 			async = Application.LoadLevelAsync(mainMenuButtons.leveltoload);
 			//async.allowSceneActivation = false;
@@ -34,14 +46,18 @@ public class LoadIntro : MonoBehaviour {
 
 		//when faded out, switch to new scene
 		if (GameObject.Find ("SceneFader").GetComponent<Image> ().color.a >= 0.95f && loaded) {
+			//MainMusicController.GetComponent<MainMusicController>().FadeIn("Office"); //TODO: INSERT AREA GAME LOADED IN
 			async.allowSceneActivation = true;
 		}
 	}
 
 	IEnumerator LoadLevel(AsyncOperation async){
-		while (!async.isDone) {
-			yield return async;
+		if (async.isDone) {
 		}
+
+		//while (!async.isDone) {
+			yield return async;
+		//}
 		Debug.Log("Loading complete");
 		loaded = true;
 	}
