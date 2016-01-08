@@ -42663,6 +42663,10 @@ MeshCollider:
 GameObject:
   m_PrefabParentObject: {fileID: 178430, guid: e44bbd0cba7ddef48958973d85947dba, type: 2}
   m_PrefabInternal: {fileID: 1718800194}
+--- !u!1 &1486352869 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 199074, guid: 09ecf0b72b5c02c4b8cab0185d4243e4, type: 2}
+  m_PrefabInternal: {fileID: 1438257916}
 --- !u!1 &1489291125
 GameObject:
   m_ObjectHideFlags: 0
@@ -50823,6 +50827,9 @@ MonoBehaviour:
   - {fileID: 1483879227}
   - {fileID: 1634370794}
   - {fileID: 1293036800}
+  - {fileID: 1486352869}
+  - {fileID: 391052541}
+  - {fileID: 561037332}
   savertimeplayed: 0
   Playerlight: {fileID: 1386179270}
   Player: {fileID: 802715136}
