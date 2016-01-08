@@ -294,7 +294,7 @@ public class EnemyRouting : MonoBehaviour {
 		Vector3 pos = waypoints [waypointToReach].gameObject.transform.position;
 		Vector3 rayDirection = lastPlayerLocation - pos;
 
-		if (Physics.Raycast(pos,rayDirection, out hit)){
+		if (Physics.Raycast(pos,rayDirection, out hit, 10.0f)){
 			return hit.transform.CompareTag("Player");
 		}
 		return false;
