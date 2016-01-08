@@ -10,7 +10,7 @@ public class SecurityPanelController : MonoBehaviour {
 	public string correctCode;
 	public GameObject MachineRoomDoor;
 	private GameObject DataAquisitie;
-
+	public GameObject MachineRoomDoorTrigger;
 	// Use this for initialization
 	void Start () {
 		for (int i = 0; i < transform.childCount; i++) {

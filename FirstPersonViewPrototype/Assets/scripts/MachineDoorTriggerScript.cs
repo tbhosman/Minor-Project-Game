@@ -16,7 +16,7 @@ public class MachineDoorTriggerScript : MonoBehaviour {
 	private RaycastHit RayHit;
 	public GameObject SaveLoadManager;
 	public GameObject MachineRoomDoor;
-
+   
 
 	void Start(){
 		if (SaveLoadManager.GetComponent<SaveLoadScript> ().DoorOpened [2]) {
@@ -42,8 +42,6 @@ public class MachineDoorTriggerScript : MonoBehaviour {
 					PlayerInfo.enabled = false;
 					SecurityPanelCanvas.SetActive (true);
 					Cursor.visible = true;
-					StartCoroutine (OnOpenCoroutine ());
-
 				} else {
 					PlayerInfo.text = OnClosedText;
 				}
@@ -56,7 +54,8 @@ public class MachineDoorTriggerScript : MonoBehaviour {
 		PlayerInfo.enabled = false;
 	}
 
-	IEnumerator OnOpenCoroutine(){
+	public IEnumerator OnOpenCoroutine(){
+		PlayerInfo.enabled = true;
 		yield return new WaitForSeconds (2);
 		PlayerInfo.enabled = false;
 		gameObject.GetComponent<Collider> ().enabled = false;
