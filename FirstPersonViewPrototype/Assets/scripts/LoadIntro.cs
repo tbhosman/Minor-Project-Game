@@ -31,7 +31,8 @@ public class LoadIntro : MonoBehaviour {
 	void Update() {
 		//wait for loading screen to fade in, then execute once
 		if (!GameObject.Find ("SceneFader").GetComponent<Image> ().enabled && !loaded && !loading) {
-			MainMusicController.GetComponent<MainMusicController>().FadeIn("Office"); //NOT FINAL LOCATION, SEE BELOW
+			if (mainMenuButtons.leveltoload == "prototype1.0")
+				MainMusicController.GetComponent<MainMusicController>().FadeIn("Office"); //NOT FINAL LOCATION, SEE BELOW
 			loading = true;
 			async = Application.LoadLevelAsync(mainMenuButtons.leveltoload);
 			//async.allowSceneActivation = false;
