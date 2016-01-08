@@ -7409,7 +7409,7 @@ Transform:
   - {fileID: 365475593}
   - {fileID: 1825071070}
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 35
 --- !u!1 &395534530
 GameObject:
   m_ObjectHideFlags: 0
@@ -10279,7 +10279,7 @@ Transform:
   m_Children:
   - {fileID: 1881963849}
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 34
 --- !u!1 &562123854
 GameObject:
   m_ObjectHideFlags: 0
@@ -15112,7 +15112,7 @@ Transform:
   - {fileID: 260169923}
   - {fileID: 903954190}
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 30
 --- !u!82 &802715138
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17049,7 +17049,7 @@ Transform:
   - {fileID: 1335362581}
   - {fileID: 1127804606}
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 31
 --- !u!95 &841279706
 Animator:
   serializedVersion: 3
@@ -22181,7 +22181,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 425346, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2340298, guid: 956b3468b5c8cc6499e78a97e8eb014d, type: 2}
       propertyPath: m_Materials.Array.data[0]
@@ -27993,18 +27993,9 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 475700, guid: 87e7e679ab66c1b40845d59b51810cec, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 11462274, guid: 87e7e679ab66c1b40845d59b51810cec, type: 2}
-      propertyPath: x_coordinaatdeur
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11462274, guid: 87e7e679ab66c1b40845d59b51810cec, type: 2}
-      propertyPath: z_coordinaatdeur
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 11416960, guid: 87e7e679ab66c1b40845d59b51810cec, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87e7e679ab66c1b40845d59b51810cec, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1400990886
