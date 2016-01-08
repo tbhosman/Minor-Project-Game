@@ -1,22 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\HighscoreManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\LoadIntro.cs">
     <Files>
-      <File FileName="Assets\scripts\mainMenuButtons.cs" Line="43" Column="78" />
-      <File FileName="Assets\SceneFadeInOut.cs" Line="1" Column="1" />
-      <File FileName="Assets\ControlsController.cs" Line="18" Column="85" />
-      <File FileName="Assets\scripts\fillStamina.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\FirstPersonController.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\InventoryPickupScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\LoadIntro.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\OptionsCanvas.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\HighscoreManager.cs" Line="63" Column="3" />
+      <File FileName="Assets\scripts\DataAquisitie.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\LoadIntro.cs" Line="25" Column="4" />
+      <File FileName="Assets\loadAnimation.cs" Line="6" Column="27" />
+      <File FileName="Assets\SceneFadeInOut.cs" Line="81" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="D:\Documents\Minor-Project-Game\FirstPersonViewPrototype\Assets\SceneFadeInOut.cs" line="79" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="Assets\scripts\EnemyRouting.cs" line="170" offsetX="1005" offsetY="2873" expression="prevDist" liveUpdate="False" />
