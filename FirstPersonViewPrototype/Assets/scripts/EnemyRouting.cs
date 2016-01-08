@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 
 public class EnemyRouting : MonoBehaviour {
@@ -244,7 +245,7 @@ public class EnemyRouting : MonoBehaviour {
 			if (newReachables.Count == 0) {
 				reachindex = (int)Reachables [Reachables.Count-1]; //take oldest location
 			} else {
-				reachindex = (int)newReachables [Random.Range (0, newReachables.Count)];
+				reachindex = (int)newReachables [UnityEngine.Random.Range (0, newReachables.Count)];
 			}
 
 		} else { //enemy is following route to player
@@ -275,18 +276,24 @@ public class EnemyRouting : MonoBehaviour {
 	}
 
 	int findWaypointToPlayer(){
-		int ans = -2;
-		float dist = float.MaxValue;
+		int[] ans = {-2,-2,-2,-2,-2};
+		float[] dist = {float.MaxValue,float.MaxValue,float.MaxValue,float.MaxValue,float.MaxValue};
+
 		for (int i = 0; i < waypoints_parent.transform.childCount; i++){
 			float wp = Vector3.Distance(waypoints[i].gameObject.transform.position,lastPlayerLocation);
-			if (ReachableWaypointToPlayer(i)){
-				if (Mathf.Abs(wp) < dist){
-					dist = Mathf.Abs(wp);
-					ans = i;
-				}
+			Array.Sort(dist, ans);
+			if (wp < dist[4]){
+				dist[4] = wp;
+				ans[4] = i;
 			}
 		}
-		return ans;
+
+		for (int i = 0; i < ans.Length; i++) {
+			if (ans[i] != -2)
+				return ans[i];
+		}
+
+		return -2;
 	}
 
 	protected bool ReachableWaypointToPlayer(int waypointToReach){ //check if player is reachable from a waypoint
@@ -294,7 +301,7 @@ public class EnemyRouting : MonoBehaviour {
 		Vector3 pos = waypoints [waypointToReach].gameObject.transform.position;
 		Vector3 rayDirection = lastPlayerLocation - pos;
 
-		if (Physics.Raycast(pos,rayDirection, out hit)){
+		if (Physics.Raycast(pos,rayDirection, out hit, 10.0f)){
 			return hit.transform.CompareTag("Player");
 		}
 		return false;
