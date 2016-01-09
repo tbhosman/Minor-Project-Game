@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Generates a map for the enemy to use for routing towards the player. Uses Dijkstra's algorithm for routing
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 using System;
 using System.Collections.Generic;
@@ -18,6 +22,7 @@ public class MapGenerator : MonoBehaviour {
 			map.add_vertex(a, new Dictionary<int, float>());
 		}
 
+		// generate all map connections
 		for (int i = 0; i < transform.childCount; i++) {
 
 			for (int j = i; j < transform.childCount; j++){
@@ -25,19 +30,16 @@ public class MapGenerator : MonoBehaviour {
 					Vector3 p1 = transform.GetChild(i).gameObject.transform.position; 
 					Vector3 p2 = transform.GetChild(j).gameObject.transform.position;
 					if (ReachableFromTo(p1, p2)){ //if there is a connection possible between the two waypoints
-						map.add_edge(i, j, Vector3.Distance(p1,p2)); //
+						map.add_edge(i, j, Vector3.Distance(p1,p2));
 						map.add_edge(j, i, Vector3.Distance(p1,p2));
-						//Debug.DrawLine(p1,p2, Color.green, 10, false);
+						//Debug.DrawLine(p1,p2, Color.green, 10, false); //used to visualize the map on startup
 					}
 				}
 			}
 		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	}
 
+	// check if two waypoints can be connected
 	protected bool ReachableFromTo(Vector3 location1, Vector3 location2){
 		RaycastHit hit;
 		Vector3 rayDirection = location2 - location1;
@@ -50,7 +52,7 @@ public class MapGenerator : MonoBehaviour {
 		}
 		return false;
 	}
-
+	
 	public class Graph
 	{
 		Dictionary<int, Dictionary<int, float>> vertices = new Dictionary<int, Dictionary<int, float>>();
@@ -69,7 +71,8 @@ public class MapGenerator : MonoBehaviour {
 		{
 			this.vertices [name].Remove(neighbor);
 		}
-		
+
+		// calculate a route between waypoints using Dijkstra in a seperate thread
 		public IEnumerator shortest_path(int start, int finish)
 		{
 			var previous = new Dictionary<int, int>();

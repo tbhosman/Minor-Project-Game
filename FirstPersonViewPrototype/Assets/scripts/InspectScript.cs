@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Script for inspecting the closet with the crowbar in it. Also picks up the crowbar after the pickup animation is finished
+/// and starts the jumpscare if the player looks behind him after inspecting.
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using UnityStandardAssets.Characters.FirstPerson;

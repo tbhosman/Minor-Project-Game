@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// OBSELETE
+/// Script for the procedural generation of the office
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class proceduralGeneration : MonoBehaviour {

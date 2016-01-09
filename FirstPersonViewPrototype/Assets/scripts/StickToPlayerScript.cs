@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Mainain a relative position to the player
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class StickToPlayerScript : MonoBehaviour {

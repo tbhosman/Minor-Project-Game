@@ -1,3 +1,7 @@
+/// <summary>
+/// Moves camera while walking or running to simulate effect of a moving head during moving
+/// </summary>
+
 using System;
 using UnityEngine;
 using UnityStandardAssets.Utility;

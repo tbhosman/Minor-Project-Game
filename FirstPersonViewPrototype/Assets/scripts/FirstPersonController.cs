@@ -1,5 +1,5 @@
 /// <summary>
-/// Controls everything regarding the player controls (walking, looking, running, headbob) and its stamina
+/// Controls everything regarding the player controls (walking, running) and its stamina
 /// </summary>
 
 using System;

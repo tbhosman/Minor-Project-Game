@@ -1,4 +1,7 @@
-﻿#pragma strict
+﻿/// <summary>
+/// Script used for a mirror (NOT USED)
+/// </summary>
+#pragma strict
 
 var plane : GameObject;
 var character : GameObject;

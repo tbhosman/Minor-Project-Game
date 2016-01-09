@@ -25,18 +25,26 @@ public class VanishScript : MonoBehaviour {
 	void Update(){
 		RayDirection = player.transform.position - transform.position;
 		ObjectToPlayerRay = new Ray (transform.position, RayDirection);
+
 		if (useDistance) {
+
 			if (Vector3.Distance (player.transform.position, gameObject.transform.position) < minDistance) {
+
 				if (Physics.Raycast (ObjectToPlayerRay, out RayHit)) {
+
 					if (RayHit.collider.gameObject.tag == "Player") {
+
 						if (Vector3.Angle (transform.position - player.transform.position, player.transform.forward) <= FieldOfVanishDegree * 0.5f) {
+
 							Debug.Log ("VanishActivated");
+
 							if (noAnimation) {
 								gameObject.SetActive (false);
 							} else {
 								gameObject.GetComponent<PlayAudioClip> ().enabled = true;
 								gameObject.GetComponent<Animation> ().Play ();
 							}
+
 							if (ActivateObjectOnLookAt) {
 								ObjectToActivateOnLookAt.SetActive (true);
 							}
@@ -45,16 +53,22 @@ public class VanishScript : MonoBehaviour {
 				}
 			}
 		} else {
+
 			if (Physics.Raycast (ObjectToPlayerRay, out RayHit)) {
+
 				if (RayHit.collider.gameObject.tag == "Player") {
+
 					if (Vector3.Angle (transform.position - player.transform.position, player.transform.forward) <= FieldOfVanishDegree * 0.5f) {
+
 						Debug.Log ("VanishActivated");
+
 						if (noAnimation) {
 							gameObject.SetActive (false);
 						} else {
 							gameObject.GetComponent<PlayAudioClip> ().enabled = true;
 							gameObject.GetComponent<Animation> ().Play ();
 						}
+
 						if (ActivateObjectOnLookAt) {
 							ObjectToActivateOnLookAt.SetActive (true);
 						}

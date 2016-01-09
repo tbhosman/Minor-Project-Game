@@ -1,3 +1,7 @@
+/// <summary>
+/// Set the trigger on this game object to active
+/// </summary>
+
 using UnityEngine;
 using System.Collections;
 

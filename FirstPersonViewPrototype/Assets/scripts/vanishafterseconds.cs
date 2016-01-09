@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Makes an object vanish after a given amount of seconds
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class vanishafterseconds : MonoBehaviour {

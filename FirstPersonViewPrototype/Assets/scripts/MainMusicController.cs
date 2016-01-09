@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Controls the main music in-game. Starts with the alarm sound during the intro, which fades into the office music.
+/// The music then loops the tune that corresponds to the area that the player is in
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class MainMusicController : MonoBehaviour {
@@ -26,6 +31,7 @@ public class MainMusicController : MonoBehaviour {
 			}
 		}
 
+		// remember volumes of all tracks
 		maxVolumeAlarm = audioTracks[0].GetComponent<AudioSource>().volume;
 		maxVolumeMachine = audioTracks[1].GetComponent<AudioSource>().volume;
 		maxVolumeOffice = audioTracks[2].GetComponent<AudioSource>().volume;
@@ -37,18 +43,23 @@ public class MainMusicController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		// fade to office music when alarm is finished
 		if (!(audioTracks[0].GetComponent<AudioSource>().isPlaying) && audioTracks[0].gameObject.activeSelf && Time.timeScale == 1) {
 			FadeIn("Office");
 		}
 	}
 
 	public void FadeIn(string track){
+
 		for (int i = 1; i < transform.childCount; i++) {
+
+			//search track that has to fade in
 			if (audioTracks[i].name == track){
 				audioTracks[i].gameObject.SetActive(true);
 				float maxVolume = getVolumeOf(track);
 				StartCoroutine(FadeMusic (audioTracks[i].GetComponent<AudioSource>(), maxVolume, fadeTime));
 			} else {
+				//fade out the track that is currently running
 				if (audioTracks[i].gameObject.activeSelf == true){
 					toFadeOut = i;
 				}
@@ -76,8 +87,9 @@ public class MainMusicController : MonoBehaviour {
 			return 1.0f;
 		}
 	}
-
-private IEnumerator FadeMusic(AudioSource audio, float targetVolume, float duration)
+	
+	// slowly fade music to desired volume
+	private IEnumerator FadeMusic(AudioSource audio, float targetVolume, float duration)
 	{
 		float startVolume = audio.volume;
 		float inverseDuration = 1.0f / duration;

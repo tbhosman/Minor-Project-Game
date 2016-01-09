@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Manages the loading screen. Starts loading after fading in, loads asynchronously to keep the loading animation running,
+/// then fades out to loaded scene
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 

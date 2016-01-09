@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Script for the procedural generation of the archives
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 using System;
 
