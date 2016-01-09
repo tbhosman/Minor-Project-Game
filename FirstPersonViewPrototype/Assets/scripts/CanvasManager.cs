@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Manages the inventory and pause canvasses in-game.
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using UnityStandardAssets.Characters.FirstPerson;
@@ -32,36 +36,41 @@ public class CanvasManager : MonoBehaviour {
 		updateInventory ();
 	}
 
+	// Manage pause canvasses
 	public void updatePause(){
+
+		//check if any object is open that should block the pause from opening
 		for (int i=0; i<IgnoreOnPause.Length; i++) {
 			if (IgnoreOnPause[i].activeSelf){
 				pauseCanvas.SetActive(false);
 				Time.timeScale = 1;
-				return; //pause cannot be opened
+				return; //pause may not be opened
 			}
 		}
 
+		//check if the inventory is open
 		if (inventory.activeSelf) {
 			pauseCanvas.SetActive(false);
-			return; //pause cannot be opened
+			return; //pause may not be opened
 		}
 
+		//pause if escape is pressed, open pause menu
 		if( Input.GetKeyDown(KeyCode.Escape))
 		{
 			isPause = !isPause;
 
-			if (isPause){
+			if (isPause){ //First pause canvas is opened
 				Time.timeScale = 0;
 				pauseCanvas.SetActive(true);
 				Cursor.visible = true;
 				GameObject.Find ("FPSController").GetComponent<FirstPersonController>().enabled = false;
 				PauseAllAudio();
-			}else{
-				if (QuitToCanvas.activeSelf){
+			}else{ //A pause canvas is opened, check which one
+				if (QuitToCanvas.activeSelf){ //second pause canvas is opened, go back to first pause canvas
 					pauseCanvas.SetActive(true);
 					QuitToCanvas.SetActive(false);
 					isPause = !isPause; //must remain in pause state
-				}else{
+				}else{ //first pause canvas is opened, resume game
 					Time.timeScale = 1;
 					pauseCanvas.SetActive(false);
 					Cursor.visible = false;
@@ -72,7 +81,10 @@ public class CanvasManager : MonoBehaviour {
 		}
 	}
 
+	//Manage inventory canvas
 	public void updateInventory(){
+
+		//check if any object is open that should block the pause from opening
 		for (int i=0; i<IgnoreOnPause.Length; i++) {
 			if (IgnoreOnPause[i].activeSelf){
 				inventory.SetActive(false);
@@ -81,7 +93,8 @@ public class CanvasManager : MonoBehaviour {
 			}
 		}
 
-		if (pauseCanvas.activeSelf) {
+		//check if a pause canvas is open
+		if (pauseCanvas.activeSelf || QuitToCanvas.activeSelf) {
 			inventory.SetActive(false);
 			return; //pause cannot be opened
 		}
@@ -110,18 +123,19 @@ public class CanvasManager : MonoBehaviour {
 			GameObject.Find ("FPSController").GetComponent<FirstPersonController>().enabled = true;
 			UnpauseAllAudio();
 		}
-		
+
+		// player uses the inventory shortcut
 		if (Input.GetKeyDown(KeyCode.I))
 		{
 			isPause = !isPause;
 			
-			if (isPause){
+			if (isPause){ // if the game has just been paused, open the inventory
 				Time.timeScale = 0;
 				inventory.SetActive(true);
 				Cursor.visible = true;
 				GameObject.Find ("FPSController").GetComponent<FirstPersonController>().enabled = false;
 				PauseAllAudio();
-			}else{
+			}else{ //if the inventory was already open, resume game
 				Time.timeScale = 1;
 				inventory.SetActive(false);
 				Cursor.visible = false;

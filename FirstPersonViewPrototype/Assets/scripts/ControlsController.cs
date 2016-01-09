@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Controller for the controls menu of the main screen
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class ControlsController : MonoBehaviour {

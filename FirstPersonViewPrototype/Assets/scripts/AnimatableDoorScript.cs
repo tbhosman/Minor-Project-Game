@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// This script enables the player to interact with a door if it has the correct key object in its inventory.
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 public class AnimatableDoorScript : MonoBehaviour {
@@ -46,7 +50,11 @@ public class AnimatableDoorScript : MonoBehaviour {
 	}
 
 	void OnTriggerStay(){
+
+		//If interaction key is pressed while in trigger area
 		if (Input.GetKeyDown ("e")) {
+
+			//crowbar is needed for the storage
 			if (Storagedoor){
 				if(Crowbarpicture.activeSelf){
 					StartCoroutine(DoorOpening());
@@ -59,6 +67,8 @@ public class AnimatableDoorScript : MonoBehaviour {
 					PlayerInstructions.text = DoorClosedString;
 				}
 			}
+
+			//key is needed for the lab door
 			if (Labdoor){
 				if(Keypicture.activeSelf){
 					StartCoroutine(DoorOpening());
@@ -71,6 +81,8 @@ public class AnimatableDoorScript : MonoBehaviour {
 					PlayerInstructions.text = DoorClosedString;
 				}
 			}
+
+			//if the door does not lead to the lab or storage, no key is needed
 			if(!Labdoor&&!Storagedoor){
 				StartCoroutine(DoorOpening());
 				OpenAnimation.Play ();
