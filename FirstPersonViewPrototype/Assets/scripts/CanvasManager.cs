@@ -12,12 +12,16 @@ public class CanvasManager : MonoBehaviour {
 	private bool isPause = false;
 	private AudioSource[] audios;
 	public GameObject inventory;
+	public Image fadeOutPanel;
+	public float fadeSpeed = 1.5f;
 
 	void Start () {
 		GasMaskOverlay.enabled = false;
 		pauseCanvas = transform.FindChild ("PauseMenus").FindChild ("PauseOverlay").gameObject;
 		QuitToCanvas = transform.FindChild ("PauseMenus").FindChild ("QuitToOverlay").gameObject;
 		inventory = transform.FindChild ("InventoryOverlay").gameObject;
+		fadeOutPanel = transform.FindChild ("QuitGameFadePanel").GetComponent<Image>();
+		fadeOutPanel.enabled = false;
 		pauseCanvas.SetActive (false);
 		QuitToCanvas.SetActive (false);
 		inventory.SetActive (false);
@@ -138,12 +142,25 @@ public class CanvasManager : MonoBehaviour {
 	
 	public void QuitGame (){
 		GameObject.Find ("DataAquisitie").GetComponent<DataAquisitie> ().CompletedGame ();
-		Application.Quit ();
+		StartCoroutine(fadeOutAndLoad (""));//Application.Quit ();
 	}
 
 	public void QuitToMenu(){
 		GameObject.Find ("DataAquisitie").GetComponent<DataAquisitie> ().CompletedGame ();
-		Application.LoadLevel ("menu");
+		StartCoroutine(fadeOutAndLoad ("menu"));//Application.LoadLevel ("menu");
+	}
+
+	IEnumerator fadeOutAndLoad(string level){
+		fadeOutPanel.enabled = true;
+		while (fadeOutPanel.color.a < 0.95f){
+			fadeOutPanel.color = Color.Lerp(fadeOutPanel.color, Color.black, fadeSpeed * Time.unscaledDeltaTime);
+			yield return null; //wait for next frame
+		}
+
+		if (level == "") Application.Quit ();
+		else Application.LoadLevel (level);
+
+		yield return true;
 	}
 
 	public void QuitFromPause(){

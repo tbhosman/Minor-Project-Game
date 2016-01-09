@@ -8,7 +8,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 460992}
-  - 108: {fileID: 10858738}
   m_Layer: 0
   m_Name: OfficeKey
   m_TagString: officeKey
@@ -78,6 +77,7 @@ GameObject:
   - 4: {fileID: 499094}
   - 65: {fileID: 6533602}
   - 114: {fileID: 11487024}
+  - 108: {fileID: 10859958}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -259,12 +259,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 14.0558853, y: 10, z: 14.8362265}
   m_Center: {x: -.459899902, y: .6930089, z: -.297724396}
---- !u!108 &10858738
+--- !u!108 &10859958
 Light:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 101952}
+  m_GameObject: {fileID: 192756}
   m_Enabled: 1
   serializedVersion: 6
   m_Type: 2

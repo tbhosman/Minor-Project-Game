@@ -29,6 +29,7 @@ GameObject:
   - 4: {fileID: 480120}
   - 65: {fileID: 6505956}
   - 114: {fileID: 11498262}
+  - 108: {fileID: 10830408}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -44,7 +45,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 452804}
-  - 108: {fileID: 10834938}
   m_Layer: 2
   m_Name: SecurityNote
   m_TagString: Untagged
@@ -145,12 +145,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2066.07031, z: 1}
   m_Center: {x: 0, y: 1032.53552, z: 0}
---- !u!108 &10834938
+--- !u!108 &10830408
 Light:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 197028}
+  m_GameObject: {fileID: 186400}
   m_Enabled: 1
   serializedVersion: 6
   m_Type: 2
