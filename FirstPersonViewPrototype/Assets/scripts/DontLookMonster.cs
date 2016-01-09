@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Activates the Don't Look Scare if the player is looking at it
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class DontLookMonster : MonoBehaviour {

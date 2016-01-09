@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Controller for the flashlight toggle
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class FlashlightScript : MonoBehaviour {

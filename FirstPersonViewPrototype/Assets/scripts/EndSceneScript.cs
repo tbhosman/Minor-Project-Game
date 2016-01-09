@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Controls the animation and overlay used in the final scene
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 

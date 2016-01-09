@@ -1,3 +1,7 @@
+/// <summary>
+/// Controls everything regarding the player controls (walking, looking, running, headbob) and its stamina
+/// </summary>
+
 using System;
 using System.Collections;
 using UnityEngine;

@@ -90,7 +90,6 @@
      <Compile Include="Assets\scripts\DataAquisitie.cs" />
      <Compile Include="Assets\scripts\DisableFlashlight.cs" />
      <Compile Include="Assets\scripts\DontLookMonster.cs" />
-     <Compile Include="Assets\scripts\DontLookScareScript.cs" />
      <Compile Include="Assets\scripts\EndSceneScript.cs" />
      <Compile Include="Assets\scripts\EnemyAnimationScript.cs" />
      <Compile Include="Assets\scripts\EnemyRouting.cs" />

@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Keeps track which locations the flashlight of the player hits. Is used to check if the enemy can see the player light.
+/// Also checks if player can see the enemy, and plays a scare sound if this is the case.
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class FlashlightHitArea : MonoBehaviour {
@@ -49,12 +54,14 @@ public class FlashlightHitArea : MonoBehaviour {
 		CheckEnemyInSight ();
 	}
 
+	//check if player can see enemy
 	void CheckEnemyInSight(){
 		RaycastHit hit;
 		Vector3 rayDirection = GameObject.Find ("Enemy").transform.position - transform.position + new Vector3(0,0.3f,0);
 
 		seeingEnemy = false;
 
+		//check if player can see the enemy
 		if ((Vector3.Angle(rayDirection, transform.forward)) <= GetComponent<Light>().spotAngle * 0.5f)
 		{
 			// Detect if player is within the field of view
@@ -64,8 +71,10 @@ public class FlashlightHitArea : MonoBehaviour {
 			}else{seeingEnemy = false;}
 		}else{seeingEnemy = false;}
 
-
+		// if the enemy can be seen and no scare sound is currently running
 		if (seeingEnemy && !scareSoundOnSeeingEnemy.isPlaying) {
+
+			//choose one of the three scare sounds randomly
 			float rand = Random.Range(0.0f,1.0f);
 			if (rand < 1.0f/3.0f){
 				scareSoundOnSeeingEnemy.PlayOneShot(scareSounds[0]);

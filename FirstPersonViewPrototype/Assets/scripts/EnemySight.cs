@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Keeps track of the senses of the enemy
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.Characters.FirstPerson;
 
@@ -38,6 +42,7 @@ public class EnemySight : MonoBehaviour {
 		}
 	}
 
+	// check if player can be seen
 	protected bool CanSeePlayer()
 	{
 		RaycastHit hit;
@@ -55,8 +60,10 @@ public class EnemySight : MonoBehaviour {
 		return false;
 	}
 
+	// check if player can be heard
 	protected bool CanHearPlayer(){
 
+		//check if player is standing, walking or running. Set hearDistance accordingly
 		if (Player.GetComponent<FirstPersonController>().MakingWalkingSound == true) {
 			hearDistance = hearDistanceWalking;
 		} else {
@@ -68,19 +75,21 @@ public class EnemySight : MonoBehaviour {
 		}
 
 		float PEdist = Vector3.Distance (Player.transform.position, transform.position);
-		if (PEdist < hearDistance / 2) {
+		if (PEdist < hearDistance / 2) { //hearing player clearly
 			canHearClearly = true;
 			return true;
-		} else if (PEdist < hearDistance) {
+		} else if (PEdist < hearDistance) { // hearing player vaguely
 			canHearClearly = false;
 			return true;
-		} else {
+		} else { //cannot hear player
 			canHearClearly = false;
 			return false;
 		}
 	}
 
+	// check if player light can be seen
 	protected bool CanSeePlayerLight(){
+		//check if player has light and if it is on
 		if (GameObject.Find("FirstPersonCharacter").transform.GetChild(0).gameObject.activeSelf && GameObject.Find("FirstPersonCharacter").transform.GetChild(0).GetComponent<Light>().enabled){
 
 			if (CanSeeLocation (GameObject.Find("PlayerLight").GetComponent<FlashlightHitArea>().hitDownPosition)){
@@ -103,6 +112,7 @@ public class EnemySight : MonoBehaviour {
 		return false;
 	}
 
+	// check if enemy can see a certain location
 	protected bool CanSeeLocation(Vector3 hitLocation){
 		RaycastHit hit;
 		Vector3 rayDirection = hitLocation - transform.position;

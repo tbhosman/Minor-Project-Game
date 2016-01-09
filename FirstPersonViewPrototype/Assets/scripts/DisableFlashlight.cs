@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Script for flickering flashlight (used in scary moments and picking up the flashlight)
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class DisableFlashlight : MonoBehaviour {

@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Analytics script, not used in actual game.
+/// Plots locations of game overs on the scene map
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class GameOverPlotter : MonoBehaviour {
