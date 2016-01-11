@@ -22,6 +22,7 @@ public class SaveLoadScript : MonoBehaviour {
 	public int PlayerID;
 	public GameObject AreaTrigger;
 	public string area;
+	public GameObject AnimatorPlayer;
 
 	//This is needs to be executed before de Start void of every GameObject
 	//If no savefile exists, the load function will handle it.
@@ -118,6 +119,10 @@ public class SaveLoadScript : MonoBehaviour {
 
 		//Check if File Exists
 		if (File.Exists (Application.persistentDataPath + "/savefile.sav")) {
+
+			//Skip Wake Animation
+			AnimatorPlayer = GameObject.Find ("AnimatorPlayer");
+			AnimatorPlayer.GetComponent<Animator>().SetTrigger ("SkipWake");
 
 			//Activate Playerlight always necessary when loading
 			Playerlight.SetActive (true);

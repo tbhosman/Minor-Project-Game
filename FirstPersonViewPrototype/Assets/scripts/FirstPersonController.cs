@@ -78,7 +78,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			MakingWalkingSound = false;
 			MakingRunningSound = false;
             //Cursor.visible = false; //uncomment to remove mouse
-            StartCoroutine(Wait(10));
+			if (GameObject.Find ("SaveLoadManager").GetComponent<SaveLoadScript> ().savertimeplayed == 0) {
+				StartCoroutine (Wait (10));
+			} else {
+				StartCoroutine (Wait (5));
+			}
         }
 
         
