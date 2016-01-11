@@ -20,9 +20,8 @@ public class LoadIntro : MonoBehaviour {
 		loaded = false;
 		fadingOut = false;
 		loading = false;
-		Application.backgroundLoadingPriority = ThreadPriority.High;
+		Application.backgroundLoadingPriority = ThreadPriority.Low;
 		if (mainMenuButtons.leveltoload == "prototype1.0"){
-			Destroy (GameObject.Find("MainMenuMusic(Clone)"));
 			Destroy (GameObject.Find ("DataAquisitie"));
 			Destroy (GameObject.Find ("DataAquisitie(Clone)"));
 			Cursor.visible = false;
@@ -36,10 +35,7 @@ public class LoadIntro : MonoBehaviour {
 	void Update() {
 		//wait for loading screen to fade in, then execute once
 		if (!GameObject.Find ("SceneFader").GetComponent<Image> ().enabled && !loaded && !loading) {
-			if (mainMenuButtons.leveltoload == "prototype1.0")
-				MainMusicController.GetComponent<MainMusicController>().FadeIn("Office"); //NOT FINAL LOCATION, SEE BELOW
 			loading = true;
-
 			StartCoroutine (LoadLevel ());
 		}
 
@@ -52,7 +48,11 @@ public class LoadIntro : MonoBehaviour {
 
 		//when faded out, switch to new scene
 		if (GameObject.Find ("SceneFader").GetComponent<Image> ().color.a >= 0.95f && loaded) {
-			//MainMusicController.GetComponent<MainMusicController>().FadeIn("Office"); //TODO: INSERT AREA GAME LOADED IN
+			if (mainMenuButtons.leveltoload == "prototype1.0"){
+				Destroy (GameObject.Find("MainMenuMusic(Clone)"));
+				MainMusicController.GetComponent<MainMusicController>().FadeIn("Office"); //NOT FINAL LOCATION, SEE BELOW
+
+			}
 			async.allowSceneActivation = true;
 		}
 	}
