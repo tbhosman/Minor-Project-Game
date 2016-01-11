@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>JS tut</title>
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+</head>
+<body>
+	
+	<input id="item">
+	<button id="add">add!</button><br>
+	<p class="counter"></p>
+	<ul id="list1"></ul>
+
+	<script>
+
+	var count = 0;
+
+		$("#add").click(function() {
+			count++;
+			var value = $("#item").val();
+
+			$("#list1").append("<li id = 'listItem" + count + "'>" + value + "</li>");
+			$("#listItem" + count).append("<button class = 'buttonDown'>DOWN</button>");
+			$("#listItem" + count).append("<button class = 'buttonUp'>UP</button>");
+
+			$(".counter").text(count + " list items(s).");
+
+		});
+
+		$(".buttonDown").click(function() {
+			alert("down");
+		});
+
+	</script>
+</body>
+</html>
