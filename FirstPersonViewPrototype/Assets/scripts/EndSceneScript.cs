@@ -1,5 +1,5 @@
 ﻿/// <summary>
-/// Controls the animation and overlay used in the final scene
+/// Different Events used in EndAnimation
 /// </summary>
 
 using UnityEngine;
@@ -15,6 +15,7 @@ public class EndSceneScript : MonoBehaviour {
 	public RawImage GasMaskOverlay;
 	public Animator AntagAnimator;
 
+	//Makes the Antag walk
 	void AntagWalk(){
 		AntagAnimator.SetFloat ("Speed", 0.2f);
 		AntagAnimator.speed = 0.65f;
@@ -24,6 +25,7 @@ public class EndSceneScript : MonoBehaviour {
 		GasMaskOverlay.enabled = !GasMaskOverlay.enabled;
 	}
 
+	//Fade gradually from black to normal
 	IEnumerator FadeIn(){
 		float elapsed = 0;
 		while (elapsed <fadeinduration) {
@@ -33,6 +35,8 @@ public class EndSceneScript : MonoBehaviour {
 			yield return null;
 		}
 	}
+
+	//Fade gradually from normal to black
 	IEnumerator FadeToBlack(){
 		float elapsed = 0;
 		while (elapsed <fadeduration) {
@@ -42,6 +46,8 @@ public class EndSceneScript : MonoBehaviour {
 			yield return null;
 		}
 	}
+
+	//Loads Credits scene
     void LoadCredits() {
         Application.LoadLevel("creditscene");
     }
