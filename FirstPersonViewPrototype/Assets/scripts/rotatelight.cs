@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Rotates the alarm light in the reactor
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class rotatelight : MonoBehaviour {

@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Controller for moving the credits text
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class Credits : MonoBehaviour {

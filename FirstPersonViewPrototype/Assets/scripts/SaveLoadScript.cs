@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Script used for saving and loading of the game
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using System;

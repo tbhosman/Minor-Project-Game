@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Script for playing an audioclip from a certain place in the clip
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class PlayAudioClip : MonoBehaviour {

@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Adds a glowing effect to the light of the reactor tubes
+/// </summary>
+/// 
+using UnityEngine;
 using System.Collections;
 
 public class ReaktorGlow : MonoBehaviour {

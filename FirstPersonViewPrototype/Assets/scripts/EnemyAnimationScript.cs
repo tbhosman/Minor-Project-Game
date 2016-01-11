@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Sets the animation that corresponds to what the routing algorithm wants
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class EnemyAnimationScript : MonoBehaviour {

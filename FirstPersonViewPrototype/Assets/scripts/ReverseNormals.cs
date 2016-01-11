@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+/// <summary>
+/// Reverses the normals of the mesh of the attached game object
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 [RequireComponent(typeof(MeshFilter))]

@@ -1,3 +1,7 @@
+/// <summary>
+/// Controls the Geiger counter sound and the screen
+/// </summary>
+
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
@@ -40,10 +44,13 @@ public class GeigerController : MonoBehaviour {
 
 	void setGeigerText(){
 
+		//calculate value to display on screen
         float radioactivityValue = radioactivityConstant / radiodistance + Random.Range(-1f,1f);
+
         string radioactivityPadded = "";
 		string radioactivityUnpadded = "";
-		if (radioactivityValue > overloadValue) {
+
+		if (radioactivityValue > overloadValue) { // if value is very high, display OVERLD
 			radioactivityPadded = " OVERLD";
 		} else { //counter is not overloaded
 			radioactivityUnpadded = radioactivityValue.ToString ("0.00");
@@ -53,30 +60,39 @@ public class GeigerController : MonoBehaviour {
 			else if (radioactivityUnpadded.Length == 7){ //value is good, no padding needed
 				radioactivityPadded = radioactivityUnpadded;
 			}
-			else{ //debug for values with more than 7 digits
+			else{ //debug for values with more than 7 digits (should not happen)
 				radioactivityPadded = " OVERLD";
 			}
 		}
 
+		//set padded value to the text of the screen
 		transform.parent.GetChild (1).GetChild (0).GetComponent<TextMesh> ().text = radioactivityPadded;
+
+		//update text again in a random time (between 0 and 0.2 seconds from current update)
         Invoke("setGeigerText", Random.Range(0f,0.2f));
     }
 
+	// Find radioactive item that is closest to the player
 	float DistanceToClosestRadioactive(){
+
 		GameObject[] radioactives;
 		radioactives =  GameObject.FindGameObjectsWithTag("radioactive");
 		GameObject closest = null;
 		float distance = Mathf.Infinity;
 		Vector3 position = transform.position;
+
 		foreach (GameObject radioactive in radioactives) {
 			float curdistance = Vector3.Distance(radioactive.transform.position,transform.position);
+
 			if (curdistance<distance){
 				distance = curdistance;
 			}
 		}
+
 		return distance;
 	}
-	
+
+	// check what clicking level to use
  	int ChooseAudioClip(float radiodistance, int previousaudiolevel){
 		if (radiodistance < 50 && radiodistance > 40) {
 			audiolevel = 2;

@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+/// <summary>
+/// Script for the procedural generation of the storage
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class ProceduralGenerationStorage : MonoBehaviour {

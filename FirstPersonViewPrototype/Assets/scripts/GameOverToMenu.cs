@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Script that loads menu after the game over scene is finished. Fades out all music from game on starting
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 

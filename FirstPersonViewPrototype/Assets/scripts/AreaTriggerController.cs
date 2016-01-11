@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Keeps track of the location that the player is in, and changes music accordingly
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class AreaTriggerController : MonoBehaviour {

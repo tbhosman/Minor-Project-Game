@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Scales the flag of the credits based on the aspect ratio of the screen
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class FlagScaler : MonoBehaviour {

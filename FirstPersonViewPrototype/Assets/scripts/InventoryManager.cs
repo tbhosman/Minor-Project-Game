@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Makes the notes in the inventory interactable
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class InventoryManager : MonoBehaviour {

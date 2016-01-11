@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Manages the loading screen. Starts loading after fading in, loads asynchronously to keep the loading animation running,
+/// then fades out to loaded scene
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -7,7 +12,7 @@ public class LoadIntro : MonoBehaviour {
 	private bool loaded;
 	private bool fadingOut;
 	private bool loading;
-	AsyncOperation async;
+	private AsyncOperation async;
 	public GameObject MMCPrefab;
 	private GameObject MainMusicController;
 
@@ -15,7 +20,7 @@ public class LoadIntro : MonoBehaviour {
 		loaded = false;
 		fadingOut = false;
 		loading = false;
-		Application.backgroundLoadingPriority = ThreadPriority.Low;
+		Application.backgroundLoadingPriority = ThreadPriority.High;
 		if (mainMenuButtons.leveltoload == "prototype1.0"){
 			Destroy (GameObject.Find("MainMenuMusic(Clone)"));
 			Destroy (GameObject.Find ("DataAquisitie"));
@@ -34,13 +39,13 @@ public class LoadIntro : MonoBehaviour {
 			if (mainMenuButtons.leveltoload == "prototype1.0")
 				MainMusicController.GetComponent<MainMusicController>().FadeIn("Office"); //NOT FINAL LOCATION, SEE BELOW
 			loading = true;
-			async = Application.LoadLevelAsync(mainMenuButtons.leveltoload);
-			//async.allowSceneActivation = false;
-			StartCoroutine (LoadLevel (async));
+
+			StartCoroutine (LoadLevel ());
 		}
 
 		//if next scene is loaded, start fading out loading screen
 		if (loaded) {
+			GameObject.Find("SceneFader").GetComponent<Image>().enabled = true;
 			GameObject.Find ("SceneFader").GetComponent<SceneFadeInOut> ().FadeToBlack();
 			fadingOut = true;
 		}
@@ -52,13 +57,15 @@ public class LoadIntro : MonoBehaviour {
 		}
 	}
 
-	IEnumerator LoadLevel(AsyncOperation async){
-		if (async.isDone) {
+	IEnumerator LoadLevel(){
+		async = Application.LoadLevelAsync(mainMenuButtons.leveltoload);
+		async.allowSceneActivation = false;
+
+		while (async.progress < 0.9f) {
+			Debug.Log( async.progress);
+			yield return null;
 		}
 
-		//while (!async.isDone) {
-			yield return async;
-		//}
 		Debug.Log("Loading complete");
 		loaded = true;
 	}

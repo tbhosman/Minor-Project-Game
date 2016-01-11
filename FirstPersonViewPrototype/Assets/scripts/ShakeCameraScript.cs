@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Shake the camera randomly (can be used during a cutscene)
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class ShakeCameraScript : MonoBehaviour {

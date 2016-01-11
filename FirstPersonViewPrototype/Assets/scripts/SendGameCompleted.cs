@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Send game completed to data aquisition
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class SendGameCompleted : MonoBehaviour {

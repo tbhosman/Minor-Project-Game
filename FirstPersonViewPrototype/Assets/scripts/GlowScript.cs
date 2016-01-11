@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+/// <summary>
+/// Makes the object this is attached to glow (used on pickups)
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 using UnityEngine.Rendering;
 public class GlowScript : MonoBehaviour {

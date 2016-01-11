@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Fetches the global and local highscores
+/// </summary>
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using System.Linq;
@@ -12,14 +15,14 @@ public class HighscoreManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		int localBest = PlayerPrefs.GetInt ("highscore");
+		int localBest = PlayerPrefs.GetInt ("highscore"); // fetch local highscore
 		if (localBest != 0){
 			localHighscore.text = localBest.ToString() + " minutes";
 		} else {
 			localHighscore.text = "No highscore yet";
 		}
 
-		globalHighscore.text = "Retrieving highscore..";
+		globalHighscore.text = "Retrieving highscore.."; // placeholder while loading global highscore
 
 		StartCoroutine(getGlobalHighscore());
 	}
@@ -32,20 +35,21 @@ public class HighscoreManager : MonoBehaviour {
 		while (!www.isDone)
 		{
 			elapsedTime += Time.deltaTime;
-			if (elapsedTime >= 10.0f) {
+			if (elapsedTime >= 10.0f) { // server timed out
 				globalHighscore.text = "Server is offline";
 				break;
 			}
 			yield return null;
 		}
 		
-		if (!www.isDone || !string.IsNullOrEmpty(www.error))
+		if (!www.isDone || !string.IsNullOrEmpty(www.error)) // if an error was received
 		{
 			//Debug.LogError("Load Failed");
 			globalHighscore.text = "Load failed";
 			yield break;
 		}
-		
+
+		// answer from server has been received, no error returned
 		string globalText =  www.text; // Pass retrieved result.
 		char[] delimiters = {':', '}'};
 		globalText = globalText.Split (delimiters)[1];

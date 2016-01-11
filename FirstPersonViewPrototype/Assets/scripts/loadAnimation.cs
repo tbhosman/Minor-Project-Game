@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Makes an image spin during loading
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class loadAnimation : MonoBehaviour {

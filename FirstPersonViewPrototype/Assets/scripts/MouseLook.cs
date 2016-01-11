@@ -1,3 +1,7 @@
+/// <summary>
+/// Controls the camera rotation according to mouse movements by the player
+/// </summary>
+
 using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;

@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Script for the procedural generation of the lab
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class Procedural_Generation_Lab : MonoBehaviour {

@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Controls the stamina bar, and enables the red panel if the player has run out of stamina
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.Characters.FirstPerson;
 
@@ -12,11 +16,9 @@ public class fillStamina : MonoBehaviour {
     public GameObject roodPanel;
 
     void Start() {
-        fps = fpsController.GetComponent<FirstPersonController>();
-        
+        fps = fpsController.GetComponent<FirstPersonController>(); 
     }
-
-
+	
     void Update() {
         StaminaTransform.localScale = new Vector3(scaleStam, StaminaTransform.localScale.y, StaminaTransform.localScale.z);
         scaleStam = 1.0f - (fps.stamina / 100);

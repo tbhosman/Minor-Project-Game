@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Makes pickups interactable for pickup, and gives information about them to the player
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 public class InventoryPickupScript : MonoBehaviour {
@@ -41,13 +45,19 @@ public class InventoryPickupScript : MonoBehaviour {
 	void OnTriggerStay() {
 		PlayerRay = new Ray (Player.transform.position, Player.transform.forward);
 		Physics.Raycast (PlayerRay, out RayHit);
+
 		if (RayHit.collider.gameObject == KeyObject) {
+
 			InspectInstructions.text = displayText;
 			InspectInstructions.enabled = true;
+
 			if (Input.GetKeyDown ("e")) {
+
 				KeyObject.SetActive (false);
 				StartCoroutine (ObjectPickup ());
 				gameObject.GetComponent<Collider>().enabled = false;
+
+				//check what item is picked up
 				if (IsFlashlight){
 					Debug.Log ("picked up flashlight");
 				}
@@ -73,6 +83,8 @@ public class InventoryPickupScript : MonoBehaviour {
 	}
 
 	IEnumerator ObjectPickup(){
+
+		// if flashlight is picked up, start with a flickering light
 		if (IsFlashlight) {
 			InspectInstructions.enabled = false;
 			Debug.Log ("Light toggled");
@@ -90,6 +102,8 @@ public class InventoryPickupScript : MonoBehaviour {
 			yield return new WaitForSeconds(0.1f);
 			flashlight.SetActive (!flashlight.activeSelf);
 		}
+
+		//show instructions
 		InspectInstructions.enabled = true;
 		InspectInstructions.text = afterPickupText;
 		yield return new WaitForSeconds (2f);
