@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 54706a474adc16447ad95090a10d133d
-timeCreated: 1452529361
+guid: 73aa2cd9f1b60a541aec617f8b59241c
+timeCreated: 1452529635
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -63,7 +63,49 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 354
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube_002
+        weight: 1
+      - path: Cube_003
+        weight: 1
+      - path: Cube_004
+        weight: 1
+      - path: Cube_005
+        weight: 1
+      - path: groot_wiel_1
+        weight: 1
+      - path: groot_wiel_2
+        weight: 1
+      - path: groot_wiel_2_001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
