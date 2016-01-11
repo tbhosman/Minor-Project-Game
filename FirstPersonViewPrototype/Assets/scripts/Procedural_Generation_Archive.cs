@@ -31,9 +31,13 @@ public class Procedural_Generation_Archive : MonoBehaviour
     void Start()
     {
 		SaveLoadManager = GameObject.Find ("SaveLoadManager");
+        
+        //initialises the matrix that contains de objects that could be generated inside of the archive closets
         doosKeuze[0] = doosH;
         doosKeuze[1] = doosS;
         doosKeuze[2] = note;
+
+        //send a raycast to see the dimensions of the room
         RaycastHit hitX;
         RaycastHit hitZ;
         Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 2.5f, transform.position.z), Vector3.right, out hitX);
@@ -41,12 +45,16 @@ public class Procedural_Generation_Archive : MonoBehaviour
         scalingX = hitX.distance;
         scalingZ = hitZ.distance;
 
+        //create a matrix with de dimensions according to the roomsize
         matrixGrootteX = (int)(scalingX);
         matrixGrootteZ = (int)(scalingZ);
+
+        //the size of one square in the matrix
         matrixHokjeX = scalingX * 2 / matrixGrootteX;
         matrixHokjeZ = scalingZ * 2 / matrixGrootteZ;
         matrix = new int[matrixGrootteX, matrixGrootteZ];
     
+        //the matrix which contains the location of the door
         matrixDeurY = new float[matrixDeur.Length];
         foreach (Vector2 element in matrixDeur)
         {
@@ -59,6 +67,7 @@ public class Procedural_Generation_Archive : MonoBehaviour
         }
         for (int j = 0; j < matrixGrootteZ; j++)
         {
+            //makes sure the door stays empty
             if (Array.IndexOf(matrixDeurY,j)==-1) {
                 rij_open = UnityEngine.Random.Range(0, matrixGrootteX);
             }
@@ -68,6 +77,8 @@ public class Procedural_Generation_Archive : MonoBehaviour
             };
             for (int i = 0; i < matrixGrootteX; i++)
             {
+
+                //generates the archiveclosets
                 if (i!=rij_open&&matrix[i,j]==0) { GameObject scaledkast = (GameObject)Instantiate(shelf, new Vector3(transform.position.x + i * matrixHokjeX - scalingX + matrixHokjeX / 2, transform.position.y, transform.position.z + j * matrixHokjeZ - scalingZ + matrixHokjeZ / 2), Quaternion.Euler(0, 0, 0)); 
                     scaledkast.transform.localScale = new Vector3(matrixHokjeX / 2, 1, 1);
                     aantaldozen = UnityEngine.Random.Range(2,5);
@@ -77,6 +88,7 @@ public class Procedural_Generation_Archive : MonoBehaviour
                         {
                             if (UnityEngine.Random.Range(0, 10) < 8) { GameObject doos = (GameObject)Instantiate(doosKeuze[UnityEngine.Random.Range(0, 2)], new Vector3(scaledkast.transform.position.x - matrixHokjeX / 2 + 0.4f + k * (matrixHokjeX / (aantaldozen) - 0.05f) + UnityEngine.Random.Range(-0.05f, 0.05f), scaledkast.transform.position.y + 0.867f, scaledkast.transform.position.z + UnityEngine.Random.Range(-0.1f, 0.1f)), Quaternion.Euler(270, UnityEngine.Random.Range(-90, 90), 0)); }
                         }
+                        //a chance to generate a note
                         else if(!GameObject.Find("SecurityNote(Clone)")&&!SaveLoadManager.GetComponent<SaveLoadScript>().keyObjectsPickedUp[2])
                         {
                             GameObject noteClone = (GameObject)Instantiate(doosKeuze[2], new Vector3(scaledkast.transform.position.x - matrixHokjeX / 2 + 0.4f + k * (matrixHokjeX / (aantaldozen) - 0.05f) + UnityEngine.Random.Range(-0.05f, 0.05f), scaledkast.transform.position.y + 0.88f, scaledkast.transform.position.z + UnityEngine.Random.Range(-0.1f, 0.1f)), Quaternion.Euler(0, 5, 0));
@@ -99,6 +111,8 @@ public class Procedural_Generation_Archive : MonoBehaviour
     {
 
     }
+
+    //visualises the generationmatrix only used for debugging purposes
     void OnDrawGizmos()
     {
         for (int i = 0; i < matrixGrootteX; i++)
