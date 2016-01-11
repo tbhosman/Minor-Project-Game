@@ -32,14 +32,18 @@ public class ProceduralGenerationStorage : MonoBehaviour {
     private int rijNummer;
     private int kolomNummer;
 
+    //instantiated scares
     void Awake()
     {
         Instantiated = 0;
     }
     void Start() {
         
+        //the array containing the storage scaffolding
         arrayKasten = new GameObject[] { kast1, kast2, kast3 };
         kast = arrayKasten[Random.Range(0, 3)];
+
+        //because all the storage rooms are the same size there is no raycasting done.
         rijZ = 1.6638886666666666666666666666666666666666666666666666f;
         kolomZ = 3.292858f;
         
@@ -179,9 +183,9 @@ public class ProceduralGenerationStorage : MonoBehaviour {
             }
         }
 
-        if (Random.Range(0, 20) > 15 && (Instantiated <4)) { Instantiate(scare, new Vector3(transform.position.x,transform.position.y+0.2f,transform.position.z), Quaternion.identity);
+        //instantiate the scares
+        if (Random.Range(0, 20) > 15 && (Instantiated <6)) { Instantiate(scare, new Vector3(transform.position.x,transform.position.y+0.2f,transform.position.z), Quaternion.identity);
             Instantiated = Instantiated + 1;
         }
-        //kastclone.transform.parent = transform;
     }
 }
