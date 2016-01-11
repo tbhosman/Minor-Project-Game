@@ -362,7 +362,7 @@ SceneSettings:
   - {fileID: 1931098538}
   m_PVSPortalsArray: []
   m_OcclusionBakeSettings:
-    smallestOccluder: 1
+    smallestOccluder: .25
     smallestHole: .25
     backfaceThreshold: 100
 --- !u!104 &2
@@ -8842,7 +8842,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: .300000012
+  near clip plane: .100000001
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -33786,15 +33786,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400016, guid: d3f1f7327febc194cb9b48726756d2d7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -.236999512
+      value: -.239999995
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: d3f1f7327febc194cb9b48726756d2d7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -.171000481
+      value: -.219999999
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: d3f1f7327febc194cb9b48726756d2d7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: .405999988
+      value: .423000008
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: d3f1f7327febc194cb9b48726756d2d7, type: 3}
       propertyPath: m_LocalRotation.x
@@ -43334,7 +43334,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 451848299}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .400000006, z: 0}
+  m_LocalPosition: {x: 0, y: -.479999989, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1386179271}
