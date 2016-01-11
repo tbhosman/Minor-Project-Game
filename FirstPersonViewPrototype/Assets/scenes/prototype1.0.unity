@@ -25881,6 +25881,10 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300660, guid: 1a7272ea20ead8f42bc6dc0614f395fc, type: 3}
+--- !u!1 &1140831256 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 197562, guid: 8f360dfe0ff752046a0ed146b8395375, type: 2}
+  m_PrefabInternal: {fileID: 1985606879}
 --- !u!1 &1143419687
 GameObject:
   m_ObjectHideFlags: 0
@@ -28773,10 +28777,6 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300678, guid: 1a7272ea20ead8f42bc6dc0614f395fc, type: 3}
---- !u!1 &1293036800 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 197028, guid: 38471986e4c54a042b8334888fd166e1, type: 2}
-  m_PrefabInternal: {fileID: 1864580359}
 --- !u!1 &1295276348
 GameObject:
   m_ObjectHideFlags: 0
@@ -36718,6 +36718,10 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1662019799}
+--- !u!1 &1662288678 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 186400, guid: 38471986e4c54a042b8334888fd166e1, type: 2}
+  m_PrefabInternal: {fileID: 1864580359}
 --- !u!1 &1668041161
 GameObject:
   m_ObjectHideFlags: 0
@@ -39385,7 +39389,7 @@ MonoBehaviour:
   - {fileID: 436355951}
   - {fileID: 1483879227}
   - {fileID: 1634370794}
-  - {fileID: 1293036800}
+  - {fileID: 1662288678}
   - {fileID: 1707065476}
   - {fileID: 1881963848}
   - {fileID: 45755273}
@@ -39401,6 +39405,8 @@ MonoBehaviour:
   DoorOpened: 000000
   keyObjectsPickedUp: 000000
   PlayerID: 0
+  AreaTrigger: {fileID: 1140831256}
+  area: 
 --- !u!1001 &1784354188
 Prefab:
   m_ObjectHideFlags: 0
@@ -40859,6 +40865,10 @@ Prefab:
     - target: {fileID: 10834938, guid: 38471986e4c54a042b8334888fd166e1, type: 2}
       propertyPath: m_Range
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 186400, guid: 38471986e4c54a042b8334888fd166e1, type: 2}
+      propertyPath: m_Name
+      value: ScaryNoteTrigger
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38471986e4c54a042b8334888fd166e1, type: 2}
