@@ -1,5 +1,5 @@
 ﻿/// <summary>
-/// Activates the Don't Look Scare if the player is looking at it
+/// Keeps the DontLookMonster in same relative position of player
 /// </summary>
 
 using UnityEngine;
@@ -18,6 +18,7 @@ public class DontLookMonster : MonoBehaviour {
 		gameObject.transform.position = Player.transform.position + RelativeToPlayerPos;
 	}
 
+	//This is an Event in DontLookScareAnimation
 	void Deactivate(){
 		gameObject.SetActive (false);
 	}

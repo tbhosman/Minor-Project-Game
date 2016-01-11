@@ -15,12 +15,6 @@ public class MainAreaTriggerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		inStorage = false;
-		inOffice = true;
-		inArchive = false;
-		inLab = false;
-		inMachine = false;
-		inReaktor = false;
 		EnemySpawnLocations = GameObject.Find ("EnemySpawnLocations");
 		EnemyObject = GameObject.Find ("Enemy");
 	}
