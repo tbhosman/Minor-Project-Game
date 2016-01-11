@@ -25,13 +25,19 @@ public class AnimatableDoorScript : MonoBehaviour {
 	public bool[] doorOpened;
 
 	void Start(){
+
+		//Initializing Variables
 		DoorAnimation = gameObject.transform.GetChild (0);
 		OpenAnimation = DoorAnimation.GetComponent<Animation> ();
 		closed = true;
 		DoorTrigger = gameObject.GetComponent<Collider> ();
 		Inventory = GameObject.FindGameObjectWithTag ("Inventory");
 		DataAquisitie = GameObject.Find ("DataAquisitie");
+
+		//If loaded this value will change, if not loaded everything is false
 		doorOpened = SaveLoadManager.GetComponent<SaveLoadScript> ().DoorOpened;
+
+		// Open doors when they already have been opened in saved game
 		if (Storagedoor && doorOpened[1]) {
 			gameObject.GetComponent<Collider>().enabled = false;
 			OpenAnimation.Play ();
@@ -43,6 +49,8 @@ public class AnimatableDoorScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(){
+
+		//Initializing text of playerinstructions
 		if (closed) {
 			PlayerInstructions.text = OpenDoorString;
 			PlayerInstructions.enabled = true;
@@ -96,9 +104,10 @@ public class AnimatableDoorScript : MonoBehaviour {
 		PlayerInstructions.enabled = false;
 	}
 
+	//Display AfterOpenString for 3 seconds
 	IEnumerator DoorOpening(){
 		PlayerInstructions.text = AfterOpenString;
-		yield return new WaitForSeconds (2);
+		yield return new WaitForSeconds (3);
 		PlayerInstructions.enabled = false;
 	}
 

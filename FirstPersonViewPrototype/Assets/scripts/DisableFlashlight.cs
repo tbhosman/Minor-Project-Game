@@ -11,6 +11,7 @@ public class DisableFlashlight : MonoBehaviour {
 	void Start(){
 		StartCoroutine (run ());
 	}
+
 	IEnumerator run(){
 		flashlight.SetActive (false);
 		yield return new WaitForSeconds(0.5f);
