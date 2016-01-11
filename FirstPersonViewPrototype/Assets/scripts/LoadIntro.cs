@@ -12,7 +12,7 @@ public class LoadIntro : MonoBehaviour {
 	private bool loaded;
 	private bool fadingOut;
 	private bool loading;
-	AsyncOperation async;
+	private AsyncOperation async;
 	public GameObject MMCPrefab;
 	private GameObject MainMusicController;
 
@@ -39,13 +39,13 @@ public class LoadIntro : MonoBehaviour {
 			if (mainMenuButtons.leveltoload == "prototype1.0")
 				MainMusicController.GetComponent<MainMusicController>().FadeIn("Office"); //NOT FINAL LOCATION, SEE BELOW
 			loading = true;
-			//async.allowSceneActivation = false;
-			StartCoroutine (LoadLevel (async));
+
+			StartCoroutine (LoadLevel ());
 		}
 
 		//if next scene is loaded, start fading out loading screen
 		if (loaded) {
-			Debug.Log(1);
+			GameObject.Find("SceneFader").GetComponent<Image>().enabled = true;
 			GameObject.Find ("SceneFader").GetComponent<SceneFadeInOut> ().FadeToBlack();
 			fadingOut = true;
 		}
@@ -57,13 +57,15 @@ public class LoadIntro : MonoBehaviour {
 		}
 	}
 
-	IEnumerator LoadLevel(AsyncOperation async){
+	IEnumerator LoadLevel(){
+		async = Application.LoadLevelAsync(mainMenuButtons.leveltoload);
+		async.allowSceneActivation = false;
 
-		while (!async.isDone) {
-			async = Application.LoadLevelAsync(mainMenuButtons.leveltoload);
-			async.allowSceneActivation = false;
+		while (async.progress < 0.9f) {
+			Debug.Log( async.progress);
 			yield return null;
 		}
+
 		Debug.Log("Loading complete");
 		loaded = true;
 	}
