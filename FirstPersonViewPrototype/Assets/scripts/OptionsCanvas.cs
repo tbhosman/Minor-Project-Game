@@ -30,7 +30,6 @@ public class OptionsCanvas : MonoBehaviour {
         //displays the qualitylevels available for your pc
         qualityDropdown.options.Clear();
         for (int i = 0; i < QualitySettings.names.Length; i++) { qualityDropdown.options.Add(new Dropdown.OptionData() { text = QualitySettings.names[i] }); }
-
         scream = GetComponent<AudioSource>();
         
         //changes the antialiasing
@@ -63,6 +62,7 @@ public class OptionsCanvas : MonoBehaviour {
     public void Volume()
     {
         AudioListener.volume = VolumeSlider.value;
+        Debug.Log(AudioListener.volume);
     }
 
     //changes the resolution
@@ -88,12 +88,10 @@ public class OptionsCanvas : MonoBehaviour {
         if (vsyncToggle.isOn)
         {
             QualitySettings.vSyncCount = 1;
-            Debug.Log("vsynccount: 1");
         }
         else
         {
             QualitySettings.vSyncCount = 0;
-            Debug.Log("vsynccount: 0");
         }
         
     }
@@ -126,12 +124,5 @@ public class OptionsCanvas : MonoBehaviour {
     public void back() {
 		GameObject.Find ("SceneFader").GetComponent<SceneFadeInOut> ().scene = "menu";
 		GameObject.Find ("SceneFader").GetComponent<SceneFadeInOut> ().sceneEnding = true;
-        //Application.LoadLevel("menu");
     } 
-
-    void Update () {
-	
-	}
-
-    
 }
