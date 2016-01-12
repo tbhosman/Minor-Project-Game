@@ -196,6 +196,12 @@ app.get("/gameOver", function (req, res) {
 	});
 });
 
+app.get("/bestScore", function(req, res) {
+	connection.query("SELECT max(TotalGameTime) FROM Unity_data WHERE TotalGameTime > 0 AND OpenedDoor_SecurityCode > 0", function(err, rows, fields){
+		res.send(JSON.parse(JSON.stringify(rows)));
+	});
+});
+
 app.listen(port);
 
 //key, security note, koevoet, ?controll room?

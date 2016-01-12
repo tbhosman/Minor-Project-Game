@@ -46,7 +46,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Materials\cursor.cs" />
-     <Compile Include="Assets\SyncMusicWithAnimation.cs" />
      <Compile Include="Assets\imports\Industrial\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\imports\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
      <Compile Include="Assets\imports\Standard Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
@@ -140,6 +139,7 @@
      <Compile Include="Assets\scripts\SetActiveTrigger.cs" />
      <Compile Include="Assets\scripts\ShakeCameraScript.cs" />
      <Compile Include="Assets\scripts\StickToPlayerScript.cs" />
+     <Compile Include="Assets\scripts\SyncMusicWithAnimation.cs" />
      <Compile Include="Assets\scripts\TogglePlayerLightScript.cs" />
      <Compile Include="Assets\scripts\VanishScript.cs" />
      <Compile Include="Assets\scripts\changeShader.cs" />
@@ -154,6 +154,7 @@
      <Compile Include="Assets\scripts\space_checker.cs" />
      <Compile Include="Assets\scripts\toggleFlashLight.cs" />
      <Compile Include="Assets\scripts\vanishafterseconds.cs" />
+     <Compile Include="Assets\scripts\ventilationSmoke.cs" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
