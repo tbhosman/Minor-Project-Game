@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Randomly starts a smoke effect through the ventilation
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class ventilationSmoke : MonoBehaviour {
