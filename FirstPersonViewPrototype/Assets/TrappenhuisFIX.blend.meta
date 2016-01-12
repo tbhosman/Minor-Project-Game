@@ -1,0 +1,135 @@
+fileFormatVersion: 2
+guid: e243794481e3e9d418605e4bfbfd3893
+timeCreated: 1452603059
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Monolithic_Landing_220mm_Thickness__231877_
+    100002: Monolithic_Landing_220mm_Thickness__231980_
+    100004: Monolithic_Landing_220mm_Thickness__232062_
+    100006: Monolithic_Landing_220mm_Thickness__232176_
+    100008: Monolithic_Landing_220mm_Thickness__232339_
+    100010: Monolithic_Run_190mm_Depth__231545__001
+    100012: Monolithic_Run_190mm_Depth__231875__000
+    100014: Monolithic_Run_190mm_Depth__231875__001
+    100016: Monolithic_Run_190mm_Depth__231978__001
+    100018: Monolithic_Run_190mm_Depth__232060__001
+    100020: Monolithic_Run_190mm_Depth__232174__001
+    100022: Monolithic_Run_190mm_Depth__232337__001
+    100024: //RootNode
+    400000: Monolithic_Landing_220mm_Thickness__231877_
+    400002: Monolithic_Landing_220mm_Thickness__231980_
+    400004: Monolithic_Landing_220mm_Thickness__232062_
+    400006: Monolithic_Landing_220mm_Thickness__232176_
+    400008: Monolithic_Landing_220mm_Thickness__232339_
+    400010: Monolithic_Run_190mm_Depth__231545__001
+    400012: Monolithic_Run_190mm_Depth__231875__000
+    400014: Monolithic_Run_190mm_Depth__231875__001
+    400016: Monolithic_Run_190mm_Depth__231978__001
+    400018: Monolithic_Run_190mm_Depth__232060__001
+    400020: Monolithic_Run_190mm_Depth__232174__001
+    400022: Monolithic_Run_190mm_Depth__232337__001
+    400024: //RootNode
+    2300000: Monolithic_Landing_220mm_Thickness__231877_
+    2300002: Monolithic_Landing_220mm_Thickness__231980_
+    2300004: Monolithic_Landing_220mm_Thickness__232062_
+    2300006: Monolithic_Landing_220mm_Thickness__232176_
+    2300008: Monolithic_Landing_220mm_Thickness__232339_
+    2300010: Monolithic_Run_190mm_Depth__231545__001
+    2300012: Monolithic_Run_190mm_Depth__231875__000
+    2300014: Monolithic_Run_190mm_Depth__231875__001
+    2300016: Monolithic_Run_190mm_Depth__231978__001
+    2300018: Monolithic_Run_190mm_Depth__232060__001
+    2300020: Monolithic_Run_190mm_Depth__232174__001
+    2300022: Monolithic_Run_190mm_Depth__232337__001
+    3300000: Monolithic_Landing_220mm_Thickness__231877_
+    3300002: Monolithic_Landing_220mm_Thickness__231980_
+    3300004: Monolithic_Landing_220mm_Thickness__232062_
+    3300006: Monolithic_Landing_220mm_Thickness__232176_
+    3300008: Monolithic_Landing_220mm_Thickness__232339_
+    3300010: Monolithic_Run_190mm_Depth__231545__001
+    3300012: Monolithic_Run_190mm_Depth__231875__000
+    3300014: Monolithic_Run_190mm_Depth__231875__001
+    3300016: Monolithic_Run_190mm_Depth__231978__001
+    3300018: Monolithic_Run_190mm_Depth__232060__001
+    3300020: Monolithic_Run_190mm_Depth__232174__001
+    3300022: Monolithic_Run_190mm_Depth__232337__001
+    4300000: Monolithic_Run_190mm_Depth__231875__000
+    4300002: Monolithic_Run_190mm_Depth__231545__001
+    4300004: Monolithic_Run_190mm_Depth__232337__001
+    4300006: Monolithic_Run_190mm_Depth__231978__001
+    4300008: Monolithic_Run_190mm_Depth__231875__001
+    4300010: Monolithic_Run_190mm_Depth__232174__001
+    4300012: Monolithic_Landing_220mm_Thickness__232339_
+    4300014: Monolithic_Landing_220mm_Thickness__232176_
+    4300016: Monolithic_Landing_220mm_Thickness__232062_
+    4300018: Monolithic_Landing_220mm_Thickness__231980_
+    4300020: Monolithic_Landing_220mm_Thickness__231877_
+    4300022: Monolithic_Run_190mm_Depth__232060__001
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
