@@ -20,7 +20,6 @@ public class Credits : MonoBehaviour {
 	void Update () {
 
 		camera.transform.Translate (Vector3.down * Time.deltaTime * speed);
-		Debug.Log (GameObject.Find ("vlagGoed").transform.FindChild ("Canvas").localPosition.z);
 		if (GameObject.Find ("vlagGoed").transform.FindChild ("Canvas").localPosition.z < -1.188f) {
 			Application.LoadLevel ("menu");
 		}

@@ -63,7 +63,6 @@ public class OptionsCanvas : MonoBehaviour {
     public void Volume()
     {
         AudioListener.volume = VolumeSlider.value;
-        Debug.Log(AudioListener.volume);
     }
 
     //changes the resolution

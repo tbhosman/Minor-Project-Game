@@ -36,8 +36,6 @@ public class VanishScript : MonoBehaviour {
 
 						if (Vector3.Angle (transform.position - player.transform.position, player.transform.forward) <= FieldOfVanishDegree * 0.5f) {
 
-							Debug.Log ("VanishActivated");
-
 							if (noAnimation) {
 								gameObject.SetActive (false);
 							} else {
