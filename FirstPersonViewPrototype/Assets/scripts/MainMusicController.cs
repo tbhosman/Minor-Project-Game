@@ -50,7 +50,6 @@ public class MainMusicController : MonoBehaviour {
 	}
 
 	public void FadeIn(string track){
-		Debug.Log ("FadeIn Track " + track);
 		for (int i = 1; i < transform.childCount; i++) {
 			//search track that has to fade in
 			if (audioTracks[i].name == track){
