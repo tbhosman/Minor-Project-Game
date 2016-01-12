@@ -154,6 +154,7 @@
      <Compile Include="Assets\scripts\space_checker.cs" />
      <Compile Include="Assets\scripts\toggleFlashLight.cs" />
      <Compile Include="Assets\scripts\vanishafterseconds.cs" />
+     <Compile Include="Assets\ventilationSmoke.cs" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
