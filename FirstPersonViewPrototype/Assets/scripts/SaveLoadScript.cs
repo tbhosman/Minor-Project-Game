@@ -153,8 +153,12 @@ public class SaveLoadScript : MonoBehaviour {
 			}
 			area = saver.area;
 
+			//Start areamusic
+			GameObject.Find ("MainMusicController(Clone)").GetComponent<MainMusicController>().FadeIn (area);
+
 			//Initialize PlayerID
 			PlayerPrefs.SetInt("ID",saver.PlayerID);
+			PlayerID = saver.PlayerID;
 
 			//Initialize which objects are picked up
 			keyObjectsPickedUp = saver.ObjectsPickedUp;

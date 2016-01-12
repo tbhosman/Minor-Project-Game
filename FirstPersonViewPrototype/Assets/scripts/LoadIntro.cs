@@ -62,7 +62,6 @@ public class LoadIntro : MonoBehaviour {
 		async.allowSceneActivation = false;
 
 		while (async.progress < 0.9f) {
-			Debug.Log( async.progress);
 			yield return null;
 		}
 
