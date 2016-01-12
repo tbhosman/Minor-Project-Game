@@ -9,7 +9,7 @@ public class DontLookMonster : MonoBehaviour {
 
 	private GameObject Player;
 	public Vector3 RelativeToPlayerPos;
-
+	public GameObject[] ObjectsToDeactivate;
 	void Start () {
 		Player = GameObject.FindGameObjectWithTag ("Player");
 	}
@@ -21,5 +21,11 @@ public class DontLookMonster : MonoBehaviour {
 	//This is an Event in DontLookScareAnimation
 	void Deactivate(){
 		gameObject.SetActive (false);
+	}
+
+	void DeactivateObjects(){
+		foreach (GameObject ObjectToDeactivate in ObjectsToDeactivate) {
+			ObjectToDeactivate.SetActive (false);
+		}
 	}
 }
