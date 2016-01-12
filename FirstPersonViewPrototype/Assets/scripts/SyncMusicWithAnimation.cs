@@ -18,15 +18,12 @@ public class SyncMusicWithAnimation : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (animator.GetCurrentAnimatorStateInfo(0).IsName("animating")){
-			animator.SetBool ("startedAudio", false);
-		}
+		if (animator.GetCurrentAnimatorStateInfo(0).IsName("Waiting")) {
+			audio.Play ();
+			animator.SetBool ("playingAudio", true);
+		} else {
+			animator.SetBool ("playingAudio", false);
 
-		animator.SetBool ("playingAudio", audio.isPlaying);
-
-		if (!audio.isPlaying) {
-			audio.Play();
-			animator.SetBool ("startedAudio", true);
 		}
 	}
 }
