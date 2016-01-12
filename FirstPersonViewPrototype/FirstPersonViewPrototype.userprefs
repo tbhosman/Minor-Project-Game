@@ -1,18 +1,17 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\DontLookMonster.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SyncMusicWithAnimation.cs">
     <Files>
-      <File FileName="Assets\scripts\DataAquisitie.cs" Line="31" Column="1" />
+      <File FileName="Assets\SyncMusicWithAnimation.cs" Line="23" Column="4" />
+      <File FileName="Assets\scripts\DataAquisitie.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\SaveLoadScript.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\SceneFadeInOut.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\MainMusicController.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\MainAreaTriggerController.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\LoadIntro.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\FirstPersonController.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\OptionsCanvas.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\VanishScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Credits.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\DontLookMonster.cs" Line="28" Column="41" />
+      <File FileName="Assets\scripts\EnemyRouting.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\EnemyAnimationScript.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

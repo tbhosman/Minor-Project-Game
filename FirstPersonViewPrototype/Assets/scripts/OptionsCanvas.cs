@@ -13,16 +13,26 @@ public class OptionsCanvas : MonoBehaviour {
     public Slider sensSlider;
     public Text aaText;
     public Dropdown resolutionDropdown;
+    public Dropdown qualityDropdown;
     public Toggle fullscreenToggle;
     public Toggle vsyncToggle;
     private bool togglefullscreen;
     public RawImage Face;
     AudioSource scream;
     public AudioClip Screamsound;
-
+ 
 
 	void Start () {
+        //displays the resolutions that are available for your pc
+        resolutionDropdown.options.Clear();
+        for (int i = 0; i < Screen.resolutions.Length; i++) { resolutionDropdown.options.Add(new Dropdown.OptionData() { text = Screen.resolutions[i].width + "x" + Screen.resolutions[i].height }); }
+
+        //displays the qualitylevels available for your pc
+        qualityDropdown.options.Clear();
+        for (int i = 0; i < QualitySettings.names.Length; i++) { qualityDropdown.options.Add(new Dropdown.OptionData() { text = QualitySettings.names[i] }); }
         scream = GetComponent<AudioSource>();
+        
+        //changes the antialiasing
         PlayerPrefs.SetInt("AA", 4);
         if (PlayerPrefs.HasKey("AA"))
         {
@@ -48,84 +58,45 @@ public class OptionsCanvas : MonoBehaviour {
         }
     }
 
+    //changes the volume
     public void Volume()
     {
         AudioListener.volume = VolumeSlider.value;
+        Debug.Log(AudioListener.volume);
     }
 
-
+    //changes the resolution
     public void DropDown()
     {
-        switch (resolutionDropdown.value)
-        {
-            case 0:
-                Screen.SetResolution(640, 480, Screen.fullScreen);
-                break;
-            case 1:
-                Screen.SetResolution(800, 600, Screen.fullScreen);
-                break;
-            case 2:
-                Screen.SetResolution(1024, 768, Screen.fullScreen);
-                break;
-            case 3:
-                Screen.SetResolution(1152, 864, Screen.fullScreen);
-                break;
-            case 4:
-                Screen.SetResolution(1280, 720, Screen.fullScreen);
-                break;
-            case 5:
-                Screen.SetResolution(1280, 800, Screen.fullScreen);
-                break;
-            case 6:
-                Screen.SetResolution(1280, 960, Screen.fullScreen);
-                break;
-            case 7:
-                Screen.SetResolution(1280, 1024, Screen.fullScreen);
-                break;
-            case 8:
-                Screen.SetResolution(1366, 768, Screen.fullScreen);
-                break;
-            case 9:
-                Screen.SetResolution(1400, 1050, Screen.fullScreen);
-                break;
-            case 10:
-                Screen.SetResolution(1440, 900, Screen.fullScreen);
-                break;
-            case 11:
-                Screen.SetResolution(1600, 900, Screen.fullScreen);
-                break;
-            case 12:
-                Screen.SetResolution(1600, 1024, Screen.fullScreen);
-                break;
-            case 13:
-                Screen.SetResolution(1680, 1050, Screen.fullScreen);
-                break;
-            case 14:
-                Screen.SetResolution(1920, 1080, Screen.fullScreen);
-                break;
-        }
+        Screen.SetResolution(Screen.resolutions[resolutionDropdown.value].width, Screen.resolutions[resolutionDropdown.value].height, true);
     }
 
+    //changes the quality
+    public void DropDownQuality() {
+        QualitySettings.SetQualityLevel(qualityDropdown.value, true);
+    }
+
+    //set the screen fullscreen
     public void setFullscreen()
     {
         Screen.fullScreen = !Screen.fullScreen;
     }
 
+    //changes the vsync
     public void vsync()
     {
         if (vsyncToggle.isOn)
         {
             QualitySettings.vSyncCount = 1;
-            Debug.Log("vsynccount: 1");
         }
         else
         {
             QualitySettings.vSyncCount = 0;
-            Debug.Log("vsynccount: 0");
         }
         
     }
 
+    //the jumpscare in the optionsmenu
     IEnumerator popupFace()
     {
         for (int i = 0; i < 10; i++)
@@ -137,7 +108,7 @@ public class OptionsCanvas : MonoBehaviour {
         }
     }
 
-
+    //changes the sensetivity
     public void sensetivity()
     {
         PlayerPrefs.SetFloat("Volume", sensSlider.value);
@@ -149,15 +120,9 @@ public class OptionsCanvas : MonoBehaviour {
         PlayerPrefs.SetFloat("sensetivity", sensSlider.value);
     }
 
+    //menu options
     public void back() {
 		GameObject.Find ("SceneFader").GetComponent<SceneFadeInOut> ().scene = "menu";
 		GameObject.Find ("SceneFader").GetComponent<SceneFadeInOut> ().sceneEnding = true;
-        //Application.LoadLevel("menu");
     } 
-
-    void Update () {
-	
-	}
-
-    
 }
