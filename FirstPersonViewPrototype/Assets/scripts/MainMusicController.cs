@@ -17,15 +17,12 @@ public class MainMusicController : MonoBehaviour {
 	private float maxVolumeReaktor;
 	private float maxVolumeStorage;
 	private float maxVolumeArchive;
-	public GameObject SaveLoadManager;
 
 
 	private int toFadeOut;
 
 	// Use this for initialization
 	void Start () {
-
-		SaveLoadManager = GameObject.Find ("SaveLoadManager");
 		audioTracks = new GameObject[transform.childCount];
 		for (int i = 0; i < transform.childCount; i++) {
 			audioTracks[i] = transform.GetChild(i).gameObject;
@@ -41,9 +38,7 @@ public class MainMusicController : MonoBehaviour {
 		maxVolumeLab = audioTracks[3].GetComponent<AudioSource>().volume;
 		maxVolumeReaktor = audioTracks[4].GetComponent<AudioSource>().volume;
 		maxVolumeStorage = audioTracks[5].GetComponent<AudioSource>().volume;
-		maxVolumeArchive = audioTracks[6].GetComponent<AudioSource>().volume;
-
-		FadeIn (SaveLoadManager.GetComponent<SaveLoadScript> ().area);
+		maxVolumeArchive = audioTracks [6].GetComponent<AudioSource> ().volume;
 	}
 	
 	// Update is called once per frame
