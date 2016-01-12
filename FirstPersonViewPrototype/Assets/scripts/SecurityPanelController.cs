@@ -15,7 +15,10 @@ public class SecurityPanelController : MonoBehaviour {
 	public GameObject MachineRoomDoor;
 	private GameObject DataAquisitie;
 	public GameObject MachineRoomDoorTrigger;
-	// Use this for initialization
+    public ParticleSystem steamlinks;
+    public ParticleSystem steamrechts;
+	
+    // Use this for initialization
 	void Start () {
 		for (int i = 0; i < transform.childCount; i++) {
 			if (transform.GetChild(i).name == "CodePanel"){
@@ -82,7 +85,8 @@ public class SecurityPanelController : MonoBehaviour {
 				MachineRoomDoor.GetComponent<Animation>().Play();
 				MachineRoomDoor.GetComponent<AudioSource>().Play();
 				codeDisplayPanel.GetComponent<Image> ().color = new Color (255, 255, 255, 100);
-
+                steamlinks.Play();
+                steamrechts.Play();
 			} else { // if the code was incorrect, display a red screen for 2 seconds, then reset
 
 				codeDisplayPanel.GetComponent<Image> ().color = Color.red;
