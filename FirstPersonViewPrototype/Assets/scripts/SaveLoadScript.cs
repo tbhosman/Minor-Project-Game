@@ -158,6 +158,7 @@ public class SaveLoadScript : MonoBehaviour {
 
 			//Initialize PlayerID
 			PlayerPrefs.SetInt("ID",saver.PlayerID);
+			PlayerID = saver.PlayerID;
 
 			//Initialize which objects are picked up
 			keyObjectsPickedUp = saver.ObjectsPickedUp;
