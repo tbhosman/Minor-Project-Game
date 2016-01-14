@@ -7,12 +7,10 @@ public class ventilationSmoke : MonoBehaviour {
     public float playtime;
     public AudioSource audiosource;
     public float playfromseconds;
-    public bool hasaudio;
 
     // Use this for initialization
     void Start () {
-        Rook();
-        InvokeRepeating("Rook", 3, 3);
+        InvokeRepeating("Rook", 8, 8);
     }
 	
 	// Update is called once per frame
@@ -34,6 +32,7 @@ public class ventilationSmoke : MonoBehaviour {
         yield return new WaitForSeconds(playtime);
         audiosource.Stop();
         audiosource.time = 0;
+        ventilatie.Stop();
     }
 }
 
