@@ -980,6 +980,7 @@ GameObject:
   - 95: {fileID: 9577580}
   - 82: {fileID: 8251580}
   - 114: {fileID: 11428042}
+  - 65: {fileID: 6503132}
   m_Layer: 0
   m_Name: Enigma
   m_TagString: Untagged
@@ -4636,6 +4637,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 131056}
   m_Mesh: {fileID: 4300054, guid: fb641c375d1a3224d9a40aeee2510968, type: 3}
+--- !u!65 &6503132
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183436}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 27.3897858, y: 47.6845932, z: 7.57788801}
+  m_Center: {x: .0832745656, y: 23.3422852, z: -2.21748304}
 --- !u!82 &8251580
 AudioSource:
   m_ObjectHideFlags: 1
