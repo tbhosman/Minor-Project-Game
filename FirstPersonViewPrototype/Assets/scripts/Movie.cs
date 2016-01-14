@@ -37,7 +37,13 @@ public class Movie : MonoBehaviour {
 		} else {
 			geluid.volume = maxVolume - maxVolume / maxDistance * distance;
 		}
-//	    if(Input.GetKeyDown(KeyCode.Space)&& filmpje.isPlaying)
+
+		// loop when finished
+		if (!geluid.isPlaying) {
+			filmpje.Play();
+			geluid.Play();
+		}
+		//	    if(Input.GetKeyDown(KeyCode.Space)&& filmpje.isPlaying)
 //        {
 //            filmpje.Pause();
 //        }else if (Input.GetKeyDown(KeyCode.Space) && !filmpje.isPlaying)
