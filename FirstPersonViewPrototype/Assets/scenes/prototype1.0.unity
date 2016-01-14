@@ -18655,6 +18655,8 @@ MonoBehaviour:
   Player: {fileID: 802715136}
   KeysIcon: {fileID: 1483879227}
   SecurityNoteButton: {fileID: 1916320949}
+  SaveLoadManager: {fileID: 1781624102}
+  KeyObjectsPickedUp: 
 --- !u!4 &564307798
 Transform:
   m_ObjectHideFlags: 0
@@ -47242,18 +47244,14 @@ Prefab:
       propertyPath: m_Pivot.y
       value: .5
       objectReference: {fileID: 0}
-    - target: {fileID: 120904, guid: 438572e3b8ad9cf4f9176d6f7440d57b, type: 2}
-      propertyPath: m_Name
-      value: SecurityPanel
-      objectReference: {fileID: 0}
-    - target: {fileID: 120904, guid: 438572e3b8ad9cf4f9176d6f7440d57b, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 11435766, guid: 438572e3b8ad9cf4f9176d6f7440d57b, type: 2}
       propertyPath: MachineRoomDoorTrigger
       value: 
       objectReference: {fileID: 1208635963}
+    - target: {fileID: 120904, guid: 438572e3b8ad9cf4f9176d6f7440d57b, type: 2}
+      propertyPath: m_Name
+      value: SecurityPanel
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 438572e3b8ad9cf4f9176d6f7440d57b, type: 2}
   m_IsPrefabParent: 0
