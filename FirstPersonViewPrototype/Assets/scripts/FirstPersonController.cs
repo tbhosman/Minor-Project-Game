@@ -51,8 +51,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private AudioSource m_AudioSource;
         private bool key1 = true;
         public float stamina;
-        public Texture2D staminaTexture;
-        
+		public Texture2D staminaTexture;
 
         public bool MakingWalkingSound;
 		public bool MakingRunningSound;
@@ -79,9 +78,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			MakingRunningSound = false;
             //Cursor.visible = false; //uncomment to remove mouse
 			if (GameObject.Find ("SaveLoadManager").GetComponent<SaveLoadScript> ().savertimeplayed == 0) {
-				StartCoroutine (Wait (10));
+				StartCoroutine (Wait (10f));
 			} else {
-				StartCoroutine (Wait (5));
+				gameObject.GetComponentInChildren<Animator>().SetFloat("RiseSpeed",2);
+				StartCoroutine (Wait (2.5f));
 			}
         }
 
@@ -226,14 +226,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_FootstepSounds[n] = m_FootstepSounds[0];
             m_FootstepSounds[0] = m_AudioSource.clip;
         }
-        public IEnumerator Wait(int getal)
+        public IEnumerator Wait(float getal)
         {
 			setWait (false);
             yield return new WaitForSeconds(getal);
             setWait(true);
         }
 
-        public IEnumerator WaitOnStamina(int getal) {
+        public IEnumerator WaitOnStamina(float getal) {
             buitenadem = true;
             yield return new WaitForSeconds(getal);
             stamina = 2;
