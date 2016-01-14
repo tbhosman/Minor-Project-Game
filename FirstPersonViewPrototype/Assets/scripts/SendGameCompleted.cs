@@ -9,6 +9,7 @@ public class SendGameCompleted : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		GameObject.Find("DataAquisitie").GetComponent<DataAquisitie>().OpenedDoor(5);
 		GameObject.Find("DataAquisitie").GetComponent<DataAquisitie>().CompletedGame();
 	}
 }
