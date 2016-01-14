@@ -26,10 +26,12 @@ public class OptionsCanvas : MonoBehaviour {
         //displays the resolutions that are available for your pc
         resolutionDropdown.options.Clear();
         for (int i = 0; i < Screen.resolutions.Length; i++) { resolutionDropdown.options.Add(new Dropdown.OptionData() { text = Screen.resolutions[i].width + "x" + Screen.resolutions[i].height }); }
-
+        resolutionDropdown.value = PlayerPrefs.GetInt("resolution", Screen.resolutions.Length - 1);
+        
         //displays the qualitylevels available for your pc
         qualityDropdown.options.Clear();
         for (int i = 0; i < QualitySettings.names.Length; i++) { qualityDropdown.options.Add(new Dropdown.OptionData() { text = QualitySettings.names[i] }); }
+        qualityDropdown.value = PlayerPrefs.GetInt("quality", 2);
         scream = GetComponent<AudioSource>();
         
         //changes the antialiasing
@@ -69,11 +71,13 @@ public class OptionsCanvas : MonoBehaviour {
     public void DropDown()
     {
         Screen.SetResolution(Screen.resolutions[resolutionDropdown.value].width, Screen.resolutions[resolutionDropdown.value].height, true);
+        PlayerPrefs.SetInt("resolution", resolutionDropdown.value);
     }
 
     //changes the quality
     public void DropDownQuality() {
         QualitySettings.SetQualityLevel(qualityDropdown.value, true);
+        PlayerPrefs.SetInt("quality", qualityDropdown.value);
     }
 
     //set the screen fullscreen
