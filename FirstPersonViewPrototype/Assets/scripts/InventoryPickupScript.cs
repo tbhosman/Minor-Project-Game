@@ -40,6 +40,11 @@ public class InventoryPickupScript : MonoBehaviour {
         InspectInstructions =GameObject.Find("PlayerInfo").GetComponent<Text>(); ;
 		Player = ProcedureHelp.GetComponent<ProcedureHelp>().Player;
 		DataAquisitie = GameObject.Find ("DataAquisitie");
+		if (IsScaryNote) {
+			if(GameObject.Find ("SaveLoadManager").GetComponent<SaveLoadScript>().keyObjectsPickedUp[4]){
+				gameObject.SetActive(false);
+			}
+		}
 
 	}
 	void OnTriggerStay() {

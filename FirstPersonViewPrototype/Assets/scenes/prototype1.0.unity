@@ -41787,6 +41787,42 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1189293083}
   m_Mesh: {fileID: 4300470, guid: d9e34f6ada736cc49b0237bd166897d6, type: 3}
+--- !u!1 &1191229391 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 131976, guid: 38471986e4c54a042b8334888fd166e1, type: 2}
+  m_PrefabInternal: {fileID: 1864580359}
+--- !u!108 &1191229397
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1191229391}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: .0500000007
+    m_NormalBias: .400000006
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_BounceIntensity: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_AreaSize: {x: 1, y: 1}
 --- !u!1 &1191706250
 GameObject:
   m_ObjectHideFlags: 0
@@ -56796,7 +56832,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1637926500}
   m_LocalRotation: {x: -.707106829, y: 0, z: -0, w: .707106829}
-  m_LocalPosition: {x: 13.1842604, y: 7.33324337, z: -44.2470818}
+  m_LocalPosition: {x: 13.1842604, y: 7.32999992, z: -44.2470818}
   m_LocalScale: {x: .304800004, y: .304800004, z: .304800004}
   m_Children: []
   m_Father: {fileID: 717440924}
@@ -62252,7 +62288,7 @@ MonoBehaviour:
   Player: {fileID: 802715136}
   Antag: {fileID: 287552371}
   DoorOpened: 000000
-  keyObjectsPickedUp: 000000
+  keyObjectsPickedUp: 0000000000
   PlayerID: 0
   AreaTrigger: {fileID: 1140831256}
   area: 
@@ -64955,7 +64991,8 @@ Prefab:
       propertyPath: m_Name
       value: ScaryNoteTrigger
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 10830408, guid: 38471986e4c54a042b8334888fd166e1, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 38471986e4c54a042b8334888fd166e1, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1864720678
