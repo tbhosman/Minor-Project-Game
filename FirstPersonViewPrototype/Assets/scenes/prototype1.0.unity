@@ -2052,7 +2052,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: d2e0b3c49e3e8e9469d2bd45e716a78c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -.970000029
+      value: -1.04499996
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: d2e0b3c49e3e8e9469d2bd45e716a78c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -33664,6 +33664,71 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 4300106, guid: 1a7272ea20ead8f42bc6dc0614f395fc, type: 3}
+--- !u!1 &957693843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 177642, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 957693844}
+  - 65: {fileID: 957693846}
+  - 114: {fileID: 957693845}
+  m_Layer: 0
+  m_Name: LabDoor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &957693844
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 419832, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 957693843}
+  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
+  m_LocalPosition: {x: -79.5, y: 1.05999994, z: 46.4199982}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2007024668}
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+--- !u!114 &957693845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11489020, guid: 7ed2e718f6a2333478af76c28d84cde0,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 957693843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78262013613e50047a436a1a1263aacd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerInstructions: {fileID: 307844848}
+  DoorClosedString: You need a Key to Open the door
+  AfterOpenString: You used the key you found in the office to open this door!
+  closed: 1
+  Storagedoor: 0
+  Labdoor: 1
+  Crowbarpicture: {fileID: 0}
+  Keypicture: {fileID: 1483879227}
+  SaveLoadManager: {fileID: 1781624102}
+  doorOpened: 0000
+--- !u!65 &957693846
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6567014, guid: 7ed2e718f6a2333478af76c28d84cde0,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 957693843}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7460134, y: 2.15659094, z: 1.08200932}
+  m_Center: {x: -.373004913, y: .0142668486, z: .532867432}
 --- !u!1 &959397000
 GameObject:
   m_ObjectHideFlags: 0
@@ -38601,6 +38666,80 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1110436559}
   m_Mesh: {fileID: 4300596, guid: d9e34f6ada736cc49b0237bd166897d6, type: 3}
+--- !u!1001 &1112304753
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2007024668}
+    m_Modifications:
+    - target: {fileID: 400004, guid: d2e0b3c49e3e8e9469d2bd45e716a78c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -.0410000011
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d2e0b3c49e3e8e9469d2bd45e716a78c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.11199999
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d2e0b3c49e3e8e9469d2bd45e716a78c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: .550000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d2e0b3c49e3e8e9469d2bd45e716a78c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d2e0b3c49e3e8e9469d2bd45e716a78c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -.707106829
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d2e0b3c49e3e8e9469d2bd45e716a78c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d2e0b3c49e3e8e9469d2bd45e716a78c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: .707106709
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d2e0b3c49e3e8e9469d2bd45e716a78c, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: d2e0b3c49e3e8e9469d2bd45e716a78c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 245c05a0750b5e0419ef644312aad619, type: 2}
+    - target: {fileID: 2300002, guid: d2e0b3c49e3e8e9469d2bd45e716a78c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: df9635d3fbf4e1d458f190ba1194264c, type: 2}
+    - target: {fileID: 2300004, guid: d2e0b3c49e3e8e9469d2bd45e716a78c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bec19a74006920d42a8b00337c532db3, type: 2}
+    - target: {fileID: 100004, guid: d2e0b3c49e3e8e9469d2bd45e716a78c, type: 3}
+      propertyPath: m_Name
+      value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d2e0b3c49e3e8e9469d2bd45e716a78c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: .300000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d2e0b3c49e3e8e9469d2bd45e716a78c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: .310000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: d2e0b3c49e3e8e9469d2bd45e716a78c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: .300000012
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d2e0b3c49e3e8e9469d2bd45e716a78c, type: 3}
+  m_IsPrefabParent: 0
+--- !u!4 &1112304754 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400004, guid: d2e0b3c49e3e8e9469d2bd45e716a78c, type: 3}
+  m_PrefabInternal: {fileID: 1112304753}
 --- !u!1 &1113146524
 GameObject:
   m_ObjectHideFlags: 0
@@ -69653,96 +69792,22 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2006242514}
   m_Mesh: {fileID: 4300386, guid: d9e34f6ada736cc49b0237bd166897d6, type: 3}
---- !u!1001 &2007024665
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 11489020, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
-      propertyPath: doorOpened.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 419832, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -79.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 419832, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.05999994
-      objectReference: {fileID: 0}
-    - target: {fileID: 419832, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 46.4199982
-      objectReference: {fileID: 0}
-    - target: {fileID: 419832, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 419832, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: .707106829
-      objectReference: {fileID: 0}
-    - target: {fileID: 419832, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 419832, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: .707106709
-      objectReference: {fileID: 0}
-    - target: {fileID: 419832, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 11489020, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
-      propertyPath: PlayerInstructions
-      value: 
-      objectReference: {fileID: 307844848}
-    - target: {fileID: 177642, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
-      propertyPath: m_Name
-      value: LabDoor
-      objectReference: {fileID: 0}
-    - target: {fileID: 11489020, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
-      propertyPath: DoorClosedString
-      value: You need a Key to Open the door
-      objectReference: {fileID: 0}
-    - target: {fileID: 11489020, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
-      propertyPath: AfterOpenString
-      value: You used the key you found in the office to open this door!
-      objectReference: {fileID: 0}
-    - target: {fileID: 6567014, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11489020, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
-      propertyPath: Crowbarpicture
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 11489020, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
-      propertyPath: Labdoor
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11489020, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
-      propertyPath: Storagedoor
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11489020, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
-      propertyPath: Keypicture
-      value: 
-      objectReference: {fileID: 1483879227}
-    - target: {fileID: 11489020, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
-      propertyPath: SaveLoadManager
-      value: 
-      objectReference: {fileID: 1781624102}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
-  m_IsPrefabParent: 0
---- !u!1 &2007024666 stripped
+--- !u!1 &2007024666
 GameObject:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 178986, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
-  m_PrefabInternal: {fileID: 2007024665}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2007024668}
+  - 111: {fileID: 2007024667}
+  m_Layer: 0
+  m_Name: DoorAnimation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!111 &2007024667
 Animation:
   m_ObjectHideFlags: 0
@@ -69758,10 +69823,20 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!4 &2007024668 stripped
+--- !u!4 &2007024668
 Transform:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 445390, guid: 7ed2e718f6a2333478af76c28d84cde0, type: 2}
-  m_PrefabInternal: {fileID: 2007024665}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2007024666}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1112304754}
+  - {fileID: 940772756}
+  m_Father: {fileID: 957693844}
+  m_RootOrder: 0
 --- !u!1 &2011119455
 GameObject:
   m_ObjectHideFlags: 0
