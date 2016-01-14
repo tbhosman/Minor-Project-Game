@@ -153,9 +153,6 @@ public class SaveLoadScript : MonoBehaviour {
 			}
 			area = saver.area;
 
-			//Start areamusic
-			GameObject.Find ("MainMusicController(Clone)").GetComponent<MainMusicController>().FadeIn (area);
-
 			//Initialize PlayerID
 			PlayerPrefs.SetInt("ID",saver.PlayerID);
 			PlayerID = saver.PlayerID;
@@ -184,6 +181,8 @@ public class SaveLoadScript : MonoBehaviour {
 			//Initialize Antag Position
 			Antag.transform.position = new Vector3(saver.antagcoordinates[0],saver.antagcoordinates[1],saver.antagcoordinates[2]);
 
+			//Start areamusic
+			GameObject.Find ("MainMusicController(Clone)").GetComponent<MainMusicController>().FadeIn (area);
 
 			print ("game loaded, playtime: " + savertimeplayed + " Player ID: " + saver.PlayerID);
 		
