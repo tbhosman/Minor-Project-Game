@@ -12,8 +12,11 @@ public class Credits : MonoBehaviour {
 	public string level;
 
 	void Start(){
-		Destroy (GameObject.Find ("MainMusicController"));
-		Destroy (GameObject.Find ("MainMusicController(Clone)"));
+		if (GameObject.Find ("MainMusicController"))
+			Destroy (GameObject.Find ("MainMusicController"));
+
+		if (GameObject.Find ("MainMusicController(Clone)"))
+			Destroy (GameObject.Find ("MainMusicController(Clone)"));
 		//StartCoroutine(waitForEndOfCredits ());
 	}
 
