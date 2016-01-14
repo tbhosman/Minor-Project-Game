@@ -13,6 +13,7 @@ public class Credits : MonoBehaviour {
 
 	void Start(){
 		Destroy (GameObject.Find ("MainMusicController"));
+		Destroy (GameObject.Find ("MainMusicController(Clone)"));
 		//StartCoroutine(waitForEndOfCredits ());
 	}
 
