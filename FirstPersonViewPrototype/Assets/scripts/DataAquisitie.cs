@@ -42,17 +42,9 @@ public class DataAquisitie : MonoBehaviour {
 	public void PickedUpItem (int item) {
 		savetimeplayed = SaveLoadManager.GetComponent<SaveLoadScript> ().savertimeplayed;
 		timeTaken = Mathf.RoundToInt ((Time.timeSinceLevelLoad + savetimeplayed)/ 60);
-		if (item == 1){
-			SaveLoadManager.GetComponent<SaveLoadScript>().keyObjectsPickedUp[0] = true;
-		};
-		if (item == 2) {
-			SaveLoadManager.GetComponent<SaveLoadScript>().keyObjectsPickedUp[1] = true;
-		}
-		if (item == 3) {
-			SaveLoadManager.GetComponent<SaveLoadScript>().keyObjectsPickedUp[2] = true;
-		}
-		SaveLoadManager.GetComponent<SaveLoadScript> ().Save (); //save game on pickup
+		SaveLoadManager.GetComponent<SaveLoadScript>().keyObjectsPickedUp[item-1] = true;
 		Debug.Log ("Found item: " + item + "  on time: " + timeTaken);
+		SaveLoadManager.GetComponent<SaveLoadScript> ().Save (); //save game on pickup
 		StartCoroutine(SendPickedUpItem (item));
 	}
 
@@ -67,8 +59,8 @@ public class DataAquisitie : MonoBehaviour {
 		savetimeplayed = SaveLoadManager.GetComponent<SaveLoadScript> ().savertimeplayed;
 		timeTaken = Mathf.RoundToInt ((Time.timeSinceLevelLoad + savetimeplayed)/ 60);
 		SaveLoadManager.GetComponent<SaveLoadScript> ().DoorOpened [door - 1] = true;
-		SaveLoadManager.GetComponent<SaveLoadScript> ().Save ();
 		Debug.Log ("Opened door: " + door + "  on time: " + timeTaken);
+		SaveLoadManager.GetComponent<SaveLoadScript> ().Save ();
 		StartCoroutine(SendOpenedDoor (door));
 	}
 
@@ -82,8 +74,8 @@ public class DataAquisitie : MonoBehaviour {
 	public void CompletedGame () {
 		savetimeplayed = SaveLoadManager.GetComponent<SaveLoadScript> ().savertimeplayed;
 		timeTaken = Mathf.RoundToInt ((Time.timeSinceLevelLoad + savetimeplayed)/ 60);
-		SaveLoadManager.GetComponent<SaveLoadScript> ().Save ();
 		Debug.Log ("Finished game in " + timeTaken + " minutes");
+		SaveLoadManager.GetComponent<SaveLoadScript> ().Save ();
 		if (PlayerPrefs.GetInt ("highscore") > timeTaken) { //set local highscore
 			PlayerPrefs.SetInt ("highscore", timeTaken);
 		}
