@@ -682,9 +682,10 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Your goal is to reach the reactor and prevent it from exploding. For this,
-    you will need certain key objects to open doors. These key objects can be found
-    throughout the game, but keep a close eye on your Geiger teller! Radioactivity
-    can become fatal\u2026 \nAlso, remember that running and light attracts attention."
+    you will need certain key objects (these emit light) to open doors. These key
+    objects can be found throughout the game, but keep a close eye on your Geiger
+    teller! Radioactivity can become fatal\u2026 \nAlso, remember that running and
+    light attracts attention."
 --- !u!222 &1179250057
 CanvasRenderer:
   m_ObjectHideFlags: 0
