@@ -7440,6 +7440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   filmpje: {fileID: 15200000, guid: 0293f068c70e27b46bcd90557357894d, type: 3}
   maxVolume: .0500000007
+  maxDistance: 10
 --- !u!82 &224076865
 AudioSource:
   m_ObjectHideFlags: 0
@@ -36283,18 +36284,6 @@ Prefab:
     - target: {fileID: 466420, guid: b3b6ff008a111194e8a70f0f4ebf7b4d, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 466420, guid: b3b6ff008a111194e8a70f0f4ebf7b4d, type: 2}
-      propertyPath: m_LocalScale.x
-      value: .5
-      objectReference: {fileID: 0}
-    - target: {fileID: 466420, guid: b3b6ff008a111194e8a70f0f4ebf7b4d, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 466420, guid: b3b6ff008a111194e8a70f0f4ebf7b4d, type: 2}
-      propertyPath: m_LocalScale.z
-      value: .5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b3b6ff008a111194e8a70f0f4ebf7b4d, type: 2}

@@ -44,7 +44,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 110904}
   m_LocalRotation: {x: .000241067974, y: -.707106769, z: .707106769, w: -.000241061221}
-  m_LocalPosition: {x: -85.4599991, y: 5.28000021, z: 113.5}
+  m_LocalPosition: {x: -85.4599991, y: 5.28000021, z: 103.945801}
   m_LocalScale: {x: .500000119, y: 1, z: .50000006}
   m_Children:
   - {fileID: 492744}
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 831e5d662fbdea048abcff61dd085a1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ventilatie: {fileID: 0}
+  ventilatie: {fileID: 19827714}
   audioclip: {fileID: 8300000, guid: 85a5a11aafb130046913979f443433fb, type: 3}
   playtime: 4
   audiosource: {fileID: 8286824}
