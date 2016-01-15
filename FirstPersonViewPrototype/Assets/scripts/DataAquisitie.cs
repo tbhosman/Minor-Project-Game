@@ -58,8 +58,8 @@ public class DataAquisitie : MonoBehaviour {
 	public void OpenedDoor (int door) {
 		savetimeplayed = SaveLoadManager.GetComponent<SaveLoadScript> ().savertimeplayed;
 		timeTaken = Mathf.RoundToInt ((Time.timeSinceLevelLoad + savetimeplayed)/ 60);
-		SaveLoadManager.GetComponent<SaveLoadScript> ().DoorOpened [door - 1] = true;
 		Debug.Log ("Opened door: " + door + "  on time: " + timeTaken);
+		SaveLoadManager.GetComponent<SaveLoadScript> ().DoorOpened [door - 1] = true;
 		SaveLoadManager.GetComponent<SaveLoadScript> ().Save ();
 		StartCoroutine(SendOpenedDoor (door));
 	}
