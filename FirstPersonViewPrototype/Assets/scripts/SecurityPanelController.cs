@@ -82,11 +82,12 @@ public class SecurityPanelController : MonoBehaviour {
 				gameObject.SetActive(false);
 				Cursor.visible = false;
 				GameObject.Find ("FPSController").GetComponent<FirstPersonController>().enabled = true;
-				MachineRoomDoor.GetComponent<Animation>().Play();
-				MachineRoomDoor.GetComponent<AudioSource>().Play();
-				codeDisplayPanel.GetComponent<Image> ().color = new Color (255, 255, 255, 100);
                 steamlinks.Play();
                 steamrechts.Play();
+                MachineRoomDoor.GetComponent<Animation>().Play();
+				MachineRoomDoor.GetComponent<AudioSource>().Play();
+				codeDisplayPanel.GetComponent<Image> ().color = new Color (255, 255, 255, 100);
+                
 			} else { // if the code was incorrect, display a red screen for 2 seconds, then reset
 
 				codeDisplayPanel.GetComponent<Image> ().color = Color.red;
@@ -101,11 +102,13 @@ public class SecurityPanelController : MonoBehaviour {
 	private IEnumerator WaitForRealSeconds(float waitTime)
 	{
 		float endTime = Time.realtimeSinceStartup + waitTime;
-		
-		while (Time.realtimeSinceStartup < endTime)
+        
+
+        while (Time.realtimeSinceStartup < endTime)
 		{
 			yield return null;
-		}
+            
+        }
 	}
 
 }
