@@ -55,6 +55,7 @@ public class MainMusicController : MonoBehaviour {
 			if (audioTracks[i].name == track){
 				audioTracks[i].gameObject.SetActive(true);
 				float maxVolume = getVolumeOf(track);
+				Debug.Log(track + "Audiofile started playing");
 				StartCoroutine(FadeMusic (audioTracks[i].GetComponent<AudioSource>(), maxVolume, fadeTime));
 			} else {
 				//fade out the track that is currently running

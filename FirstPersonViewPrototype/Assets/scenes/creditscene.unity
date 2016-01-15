@@ -358,7 +358,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 854442433}
   m_LocalRotation: {x: 1.54972076e-06, y: .707106113, z: -.707107484, w: 1.59524598e-06}
-  m_LocalPosition: {x: 0, y: 0, z: 3.22000003}
+  m_LocalPosition: {x: 0, y: 0, z: 2.98000002}
   m_LocalScale: {x: .00100000005, y: .00100000005, z: .00100000005}
   m_Children: []
   m_Father: {fileID: 2083864381}
@@ -389,7 +389,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 86cc56bad96f9f943831ab72383f24cf, type: 3}
-    m_FontSize: 81
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -399,12 +399,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Executive producers:\n\n\r\rTim Hosman\r\nJoost Zwart\n\rLou Bakker\r\nDixie
-    de Klerk\n\rPim Klaassen\r\r\n\nChief Business Managers:\n\n\r\rTim Hosman\r\nJoost
-    Zwart\n\n\r\rExecutive 3d designers:\r\r\n\nPim Klaassen\n\rDixie de Klerk\n\rJoost
-    Zwart\r\r\n\nPresident generals audio:\n\r\r\nPim Klaassen\n\rLou Bakker\n\n\r\rChief
-    executive programmer:\n\r\n\rTim Hosman\r\r\n\nHeads of jumpscare department:\n\n\r\rLou
-    Bakker\n\rPim Klaassen\n\nWaypoint specialist:\n\nTim Hosman"
+  m_Text: "REAKTOR\n\n\n\nExecutive producers:\n\n\r\rTim Hosman\r\nJoost Zwart\n\rLou
+    Bakker\r\nDixie de Klerk\n\rPim Klaassen\r\r\n\nChief Business Managers:\n\n\r\rTim
+    Hosman\r\nJoost Zwart\n\n\r\rExecutive 3d designers:\r\r\n\nPim Klaassen\n\rDixie
+    de Klerk\n\rJoost Zwart\r\r\n\nPresident generals audio:\n\r\r\nPim Klaassen\n\rLou
+    Bakker\n\n\r\rChief executive programmer:\n\r\n\rTim Hosman\r\r\n\nHeads of jumpscare
+    department:\n\n\r\rLou Bakker\n\rPim Klaassen\n\nWaypoint specialist:\n\nTim Hosman"
 --- !u!222 &854442439
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1360,7 +1360,9 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}

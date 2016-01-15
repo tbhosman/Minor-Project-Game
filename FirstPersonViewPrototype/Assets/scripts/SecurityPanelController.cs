@@ -20,7 +20,7 @@ public class SecurityPanelController : MonoBehaviour {
 	
     // Use this for initialization
 	void Start () {
-		for (int i = 0; i < transform.childCount; i++) {
+        for (int i = 0; i < transform.childCount; i++) {
 			if (transform.GetChild(i).name == "CodePanel"){
 				codeDisplayPanel = transform.GetChild (i).gameObject;
 				codeDisplayText = codeDisplayPanel.transform.GetChild(0).GetComponent<Text>();
@@ -73,8 +73,10 @@ public class SecurityPanelController : MonoBehaviour {
 
 			// if the code is correct, make the display green and wait 2 seconds, then close panel and open the door
 			if (codeDisplayText.text == correctCode) {
+                steamlinks.Play();
+                steamrechts.Play();
 
-				GameObject.Find ("MachineRoomDoorTrigger").GetComponent<Collider> ().enabled = false;
+                GameObject.Find ("MachineRoomDoorTrigger").GetComponent<Collider> ().enabled = false;
 				codeDisplayPanel.GetComponent<Image> ().color = Color.green;
 				DataAquisitie.GetComponent<DataAquisitie>().OpenedDoor(3);
 				yield return StartCoroutine (WaitForRealSeconds (2.0f));
@@ -82,8 +84,6 @@ public class SecurityPanelController : MonoBehaviour {
 				gameObject.SetActive(false);
 				Cursor.visible = false;
 				GameObject.Find ("FPSController").GetComponent<FirstPersonController>().enabled = true;
-                steamlinks.Play();
-                steamrechts.Play();
                 MachineRoomDoor.GetComponent<Animation>().Play();
 				MachineRoomDoor.GetComponent<AudioSource>().Play();
 				codeDisplayPanel.GetComponent<Image> ().color = new Color (255, 255, 255, 100);
