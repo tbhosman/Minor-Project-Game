@@ -32,11 +32,11 @@ public class MainAreaTriggerController : MonoBehaviour {
 			inLab = false;
 			inMachine = false;
 			inReaktor = false;
-			respawnIn(Area);
+			respawnIn("Office");
 			if (GameObject.Find("MainMusicController") != null)
-				GameObject.Find ("MainMusicController").GetComponent<MainMusicController> ().FadeIn (Area);
+				GameObject.Find ("MainMusicController").GetComponent<MainMusicController> ().FadeIn ("Office");
 			else
-				GameObject.Find ("MainMusicController(Clone)").GetComponent<MainMusicController> ().FadeIn (Area);
+				GameObject.Find ("MainMusicController(Clone)").GetComponent<MainMusicController> ().FadeIn ("Office");
 		} else if (Area == "Storage" && inStorage == false) {
 			inStorage = true;
 			inOffice = false;
@@ -45,11 +45,11 @@ public class MainAreaTriggerController : MonoBehaviour {
 			inMachine = false;
 			inReaktor = false;
 			Debug.Log ("in storage");
-			respawnIn(Area);
+			respawnIn("Storage");
 			if (GameObject.Find("MainMusicController") != null)
-				GameObject.Find ("MainMusicController").GetComponent<MainMusicController> ().FadeIn (Area);
+				GameObject.Find ("MainMusicController").GetComponent<MainMusicController> ().FadeIn ("Storage");
 			else
-				GameObject.Find ("MainMusicController(Clone)").GetComponent<MainMusicController> ().FadeIn (Area);
+				GameObject.Find ("MainMusicController(Clone)").GetComponent<MainMusicController> ().FadeIn ("Storage");
 		} else if (Area == "Lab" && inLab == false) {
 			inStorage = false;
 			inOffice = false;
@@ -57,11 +57,11 @@ public class MainAreaTriggerController : MonoBehaviour {
 			inLab = true;
 			inMachine = false;
 			inReaktor = false;
-			respawnIn(Area);
+			respawnIn("Lab");
 			if (GameObject.Find("MainMusicController") != null)
-				GameObject.Find ("MainMusicController").GetComponent<MainMusicController> ().FadeIn (Area);
+				GameObject.Find ("MainMusicController").GetComponent<MainMusicController> ().FadeIn ("Laboratory");
 			else
-				GameObject.Find ("MainMusicController(Clone)").GetComponent<MainMusicController> ().FadeIn (Area);
+				GameObject.Find ("MainMusicController(Clone)").GetComponent<MainMusicController> ().FadeIn ("Laboratory");
 		} else if (Area == "Machine" && inMachine == false) {
 			inStorage = false;
 			inOffice = false;
@@ -69,11 +69,11 @@ public class MainAreaTriggerController : MonoBehaviour {
 			inLab = false;
 			inMachine = true;
 			inReaktor = false;
-			respawnIn(Area);
+			respawnIn("Machine");
 			if (GameObject.Find("MainMusicController") != null)
-				GameObject.Find ("MainMusicController").GetComponent<MainMusicController> ().FadeIn (Area);
+				GameObject.Find ("MainMusicController").GetComponent<MainMusicController> ().FadeIn ("MachineRoom");
 			else
-				GameObject.Find ("MainMusicController(Clone)").GetComponent<MainMusicController> ().FadeIn (Area);
+				GameObject.Find ("MainMusicController(Clone)").GetComponent<MainMusicController> ().FadeIn ("MachineRoom");
 		} else if (Area == "Archive" && inArchive == false) {
 			inStorage = false;
 			inOffice = false;
@@ -81,11 +81,11 @@ public class MainAreaTriggerController : MonoBehaviour {
 			inLab = false;
 			inMachine = false;
 			inReaktor = false;
-			respawnIn(Area);
+			respawnIn("Archive");
 			if (GameObject.Find("MainMusicController") != null)
-				GameObject.Find ("MainMusicController").GetComponent<MainMusicController> ().FadeIn (Area);
+				GameObject.Find ("MainMusicController").GetComponent<MainMusicController> ().FadeIn ("Archive");
 			else
-				GameObject.Find ("MainMusicController(Clone)").GetComponent<MainMusicController> ().FadeIn (Area);
+				GameObject.Find ("MainMusicController(Clone)").GetComponent<MainMusicController> ().FadeIn ("Archive");
 		} else if (Area == "Reaktor" && inReaktor == false) {
 			inStorage = false;
 			inOffice = false;
@@ -94,9 +94,9 @@ public class MainAreaTriggerController : MonoBehaviour {
 			inMachine = false;
 			inReaktor = true;
 			if (GameObject.Find("MainMusicController") != null)
-				GameObject.Find ("MainMusicController").GetComponent<MainMusicController> ().FadeIn (Area);
+				GameObject.Find ("MainMusicController").GetComponent<MainMusicController> ().FadeIn ("Reaktor");
 			else
-				GameObject.Find ("MainMusicController(Clone)").GetComponent<MainMusicController> ().FadeIn (Area);
+				GameObject.Find ("MainMusicController(Clone)").GetComponent<MainMusicController> ().FadeIn ("Reaktor");
 		}	}
 
 	void respawnIn(string Area){
