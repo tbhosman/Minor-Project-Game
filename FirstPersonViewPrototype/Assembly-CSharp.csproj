@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\IntroFade.cs" />
      <Compile Include="Assets\Materials\cursor.cs" />
+     <Compile Include="Assets\TitleScaler.cs" />
      <Compile Include="Assets\imports\Industrial\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\imports\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
      <Compile Include="Assets\imports\Standard Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />

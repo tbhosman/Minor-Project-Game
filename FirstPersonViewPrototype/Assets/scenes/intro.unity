@@ -236,6 +236,7 @@ GameObject:
   - 64: {fileID: 532565857}
   - 23: {fileID: 532565856}
   - 220: {fileID: 532565861}
+  - 114: {fileID: 532565860}
   m_Layer: 0
   m_Name: titel
   m_TagString: Untagged
@@ -298,6 +299,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!114 &532565860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 532565855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a82499a53621a0d429be8adaa786be05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scalerError: .00999999978
 --- !u!220 &532565861
 LightProbeGroup:
   m_ObjectHideFlags: 0
