@@ -23,6 +23,7 @@ public class AnimatableDoorScript : MonoBehaviour {
 	private GameObject DataAquisitie;
 	public GameObject SaveLoadManager;
 	public bool[] doorOpened;
+	public GameObject PointLightOfDoor;
 
 	void Start(){
 
