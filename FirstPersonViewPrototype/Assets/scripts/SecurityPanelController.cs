@@ -17,9 +17,14 @@ public class SecurityPanelController : MonoBehaviour {
 	public GameObject MachineRoomDoorTrigger;
     public ParticleSystem steamlinks;
     public ParticleSystem steamrechts;
-	
+
+    public AudioClip audioclip;
+    public float playtime;
+    public AudioSource audiosource;
+    public float playfromseconds;
+
     // Use this for initialization
-	void Start () {
+    void Start () {
         for (int i = 0; i < transform.childCount; i++) {
 			if (transform.GetChild(i).name == "CodePanel"){
 				codeDisplayPanel = transform.GetChild (i).gameObject;
@@ -87,8 +92,13 @@ public class SecurityPanelController : MonoBehaviour {
                 MachineRoomDoor.GetComponent<Animation>().Play();
 				MachineRoomDoor.GetComponent<AudioSource>().Play();
 				codeDisplayPanel.GetComponent<Image> ().color = new Color (255, 255, 255, 100);
-                
-			} else { // if the code was incorrect, display a red screen for 2 seconds, then reset
+
+                audiosource.clip = audioclip;
+                audiosource.time = playfromseconds;
+                audiosource.Play();
+                StartCoroutine(PlayAudioSource());
+
+            } else { // if the code was incorrect, display a red screen for 2 seconds, then reset
 
 				codeDisplayPanel.GetComponent<Image> ().color = Color.red;
 				yield return StartCoroutine (WaitForRealSeconds (2.0f));
@@ -110,5 +120,13 @@ public class SecurityPanelController : MonoBehaviour {
             
         }
 	}
+
+    IEnumerator PlayAudioSource()
+    {
+        audiosource.Play();
+        yield return new WaitForSeconds(playtime);
+        audiosource.Stop();
+        audiosource.time = 0;
+    }
 
 }
