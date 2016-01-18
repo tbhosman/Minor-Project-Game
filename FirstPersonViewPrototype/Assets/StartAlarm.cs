@@ -1,5 +1,6 @@
 ﻿/// <summary>
-/// Starts the alarm audio for the alarm objects. Syncs with the alarm audio that starts during the intro
+/// Starts the alarm audio for the alarm objects as soon as the game is started (from the beginning). 
+/// Syncs with the alarm audio that already started during the intro.
 /// </summary>
 
 using UnityEngine;
@@ -23,11 +24,11 @@ public class StartAlarm : MonoBehaviour {
 
 		if (MMC.transform.FindChild ("Alarm").gameObject.activeSelf) {
 			MMCAlarm = MMC.transform.FindChild ("Alarm").GetComponent<AudioSource>();
+			LocalAlarm.Play();
 		}
 	}
 
 	void Update(){
 		LocalAlarm.timeSamples = MMCAlarm.timeSamples;
-		Debug.Log( LocalAlarm.isPlaying);
 	}
 }
