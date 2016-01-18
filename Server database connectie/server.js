@@ -105,7 +105,7 @@ app.get("/pickUp3", function (req, res) {
 	});
 });
 
-app.get("/pickUp4", function (req, res) {
+app.get("/pickUp5", function (req, res) {
 	var time_pickup4 = req.param('Time');
 	var user_id = req.param('User_id');
 	connection.query("UPDATE Unity_data SET PickUpTime_ReactorDoor = " + time_pickup4 + " WHERE User_id = " + user_id, function(err, result) {
@@ -116,7 +116,7 @@ app.get("/pickUp4", function (req, res) {
 	});
 });
 
-app.get("/pickUp5", function (req, res) {
+app.get("/pickUp4", function (req, res) {
 	var time_pickup5 = req.param('Time');
 	var user_id = req.param('User_id');
 	connection.query("UPDATE Unity_data SET PickUpTime_ScareNote = " + time_pickup5 + " WHERE User_id = " + user_id, function(err, result) {
@@ -160,7 +160,7 @@ app.get("/openedDoor3", function (req, res) {
 	});
 });
 
-app.get("/openedDoor4", function (req, res) {
+app.get("/openedDoor5", function (req, res) {
 	var time_door4 = req.param('Time');
 	var user_id = req.param('User_id');
 	connection.query("UPDATE Unity_data SET OpenedDoor_ReactorDoor = " + time_door4 + " WHERE User_id = " + user_id, function(err, result) {
@@ -171,7 +171,7 @@ app.get("/openedDoor4", function (req, res) {
 	});
 });
 
-app.get("/openedDoor5", function (req, res) {
+app.get("/openedDoor4", function (req, res) {
 	var time_door5 = req.param('Time');
 	var user_id = req.param('User_id');
 	connection.query("UPDATE Unity_data SET OpenedDoor_ScareNote = " + time_door5 + " WHERE User_id = " + user_id, function(err, result) {
@@ -208,4 +208,5 @@ app.listen(port);
 // 1 sleutel
 // 2 koevoet
 // 3 security code
+//4 reactor door
 // 5 scare note
