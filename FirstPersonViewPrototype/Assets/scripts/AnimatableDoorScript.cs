@@ -29,7 +29,7 @@ public class AnimatableDoorScript : MonoBehaviour {
 
 		//Initializing Variables
 		DoorAnimation = gameObject.transform.GetChild (0);
-		OpenAnimation = DoorAnimation.GetComponent<Animation> ();
+		OpenAnimation = DoorAnimation.GetComponent<Animation>();
 		closed = true;
 		DoorTrigger = gameObject.GetComponent<Collider> ();
 		Inventory = GameObject.FindGameObjectWithTag ("Inventory");
