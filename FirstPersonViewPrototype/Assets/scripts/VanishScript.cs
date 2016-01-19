@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿///<summary>
+/// jumpscare in the storage where an enemy suddenly appears
+/// </summary>
+
+
+using UnityEngine;
 using System.Collections;
 
 //Object verdwijnt als de player bijnen fieldofvanishdegree kijkt naar het object. Zet noAnimation true als hij geen animatie bevat.
