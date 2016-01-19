@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿///<summary>
+/// flickering flashlight when you first pick it up
+/// </summary>
+
+
+using UnityEngine;
 using System.Collections;
 
 public class TogglePlayerLightScript : MonoBehaviour {
