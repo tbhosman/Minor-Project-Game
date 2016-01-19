@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿///<summary>
+/// motion blur
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.ImageEffects;
 

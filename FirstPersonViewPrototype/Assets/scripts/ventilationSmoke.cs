@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿///<summary>
+/// manages the particlesystem in the ventilationsystem
+/// </summary>
+
+
+using UnityEngine;
 using System.Collections;
 
 public class ventilationSmoke : MonoBehaviour {

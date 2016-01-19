@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿///<summary>
+/// makes the lights above the doors flicker
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class Active_Flicker : MonoBehaviour {
