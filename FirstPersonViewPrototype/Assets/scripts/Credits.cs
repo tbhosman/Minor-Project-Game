@@ -12,6 +12,7 @@ public class Credits : MonoBehaviour {
 	public string level;
 
 	void Start(){
+
 		if (GameObject.Find ("MainMusicController"))
 			Destroy (GameObject.Find ("MainMusicController"));
 
@@ -24,7 +25,7 @@ public class Credits : MonoBehaviour {
 	void Update () {
 
 		camera.transform.Translate (Vector3.down * Time.deltaTime * speed);
-		if (GameObject.Find ("vlagGoed").transform.FindChild ("Canvas").localPosition.z < -1.188f) {
+		if (GameObject.Find ("vlagGoed").transform.FindChild ("Canvas").localPosition.z < -1.9f) {
 			Application.LoadLevel ("menu");
 		}
 	}
