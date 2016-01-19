@@ -52,6 +52,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool key1 = true;
         public float stamina;
 		public Texture2D staminaTexture;
+        public float sens;
 
         public bool MakingWalkingSound;
 		public bool MakingRunningSound;
@@ -60,6 +61,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Use this for initialization
         private void Start()
         {
+            sens = PlayerPrefs.GetFloat("sensetivity", 0.5f);
             stamina = 100.0f;
             buitenadem = false;
             wait = false;

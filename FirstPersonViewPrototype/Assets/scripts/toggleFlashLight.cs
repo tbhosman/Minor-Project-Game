@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿///<summary>
+/// pickup script for the flashlight. also displays a message
+/// </summary>
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 

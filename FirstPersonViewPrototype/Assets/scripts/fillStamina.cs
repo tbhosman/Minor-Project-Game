@@ -20,6 +20,8 @@ public class fillStamina : MonoBehaviour {
     }
 	
     void Update() {
+
+        //adjusts the staminabar
         StaminaTransform.localScale = new Vector3(scaleStam, StaminaTransform.localScale.y, StaminaTransform.localScale.z);
         scaleStam = 1.0f - (fps.stamina / 100);
         if (fps.stamina <= 1)
