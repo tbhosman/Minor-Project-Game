@@ -158,7 +158,7 @@ public class EnemyRouting : MonoBehaviour {
 
 		//keep looking at waypoint to reach
 		if (wantWalk && !goingToPlayer && prevDist > reachDist) {
-			rb.transform.LookAt (waypoint.transform.position + new Vector3(0,0.1f,0));
+			rb.transform.LookAt (waypoint.transform.position);// + new Vector3(0,0.1f,0));
 		}
 	}
 
@@ -176,8 +176,12 @@ public class EnemyRouting : MonoBehaviour {
 		
 		waypoint_index = newWaypoint (); //the actual script for getting the new waypoint
 		
-		//set as new waypoint
+		//set as new waypoint and match y position with enemy y position
 		waypoint = waypoints [waypoint_index];
+		Vector3 waypoint_tmp = waypoint.transform.position;
+		waypoint_tmp.y = transform.position.y;
+		waypoint.transform.position = waypoint_tmp;
+
 		prevDist = Vector3.Distance (transform.position, waypoint.transform.position);
 		wantTurn = true;
 	}
@@ -193,7 +197,7 @@ public class EnemyRouting : MonoBehaviour {
 			rb.velocity = transform.TransformDirection(new Vector3(0,0,speed));
 			wantTurn = false;
 			wantIdle = false;
-			rb.transform.LookAt (location + new Vector3(0,0.1f,0));
+			rb.transform.LookAt (location);// + new Vector3(0,0.1f,0));
 
 		} else if (rb.velocity == new Vector3 (0, 0, 0)) { //standing still; starting or working on a turn
 
