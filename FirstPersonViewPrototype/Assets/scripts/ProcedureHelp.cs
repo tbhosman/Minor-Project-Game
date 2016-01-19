@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿///<summary>
+/// manages which objects are pickedup for the procedural generation
+/// 
+/// </summary>
+
+using UnityEngine;
 using System.Collections;
 
 public class ProcedureHelp : MonoBehaviour {

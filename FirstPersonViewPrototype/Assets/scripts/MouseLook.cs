@@ -28,15 +28,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             m_CharacterTargetRot = character.localRotation;
             m_CameraTargetRot = camera.localRotation;
-       
+            sensetivity = PlayerPrefs.GetFloat("sensetivity");
+            XSensitivity = XSensitivity * sensetivity * 2;
+            YSensitivity = YSensitivity * sensetivity * 2;
+            Debug.Log("sensetivity" + sensetivity);
         }
 
-        public void Awake() {
-            sensetivity = PlayerPrefs.GetFloat("sensetivity");
-            XSensitivity = XSensitivity * sensetivity * 5;
-            YSensitivity = YSensitivity * sensetivity * 5;
-           Debug.Log("sensetivity"+sensetivity);
-        }
         
         public void LookRotation(Transform character, Transform camera)
         {

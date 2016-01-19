@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿///<summary> changes the shader when the player is in the collider</summary>
+/// 
+
+using UnityEngine;
 using System.Collections;
 
 public class changeShader : MonoBehaviour {
