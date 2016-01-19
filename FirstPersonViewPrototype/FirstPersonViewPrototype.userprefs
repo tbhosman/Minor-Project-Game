@@ -1,20 +1,20 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\AnimatableDoorScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Credits.cs">
     <Files>
-      <File FileName="Assets\scripts\CanvasManager.cs" Line="202" Column="21" />
-      <File FileName="Assets\StartAlarm.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Credits.cs" Line="28" Column="43" />
       <File FileName="Assets\scripts\DataAquisitie.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\MainAreaTriggerController.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\AreaTriggerController.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\Movie.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\Active_Flicker.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\AnimatableDoorScript.cs" Line="32" Column="62" />
+      <File FileName="Assets\scripts\MapGenerator.cs" Line="140" Column="2" />
+      <File FileName="Assets\scripts\EnemyRouting.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\CanvasManager.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="D:\Documents\Minor-Project-Game\FirstPersonViewPrototype\Assets\StartAlarm.cs" line="32" />
+      <Breakpoint file="D:\Documents\Minor-Project-Game\FirstPersonViewPrototype\Assets\scripts\EnemyRouting.cs" line="261" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
