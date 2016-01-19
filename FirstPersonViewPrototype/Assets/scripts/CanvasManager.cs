@@ -18,8 +18,10 @@ public class CanvasManager : MonoBehaviour {
 	public GameObject inventory;
 	public Image fadeOutPanel;
 	public float fadeSpeed = 1.5f;
+	public MovieTexture TvBroadcast;
 
 	void Start () {
+		TvBroadcast = GameObject.Find ("TvVideo").GetComponent<Movie> ().filmpje;
 		GasMaskOverlay.enabled = false;
 		pauseCanvas = transform.FindChild ("PauseMenus").FindChild ("PauseOverlay").gameObject;
 		QuitToCanvas = transform.FindChild ("PauseMenus").FindChild ("QuitToOverlay").gameObject;
@@ -188,6 +190,7 @@ public class CanvasManager : MonoBehaviour {
 	}
 
 	void PauseAllAudio(){
+		TvBroadcast.Pause ();
 		audios = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
 
 		foreach (AudioSource aud in audios) {
@@ -196,6 +199,7 @@ public class CanvasManager : MonoBehaviour {
 	}
 
 	void UnpauseAllAudio(){
+		TvBroadcast.Play();
 		audios = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
 
 		foreach (AudioSource aud in audios) {

@@ -46,7 +46,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Materials\cursor.cs" />
-     <Compile Include="Assets\StartAlarm.cs" />
      <Compile Include="Assets\imports\Industrial\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\imports\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
      <Compile Include="Assets\imports\Standard Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
@@ -135,12 +134,12 @@
      <Compile Include="Assets\scripts\ReverseNormals.cs" />
      <Compile Include="Assets\scripts\RigidbodyFirstPersonController.cs" />
      <Compile Include="Assets\scripts\SaveLoadScript.cs" />
-     <Compile Include="Assets\scripts\SaveLoadscript2.cs" />
      <Compile Include="Assets\scripts\SceneFadeInOut.cs" />
      <Compile Include="Assets\scripts\SecurityPanelController.cs" />
      <Compile Include="Assets\scripts\SendGameCompleted.cs" />
      <Compile Include="Assets\scripts\SetActiveTrigger.cs" />
      <Compile Include="Assets\scripts\ShakeCameraScript.cs" />
+     <Compile Include="Assets\scripts\StartAlarm.cs" />
      <Compile Include="Assets\scripts\StickToPlayerScript.cs" />
      <Compile Include="Assets\scripts\SyncMusicWithAnimation.cs" />
      <Compile Include="Assets\scripts\TitleScaler.cs" />
@@ -159,7 +158,6 @@
      <Compile Include="Assets\scripts\toggleFlashLight.cs" />
      <Compile Include="Assets\scripts\vanishafterseconds.cs" />
      <Compile Include="Assets\scripts\ventilationSmoke.cs" />
-     <Compile Include="Assets\steam.cs" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
@@ -230,11 +228,17 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset2.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>D:/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>
