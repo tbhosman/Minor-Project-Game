@@ -12,14 +12,12 @@ public class Active_Flicker : MonoBehaviour {
 	void StartLightFlicker(){
 		float RandomTime = Random.Range (RangeOfFlicker, RangeOfRepeat);
 		StartCoroutine (LightFlicker());
-		Debug.Log ("LightFlicker " + RandomTime);
 		Invoke("StartLightFlicker", RandomTime);
 	}
 
 	IEnumerator LightFlicker(){
 		gameObject.GetComponent<Light> ().enabled = false;;
 		float RandTime = Random.Range (0, RangeOfFlicker);
-		Debug.Log ("LightFlickerActiveAfter: " + RandTime);
 		yield return new WaitForSeconds(RandTime);
 		gameObject.GetComponent<Light> ().enabled = true;
 	}
