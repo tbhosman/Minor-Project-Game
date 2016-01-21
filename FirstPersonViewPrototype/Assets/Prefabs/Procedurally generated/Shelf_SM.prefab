@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 443132}
   - 205: {fileID: 20540720}
+  - 65: {fileID: 6568996}
   m_Layer: 2
   m_Name: Shelf_SM
   m_TagString: Untagged
@@ -26,7 +27,6 @@ GameObject:
   - 4: {fileID: 498570}
   - 33: {fileID: 3361978}
   - 23: {fileID: 2343694}
-  - 64: {fileID: 6496482}
   m_Layer: 2
   m_Name: Shelf_SM_LOD2
   m_TagString: Untagged
@@ -44,7 +44,7 @@ GameObject:
   - 4: {fileID: 449544}
   - 33: {fileID: 3394064}
   - 23: {fileID: 2306134}
-  - 64: {fileID: 6436742}
+  - 65: {fileID: 6561546}
   m_Layer: 2
   m_Name: Shelf_SM_LOD0
   m_TagString: Untagged
@@ -62,7 +62,6 @@ GameObject:
   - 4: {fileID: 420048}
   - 33: {fileID: 3395742}
   - 23: {fileID: 2319350}
-  - 64: {fileID: 6452196}
   m_Layer: 2
   m_Name: Shelf_SM_LOD1
   m_TagString: Untagged
@@ -214,8 +213,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184342}
   m_Mesh: {fileID: 4300000, guid: 304acf76176e2764190543ae23025cce, type: 3}
---- !u!64 &6436742
-MeshCollider:
+--- !u!65 &6561546
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -224,32 +223,20 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: c223afefe74d38a49a88d4e404b73bc5, type: 3}
---- !u!64 &6452196
-MeshCollider:
+  m_Size: {x: 1.91166425, y: .968238473, z: 1.70379138}
+  m_Center: {x: .000170201063, y: -.0226440635, z: .85189569}
+--- !u!65 &6568996
+BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 184342}
+  m_GameObject: {fileID: 129800}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: 304acf76176e2764190543ae23025cce, type: 3}
---- !u!64 &6496482
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 163188}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 4300000, guid: 8084429c7702d6c48b4952ad434ce512, type: 3}
+  m_Size: {x: 1.76014102, y: .579164684, z: 1.70379102}
+  m_Center: {x: -.0755962431, y: .0268401094, z: .851901412}
 --- !u!205 &20540720
 LODGroup:
   m_ObjectHideFlags: 1
@@ -289,6 +276,30 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalScale.x
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Center.x
+      value: -.0755962431
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Center.y
+      value: .0268401094
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Center.z
+      value: .851901412
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Size.x
+      value: 1.76014102
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Size.y
+      value: .579164684
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Size.z
+      value: 1.70379102
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
