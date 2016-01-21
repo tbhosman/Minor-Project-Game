@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/// <summary>
+/// Jump scare system.
+/// Plays the desired jumpscare animation when plaer walks through the trigger of the gameObject.
+/// </summary>
+using UnityEngine;
 using System.Collections;
 
 public class JumScareSystem : MonoBehaviour {
