@@ -18,10 +18,9 @@ public class SecurityPanelController : MonoBehaviour {
     public ParticleSystem steamlinks;
     public ParticleSystem steamrechts;
 
-    public AudioClip audioclip;
-    public float playtime;
-    public AudioSource audiosource;
-    public float playfromseconds;
+    public float steamPlayTime;
+    public GameObject steamEffect;
+    public float playSteamFromSeconds;
 
     // Use this for initialization
     void Start () {
@@ -78,13 +77,18 @@ public class SecurityPanelController : MonoBehaviour {
 
 			// if the code is correct, make the display green and wait 2 seconds, then close panel and open the door
 			if (codeDisplayText.text == correctCode) {
-                steamlinks.Play();
-                steamrechts.Play();
+
 
                 GameObject.Find ("MachineRoomDoorTrigger").GetComponent<Collider> ().enabled = false;
 				codeDisplayPanel.GetComponent<Image> ().color = Color.green;
 				DataAquisitie.GetComponent<DataAquisitie>().OpenedDoor(3);
+
 				yield return StartCoroutine (WaitForRealSeconds (2.0f));
+
+				steamlinks.Play();
+				steamrechts.Play();
+				steamEffect.GetComponent<playSteamAudio>().PlaySteamAudio();
+
 				codeDisplayText.text = "";
 				gameObject.SetActive(false);
 				Cursor.visible = false;
@@ -92,12 +96,6 @@ public class SecurityPanelController : MonoBehaviour {
                 MachineRoomDoor.GetComponent<Animation>().Play();
 				MachineRoomDoor.GetComponent<AudioSource>().Play();
 				codeDisplayPanel.GetComponent<Image> ().color = new Color (255, 255, 255, 100);
-
-                audiosource.clip = audioclip;
-                audiosource.time = playfromseconds;
-                audiosource.Play();
-                StartCoroutine(PlayAudioSource());
-
             } else { // if the code was incorrect, display a red screen for 2 seconds, then reset
 
 				codeDisplayPanel.GetComponent<Image> ().color = Color.red;
@@ -120,13 +118,4 @@ public class SecurityPanelController : MonoBehaviour {
             
         }
 	}
-
-    IEnumerator PlayAudioSource()
-    {
-        audiosource.Play();
-        yield return new WaitForSeconds(playtime);
-        audiosource.Stop();
-        audiosource.time = 0;
-    }
-
 }
