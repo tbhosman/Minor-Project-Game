@@ -29,7 +29,7 @@ public class StartAlarm : MonoBehaviour {
 	}
 
 	void Update(){
-		if (MMC != null && MMCAlarm.isPlaying) {
+		if (MMC != null && MMCAlarm != null && MMCAlarm.isPlaying) {
 			LocalAlarm.timeSamples = MMCAlarm.timeSamples;
 		}
 	}
