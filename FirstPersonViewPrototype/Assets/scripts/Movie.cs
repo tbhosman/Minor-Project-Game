@@ -22,7 +22,7 @@ public class Movie : MonoBehaviour {
         geluid = GetComponent<AudioSource>();
         geluid.clip = filmpje.audioClip;
         filmpje.Play();
-		filmpje.loop = true;
+		//filmpje.loop = true;
         geluid.Play();
     }
 	
@@ -37,6 +37,11 @@ public class Movie : MonoBehaviour {
 			geluid.volume = 0.0f;
 		} else {
 			geluid.volume = maxVolume - maxVolume / maxDistance * distance;
+		}
+
+		if (geluid.time > 260.0f){
+			filmpje.Play();
+			geluid.Play();
 		}
 		
 		//	    if(Input.GetKeyDown(KeyCode.Space)&& filmpje.isPlaying)
