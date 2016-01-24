@@ -282,15 +282,6 @@ public class EnemyRouting : MonoBehaviour {
 		return true;
 	}
 
-//	IEnumerator RampSpeed(float startSpeed, float stopSpeed){
-//		float t = 0;
-//		while (t<rampUpDuration) {
-//			t += Time.deltaTime;
-//			rb.velocity = transform.TransformDirection(new Vector3(0,0, Mathf.Lerp(startSpeed,stopSpeed,t/rampUpDuration)));
-//			yield return null;
-//		}
-//	}
-
 	// find closest reachable waypoint to the player
 	int findWaypointToPlayer(){
 		int[] ans = {-2,-2,-2,-2,-2};

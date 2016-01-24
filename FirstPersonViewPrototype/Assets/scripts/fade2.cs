@@ -1,5 +1,6 @@
 ﻿/// <summary>
 /// Controls the fades of the intro script
+/// This script is NOT implemented in the game, but has been replaced by IntroFade
 /// </summary>
 
 using UnityEngine;

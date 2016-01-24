@@ -1,21 +1,86 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\AreaTriggerController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\ventilationSmoke.cs">
     <Files>
-      <File FileName="Assets\scripts\JumScareSystem.cs" Line="3" Column="98" />
-      <File FileName="Assets\scripts\Credits.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\DataAquisitie.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\MainAreaTriggerController.cs" Line="3" Column="116" />
-      <File FileName="Assets\scripts\AreaTriggerController.cs" Line="23" Column="4" />
       <File FileName="Assets\scripts\Active_Flicker.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\MapGenerator.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\EnemyRouting.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\CanvasManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\SaveLoadScript.cs" Line="190" Column="35" />
+      <File FileName="Assets\scripts\MainMusicController.cs" Line="96" Column="8" />
+      <File FileName="Assets\scripts\SecurityPanelController.cs" Line="115" Column="14" />
+      <File FileName="Assets\scripts\MainAreaTriggerController.cs" Line="31" Column="18" />
+      <File FileName="Assets\scripts\StartAlarm.cs" Line="23" Column="4" />
+      <File FileName="Assets\scripts\EnemyRouting.cs" Line="283" Column="3" />
+      <File FileName="Assets\scripts\GameOverScript.cs" Line="19" Column="13" />
+      <File FileName="Assets\scripts\Movie.cs" Line="37" Column="3" />
+      <File FileName="Assets\scripts\DataAquisitie.cs" Line="23" Column="4" />
+      <File FileName="Assets\scripts\AdjustMotionBlur.cs" Line="19" Column="38" />
+      <File FileName="Assets\scripts\AnimatableDoorScript.cs" Line="63" Column="40" />
+      <File FileName="Assets\scripts\AreaTriggerController.cs" Line="14" Column="30" />
+      <File FileName="Assets\scripts\BlurManager.cs" Line="16" Column="42" />
+      <File FileName="Assets\scripts\CanvasManager.cs" Line="171" Column="8" />
+      <File FileName="Assets\scripts\changeShader.cs" Line="1" Column="35" />
+      <File FileName="Assets\scripts\ControlsController.cs" Line="17" Column="2" />
+      <File FileName="Assets\scripts\Credits.cs" Line="21" Column="21" />
+      <File FileName="Assets\scripts\DisableFlashlight.cs" Line="19" Column="19" />
+      <File FileName="Assets\scripts\disableOnActive.cs" Line="10" Column="16" />
+      <File FileName="Assets\scripts\DontLookMonster.cs" Line="16" Column="1" />
+      <File FileName="Assets\scripts\EndSceneScript.cs" Line="31" Column="8" />
+      <File FileName="Assets\scripts\EnemyAnimationScript.cs" Line="23" Column="8" />
+      <File FileName="Assets\scripts\EnemySight.cs" Line="22" Column="9" />
+      <File FileName="Assets\scripts\fade2.cs" Line="3" Column="80" />
+      <File FileName="Assets\scripts\fillStamina.cs" Line="23" Column="1" />
+      <File FileName="Assets\scripts\FirstPersonController.cs" Line="18" Column="1" />
+      <File FileName="Assets\scripts\FlagScaler.cs" Line="18" Column="19" />
+      <File FileName="Assets\scripts\FlashlightHitArea.cs" Line="14" Column="24" />
+      <File FileName="Assets\scripts\FlashlightScript.cs" Line="16" Column="6" />
+      <File FileName="Assets\scripts\GameOverPlotter.cs" Line="18" Column="21" />
+      <File FileName="Assets\scripts\GameOverToMenu.cs" Line="19" Column="9" />
+      <File FileName="Assets\scripts\GeigerController.cs" Line="20" Column="1" />
+      <File FileName="Assets\scripts\GlowScript.cs" Line="22" Column="17" />
+      <File FileName="Assets\scripts\HeadBob.cs" Line="2" Column="23" />
+      <File FileName="Assets\scripts\HighscoreManager.cs" Line="25" Column="72" />
+      <File FileName="Assets\scripts\ImpulsOnActivation.cs" Line="20" Column="1" />
+      <File FileName="Assets\scripts\InspectScript.cs" Line="23" Column="24" />
+      <File FileName="Assets\scripts\IntroFade.cs" Line="25" Column="11" />
+      <File FileName="Assets\scripts\InventoryManager.cs" Line="26" Column="3" />
+      <File FileName="Assets\scripts\InventoryPickupScript.cs" Line="40" Column="27" />
+      <File FileName="Assets\scripts\JumScareSystem.cs" Line="24" Column="28" />
+      <File FileName="Assets\scripts\loadAnimation.cs" Line="21" Column="2" />
+      <File FileName="Assets\scripts\LoadIntro.cs" Line="64" Column="8" />
+      <File FileName="Assets\scripts\MachineDoorTriggerScript.cs" Line="27" Column="30" />
+      <File FileName="Assets\scripts\mainMenuButtons.cs" Line="19" Column="21" />
+      <File FileName="Assets\scripts\MapGenerator.cs" Line="108" Column="11" />
+      <File FileName="Assets\scripts\MouseLook.cs" Line="23" Column="15" />
+      <File FileName="Assets\scripts\OptionsCanvas.cs" Line="27" Column="17" />
+      <File FileName="Assets\scripts\PlayAudioClip.cs" Line="23" Column="9" />
+      <File FileName="Assets\scripts\Procedural_Generation_Archive.cs" Line="25" Column="20" />
+      <File FileName="Assets\scripts\Procedural_Generation_Lab.cs" Line="25" Column="23" />
+      <File FileName="Assets\scripts\Procedural_Generation_Office.cs" Line="24" Column="16" />
+      <File FileName="Assets\scripts\proceduralGeneration.cs" Line="24" Column="28" />
+      <File FileName="Assets\scripts\ProceduralGenerationStorage.cs" Line="23" Column="34" />
+      <File FileName="Assets\scripts\ProcedureHelp.cs" Line="24" Column="1" />
+      <File FileName="Assets\scripts\ReaktorGlow.cs" Line="25" Column="1" />
+      <File FileName="Assets\scripts\ReverseNormals.cs" Line="28" Column="18" />
+      <File FileName="Assets\scripts\RigidbodyFirstPersonController.cs" Line="27" Column="34" />
+      <File FileName="Assets\scripts\rotatelight.cs" Line="21" Column="1" />
+      <File FileName="Assets\scripts\SceneFadeInOut.cs" Line="26" Column="2" />
+      <File FileName="Assets\scripts\SendGameCompleted.cs" Line="16" Column="1" />
+      <File FileName="Assets\scripts\SetActiveTrigger.cs" Line="18" Column="4" />
+      <File FileName="Assets\scripts\ShakeCameraScript.cs" Line="18" Column="8" />
+      <File FileName="Assets\scripts\shock.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\space_checker.cs" Line="22" Column="3" />
+      <File FileName="Assets\scripts\StickToPlayerScript.cs" Line="19" Column="1" />
+      <File FileName="Assets\scripts\SyncMusicWithAnimation.cs" Line="23" Column="5" />
+      <File FileName="Assets\scripts\TitleScaler.cs" Line="18" Column="1" />
+      <File FileName="Assets\scripts\toggleFlashLight.cs" Line="19" Column="6" />
+      <File FileName="Assets\scripts\TogglePlayerLightScript.cs" Line="25" Column="20" />
+      <File FileName="Assets\scripts\vanishafterseconds.cs" Line="25" Column="1" />
+      <File FileName="Assets\scripts\VanishScript.cs" Line="26" Column="13" />
+      <File FileName="Assets\scripts\ventilationSmoke.cs" Line="26" Column="13" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="D:\Documents\Minor-Project-Game\FirstPersonViewPrototype\Assets\scripts\EnemyRouting.cs" line="261" />
+      <Breakpoint file="D:\Documents\Minor-Project-Game\FirstPersonViewPrototype\Assets\scripts\SaveLoadScript.cs" line="138" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

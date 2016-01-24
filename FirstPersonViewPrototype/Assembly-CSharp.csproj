@@ -100,6 +100,7 @@
      <Compile Include="Assets\scripts\FlagScaler.cs" />
      <Compile Include="Assets\scripts\FlashlightHitArea.cs" />
      <Compile Include="Assets\scripts\FlashlightScript.cs" />
+     <Compile Include="Assets\scripts\GameOverMovie.cs" />
      <Compile Include="Assets\scripts\GameOverPlotter.cs" />
      <Compile Include="Assets\scripts\GameOverScript.cs" />
      <Compile Include="Assets\scripts\GameOverToMenu.cs" />
@@ -148,6 +149,7 @@
      <Compile Include="Assets\scripts\fillStamina.cs" />
      <Compile Include="Assets\scripts\loadAnimation.cs" />
      <Compile Include="Assets\scripts\mainMenuButtons.cs" />
+     <Compile Include="Assets\scripts\playSteamAudio.cs" />
      <Compile Include="Assets\scripts\proceduralGeneration.cs" />
      <Compile Include="Assets\scripts\rotatelight.cs" />
      <Compile Include="Assets\scripts\shock.cs" />
