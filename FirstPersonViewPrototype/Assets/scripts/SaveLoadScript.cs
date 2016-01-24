@@ -182,7 +182,10 @@ public class SaveLoadScript : MonoBehaviour {
 			Antag.transform.position = new Vector3(saver.antagcoordinates[0],saver.antagcoordinates[1],saver.antagcoordinates[2]);
 
 			//Start areamusic
-			GameObject.Find ("MainMusicController(Clone)").GetComponent<MainMusicController>().FadeIn (area);
+			if (area == "Lab") // Dirty fix because the wrong naming convention was used
+				GameObject.Find ("MainMusicController(Clone)").GetComponent<MainMusicController>().FadeIn ("Laboratory");
+			else
+				GameObject.Find ("MainMusicController(Clone)").GetComponent<MainMusicController>().FadeIn (area);
 
 			print ("game loaded, playtime: " + savertimeplayed + " Player ID: " + saver.PlayerID);
 		

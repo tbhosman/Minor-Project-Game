@@ -1,18 +1,24 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\StartAlarm.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GameOverMovie.cs">
     <Files>
+      <File FileName="Assets\scripts\SaveLoadScript.cs" Line="185" Column="80" />
       <File FileName="Assets\scripts\MainMusicController.cs" Line="1" Column="1" />
       <File FileName="Assets\playSteamAudio.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\SecurityPanelController.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\SaveLoadScript.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\MainAreaTriggerController.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\StartAlarm.cs" Line="32" Column="38" />
+      <File FileName="Assets\scripts\StartAlarm.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\EnemyRouting.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\GameOverScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\Movie.cs" Line="1" Column="1" />
+      <File FileName="Assets\GameOverMovie.cs" Line="2" Column="55" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="D:\Documents\Minor-Project-Game\FirstPersonViewPrototype\Assets\scripts\EnemyRouting.cs" line="261" />
+      <Breakpoint file="D:\Documents\Minor-Project-Game\FirstPersonViewPrototype\Assets\scripts\SaveLoadScript.cs" line="138" />
+      <Breakpoint file="D:\Documents\Minor-Project-Game\FirstPersonViewPrototype\Assets\scripts\MainAreaTriggerController.cs" line="28" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
